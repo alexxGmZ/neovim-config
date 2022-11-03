@@ -84,7 +84,7 @@ I use ```vim-plug``` as a Plugin Manager
 * [indent-blankline](#indent-blankline)
 * [lualine](#lualine)
 * [nvim-treesitter](#nvim-treesitter)
-* [Comment.nvim](#comment.nvim)
+* [Comment.nvim](#Comment.nvim)
 * [fzf-lua](#fzf-lua)
 * [vim-illuminate](#vim-illuminate)
 * [vim-closetag](#vim-closetag)
