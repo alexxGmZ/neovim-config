@@ -84,7 +84,7 @@ I use ```vim-plug``` as a Plugin Manager
 * [indent-blankline](#indent-blankline)
 * [lualine](#lualine)
 * [nvim-treesitter](#nvim-treesitter)
-* [Comment.nvim](#Comment.nvim)
+* [Comment](#Comment)
 * [fzf-lua](#fzf-lua)
 * [vim-illuminate](#vim-illuminate)
 * [vim-closetag](#vim-closetag)
@@ -427,7 +427,7 @@ require'nvim-treesitter.configs'.setup {
 }
 ```
 
-#### Comment.nvim
+#### Comment
 
 ```lua
 -- lua
