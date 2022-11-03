@@ -4,34 +4,35 @@ set termguicolors
 
 " vim-plug
 call plug#begin()
-	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-	Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
-	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'lukas-reineke/indent-blankline.nvim'
-	Plug 'preservim/nerdcommenter'
-	Plug 'jeffkreeftmeijer/vim-numbertoggle'
 	Plug 'nvim-lualine/lualine.nvim'
+	Plug 'RRethy/vim-illuminate'
+	Plug 'numToStr/Comment.nvim'
+	Plug 'nvim-treesitter/nvim-treesitter-context'
+
+	" git
 	Plug 'tpope/vim-fugitive'
 	Plug 'idanarye/vim-merginal'
-	Plug 'RRethy/vim-illuminate'
+
+	" navigation
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+	Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
+	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+	Plug 'christoomey/vim-tmux-navigator'
+	Plug 'preservim/tagbar'
+	Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 	" syntax highlighting
 	" polyglot for backup
 	Plug 'sheerun/vim-polyglot'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	Plug 'nvim-treesitter/nvim-treesitter-context'
 
 	" language support
 	Plug 'gregsexton/MatchTag'
 	Plug 'norcalli/nvim-colorizer.lua'
 	Plug 'alvan/vim-closetag'
-	Plug 'vim-scripts/c.vim'					"C
-	Plug 'https://github.com/AndrewRadev/tagalong.vim.git'
-	Plug 'victorvoid/vim-frontend'
+	Plug 'AndrewRadev/tagalong.vim.git'
 	Plug 'dense-analysis/ale'
-	Plug 'lighttiger2505/sqls'
-	Plug 'preservim/tagbar'
 
 	" lightweight auto-completion
 	" Plug 'maxboisvert/vim-simple-complete'
@@ -46,12 +47,9 @@ call plug#begin()
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-vsnip'
 	Plug 'hrsh7th/vim-vsnip'
-	" Plug 'L3MON4D3/LuaSnip', {'tag': 'v<CurrentMajor>.*'}
 	
 	" colorschemes
-	Plug 'ray-x/aurora'
 	Plug 'Rigellute/shades-of-purple.vim'
-	Plug 'ghifarit53/daycula-vim'
 	Plug 'ghifarit53/tokyonight-vim'
 	Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 call plug#end()
@@ -75,9 +73,6 @@ lua << EOF
 			-- REQUIRED - you must specify a snippet engine
 			expand = function(args)
 			  vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-			  -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-			  -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-			  -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
 			end,
 		},
 		window = {
@@ -93,13 +88,6 @@ lua << EOF
 			["<Tab>"] = cmp.mapping(function(fallback)
 				if cmp.visible() then
 					cmp.select_next_item()
-				-- elseif luasnip.expand_or_locally_jumpable() then
-					-- luasnip.expand_or_jump()
-				-- elseif jumpable(1) then
-					-- luasnip.jump(1)
-				--elseif has_words_before() then
-				-- cmp.complete()
-				--	fallback()
 				else
 					fallback()
 				end
@@ -107,8 +95,6 @@ lua << EOF
 			["<S-Tab>"] = cmp.mapping(function(fallback)
 				if cmp.visible() then
 					cmp.select_prev_item()
-				-- elseif luasnip.jumpable(-1) then
-				--	luasnip.jump(-1)
 				else
 					fallback()
 				end
@@ -117,10 +103,6 @@ lua << EOF
 		sources = cmp.config.sources({
 			{ name = 'nvim_lsp' },
 			{ name = 'vsnip' }, -- For vsnip users.
-			-- { name = 'luasnip' }, -- For luasnip users.
-			-- { name = 'ultisnips' }, -- For ultisnips users.
-			-- { name = 'snippy' }, -- For snippy users.
-		}, {
 			{ name = 'buffer' },
 		})
 	})
@@ -175,7 +157,7 @@ lua << EOF
 		options = {
 			icons_enabled = false,
 			theme = 'molokai',
-			component_separators = { left = '', right = ''},
+			-- component_separators = { left = '', right = ''},
 			component_separators = '',
 			section_separators = {
 				left = '',
@@ -390,18 +372,10 @@ lua << EOF
 			additional_vim_regex_highlighting = false,
 		},
 	}
-EOF
 
-" NERD Commenter
-	let g:NERDCreateDefaultMappings = 1
-	let g:NERDSpaceDelims = 1
-	let g:NERDCompactSexyComs = 1
-	let g:NERDDefaultAlign = 'left'
-	let g:NERDAltDelims_java = 1
-	let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-	let g:NERDCommentEmptyLines = 1
-	let g:NERDTrimTrailingWhitespace = 1
-	let g:NERDToggleCheckAllLines = 1
+	-- Comment.nvim
+	require('Comment').setup()
+EOF
 
 " fzf
 	nnoremap <c-P> <cmd>lua require('fzf-lua').files()<CR>
@@ -430,9 +404,6 @@ EOF
 
 " nvim-treesitter-context
 	hi TreesitterContextBottom gui=underline guisp=Grey
-
-" lightline
-	let g:lightline = {'colorscheme' : 'shades_of_purple'}
 
 " nerdtree toggle
 	nmap <F6> :NERDTreeToggle<CR>
@@ -477,8 +448,10 @@ EOF
 	set ignorecase
 	set smartcase
 
+" hi Normal ctermbg=NONE
+
 set colorcolumn=90
-set complete-=t " exclude tags
+set complete-=t " disable tags
 set nocompatible
 set ttyfast
 set wildmenu
@@ -492,4 +465,6 @@ set writebackup
 set nowrap
 set noshowmode
 set encoding=UTF-8
+" set fileencoding=utf-8
+" set fileencodings=koi8-r,utf8
 set fileencodings=utf8,cp1251,koi8-r,koi8-u

@@ -43,8 +43,6 @@ I use ```vim-plug``` as a Plugin Manager
 * gregsexton/MatchTag
 * vim-scripts/c.vim
 * AndrewRadev/tagalong.vim.git
-* vim-frontend
-* lighttiger2505/sqls
 * neovim/nvim-lspconfig
 * hrsh7th/cmp-nvim-lsp
 * hrsh7th/cmp-buffer
@@ -59,26 +57,23 @@ I use ```vim-plug``` as a Plugin Manager
 
 #### Aesthetic or UI
 
-* itchyny/lightline.vim
 * lukas-reineke/indent-blankline.nvim
 * nvim-lualine/lualine.nvim
 * ghifarit53/tokyonight-vim
 * catppuccin/nvim
-* ray-x/aurora
 * Rigellute/shades-of-purple.vim
-* ghifarit53/daycula-vim
 * ghifarit53/tokyonight-vim
 * RRethy/vim-illuminate
 
 #### Quality of Life
 
-* preservim/nerdcommenter
 * tpope/vim-fugitive
 * idanarye/vim-merginal
 * norcalli/nvim-colorizer.lua
 * alvan/vim-closetag
 * dense-analysis/ale
 * nvim-treesitter/nvim-treesitter-context
+* numToStr/Comment.nvim
 
 <br>
 
@@ -89,7 +84,7 @@ I use ```vim-plug``` as a Plugin Manager
 * [indent-blankline](#indent-blankline)
 * [lualine](#lualine)
 * [nvim-treesitter](#nvim-treesitter)
-* [nerdcommenter](#nerdcommenter)
+* [Comment.nvim](#comment.nvim)
 * [fzf-lua](#fzf-lua)
 * [vim-illuminate](#vim-illuminate)
 * [vim-closetag](#vim-closetag)
@@ -112,13 +107,10 @@ cmp.setup({
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
 		  vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-		  -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-		  -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-		  -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
 		end,
 	},
 	window = {
-		-- completion = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
 		-- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
@@ -130,13 +122,6 @@ cmp.setup({
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			-- elseif luasnip.expand_or_locally_jumpable() then
-				-- luasnip.expand_or_jump()
-			-- elseif jumpable(1) then
-				-- luasnip.jump(1)
-			--elseif has_words_before() then
-			-- cmp.complete()
-			--	fallback()
 			else
 				fallback()
 			end
@@ -154,9 +139,6 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'vsnip' }, -- For vsnip users.
-		-- { name = 'luasnip' }, -- For luasnip users.
-		-- { name = 'ultisnips' }, -- For ultisnips users.
-		-- { name = 'snippy' }, -- For snippy users.
 	}, {
 		{ name = 'buffer' },
 	})
@@ -445,19 +427,11 @@ require'nvim-treesitter.configs'.setup {
 }
 ```
 
-#### nerdcommenter
+#### Comment.nvim
 
-```vim
-" vim-script
-let g:NERDCreateDefaultMappings = 1
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDAltDelims_java = 1
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDToggleCheckAllLines = 1
+```lua
+-- lua
+require('Comment').setup()
 ```
 
 #### fzf-lua
