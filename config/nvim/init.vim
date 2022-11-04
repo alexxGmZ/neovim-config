@@ -30,7 +30,7 @@ call plug#begin()
 	Plug 'gregsexton/MatchTag'
 	Plug 'norcalli/nvim-colorizer.lua'
 	Plug 'alvan/vim-closetag'
-	Plug 'AndrewRadev/tagalong.vim.git'
+	Plug 'AndrewRadev/tagalong.vim'
 	Plug 'dense-analysis/ale'
 
 	" lightweight auto-completion
@@ -38,6 +38,7 @@ call plug#begin()
 	" Plug 'ackyshake/VimCompletesMe'
 
 	" auto-completion
+	Plug 'williamboman/nvim-lsp-installer'
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/cmp-nvim-lsp'
 	Plug 'hrsh7th/cmp-buffer'
@@ -46,6 +47,7 @@ call plug#begin()
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-vsnip'
 	Plug 'hrsh7th/vim-vsnip'
+	Plug 'hrsh7th/vim-vsnip-integ'
 
 	" colorschemes
 	Plug 'Rigellute/shades-of-purple.vim'
@@ -54,9 +56,9 @@ call plug#begin()
 call plug#end()
 
 set completeopt=menu,menuone,noselect
-
 " catppuccin colorscheme
 	colorscheme catppuccin-mocha
+
 
 " lua plugin configs
 lua << EOF
@@ -65,7 +67,21 @@ lua << EOF
 
 	-- nvim-colorizer
 	require'colorizer'.setup()
+
+	require'nvim-lsp-installer'.setup({
+		automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+		ui = {
+			icons = {
+				server_installed = "✓",
+				server_pending = "➜",
+				server_uninstalled = "✗"
+			}
+		}
+	})
 EOF
+
+" tagalong
+	let g:tagalong_verbose = 1
 
 fun! TrimWhitespace()
 	let l:save = winsaveview()
@@ -84,4 +100,3 @@ augroup END
 
 " nvim-treesitter-context
 	hi TreesitterContextBottom gui=underline guisp=Grey
-
