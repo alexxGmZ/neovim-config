@@ -27,3 +27,11 @@ require('lspconfig')['intelephense'].setup{
 	capabilities = capabilities
 }
 
+require('lspconfig')['vimls'].setup{
+	capabilities = capabilities
+}
+
+require('lspconfig')['sqls'].setup{
+	capabilities = capabilities
+}
+

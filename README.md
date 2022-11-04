@@ -12,8 +12,12 @@
 * zsh (oh-my-zsh)
 * Kitty Terminal (coz it supports font ligature and other utf-8 symbols)
 * npm
-* pyright (install using npm)
+* pyright (for python LSP)
+* clang (for clangd LSP)
+* java-devel (for jdtls LSP)
 * ctags (for tagbar to work)
+* go (for sqls LSP)
+* lua (for sumneko_lua LSP)
 * neovim v0.8.0
 * vim-plug
 * Tabs is better than Spaces
@@ -52,9 +56,10 @@ I use ```vim-plug``` as a Plugin Manager
 * hrsh7th/nvim-cmp
 * hrsh7th/cmp-vsnip
 * hrsh7th/vim-vsnip
-* Lightweight Alternatives:
-	+ maxboisvert/vim-simple-complete
-	+ ackyshake/VimCompletesMe
+
+Lightweight Alternatives:
+* maxboisvert/vim-simple-complete
+* ackyshake/VimCompletesMe
 
 #### Aesthetic or UI
 
@@ -179,6 +184,7 @@ cmp.setup.cmdline(':', {
 ```lua
 -- lua
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 require('lspconfig')['pyright'].setup {
 	capabilities = capabilities
@@ -201,6 +207,14 @@ require('lspconfig')['sumneko_lua'].setup{
 }
 
 require('lspconfig')['intelephense'].setup{
+	capabilities = capabilities
+}
+
+require('lspconfig')['vimls'].setup{
+	capabilities = capabilities
+}
+
+require('lspconfig')['sqls'].setup{
 	capabilities = capabilities
 }
 ```
