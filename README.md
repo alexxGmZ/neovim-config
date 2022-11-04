@@ -44,6 +44,7 @@ I use ```vim-plug``` as a Plugin Manager
 * vim-scripts/c.vim
 * AndrewRadev/tagalong.vim.git
 * neovim/nvim-lspconfig
+* williamboman/nvim-lsp-installer
 * hrsh7th/cmp-nvim-lsp
 * hrsh7th/cmp-buffer
 * hrsh7th/cmp-path
@@ -81,6 +82,7 @@ I use ```vim-plug``` as a Plugin Manager
 
 * [nvim-cmp](#nvim-cmp)
 * [lspconfig](#lspconfig)
+* [nvim-lsp-installer](#nvim-lsp-installer)
 * [indent-blankline](#indent-blankline)
 * [lualine](#lualine)
 * [nvim-treesitter](#nvim-treesitter)
@@ -181,6 +183,41 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig')['pyright'].setup {
 	capabilities = capabilities
 }
+
+require('lspconfig')['jdtls'].setup{
+	capabilities = capabilities
+}
+
+require('lspconfig')['html'].setup{
+	capabilities = capabilities
+}
+
+require('lspconfig')['clangd'].setup{
+	capabilities = capabilities
+}
+
+require('lspconfig')['sumneko_lua'].setup{
+	capabilities = capabilities
+}
+
+require('lspconfig')['intelephense'].setup{
+	capabilities = capabilities
+}
+```
+
+#### nvim-lsp-installer
+
+```lua
+require'nvim-lsp-installer'.setup({
+	automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+	ui = {
+		icons = {
+			server_installed = "✓",
+			server_pending = "➜",
+			server_uninstalled = "✗"
+		}
+	}
+})
 ```
 
 #### indent-blankline
@@ -238,7 +275,7 @@ require('lualine').setup {
 		lualine_b = {
 			{'filename',
 				color = {
-					bg = '#c7d158' 
+					bg = '#c7d158'
 				},
 				separator = {
 					right = ''
@@ -325,7 +362,7 @@ require('lualine').setup {
 		lualine_z = {
 			{'location',
 				color = {
-					bg = '#66d9ef', 
+					bg = '#66d9ef',
 					fg = '#1a1b26'
 				},
 				separator = {
