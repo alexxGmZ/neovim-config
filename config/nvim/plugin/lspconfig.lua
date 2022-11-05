@@ -35,3 +35,7 @@ require('lspconfig')['sqls'].setup{
 	capabilities = capabilities
 }
 
+require('lspconfig')['phpactor'].setup{
+	capabilities = capabilities,
+}
+

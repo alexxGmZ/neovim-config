@@ -18,6 +18,7 @@
 * ctags (for tagbar to work)
 * go (for sqls LSP)
 * lua (for sumneko_lua LSP)
+* composer (for phpactor LSP)
 * neovim v0.8.0
 * vim-plug
 * Tabs is better than Spaces
@@ -70,6 +71,7 @@ Lightweight Alternatives:
 * Rigellute/shades-of-purple.vim
 * ghifarit53/tokyonight-vim
 * RRethy/vim-illuminate
+* akinsho/bufferline.nvim
 
 #### Quality of Life
 
@@ -217,6 +219,10 @@ require('lspconfig')['vimls'].setup{
 require('lspconfig')['sqls'].setup{
 	capabilities = capabilities
 }
+
+require('lspconfig')['phpactor'].setup{
+	capabilities = capabilities,
+}
 ```
 
 #### nvim-lsp-installer
@@ -285,12 +291,50 @@ require('lualine').setup {
 					right = ''
 				},
 			},
+			{'branch',
+				color = {
+					bg = '#f92672',
+					fg = '#f7f5f5'
+				},
+				separator = {
+					left = '',
+					right = ''
+				},
+				icons_enabled = true,
+			},
+			{'diff',
+				colored = true,
+				color = {
+					bg = '#1a1b26',
+				},
+				diff_color = {
+					added = {
+						fg = '#9ece6a',
+					},
+					modified = {
+						fg = '#7dcfff',
+					},
+					removed = {
+						fg = '#f7768e',
+					},
+				},
+				symbols = {
+					added = '+',
+					modified = '~',
+					removed = '-',
+				},
+				separator = {
+					right = ''
+				},
+				source = nil,
+			},
 		},
 		lualine_b = {
 			{'filename',
 				color = {
 					bg = '#c7d158'
 				},
+				path = 1,
 				separator = {
 					right = ''
 				},
@@ -386,76 +430,20 @@ require('lualine').setup {
 			}
 		}
 	},
-	tabline = {
-		lualine_a = {
-			{'branch',
-				color = {
-					bg = '#f92672',
-					fg = '#f7f5f5'
-				},
-				separator = {
-					left = '',
-					right = ''
-				},
-				icons_enabled = true,
-			},
-		},
-		lualine_b = {
-			{'diff',
-				colored = true,
-				color = {
-					bg = '#1a1b26',
-				},
-				diff_color = {
-					added = {
-						fg = '#9ece6a',
-					},
-					modified = {
-						fg = '#7dcfff',
-					},
-					removed = {
-						fg = '#f7768e',
-					},
-				},
-				symbols = {
-					added = '+',
-					modified = '~',
-					removed = '-',
-				},
-				separator = {
-					right = ''
-				},
-				source = nil,
-			},
-		},
-		lualine_c = {
-			{'filename',
-				color = {
-					bg = '#c7d158',
-					fg = '#2c2c2c'
-				},
-				path = 1,
-				shorting_target = 0,
-				separator = {
-					left = '',
-					right = ''
-				},
-				symbols = {
-					modified = '●',
-					readonly = '[RO]',
-				}
-			}
-		},
-		lualine_z = {
-			{'tabs',
-				mode = 0,
-				separator = {
-					left = '',
-					right = ''
-				},
-			},
-		}
-	},
+	-- tabline = {
+	-- 	lualine_a = {},
+	-- 	lualine_b = {},
+	-- 	lualine_c = {},
+	-- 	lualine_z = {
+	-- 		{'tabs',
+	-- 			mode = 0,
+	-- 			separator = {
+	-- 				left = '',
+	-- 				right = ''
+	-- 			},
+	-- 		},
+	-- 	}
+	-- },
 	winbar = {},
 	inactive_winbar = {},
 	extensions = {}
