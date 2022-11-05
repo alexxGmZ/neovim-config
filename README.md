@@ -93,6 +93,7 @@ Lightweight Alternatives:
 * [indent-blankline](#indent-blankline)
 * [lualine](#lualine)
 * [nvim-treesitter](#nvim-treesitter)
+* [bufferline](#bufferline)
 * [Comment](#Comment)
 * [fzf-lua](#fzf-lua)
 * [vim-illuminate](#vim-illuminate)
@@ -463,6 +464,37 @@ require'nvim-treesitter.configs'.setup {
 		enable = true,
 		additional_vim_regex_highlighting = false,
 	},
+}
+```
+
+#### bufferline
+
+```lua
+-- lua
+require('bufferline').setup {
+	options = {
+		mode = "tabs",
+		truncate_names = false,
+		name_formatter = function(buf)
+			-- truncate backwards
+			buf.path = string.gsub(buf.path, os.getenv("PWD") .. "/", "")
+			local buf_path_length = #buf.path
+			-- print(buf_path_length)
+			local max_name_length = 45
+			if buf_path_length > max_name_length and buf.path ~= buf.name then
+				buf.path = string.sub(buf.path, buf_path_length - max_name_length, buf_path_length)
+				buf.path = "..." .. buf.path
+			end
+
+			return buf.path
+		end,
+		numbers = "ordinal",
+		indicator = {
+			style = "none"
+		},
+		separator_style = "slant",
+		diagnostics = "nvim_lsp"
+	}
 }
 ```
 
