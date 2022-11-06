@@ -37,6 +37,8 @@ I use ```vim-plug``` as a Plugin Manager
 * preservim/tagbar
 * christoomey/vim-tmux-navigator
 * jeffkreeftmeijer/vim-numbertoggle
+* nvim-lua/plenary.nvim
+* nvim-telescope/telescope.nvim
 
 #### Syntax Highlighting
 
@@ -93,6 +95,7 @@ Lightweight Alternatives:
 * [indent-blankline](#indent-blankline)
 * [lualine](#lualine)
 * [nvim-treesitter](#nvim-treesitter)
+* [telescope](#telescope)
 * [bufferline](#bufferline)
 * [Comment](#Comment)
 * [fzf-lua](#fzf-lua)
@@ -464,6 +467,40 @@ require'nvim-treesitter.configs'.setup {
 		enable = true,
 		additional_vim_regex_highlighting = false,
 	},
+}
+```
+
+#### telescope
+```lua
+-- lua
+local builtin = require('telescope.builtin')
+local actions = require("telescope.actions")
+
+-- builtin keymaps
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+require('telescope').setup{
+	defaults = {
+		mappings = {
+			i = {
+				["<C-j>"] = actions.move_selection_next,
+				["<C-k>"] = actions.move_selection_previous,
+				["<C-s>"] = actions.select_horizontal,
+			}
+		},
+		layout_strategy = 'horizontal',
+		layout_config = {
+			horizontal = {
+				height = 0.9,
+				prompt_position = 'bottom',
+				width = 0.9,
+				preview_cutoff = 10
+			}
+		}
+	}
 }
 ```
 
