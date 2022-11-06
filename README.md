@@ -476,17 +476,16 @@ require('bufferline').setup {
 		mode = "tabs",
 		truncate_names = false,
 		name_formatter = function(buf)
-			-- truncate backwards
-			buf.path = string.gsub(buf.path, os.getenv("PWD") .. "/", "")
-			local buf_path_length = #buf.path
-			-- print(buf_path_length)
-			local max_name_length = 45
-			if buf_path_length > max_name_length and buf.path ~= buf.name then
-				buf.path = string.sub(buf.path, buf_path_length - max_name_length, buf_path_length)
-				buf.path = "..." .. buf.path
-			end
-
-			return buf.path
+			--- truncate backwards
+			-- buf.path = string.gsub(buf.path, "/home/al6x/", "~/")
+			-- local tab_name_length = #buf.path
+			-- local max_name_length = 35
+			-- if tab_name_length > max_name_length then
+			-- 	buf.path = string.sub(buf.path, tab_name_length - max_name_length, tab_name_length)
+			-- 	buf.path = "..." .. buf.path
+			-- end
+			-- return buf.path
+			return buf.name
 		end,
 		numbers = "ordinal",
 		indicator = {
