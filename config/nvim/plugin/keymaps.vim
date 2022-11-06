@@ -1,3 +1,4 @@
+let mapleader = " "
 " fzf
 	nnoremap <c-P> <cmd>lua require('fzf-lua').files()<CR>
 

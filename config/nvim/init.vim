@@ -21,6 +21,8 @@ call plug#begin()
 	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'preservim/tagbar'
 	Plug 'jeffkreeftmeijer/vim-numbertoggle'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 	" syntax highlighting
 	" polyglot for backup
