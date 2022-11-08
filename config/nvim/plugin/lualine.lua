@@ -1,4 +1,3 @@
--- change mode names or labels
 local mode_map = {
 	n = "NOR",
 	nt = "NOR",
@@ -12,6 +11,10 @@ local mode_map = {
 	['!'] = "SH",
 	c = "COM"
 }
+
+function custom_filename_path()
+	return string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
+end
 
 require('lualine').setup {
 	options = {
@@ -150,7 +153,7 @@ require('lualine').setup {
 				color = {
 					bg = '#c7d158'
 				},
-				path = 1,
+				-- path = 1,
 				separator = {
 					-- right = ''
 					right = ''
@@ -158,7 +161,8 @@ require('lualine').setup {
 				symbols = {
 					modified = '●',
 					readonly = '[RO]',
-				}
+				},
+				fmt = custom_filename_path
 			},
 			{'diff',
 				colored = true,
@@ -187,7 +191,6 @@ require('lualine').setup {
 				},
 				source = nil,
 			},
-
 		},
 		lualine_b = {
 		},
@@ -204,7 +207,7 @@ require('lualine').setup {
 					bg = '#c7d158',
 					fg = '#1a1b26',
 				},
-				path = 1,
+				-- path = 1,
 				separator = {
 					-- right = ''
 					right = ''
@@ -212,7 +215,8 @@ require('lualine').setup {
 				symbols = {
 					modified = '●',
 					readonly = '[RO]',
-				}
+				},
+				fmt = custom_filename_path
 			},
 			{'diff',
 				colored = true,
@@ -241,11 +245,11 @@ require('lualine').setup {
 				},
 				source = nil,
 			},
-
 		},
 		lualine_b = {
 		},
 		lualine_c = {},
 	},
+
 	extensions = {}
 }
