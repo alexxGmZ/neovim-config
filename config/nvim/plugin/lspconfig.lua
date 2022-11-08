@@ -39,3 +39,7 @@ require('lspconfig')['phpactor'].setup{
 	capabilities = capabilities,
 }
 
+require('lspconfig')['r_language_server'].setup{
+	capabilities = capabilities,
+}
+

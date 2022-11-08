@@ -1,3 +1,18 @@
+-- change mode names or labels
+local mode_map = {
+	n = "NOR",
+	nt = "NOR",
+	i = "INS",
+	R = "REP",
+	v = "VIS",
+	V = "VLI",
+	no = "CHA",
+	["\22"] = "VBL",
+	t = "TER",
+	['!'] = "SH",
+	c = "COM"
+}
+
 require('lualine').setup {
 	options = {
 		icons_enabled = false,
@@ -21,6 +36,7 @@ require('lualine').setup {
 			winbar = 1000,
 		},
 	},
+
 	sections = {
 		lualine_a = {
 			{'mode',
@@ -29,17 +45,120 @@ require('lualine').setup {
 					left = '',
 					right = ''
 				},
+				fmt = function()
+					return mode_map[vim.api.nvim_get_mode().mode] or vim.api.nvim_get_mode().mode
+				end
 			},
+		},
+		lualine_b = {
 			{'branch',
 				color = {
 					bg = '#f92672',
 					fg = '#f7f5f5'
 				},
 				separator = {
-					left = '',
-					right = ''
+					right = ''
 				},
 				icons_enabled = true,
+			},
+		},
+		lualine_c = {
+			{'diagnostics',
+				color = {
+					bg = '#1a1b26',
+				},
+				sources = { 'nvim_diagnostic', 'coc', 'ale', 'nvim_lsp' },
+				sections = { 'error', 'warn', 'info', },
+				symbols = {
+					error = ' ',
+					warn = ' ',
+					info = ' ',
+				},
+				colored = true,
+				update_in_insert = false,
+				always_visible = false,
+				separator = {
+					right = ''
+				}
+			},
+		},
+		lualine_x = {},
+		lualine_y = {'encoding', 'filetype', 'progress'},
+		lualine_z = {
+			{'location',
+				separator = {
+					left = '',
+					right = ''
+				}
+			}
+		}
+	},
+
+	inactive_sections = {
+		lualine_a = {},
+		lualine_b = {
+			{'diagnostics',
+				color = {
+					bg = '#1a1b26',
+				},
+				sources = { 'nvim_diagnostic', 'coc', 'ale', 'nvim_lsp' },
+				sections = { 'error', 'warn', 'info', },
+				symbols = {
+					error = ' ',
+					warn = ' ',
+					info = ' ',
+				},
+				colored = true,
+				update_in_insert = false,
+				always_visible = false,
+				separator = {
+					right = ''
+				}
+			},
+		},
+		lualine_c = {},
+		lualine_x = {},
+		lualine_y = {
+			{ 'encoding', 'filetype',
+				color = {
+					fg = '#1a1b26',
+				}
+			},
+			{ 'filetype',
+				color = {
+					fg = '#1a1b26',
+				}
+			}
+		},
+		lualine_z = {
+			{'location',
+				color = {
+					bg = '#66d9ef',
+					fg = '#1a1b26'
+				},
+				separator = {
+					left = '',
+					right = ''
+				},
+			}
+		}
+	},
+
+	winbar = {
+		lualine_a = {
+			{'filename',
+				color = {
+					bg = '#c7d158'
+				},
+				path = 1,
+				separator = {
+					-- right = ''
+					right = ''
+				},
+				symbols = {
+					modified = '●',
+					readonly = '[RO]',
+				}
 			},
 			{'diff',
 				colored = true,
@@ -63,127 +182,70 @@ require('lualine').setup {
 					removed = '-',
 				},
 				separator = {
-					right = ''
+					-- right = ''
+					right = ''
 				},
 				source = nil,
 			},
+
 		},
 		lualine_b = {
-			{'filename',
-				color = {
-					bg = '#c7d158'
-				},
-				path = 1,
-				separator = {
-					right = ''
-				},
-				symbols = {
-					modified = '●',
-					readonly = '[RO]',
-				}
-			}
-		},
-		lualine_c = {
-			{'diagnostics',
-				color = {
-					bg = '#1a1b26',
-				},
-				sources = { 'nvim_diagnostic', 'coc', 'ale', 'nvim_lsp' },
-				sections = { 'error', 'warn', 'info', 'hint' },
-				symbols = {
-					error = 'E',
-					warn = 'W',
-					info = 'I',
-					hint = 'H'
-				},
-				colored = true,
-				update_in_insert = false,
-				always_visible = false,
-				separator = {
-					right = ''
-				}
-			},
-		},
-		lualine_x = {},
-		lualine_y = {'encoding', 'filetype', 'progress'},
-		lualine_z = {
-			{'location',
-				separator = {
-					left = '',
-					right = ''
-				}
-			}
-		}
-	},
-	inactive_sections = {
-		lualine_a = {
-			{'filename',
-				color = {
-					bg = '#c7d158',
-					fg = '#1a1b26'
-				},
-				separator = {
-					left = '',
-					right = ''
-				},
-				symbols = {
-					modified = '●',
-					readonly = '[RO]',
-				},
-			}
-		},
-		lualine_b = {
-			{'diagnostics',
-				color = {
-					bg = '#1a1b26',
-				},
-				sources = { 'nvim_diagnostic', 'coc', 'ale', 'nvim_lsp' },
-				sections = { 'error', 'warn', 'info', 'hint' },
-				symbols = {
-					error = 'E',
-					warn = 'W',
-					info = 'I',
-					hint = 'H'
-				},
-				colored = true,
-				update_in_insert = false,
-				always_visible = false,
-				separator = {
-					right = ''
-				}
-			},
 		},
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = {},
-		lualine_z = {
-			{'location',
+		lualine_z = {}
+	},
+
+	inactive_winbar = {
+		lualine_a = {
+			{'filename',
 				color = {
-					bg = '#66d9ef',
-					fg = '#1a1b26'
+					bg = '#c7d158',
+					fg = '#1a1b26',
+				},
+				path = 1,
+				separator = {
+					-- right = ''
+					right = ''
+				},
+				symbols = {
+					modified = '●',
+					readonly = '[RO]',
+				}
+			},
+			{'diff',
+				colored = true,
+				color = {
+					bg = '#1a1b26',
+				},
+				diff_color = {
+					added = {
+						fg = '#9ece6a',
+					},
+					modified = {
+						fg = '#7dcfff',
+					},
+					removed = {
+						fg = '#f7768e',
+					},
+				},
+				symbols = {
+					added = '+',
+					modified = '~',
+					removed = '-',
 				},
 				separator = {
-					left = '',
-					right = ''
+					-- right = ''
+					right = ''
 				},
-			}
-		}
+				source = nil,
+			},
+
+		},
+		lualine_b = {
+		},
+		lualine_c = {},
 	},
-	-- tabline = {
-	-- 	lualine_a = {},
-	-- 	lualine_b = {},
-	-- 	lualine_c = {},
-	-- 	lualine_z = {
-	-- 		{'tabs',
-	-- 			mode = 0,
-	-- 			separator = {
-	-- 				left = '',
-	-- 				right = ''
-	-- 			},
-	-- 		},
-	-- 	}
-	-- },
-	winbar = {},
-	inactive_winbar = {},
 	extensions = {}
 }

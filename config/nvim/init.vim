@@ -82,6 +82,7 @@ lua << EOF
 			}
 		}
 	})
+
 EOF
 
 hi MatchParen cterm=none gui=underline
@@ -104,5 +105,4 @@ augroup HANDSOME
 augroup END
 
 " nvim-treesitter-context
-	"hi TreesitterContextBottom gui=underline guisp=Grey
 	hi TreesitterContextBottom guibg=#313244
