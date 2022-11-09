@@ -13,7 +13,20 @@ local mode_map = {
 }
 
 function custom_filename_path()
-	return string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
+	local modified_symbol = ""
+	local readonly_symbol = ""
+	-- relative path
+	local file_name = string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
+
+	if vim.bo.modified then
+		modified_symbol = " ●"
+	end
+
+	if vim.bo.readonly then
+		readonly_symbol = " [RO]"
+	end
+
+	return file_name .. modified_symbol .. readonly_symbol
 end
 
 require('lualine').setup {
@@ -158,10 +171,6 @@ require('lualine').setup {
 					-- right = ''
 					right = ''
 				},
-				symbols = {
-					modified = '●',
-					readonly = '[RO]',
-				},
 				fmt = custom_filename_path
 			},
 			{'diff',
@@ -211,10 +220,6 @@ require('lualine').setup {
 				separator = {
 					-- right = ''
 					right = ''
-				},
-				symbols = {
-					modified = '●',
-					readonly = '[RO]',
 				},
 				fmt = custom_filename_path
 			},
