@@ -26,7 +26,7 @@ function custom_filename_path()
 		readonly_symbol = " [RO]"
 	end
 
-	return file_name .. modified_symbol .. readonly_symbol
+	return file_name .. readonly_symbol .. modified_symbol
 end
 
 require('lualine').setup {
@@ -164,9 +164,9 @@ require('lualine').setup {
 		lualine_a = {
 			{'filename',
 				color = {
-					bg = '#c7d158'
+					bg = '#474973',
+					fg = '#cdd6f4'
 				},
-				-- path = 1,
 				separator = {
 					-- right = ''
 					right = ''
@@ -213,10 +213,9 @@ require('lualine').setup {
 		lualine_a = {
 			{'filename',
 				color = {
-					bg = '#c7d158',
-					fg = '#1a1b26',
+					bg = '#474973',
+					fg = '#cdd6f4'
 				},
-				-- path = 1,
 				separator = {
 					-- right = ''
 					right = ''
@@ -251,8 +250,7 @@ require('lualine').setup {
 				source = nil,
 			},
 		},
-		lualine_b = {
-		},
+		lualine_b = {},
 		lualine_c = {},
 	},
 
