@@ -9,6 +9,7 @@ call plug#begin()
 	Plug 'numToStr/Comment.nvim'
 	Plug 'nvim-treesitter/nvim-treesitter-context'
 	Plug 'akinsho/bufferline.nvim'
+	Plug 'SmiteshP/nvim-navic'
 
 	" git
 	Plug 'tpope/vim-fugitive'

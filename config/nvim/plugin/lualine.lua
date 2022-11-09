@@ -1,3 +1,5 @@
+local navic = require("nvim-navic")
+
 local mode_map = {
 	n = "NOR",
 	nt = "NOR",
@@ -17,6 +19,11 @@ function custom_filename_path()
 	local readonly_symbol = ""
 	-- relative path
 	local file_name = string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
+	local navic_location = ""
+
+	if navic.is_available() and navic.get_location() ~= "" then
+		navic_location = "  " .. navic.get_location()
+	end
 
 	if vim.bo.modified then
 		modified_symbol = " ●"
@@ -26,7 +33,8 @@ function custom_filename_path()
 		readonly_symbol = " [RO]"
 	end
 
-	return file_name .. readonly_symbol .. modified_symbol
+	-- print(navic.get_location(), navic.is_available())
+	return file_name .. readonly_symbol .. modified_symbol .. navic_location
 end
 
 require('lualine').setup {

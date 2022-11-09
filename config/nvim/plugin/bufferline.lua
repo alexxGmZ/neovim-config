@@ -1,7 +1,6 @@
-local utils = require("bufferline.utils")
 require('bufferline').setup {
 	options = {
-		always_show_bufferline = false,
+		always_show_bufferline = true,
 		mode = "tabs",
 		truncate_names = false,
 		name_formatter = function(buf)
