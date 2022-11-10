@@ -38,6 +38,7 @@ set mouse=a
 set showcmd
 set nobackup
 set writebackup
+" set nowritebackup
 set nowrap
 set noshowmode
 set encoding=UTF-8

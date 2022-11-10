@@ -10,6 +10,7 @@ call plug#begin()
 	Plug 'nvim-treesitter/nvim-treesitter-context'
 	Plug 'akinsho/bufferline.nvim'
 	Plug 'SmiteshP/nvim-navic'
+	Plug 'nvim-tree/nvim-web-devicons'
 
 	" git
 	Plug 'tpope/vim-fugitive'

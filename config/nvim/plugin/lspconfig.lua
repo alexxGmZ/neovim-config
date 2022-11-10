@@ -59,3 +59,8 @@ require('lspconfig')['r_language_server'].setup{
 	on_attach = navic_on_attach
 }
 
+require('lspconfig')['cssls'].setup{
+	capabilities = capabilities,
+	on_attach = navic_on_attach
+}
+
