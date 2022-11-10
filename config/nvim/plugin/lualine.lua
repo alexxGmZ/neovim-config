@@ -33,7 +33,6 @@ function custom_filename_path()
 		readonly_symbol = " [RO]"
 	end
 
-	-- print(navic.get_location(), navic.is_available())
 	return file_name .. readonly_symbol .. modified_symbol .. navic_location
 end
 
@@ -85,6 +84,33 @@ require('lualine').setup {
 				},
 				icons_enabled = true,
 			},
+			{'diff',
+				colored = true,
+				color = {
+					bg = '#1a1b26',
+				},
+				diff_color = {
+					added = {
+						fg = '#9ece6a',
+					},
+					modified = {
+						fg = '#7dcfff',
+					},
+					removed = {
+						fg = '#f7768e',
+					},
+				},
+				symbols = {
+					added = '+',
+					modified = '~',
+					removed = '-',
+				},
+				separator = {
+					-- right = ''
+					-- right = ''
+				},
+				source = nil,
+			},
 		},
 		lualine_c = {
 			{'diagnostics',
@@ -119,7 +145,35 @@ require('lualine').setup {
 	},
 
 	inactive_sections = {
-		lualine_a = {},
+		lualine_a = {
+			{'diff',
+				colored = true,
+				color = {
+					bg = '#1a1b26',
+				},
+				diff_color = {
+					added = {
+						fg = '#9ece6a',
+					},
+					modified = {
+						fg = '#7dcfff',
+					},
+					removed = {
+						fg = '#f7768e',
+					},
+				},
+				symbols = {
+					added = '+',
+					modified = '~',
+					removed = '-',
+				},
+				separator = {
+					-- right = ''
+					right = ''
+				},
+				source = nil,
+			},
+		},
 		lualine_b = {
 			{'diagnostics',
 				color = {
@@ -181,33 +235,6 @@ require('lualine').setup {
 				},
 				fmt = custom_filename_path
 			},
-			{'diff',
-				colored = true,
-				color = {
-					bg = '#1a1b26',
-				},
-				diff_color = {
-					added = {
-						fg = '#9ece6a',
-					},
-					modified = {
-						fg = '#7dcfff',
-					},
-					removed = {
-						fg = '#f7768e',
-					},
-				},
-				symbols = {
-					added = '+',
-					modified = '~',
-					removed = '-',
-				},
-				separator = {
-					-- right = ''
-					right = ''
-				},
-				source = nil,
-			},
 		},
 		lualine_b = {
 		},
@@ -229,33 +256,6 @@ require('lualine').setup {
 					right = ''
 				},
 				fmt = custom_filename_path
-			},
-			{'diff',
-				colored = true,
-				color = {
-					bg = '#1a1b26',
-				},
-				diff_color = {
-					added = {
-						fg = '#9ece6a',
-					},
-					modified = {
-						fg = '#7dcfff',
-					},
-					removed = {
-						fg = '#f7768e',
-					},
-				},
-				symbols = {
-					added = '+',
-					modified = '~',
-					removed = '-',
-				},
-				separator = {
-					-- right = ''
-					right = ''
-				},
-				source = nil,
 			},
 		},
 		lualine_b = {},

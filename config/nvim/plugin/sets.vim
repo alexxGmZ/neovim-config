@@ -17,6 +17,7 @@ set termguicolors
 	set number
 	set cursorline
 	set scrolloff=5
+	set sidescrolloff=8
 
 " search
 	set hlsearch

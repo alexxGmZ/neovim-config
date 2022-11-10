@@ -1,7 +1,9 @@
 -- nvim-navic plugin
 local navic = require("nvim-navic")
 local navic_on_attach = function(client, bufnr)
-	return navic.attach(client, bufnr)
+	if client.server_capabilities.documentSymbolProvider then
+		return navic.attach(client, bufnr)
+	end
 end
 
 -- cmp-nvim-lsp plugin
