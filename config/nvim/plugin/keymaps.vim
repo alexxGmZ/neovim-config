@@ -15,11 +15,6 @@ nmap <leader>vst :vsplit term://$SHELL <CR>
 nmap <leader>spt :split term://$SHELL <CR>
 nmap <leader>tnt :tabnew term://$SHELL <CR>
 
-" nerdtree toggle
-nmap <leader>F :NERDTreeToggle <CR>
-nmap <leader><leader>f :NERDTreeToggle <CR>
-nmap <F6> :NERDTreeToggle <CR>
-
 " tagbar toggle
 nmap <F8> :TagbarToggle <CR>
 nmap <leader>t :TagbarToggle <CR>
@@ -36,4 +31,11 @@ inoremap ' ''<Esc>ha
 
 nmap <leader>qq :quit <CR>
 nmap <leader>qa :quitall <CR>
-nmap <leader>w :write <CR>
+nmap <leader>ww :write <CR>
+nmap <leader>wq :wq <CR>
+nmap <leader>wa :wa <CR>
+
+" nvim-tree
+nmap <leader>F :NvimTreeToggle <CR>
+nmap <leader><leader>f :NvimTreeToggle <CR>
+nmap <F6> :NvimTreeToggle <CR>

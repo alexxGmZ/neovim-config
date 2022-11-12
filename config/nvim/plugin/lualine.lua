@@ -1,5 +1,6 @@
 local navic = require("nvim-navic")
 
+-- rename mode names to shorter ones
 local mode_map = {
 	n = "NOR",
 	nt = "NOR",
@@ -14,25 +15,31 @@ local mode_map = {
 	c = "COM"
 }
 
+-- this function is mainly for winbar
 function custom_filename_path()
 	local modified_symbol = ""
 	local readonly_symbol = ""
-	-- relative path
-	local file_name = string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
 	local navic_location = ""
 
+	-- relative path, replace directory slashes to a bigger arrow
+	local file_name = string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
+
+	-- enable navic if it's available
 	if navic.is_available() and navic.get_location() ~= "" then
 		navic_location = "  " .. navic.get_location()
 	end
 
+	-- if the current file is modified
 	if vim.bo.modified then
 		modified_symbol = " ●"
 	end
 
+	-- if the current file is readonly
 	if vim.bo.readonly then
 		readonly_symbol = " [RO]"
 	end
 
+	-- returns the stuff that is being outputted in winbar
 	return file_name .. readonly_symbol .. modified_symbol .. navic_location
 end
 

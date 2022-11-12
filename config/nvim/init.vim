@@ -19,7 +19,7 @@ call plug#begin()
 	" navigation
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
-	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+	Plug 'nvim-tree/nvim-tree.lua'
 	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'preservim/tagbar'
 	Plug 'jeffkreeftmeijer/vim-numbertoggle'
