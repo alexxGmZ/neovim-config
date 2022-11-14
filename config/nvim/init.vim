@@ -60,7 +60,6 @@ call plug#begin()
 	Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 call plug#end()
 
-set completeopt=menu,menuone,noselect
 " catppuccin colorscheme
 	colorscheme catppuccin-mocha
 

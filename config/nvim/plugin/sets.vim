@@ -1,4 +1,5 @@
 set termguicolors
+set completeopt=menu,menuone,noselect
 
 " indention
 set autoindent

@@ -33,7 +33,6 @@ I use ```vim-plug``` as a Plugin Manager
 
 #### Navigation
 
-* scrooloose/nerdtree
 * junegunn/fzf
 * ibhagwan/fzf-lua
 * preservim/tagbar
@@ -41,6 +40,7 @@ I use ```vim-plug``` as a Plugin Manager
 * jeffkreeftmeijer/vim-numbertoggle
 * nvim-lua/plenary.nvim
 * nvim-telescope/telescope.nvim
+* nvim-tree/nvim-tree.lua
 
 #### Syntax Highlighting
 
@@ -106,7 +106,7 @@ Lightweight Alternatives:
 * [vim-illuminate](#vim-illuminate)
 * [vim-closetag](#vim-closetag)
 * [ale](#ale)
-* [nerdtree](#nerdtree)
+* [nvim-tree](#nvim-tree)
 * [tagbar](#tagbar)
 
 <br>
@@ -673,13 +673,13 @@ nmap ]A :ALELast<CR>
 nmap [A :ALEFirst<CR>
 ```
 
-#### nerdtree
+#### nvim-tree
 
 ```vim
 " vim-script
-nmap <leader>F :NERDTreeToggle <CR>
-nmap <leader><leader>f :NERDTreeToggle <CR>
-nmap <F6> :NERDTreeToggle<CR>
+nmap <leader>F :NvimTreeToggle <CR>
+nmap <leader><leader>f :NvimTreeToggle <CR>
+nmap <F6> :NvimTreeToggle <CR>
 ```
 
 #### tagbar
