@@ -58,10 +58,12 @@ call plug#begin()
 	Plug 'Rigellute/shades-of-purple.vim'
 	Plug 'ghifarit53/tokyonight-vim'
 	Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+	Plug 'folke/tokyonight.nvim'
 call plug#end()
 
 " catppuccin colorscheme
 	colorscheme catppuccin-mocha
+	" colorscheme tokyonight-night
 
 
 " lua plugin configs
@@ -74,7 +76,8 @@ lua << EOF
 
 	-- nvim-lsp-installer
 	require'nvim-lsp-installer'.setup({
-		automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+		-- automatically detect which servers to install (based on which servers are set up via lspconfig)
+		automatic_installation = true,
 		ui = {
 			icons = {
 				server_installed = "✓",
@@ -107,3 +110,7 @@ augroup END
 
 " nvim-treesitter-context
 	hi TreesitterContextBottom guibg=#313244
+	" hi TreesitterContextBottom gui=underline
+
+" tagbar
+	let g:tagbar_sort = 0

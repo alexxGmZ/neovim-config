@@ -40,7 +40,11 @@ function custom_filename_path()
 	end
 
 	-- returns the stuff that is being outputted in winbar
-	return file_name .. readonly_symbol .. modified_symbol .. navic_location
+	return file_name .. navic_location .. readonly_symbol .. modified_symbol
+end
+
+function buffer_name(buf)
+	return buf.name
 end
 
 require('lualine').setup {
