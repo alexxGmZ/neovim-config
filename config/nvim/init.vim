@@ -25,6 +25,7 @@ call plug#begin()
 	Plug 'jeffkreeftmeijer/vim-numbertoggle'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+	Plug 'Xuyuanp/scrollbar.nvim'
 
 	" syntax highlighting
 	" polyglot for backup
@@ -37,6 +38,7 @@ call plug#begin()
 	Plug 'alvan/vim-closetag'
 	Plug 'AndrewRadev/tagalong.vim'
 	Plug 'dense-analysis/ale'
+	Plug 'm4xshen/autoclose.nvim'
 
 	" lightweight auto-completion
 	" Plug 'maxboisvert/vim-simple-complete'
@@ -106,6 +108,10 @@ augroup HANDSOME
 
 	" Terminal
 	autocmd TermOpen * setlocal nonumber norelativenumber
+
+	autocmd WinScrolled,VimResized,QuitPre * silent! lua require('scrollbar').show()
+	autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+	autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
 augroup END
 
 " nvim-treesitter-context
