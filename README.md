@@ -13,7 +13,7 @@
 * zsh (oh-my-zsh)
 * Kitty Terminal (coz it supports font ligature and other utf-8 symbols)
 * npm
-* pyright (for python LSP)
+* python3 (for pyright LSP)
 * clang (for clangd LSP)
 * java-devel (for jdtls LSP)
 * ctags (for tagbar to work)
@@ -89,6 +89,7 @@ Lightweight Alternatives:
 * dense-analysis/ale
 * nvim-treesitter/nvim-treesitter-context
 * numToStr/Comment.nvim
+* nullchilly/fsread.nvim
 
 <br>
 
@@ -337,11 +338,12 @@ require('lualine').setup {
     options = {
         icons_enabled = false,
         theme = 'molokai',
+        -- section_separators = { left = '', right = ''},
         -- component_separators = { left = '', right = ''},
         component_separators = '',
         section_separators = {
             left = '',
-            right = ''
+            right = ''
         },
         disabled_filetypes = {
             statusline = {},
@@ -362,8 +364,8 @@ require('lualine').setup {
             {'mode',
                 icons_enabled = true,
                 separator = {
-                    left = '',
-                    right = ''
+                    -- left = '',
+                    right = ''
                 },
                 fmt = function()
                     return mode_map[vim.api.nvim_get_mode().mode] or vim.api.nvim_get_mode().mode
@@ -377,7 +379,8 @@ require('lualine').setup {
                     fg = '#f7f5f5'
                 },
                 separator = {
-                    right = ''
+                    -- right = ''
+                    right = ''
                 },
                 icons_enabled = true,
             },
@@ -404,7 +407,7 @@ require('lualine').setup {
                 },
                 separator = {
                     -- right = ''
-                    -- right = ''
+                    right = ''
                 },
                 source = nil,
             },
@@ -425,7 +428,8 @@ require('lualine').setup {
                 update_in_insert = false,
                 always_visible = false,
                 separator = {
-                    right = ''
+                    -- right = ''
+                    right = ''
                 }
             },
         },
@@ -434,8 +438,8 @@ require('lualine').setup {
         lualine_z = {
             {'location',
                 separator = {
-                    left = '',
-                    right = ''
+                    left = '',
+                    -- right = ''
                 }
             }
         }
@@ -487,7 +491,7 @@ require('lualine').setup {
                 update_in_insert = false,
                 always_visible = false,
                 separator = {
-                    right = ''
+                    right = ''
                 }
             },
         },
@@ -512,8 +516,8 @@ require('lualine').setup {
                     fg = '#1a1b26'
                 },
                 separator = {
-                    left = '',
-                    right = ''
+                    left = '',
+                    -- right = ''
                 },
             }
         }
@@ -682,10 +686,54 @@ nmap <leader><leader>f :NvimTreeToggle <CR>
 nmap <F6> :NvimTreeToggle <CR>
 ```
 
+```lua
+-- lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup{
+    sort_by = "name",
+    view = {
+        adaptive_size = false,
+        number = false,
+        relativenumber = false,
+    },
+    renderer = {
+        add_trailing = true,
+        group_empty = false,
+        indent_markers = {
+            enable = false,
+            inline_arrows = false,
+            icons = {
+                corner = "└",
+                edge = "│",
+                item = "│",
+                bottom = "─",
+                none = " ",
+            },
+        }
+    },
+    diagnostics = {
+        enable = false,
+        show_on_dirs = false,
+        debounce_delay = 50,
+        icons = {
+            hint = "",
+            info = "",
+            warning = "",
+            error = "",
+        },
+    },
+}
+```
+
 #### tagbar
 
 ```vim
 " vim-script
+let g:tagbar_sort = 0
 nmap <F8> :TagbarToggle<CR>
 nmap <leader>t :TagbarToggle <CR>
 ```
