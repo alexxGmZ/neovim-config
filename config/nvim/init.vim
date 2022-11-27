@@ -11,6 +11,7 @@ call plug#begin()
 	Plug 'akinsho/bufferline.nvim'
 	Plug 'SmiteshP/nvim-navic'
 	Plug 'nvim-tree/nvim-web-devicons'
+	Plug 'nullchilly/fsread.nvim'
 
 	" git
 	Plug 'tpope/vim-fugitive'
@@ -38,7 +39,7 @@ call plug#begin()
 	Plug 'alvan/vim-closetag'
 	Plug 'AndrewRadev/tagalong.vim'
 	Plug 'dense-analysis/ale'
-	Plug 'm4xshen/autoclose.nvim'
+	" Plug 'm4xshen/autoclose.nvim'
 
 	" lightweight auto-completion
 	" Plug 'maxboisvert/vim-simple-complete'

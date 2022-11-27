@@ -51,11 +51,12 @@ require('lualine').setup {
 	options = {
 		icons_enabled = false,
 		theme = 'molokai',
+		-- section_separators = { left = '', right = ''},
 		-- component_separators = { left = '', right = ''},
 		component_separators = '',
 		section_separators = {
 			left = '',
-			right = ''
+			right = ''
 		},
 		disabled_filetypes = {
 			statusline = {},
@@ -76,8 +77,8 @@ require('lualine').setup {
 			{'mode',
 				icons_enabled = true,
 				separator = {
-					left = '',
-					right = ''
+					-- left = '',
+					right = ''
 				},
 				fmt = function()
 					return mode_map[vim.api.nvim_get_mode().mode] or vim.api.nvim_get_mode().mode
@@ -91,7 +92,8 @@ require('lualine').setup {
 					fg = '#f7f5f5'
 				},
 				separator = {
-					right = ''
+					-- right = ''
+					right = ''
 				},
 				icons_enabled = true,
 			},
@@ -118,7 +120,7 @@ require('lualine').setup {
 				},
 				separator = {
 					-- right = ''
-					-- right = ''
+					right = ''
 				},
 				source = nil,
 			},
@@ -139,7 +141,8 @@ require('lualine').setup {
 				update_in_insert = false,
 				always_visible = false,
 				separator = {
-					right = ''
+					-- right = ''
+					right = ''
 				}
 			},
 		},
@@ -148,8 +151,8 @@ require('lualine').setup {
 		lualine_z = {
 			{'location',
 				separator = {
-					left = '',
-					right = ''
+					left = '',
+					-- right = ''
 				}
 			}
 		}
@@ -201,7 +204,7 @@ require('lualine').setup {
 				update_in_insert = false,
 				always_visible = false,
 				separator = {
-					right = ''
+					right = ''
 				}
 			},
 		},
@@ -226,8 +229,8 @@ require('lualine').setup {
 					fg = '#1a1b26'
 				},
 				separator = {
-					left = '',
-					right = ''
+					left = '',
+					-- right = ''
 				},
 			}
 		}

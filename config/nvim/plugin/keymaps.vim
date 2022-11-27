@@ -23,11 +23,11 @@ nmap <leader>t :TagbarToggle <CR>
 map <esc> :noh <CR>
 
 " auto-complete brackets
-" inoremap { {}<Esc>ha
-" inoremap ( ()<Esc>ha
-" inoremap [ []<Esc>ha
-" inoremap " ""<Esc>ha
-" inoremap ' ''<Esc>ha
+inoremap { {}<Esc>ha
+inoremap ( ()<Esc>ha
+inoremap [ []<Esc>ha
+inoremap " ""<Esc>ha
+inoremap ' ''<Esc>ha
 
 nmap <leader>qq :quit <CR>
 nmap <leader>qa :quitall <CR>

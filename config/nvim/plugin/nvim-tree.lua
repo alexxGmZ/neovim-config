@@ -4,7 +4,7 @@ vim.opt.termguicolors = true
 
 -- empty setup using defaults
 require("nvim-tree").setup{
-	sort_by = "extension",
+	sort_by = "name",
 	view = {
 		adaptive_size = false,
 		number = false,
