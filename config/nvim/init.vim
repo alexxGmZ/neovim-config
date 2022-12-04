@@ -1,6 +1,10 @@
 syntax on
 syntax enable
 
+if exists('g:vscode')
+	" for vscode neovim
+else
+
 " vim-plug
 call plug#begin()
 	Plug 'lukas-reineke/indent-blankline.nvim'
@@ -16,6 +20,7 @@ call plug#begin()
 	" git
 	Plug 'tpope/vim-fugitive'
 	Plug 'idanarye/vim-merginal'
+	" Plug 'akinsho/git-conflict.nvim'
 
 	" navigation
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -26,7 +31,9 @@ call plug#begin()
 	Plug 'jeffkreeftmeijer/vim-numbertoggle'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-	Plug 'Xuyuanp/scrollbar.nvim'
+	" Plug 'Xuyuanp/scrollbar.nvim'
+	Plug 'stevearc/aerial.nvim'
+	Plug 'gorbit99/codewindow.nvim'
 
 	" syntax highlighting
 	" polyglot for backup
@@ -68,7 +75,6 @@ call plug#end()
 	colorscheme catppuccin-mocha
 	" colorscheme tokyonight-night
 
-
 " lua plugin configs
 lua << EOF
 	-- Comment.nvim
@@ -89,7 +95,6 @@ lua << EOF
 			}
 		}
 	})
-
 EOF
 
 hi MatchParen cterm=none gui=underline
@@ -121,3 +126,6 @@ augroup END
 
 " tagbar
 	let g:tagbar_sort = 0
+
+endif
+

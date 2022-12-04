@@ -77,7 +77,6 @@ require('lualine').setup {
 			{'mode',
 				icons_enabled = true,
 				separator = {
-					-- left = '',
 					right = ''
 				},
 				fmt = function()
@@ -119,7 +118,6 @@ require('lualine').setup {
 					removed = '-',
 				},
 				separator = {
-					-- right = ''
 					right = ''
 				},
 				source = nil,
@@ -141,7 +139,6 @@ require('lualine').setup {
 				update_in_insert = false,
 				always_visible = false,
 				separator = {
-					-- right = ''
 					right = ''
 				}
 			},
@@ -152,7 +149,6 @@ require('lualine').setup {
 			{'location',
 				separator = {
 					left = '',
-					-- right = ''
 				}
 			}
 		}
@@ -182,7 +178,6 @@ require('lualine').setup {
 					removed = '-',
 				},
 				separator = {
-					-- right = ''
 					right = ''
 				},
 				source = nil,
@@ -230,7 +225,6 @@ require('lualine').setup {
 				},
 				separator = {
 					left = '',
-					-- right = ''
 				},
 			}
 		}
@@ -244,7 +238,6 @@ require('lualine').setup {
 					fg = '#cdd6f4'
 				},
 				separator = {
-					-- right = ''
 					right = ''
 				},
 				fmt = custom_filename_path
@@ -266,7 +259,6 @@ require('lualine').setup {
 					fg = '#cdd6f4'
 				},
 				separator = {
-					-- right = ''
 					right = ''
 				},
 				fmt = custom_filename_path
