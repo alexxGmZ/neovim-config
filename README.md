@@ -41,6 +41,7 @@ I use ```vim-plug``` as a Plugin Manager
 * nvim-lua/plenary.nvim
 * nvim-telescope/telescope.nvim
 * nvim-tree/nvim-tree.lua
+* stevearc/aerial.nvim
 
 #### Syntax Highlighting
 
@@ -79,6 +80,8 @@ Lightweight Alternatives:
 * akinsho/bufferline.nvim
 * SmiteshP/nvim-navic
 * nvim-tree/nvim-web-devicons
+* gorbit99/codewindow.nvim
+* folke/tokyonight.nvim
 
 #### Quality of Life
 
@@ -109,6 +112,8 @@ Lightweight Alternatives:
 * [ale](#ale)
 * [nvim-tree](#nvim-tree)
 * [tagbar](#tagbar)
+* [aerial](#aerial)
+* [codewindow](#codewindow)
 
 <br>
 
@@ -192,7 +197,6 @@ cmp.setup.cmdline(':', {
 
 ```lua
 -- lua
-
 -- nvim-navic plugin
 local navic = require("nvim-navic")
 local navic_on_attach = function(client, bufnr)
@@ -204,57 +208,73 @@ end
 -- cmp-nvim-lsp plugin
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+-- python
 require('lspconfig')['pyright'].setup {
     capabilities = capabilities,
     on_attach = navic_on_attach
 }
 
+-- java
 require('lspconfig')['jdtls'].setup{
     capabilities = capabilities,
     on_attach = navic_on_attach
 }
 
+-- hmtl
 require('lspconfig')['html'].setup{
     capabilities = capabilities,
     on_attach = navic_on_attach
 }
 
+-- c, c++, objective c, c#
 require('lspconfig')['clangd'].setup{
     capabilities = capabilities,
     on_attach = navic_on_attach
 }
 
+-- lua
 require('lspconfig')['sumneko_lua'].setup{
     capabilities = capabilities,
     on_attach = navic_on_attach
 }
 
+-- php
 require('lspconfig')['intelephense'].setup{
     capabilities = capabilities,
     on_attach = navic_on_attach
 }
 
+-- php
+require('lspconfig')['phpactor'].setup{
+    capabilities = capabilities,
+}
+
+-- vimscript
 require('lspconfig')['vimls'].setup{
     capabilities = capabilities,
     on_attach = navic_on_attach
 }
 
+-- sql
 require('lspconfig')['sqls'].setup{
     capabilities = capabilities,
     on_attach = navic_on_attach
 }
 
-require('lspconfig')['phpactor'].setup{
-    capabilities = capabilities,
-}
-
+-- R
 require('lspconfig')['r_language_server'].setup{
     capabilities = capabilities,
     on_attach = navic_on_attach
 }
 
+-- css
 require('lspconfig')['cssls'].setup{
+    capabilities = capabilities,
+    on_attach = navic_on_attach
+}
+
+-- markdown
+require('lspconfig')['marksman'].setup{
     capabilities = capabilities,
     on_attach = navic_on_attach
 }
@@ -294,10 +314,9 @@ require("indent_blankline").setup {
 
 ```lua
 -- lua
-
--- nvim-navic plugin
 local navic = require("nvim-navic")
 
+-- rename mode names to shorter ones
 local mode_map = {
     n = "NOR",
     nt = "NOR",
@@ -312,26 +331,36 @@ local mode_map = {
     c = "COM"
 }
 
+-- this function is mainly for winbar
 function custom_filename_path()
     local modified_symbol = ""
     local readonly_symbol = ""
-    -- relative path
-    local file_name = string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
     local navic_location = ""
 
+    -- relative path, replace directory slashes to a bigger arrow
+    local file_name = string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
+
+    -- enable navic if it's available
     if navic.is_available() and navic.get_location() ~= "" then
         navic_location = "  " .. navic.get_location()
     end
 
+    -- if the current file is modified
     if vim.bo.modified then
         modified_symbol = " ●"
     end
 
+    -- if the current file is readonly
     if vim.bo.readonly then
         readonly_symbol = " [RO]"
     end
 
-    return file_name .. readonly_symbol .. modified_symbol .. navic_location
+    -- returns the stuff that is being outputted in winbar
+    return file_name .. navic_location .. readonly_symbol .. modified_symbol
+end
+
+function buffer_name(buf)
+    return buf.name
 end
 
 require('lualine').setup {
@@ -364,7 +393,6 @@ require('lualine').setup {
             {'mode',
                 icons_enabled = true,
                 separator = {
-                    -- left = '',
                     right = ''
                 },
                 fmt = function()
@@ -406,7 +434,6 @@ require('lualine').setup {
                     removed = '-',
                 },
                 separator = {
-                    -- right = ''
                     right = ''
                 },
                 source = nil,
@@ -428,7 +455,6 @@ require('lualine').setup {
                 update_in_insert = false,
                 always_visible = false,
                 separator = {
-                    -- right = ''
                     right = ''
                 }
             },
@@ -439,7 +465,6 @@ require('lualine').setup {
             {'location',
                 separator = {
                     left = '',
-                    -- right = ''
                 }
             }
         }
@@ -469,7 +494,6 @@ require('lualine').setup {
                     removed = '-',
                 },
                 separator = {
-                    -- right = ''
                     right = ''
                 },
                 source = nil,
@@ -517,7 +541,6 @@ require('lualine').setup {
                 },
                 separator = {
                     left = '',
-                    -- right = ''
                 },
             }
         }
@@ -531,7 +554,6 @@ require('lualine').setup {
                     fg = '#cdd6f4'
                 },
                 separator = {
-                    -- right = ''
                     right = ''
                 },
                 fmt = custom_filename_path
@@ -553,7 +575,6 @@ require('lualine').setup {
                     fg = '#cdd6f4'
                 },
                 separator = {
-                    -- right = ''
                     right = ''
                 },
                 fmt = custom_filename_path
@@ -735,7 +756,46 @@ require("nvim-tree").setup{
 " vim-script
 let g:tagbar_sort = 0
 nmap <F8> :TagbarToggle<CR>
-nmap <leader>t :TagbarToggle <CR>
+nmap <leader>tt :TagbarToggle <CR>
+```
+
+#### aerial
+
+```lua
+-- lua
+require('aerial').setup({
+    -- optionally use on_attach to set keymaps when aerial has attached to a buffer
+    on_attach = function(bufnr)
+        -- Jump forwards/backwards with '{' and '}'
+        vim.keymap.set('n', '{', '<cmd>AerialPrev<CR>', {buffer = bufnr})
+        vim.keymap.set('n', '}', '<cmd>AerialNext<CR>', {buffer = bufnr})
+    end,
+
+    filter_kind = false
+})
+```
+
+#### codewindow
+
+```lua
+-- lua
+require('codewindow').setup{
+    active_in_terminals = false,
+    auto_enable = false,
+    exclude_filetypes = {},
+    max_minimap_height = nil,
+    max_lines = nil,
+    minimap_width = 15,
+    use_lsp = true,
+    use_treesitter = true,
+    use_git = true,
+    width_multiplier = 2,
+    z_index = 1,
+    show_cursor = true,
+    window_border = 'single'
+}
+
+require('codewindow').apply_default_keybinds()
 ```
 
 <br>
