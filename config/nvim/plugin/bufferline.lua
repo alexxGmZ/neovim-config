@@ -1,5 +1,9 @@
+local bufferline_setup, bufferline = pcall(require, "bufferline")
+if not bufferline_setup then
+	return
+end
 
-require('bufferline').setup {
+bufferline.setup {
 	options = {
 		always_show_bufferline = true,
 		mode = "tabs",

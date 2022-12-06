@@ -1,4 +1,10 @@
-local navic = require("nvim-navic")
+local nvim_navic_setup, navic = pcall(require, "nvim-navic")
+local lualine_setup, lualine = pcall(require, "lualine")
+
+if not nvim_navic_setup or
+	not lualine_setup then
+	return
+end
 
 -- rename mode names to shorter ones
 local mode_map = {
@@ -47,7 +53,7 @@ function buffer_name(buf)
 	return buf.name
 end
 
-require('lualine').setup {
+lualine.setup {
 	options = {
 		icons_enabled = false,
 		theme = 'molokai',

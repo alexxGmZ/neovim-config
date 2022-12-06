@@ -1,3 +1,9 @@
+local telescope_setup, telescope = pcall(require, "telescope")
+
+if not telescope_setup then
+	return
+end
+
 local builtin = require('telescope.builtin')
 local actions = require("telescope.actions")
 
@@ -7,7 +13,7 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
-require('telescope').setup{
+telescope.setup{
 	defaults = {
 		mappings = {
 			i = {

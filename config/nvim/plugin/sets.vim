@@ -1,6 +1,8 @@
 set termguicolors
 set completeopt=menu,menuone,noselect
 
+set clipboard=unnamedplus
+
 " indention
 set autoindent
 set noexpandtab

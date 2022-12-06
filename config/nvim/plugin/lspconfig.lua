@@ -1,5 +1,14 @@
+local navic_setup, navic = pcall(require, "nvim-navic")
+local cmp_nvim_lsp_setup, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+local lspconfig_setup = pcall(require, "lspconfig")
+
+if not navic_setup or
+	not cmp_nvim_lsp_setup or
+	not lspconfig_setup then
+	return
+end
+
 -- nvim-navic plugin
-local navic = require("nvim-navic")
 local navic_on_attach = function(client, bufnr)
 	if client.server_capabilities.documentSymbolProvider then
 		return navic.attach(client, bufnr)
@@ -7,7 +16,7 @@ local navic_on_attach = function(client, bufnr)
 end
 
 -- cmp-nvim-lsp plugin
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- python
 require('lspconfig')['pyright'].setup {

@@ -1,4 +1,8 @@
-local cmp = require'cmp'
+local cmp_setup, cmp = pcall(require, "cmp")
+
+if not cmp_setup then
+	return
+end
 
 cmp.setup({
 	snippet = {

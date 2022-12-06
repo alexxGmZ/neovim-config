@@ -1,10 +1,6 @@
 syntax on
 syntax enable
 
-if exists('g:vscode')
-	" for vscode neovim
-else
-
 " vim-plug
 call plug#begin()
 	Plug 'lukas-reineke/indent-blankline.nvim'
@@ -16,6 +12,8 @@ call plug#begin()
 	Plug 'SmiteshP/nvim-navic'
 	Plug 'nvim-tree/nvim-web-devicons'
 	Plug 'nullchilly/fsread.nvim'
+	Plug 'davidgranstrom/nvim-markdown-preview'
+	Plug 'manzeloth/live-server'
 
 	" git
 	Plug 'tpope/vim-fugitive'
@@ -66,14 +64,13 @@ call plug#begin()
 
 	" colorschemes
 	Plug 'Rigellute/shades-of-purple.vim'
-	Plug 'ghifarit53/tokyonight-vim'
 	Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 	Plug 'folke/tokyonight.nvim'
 call plug#end()
 
 " catppuccin colorscheme
-	colorscheme catppuccin-mocha
-	" colorscheme tokyonight-night
+colorscheme catppuccin-mocha
+" colorscheme tokyonight-night
 
 " lua plugin configs
 lua << EOF
@@ -100,7 +97,7 @@ EOF
 hi MatchParen cterm=none gui=underline
 
 " tagalong
-	let g:tagalong_verbose = 1
+let g:tagalong_verbose = 1
 
 fun! TrimWhitespace()
 	let l:save = winsaveview()
@@ -118,14 +115,13 @@ augroup HANDSOME
 	autocmd WinScrolled,VimResized,QuitPre * silent! lua require('scrollbar').show()
 	autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
 	autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
+	" autocmd FileType markdown MarkdownPreview
 augroup END
 
 " nvim-treesitter-context
-	hi TreesitterContextBottom guibg=#313244
-	" hi TreesitterContextBottom gui=underline
+hi TreesitterContextBottom guibg=#313244
+" hi TreesitterContextBottom gui=underline
 
 " tagbar
-	let g:tagbar_sort = 0
-
-endif
+let g:tagbar_sort = 0
 
