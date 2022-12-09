@@ -1,6 +1,5 @@
 set termguicolors
 set completeopt=menu,menuone,noselect
-
 set clipboard=unnamedplus
 
 " indention
@@ -20,8 +19,9 @@ filetype indent on
 set relativenumber
 set number
 set cursorline
-set scrolloff=5
+set scrolloff=8
 set sidescrolloff=8
+set signcolumn=yes
 
 " search
 set hlsearch
