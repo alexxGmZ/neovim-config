@@ -50,9 +50,10 @@ else
 		" language support
 		Plug 'gregsexton/MatchTag'
 		Plug 'norcalli/nvim-colorizer.lua'
-		Plug 'alvan/vim-closetag'
+		" Plug 'alvan/vim-closetag'
 		Plug 'AndrewRadev/tagalong.vim'
 		Plug 'dense-analysis/ale'
+		Plug 'windwp/nvim-ts-autotag'
 		" Plug 'm4xshen/autoclose.nvim'
 
 		" lightweight auto-completion
