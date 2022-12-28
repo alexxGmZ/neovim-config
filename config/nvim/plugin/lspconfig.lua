@@ -55,9 +55,9 @@ require('lspconfig')['intelephense'].setup{
 }
 
 -- php
-require('lspconfig')['phpactor'].setup{
-	capabilities = capabilities,
-}
+-- require('lspconfig')['phpactor'].setup{
+-- 	capabilities = capabilities,
+-- }
 
 -- vimscript
 require('lspconfig')['vimls'].setup{
@@ -85,6 +85,18 @@ require('lspconfig')['cssls'].setup{
 
 -- markdown
 require('lspconfig')['marksman'].setup{
+	capabilities = capabilities,
+	on_attach = navic_on_attach
+}
+
+-- latex
+require('lspconfig')['texlab'].setup{
+	capabilities = capabilities,
+	on_attach = navic_on_attach
+}
+
+-- latex
+require('lspconfig')['tailwindcss'].setup{
 	capabilities = capabilities,
 	on_attach = navic_on_attach
 }

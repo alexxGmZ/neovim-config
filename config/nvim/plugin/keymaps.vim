@@ -48,5 +48,6 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
-" nnoremap <C-o> <C-o>zz
-" nnoremap <C-i> <C-i>zz
+
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
