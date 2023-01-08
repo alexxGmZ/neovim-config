@@ -1,5 +1,5 @@
-local nvim_navic_setup, navic = pcall(require, "nvim-navic")
 local lualine_setup, lualine = pcall(require, "lualine")
+local nvim_navic_setup, navic = pcall(require, "nvim-navic")
 
 if not nvim_navic_setup or
 	not lualine_setup then

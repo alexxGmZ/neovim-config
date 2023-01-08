@@ -3,7 +3,6 @@ syntax enable
 
 call plug#begin()
 	Plug 'lukas-reineke/indent-blankline.nvim'
-	Plug 'nvim-lualine/lualine.nvim'
 	Plug 'RRethy/vim-illuminate'
 	Plug 'numToStr/Comment.nvim'
 	Plug 'nvim-treesitter/nvim-treesitter-context'
@@ -13,6 +12,7 @@ call plug#begin()
 	Plug 'nullchilly/fsread.nvim'
 	Plug 'davidgranstrom/nvim-markdown-preview'
 	Plug 'manzeloth/live-server'
+	Plug 'nvim-lualine/lualine.nvim'
 
 	" git
 	Plug 'tpope/vim-fugitive'
@@ -79,14 +79,24 @@ colorscheme catppuccin-mocha
 
 " lua plugin configs
 lua << EOF
+	local comment_setup, comment = pcall(require, "Comment")
+	local colorizer_setup, colorizer = pcall(require, "colorizer")
+	local lsp_installer_setup, lsp_installer = pcall(require, "nvim-lsp-installer")
+
+	if not comment_setup or
+		not colorizer_setup or
+		not lsp_installer_setup then
+		return
+	end
+
 	-- Comment.nvim
-	require('Comment').setup()
+	comment.setup()
 
 	-- nvim-colorizer
-	require'colorizer'.setup()
+	colorizer.setup()
 
 	-- nvim-lsp-installer
-	require'nvim-lsp-installer'.setup({
+	lsp_installer.setup({
 		-- automatically detect which servers to install (based on which servers are set up via lspconfig)
 		automatic_installation = true,
 		ui = {

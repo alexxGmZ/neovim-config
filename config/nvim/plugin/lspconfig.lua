@@ -51,7 +51,7 @@ require('lspconfig')['sumneko_lua'].setup{
 -- php
 require('lspconfig')['intelephense'].setup{
 	capabilities = capabilities,
-	on_attach = navic_on_attach
+	on_attach = navic_on_attach,
 }
 
 -- php
