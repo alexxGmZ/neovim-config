@@ -2,71 +2,69 @@ syntax on
 syntax enable
 
 call plug#begin()
-	Plug 'lukas-reineke/indent-blankline.nvim'
-	Plug 'RRethy/vim-illuminate'
-	Plug 'numToStr/Comment.nvim'
-	Plug 'nvim-treesitter/nvim-treesitter-context'
-	Plug 'akinsho/bufferline.nvim'
-	Plug 'SmiteshP/nvim-navic'
-	Plug 'nvim-tree/nvim-web-devicons'
-	Plug 'nullchilly/fsread.nvim'
-	Plug 'davidgranstrom/nvim-markdown-preview'
-	Plug 'manzeloth/live-server'
-	Plug 'nvim-lualine/lualine.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'RRethy/vim-illuminate'
+Plug 'numToStr/Comment.nvim'
+Plug 'nvim-treesitter/nvim-treesitter-context'
+Plug 'akinsho/bufferline.nvim'
+Plug 'SmiteshP/nvim-navic'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nullchilly/fsread.nvim', {'on': ['FSRead', 'FSToggle']}
+Plug 'davidgranstrom/nvim-markdown-preview', {'for': 'markdown'}
+Plug 'manzeloth/live-server', {'on': 'LiveServer'}
+Plug 'nvim-lualine/lualine.nvim'
 
-	" git
-	Plug 'tpope/vim-fugitive'
-	Plug 'idanarye/vim-merginal'
-	" Plug 'akinsho/git-conflict.nvim'
+" git
+Plug 'tpope/vim-fugitive'
+Plug 'idanarye/vim-merginal', {'on': ['Merginal', 'MerginalToggle']}
+" Plug 'akinsho/git-conflict.nvim'
 
-	" navigation
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-	Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
-	Plug 'nvim-tree/nvim-tree.lua'
-	Plug 'christoomey/vim-tmux-navigator'
-	Plug 'preservim/tagbar'
-	Plug 'jeffkreeftmeijer/vim-numbertoggle'
-	Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-	Plug 'stevearc/aerial.nvim'
-	Plug 'gorbit99/codewindow.nvim'
-	" Plug 'karb94/neoscroll.nvim'
+" navigation
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
+Plug 'nvim-tree/nvim-tree.lua', {'on': 'NvimTreeToggle'}
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'preservim/tagbar', {'on': ['Tagbar', 'TagbarToggle']}
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.0'}
+Plug 'stevearc/aerial.nvim', {'on': 'AerialToggle'}
+Plug 'gorbit99/codewindow.nvim'
 
-	" syntax highlighting
-	" polyglot for backup
-	Plug 'sheerun/vim-polyglot'
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" syntax highlighting
+" polyglot for backup
+Plug 'mtdl9/vim-log-highlighting', {'for': 'log'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-	" language support
-	Plug 'gregsexton/MatchTag'
-	Plug 'norcalli/nvim-colorizer.lua'
-	Plug 'AndrewRadev/tagalong.vim'
-	Plug 'dense-analysis/ale'
-	Plug 'windwp/nvim-ts-autotag'
-	" Plug 'm4xshen/autoclose.nvim'
+" language support
+Plug 'gregsexton/MatchTag'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'AndrewRadev/tagalong.vim', {'for': ['html', 'php', 'javascript', 'xml', 'markdown']}
+" Plug 'dense-analysis/ale'
+Plug 'windwp/nvim-ts-autotag',
 
-	" lightweight auto-completion
-	" Plug 'maxboisvert/vim-simple-complete'
-	" Plug 'ackyshake/VimCompletesMe'
+" lightweight auto-completion
+" Plug 'maxboisvert/vim-simple-complete'
+" Plug 'ackyshake/VimCompletesMe'
 
-	" auto-completion
-	Plug 'williamboman/nvim-lsp-installer'
-	Plug 'neovim/nvim-lspconfig'
-	Plug 'hrsh7th/cmp-nvim-lsp'
-	Plug 'hrsh7th/cmp-buffer'
-	Plug 'hrsh7th/cmp-path'
-	Plug 'hrsh7th/cmp-cmdline'
-	Plug 'hrsh7th/nvim-cmp'
-	Plug 'hrsh7th/cmp-vsnip'
-	Plug 'hrsh7th/vim-vsnip'
-	Plug 'hrsh7th/vim-vsnip-integ'
+" auto-completion
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 
-	" colorschemes
-	Plug 'Rigellute/shades-of-purple.vim'
-	Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-	Plug 'folke/tokyonight.nvim'
-	Plug 'nyoom-engineering/oxocarbon.nvim'
-	Plug 'ayu-theme/ayu-vim'
+" colorschemes
+Plug 'Rigellute/shades-of-purple.vim'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'folke/tokyonight.nvim'
+Plug 'nyoom-engineering/oxocarbon.nvim'
+Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 colorscheme catppuccin-mocha

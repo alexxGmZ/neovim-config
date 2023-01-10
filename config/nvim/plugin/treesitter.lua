@@ -14,6 +14,8 @@ treesitter.setup {
 		enable = true,
 		additional_vim_regex_highlighting = false,
 	},
+
+	-- for nvim-ts-autotag
 	autotag = {
 		enable = true,
 	}
