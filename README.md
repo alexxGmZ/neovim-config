@@ -2,8 +2,7 @@
 
 <br>
 
-## Why not convert to full Lua configuration?
-Well if it ain't broken then don't fix it. Old habits die hard.
+## Fully converted to Lua configuration
 
 <br>
 
@@ -45,20 +44,16 @@ I use ```vim-plug``` as a Plugin Manager
 * preservim/tagbar
 * christoomey/vim-tmux-navigator
 * jeffkreeftmeijer/vim-numbertoggle
-* nvim-lua/plenary.nvim
-* nvim-telescope/telescope.nvim
 * nvim-tree/nvim-tree.lua
 * stevearc/aerial.nvim
 
 #### Syntax Highlighting
 
-* sheerun/vim-polyglot
 * nvim-treesitter/nvim-treesitter
 
 #### Auto-Completion
 
 * gregsexton/MatchTag
-* vim-scripts/c.vim
 * AndrewRadev/tagalong.vim.git
 * neovim/nvim-lspconfig
 * williamboman/nvim-lsp-installer
@@ -81,21 +76,16 @@ Lightweight Alternatives:
 * lukas-reineke/indent-blankline.nvim
 * nvim-lualine/lualine.nvim
 * catppuccin/nvim
-* Rigellute/shades-of-purple.vim
 * akinsho/bufferline.nvim
 * SmiteshP/nvim-navic
 * nvim-tree/nvim-web-devicons
 * gorbit99/codewindow.nvim
-* folke/tokyonight.nvim
-* nyoom-engineering/oxocarbon.nvim
-* ayu-theme/ayu-vim
 
 #### Quality of Life
 
 * tpope/vim-fugitive
 * idanarye/vim-merginal
 * norcalli/nvim-colorizer.lua
-* dense-analysis/ale
 * nvim-treesitter/nvim-treesitter-context
 * numToStr/Comment.nvim
 * nullchilly/fsread.nvim
