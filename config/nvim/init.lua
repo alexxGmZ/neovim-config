@@ -17,6 +17,7 @@ require("alex.plugins.vim-illuminate")
 require("alex.plugins.lualine")
 require("alex.plugins.nvim-tree")
 -- require("alex.plugins.telescope")
+require("alex.plugins.tokyonight")
 require("alex.plugins.treesitter")
 require("alex.plugins.treesitter-context")
 

@@ -66,16 +66,16 @@ require('lspconfig')['vimls'].setup{
 }
 
 -- sql
-require('lspconfig')['sqls'].setup{
-	capabilities = capabilities,
-	on_attach = navic_on_attach
-}
+-- require('lspconfig')['sqls'].setup{
+-- 	capabilities = capabilities,
+-- 	on_attach = navic_on_attach
+-- }
 
 -- R
-require('lspconfig')['r_language_server'].setup{
-	capabilities = capabilities,
-	on_attach = navic_on_attach
-}
+-- require('lspconfig')['r_language_server'].setup{
+-- 	capabilities = capabilities,
+-- 	on_attach = navic_on_attach
+-- }
 
 -- css
 require('lspconfig')['cssls'].setup{
