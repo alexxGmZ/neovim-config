@@ -27,7 +27,7 @@
 * lua (for sumneko_lua LSP)
 * composer (for phpactor LSP)
 * neovim v0.8.0
-* vim-plug
+* packer as the plugin manager
 * Tabs is better than Spaces
 * Fira Code Nerd Font and Victor Mono Font for sweet cursive italics (configured in Kitty)
 
@@ -35,7 +35,7 @@
 
 ### Plugins
 
-I use ```vim-plug``` as a Plugin Manager
+I use ```packer``` as a Plugin Manager
 
 #### Navigation
 
