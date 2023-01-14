@@ -16,6 +16,7 @@
 ### Tools I use or need
 
 * Fedora 36 OS
+* Gnome Desktop Environment
 * zsh (oh-my-zsh)
 * Kitty Terminal (coz it supports font ligature and other utf-8 symbols)
 * npm
@@ -28,7 +29,6 @@
 * composer (for phpactor LSP)
 * neovim v0.8.0
 * packer as the plugin manager
-* Tabs is better than Spaces
 * Fira Code Nerd Font and Victor Mono Font for sweet cursive italics (configured in Kitty)
 
 <br>
@@ -81,10 +81,12 @@ Lightweight Alternatives:
 * nvim-tree/nvim-web-devicons
 * gorbit99/codewindow.nvim
 
-#### Quality of Life
-
+#### Git Integration
 * tpope/vim-fugitive
 * idanarye/vim-merginal
+
+#### Quality of Life
+
 * norcalli/nvim-colorizer.lua
 * nvim-treesitter/nvim-treesitter-context
 * numToStr/Comment.nvim
