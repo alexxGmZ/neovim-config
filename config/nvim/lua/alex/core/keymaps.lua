@@ -46,3 +46,9 @@ map.set("i", "[", "[]<Esc>ha")
 map.set("i", "(", "()<Esc>ha")
 map.set("i", "\"", "\"\"<Esc>ha")
 map.set("i", "\'", "\'\'<Esc>ha")
+
+-- split resizing
+map.set("n", "<leader>-", "<C-w>3-")
+map.set("n", "<leader>=", "<C-w>3+")
+map.set("n", "<leader>.", "<C-w>3>")
+map.set("n", "<leader>,", "<C-w>3<")
