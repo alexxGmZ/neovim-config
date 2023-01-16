@@ -1,55 +1,54 @@
-vim.cmd[[
-	let mapleader = " "
+vim.g.mapleader = " "
+local map = vim.keymap
 
-	" fzf
-	nnoremap <c-P> <cmd>lua require('fzf-lua').files()<CR>
+-- terminal
+map.set("t", "<Esc>", "<C-\\><C-n>")
+map.set("n", "<leader>vst", ":vsplit term://$SHELL<CR>")
+map.set("n", "<leader>spt", ":split term://$SHELL<CR>")
+map.set("n", "<leader>tnt", ":tabnew term://$SHELL<CR>")
 
-	" ALE
-	nmap ]a :ALENextWrap <CR>
-	nmap [a :ALEPreviousWrap <CR>
-	nmap ]A :ALELast <CR>
-	nmap [A :ALEFirst <CR>
+-- motions
+map.set("n", "<C-d>", "<C-d>zz")
+map.set("n", "<C-u>", "<C-u>zz")
+map.set("n", "n", "nzzzv")
+map.set("n", "N", "Nzzzv")
+map.set("n", "<C-o", "<C-o>zz")
+map.set("n", "<C-i", "<C-i>zz")
 
-	" Terminal
-	tnoremap <Esc> <C-\><C-n>
-	nmap <leader>vst :vsplit term://$SHELL <CR>
-	nmap <leader>spt :split term://$SHELL <CR>
-	nmap <leader>tnt :tabnew term://$SHELL <CR>
+-- aerial
+map.set("n", "<leader>a", ":AerialToggle<CR>")
 
-	" tagbar toggle
-	nmap <F8> :TagbarToggle <CR>
-	nmap <leader>tt :TagbarToggle <CR>
+-- nvim-tree
+map.set("n", "<leader>F", ":NvimTreeToggle<CR>")
+map.set("n", "<leader><leader>f", ":NvimTreeToggle<CR>")
+map.set("n", "<F6>", ":NvimTreeToggle<CR>")
 
-	" Remove Search Highlight
-	map <esc> :noh <CR>
+-- write and quit
+map.set("n", "<leader>ww", ":w<CR>")
+map.set("n", "<leader>wq", ":wq<CR>")
+map.set("n", "<leader>wa", ":wa<CR>")
+map.set("n", "<leader>qq", ":q<CR>")
+map.set("n", "<leader>qa", ":qa<CR>")
 
-	" auto-complete brackets
-	inoremap { {}<Esc>ha
-	inoremap ( ()<Esc>ha
-	inoremap [ []<Esc>ha
-	inoremap " ""<Esc>ha
-	inoremap ' ''<Esc>ha
+-- nohilight
+map.set("n", "<Esc>", ":noh<CR>")
 
-	nmap <leader>qq :quit <CR>
-	nmap <leader>qa :quitall <CR>
-	nmap <leader>ww :write <CR>
-	nmap <leader>wq :wq <CR>
-	nmap <leader>wa :wa <CR>
+-- fzf
+map.set("n", "<C-p>", "<cmd>lua require('fzf-lua').files()<CR>")
 
-	" nvim-tree
-	nmap <leader>F :NvimTreeToggle <CR>
-	nmap <leader><leader>f :NvimTreeToggle <CR>
-	nmap <F6> :NvimTreeToggle <CR>
+-- tagbar
+map.set("n", "<F8>", ":TagbarToggle<CR>")
+map.set("n", "<leader>tt", ":TagbarToggle<CR>")
 
-	" aerial
-	nmap <leader>a :AerialToggle <CR>
+-- autoclose brackets
+map.set("i", "{", "{}<Esc>ha")
+map.set("i", "[", "[]<Esc>ha")
+map.set("i", "(", "()<Esc>ha")
+map.set("i", "\"", "\"\"<Esc>ha")
+map.set("i", "\'", "\'\'<Esc>ha")
 
-	" Just watched ThePrimeagan's Vertical Movements Video
-	nnoremap <C-d> <C-d>zz
-	nnoremap <C-u> <C-u>zz
-	nnoremap n nzzzv
-	nnoremap N Nzzzv
-
-	nnoremap <C-o> <C-o>zz
-	nnoremap <C-i> <C-i>zz
-]]
+-- split resizing
+map.set("n", "<leader>-", "<C-w>3-")
+map.set("n", "<leader>=", "<C-w>3+")
+map.set("n", "<leader>.", "<C-w>3>")
+map.set("n", "<leader>,", "<C-w>3<")
