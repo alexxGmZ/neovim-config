@@ -34,7 +34,8 @@ map.set("n", "<leader>qa", ":qa<CR>")
 map.set("n", "<Esc>", ":noh<CR>")
 
 -- fzf
-map.set("n", "<C-p>", "<cmd>lua require('fzf-lua').files()<CR>")
+-- map.set("n", "<C-p>", "<cmd>lua require('fzf-lua').files()<CR>")
+map.set("n", "<C-p>", ":FzfLua files<CR>")
 
 -- tagbar
 map.set("n", "<F8>", ":TagbarToggle<CR>")
