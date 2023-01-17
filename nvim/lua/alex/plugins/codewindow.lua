@@ -1,9 +1,9 @@
-local codewindow_setup, codewindow = pcall(require, "codewindow")
-if not codewindow_setup then
-	return
-end
+-- local codewindow_setup, codewindow = pcall(require, "codewindow")
+-- if not codewindow_setup then
+-- 	return
+-- end
 
-codewindow.setup{
+require("codewindow").setup{
 	active_in_terminals = false, -- Should the minimap activate for terminal buffers
 	auto_enable = false, -- Automatically open the minimap when entering a (non-excluded) buffer (accepts a table of filetypes)
 	exclude_filetypes = {}, -- Choose certain filetypes to not show minimap on
@@ -19,4 +19,12 @@ codewindow.setup{
 	window_border = 'single' -- The border style of the floating window (accepts all usual options)
 }
 
-codewindow.apply_default_keybinds()
+-- codewindow.apply_default_keybinds()
+
+local api = vim.api
+
+-- custom codewindow commands
+api.nvim_create_user_command('CWToggle', function() require('codewindow').toggle_minimap() end, {})
+api.nvim_create_user_command('CWFocus', function() require('codewindow').toggle_focus() end, {})
+api.nvim_create_user_command('CWOpen', function() require('codewindow').open_minimap() end, {})
+api.nvim_create_user_command('CWClose', function() require('codewindow').close_minimap() end, {})
