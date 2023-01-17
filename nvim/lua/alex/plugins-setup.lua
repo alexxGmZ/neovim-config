@@ -65,7 +65,7 @@ return packer.startup(function(use)
 
 	-- previewe for markdown files to browser
 	use{ "davidgranstrom/nvim-markdown-preview",
-		opt = true,
+		-- opt = true,
 		cmd = {'MarkdownPreview'}
 	}
 
@@ -75,7 +75,7 @@ return packer.startup(function(use)
 	}
 
 	use{ "manzeloth/live-server",
-		opt = true,
+		-- opt = true,
 		cmd = {'LiveServer'}
 	}
 
@@ -85,12 +85,17 @@ return packer.startup(function(use)
 	use "SmiteshP/nvim-navic"
 
 	-- file explorer
-	use "nvim-tree/nvim-tree.lua"
+	use{"nvim-tree/nvim-tree.lua",
+		config = function()
+			require("alex.plugins.nvim-tree")
+		end,
+		cmd = {'NvimTreeOpen', 'NvimTreeToggle'}
+	}
 
 	-- git stuff
 	use "tpope/vim-fugitive"
 	use{ "idanarye/vim-merginal",
-		opt = true,
+		-- opt = true,
 		cmd = {'Merginal', 'MerginalToggle'}
 	}
 
@@ -105,12 +110,18 @@ return packer.startup(function(use)
 	-- some code summary windows
 	-- use("stevearc/aerial.nvim")
 	use{ "preservim/tagbar",
-		opt = true,
+		-- opt = true,
 		cmd = {'TagbarOpen', 'TagbarToggle', 'Tagbar'},
 		config = vim.cmd("let g:tagbar_sort = 0")
 	}
 
-	use "gorbit99/codewindow.nvim"
+	use{"gorbit99/codewindow.nvim",
+		-- opt = true,
+		config = function()
+			require("alex.plugins.codewindow")
+		end,
+		cmd = {'CWToggle', 'CWOpen'}
+	}
 
 	-- syntax highlighting for .log files
 	use "mtdl9/vim-log-highlighting"
