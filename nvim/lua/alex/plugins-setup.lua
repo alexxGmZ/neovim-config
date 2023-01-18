@@ -55,13 +55,47 @@ return packer.startup(function(use)
 	use "nvim-treesitter/nvim-treesitter-context"
 
 	-- tabs
-	-- use("akinsho/bufferline.nvim")
 	use{ "akinsho/bufferline.nvim",
 		tag = "v3.*"
 	}
 
 	-- icons
 	use "nvim-tree/nvim-web-devicons"
+
+	-- lualine (statusline and winbar)
+	use "nvim-lualine/lualine.nvim"
+
+	-- navic (winbar)
+	use "SmiteshP/nvim-navic"
+
+	-- git stuff
+	use "tpope/vim-fugitive"
+
+	-- fzf
+	use "junegunn/fzf"
+
+	-- auto relative line number
+	use "jeffkreeftmeijer/vim-numbertoggle"
+
+	-- lsp
+	use "williamboman/nvim-lsp-installer"
+	use "neovim/nvim-lspconfig"
+	use "hrsh7th/cmp-nvim-lsp"
+	use "hrsh7th/cmp-buffer"
+	use "hrsh7th/cmp-path"
+	use "hrsh7th/cmp-cmdline"
+	use "hrsh7th/nvim-cmp"
+	use "hrsh7th/cmp-vsnip"
+	use "hrsh7th/vim-vsnip"
+	use "hrsh7th/vim-vsnip-integ"
+
+	--[[ ----------------------------------
+		      Lazy loaded plugins
+	------------------------------------- ]]
+	use{ "ibhagwan/fzf-lua",
+		config = function() require('fzf-lua') end,
+		cmd = {'FzfLua'}
+	}
 
 	-- previewe for markdown files to browser
 	use{ "davidgranstrom/nvim-markdown-preview",
@@ -79,12 +113,6 @@ return packer.startup(function(use)
 		cmd = {'LiveServer'}
 	}
 
-	-- lualine
-	use "nvim-lualine/lualine.nvim"
-	-- navic
-	use "SmiteshP/nvim-navic"
-
-	-- file explorer
 	use{"nvim-tree/nvim-tree.lua",
 		config = function()
 			require("alex.plugins.nvim-tree")
@@ -92,23 +120,10 @@ return packer.startup(function(use)
 		cmd = {'NvimTreeOpen', 'NvimTreeToggle'}
 	}
 
-	-- git stuff
-	use "tpope/vim-fugitive"
 	use{ "idanarye/vim-merginal",
-		-- opt = true,
 		cmd = {'Merginal', 'MerginalToggle'}
 	}
 
-	-- fzf
-	use "junegunn/fzf"
-	use "ibhagwan/fzf-lua"
-
-
-	-- auto relative number
-	use "jeffkreeftmeijer/vim-numbertoggle"
-
-	-- some code summary windows
-	-- use("stevearc/aerial.nvim")
 	use{ "preservim/tagbar",
 		-- opt = true,
 		cmd = {'TagbarOpen', 'TagbarToggle', 'Tagbar'},
@@ -124,7 +139,9 @@ return packer.startup(function(use)
 	}
 
 	-- syntax highlighting for .log files
-	use "mtdl9/vim-log-highlighting"
+	use{ "mtdl9/vim-log-highlighting",
+		ft = {'log'}
+	}
 
 	-- frontend stuff
 	use "norcalli/nvim-colorizer.lua"
@@ -137,19 +154,9 @@ return packer.startup(function(use)
 	use{ "windwp/nvim-ts-autotag",
 		ft = {'markdown', 'html', 'php', 'xml', 'javascript'}
 	}
-
-	-- lsp
-	use "williamboman/nvim-lsp-installer"
-	use "neovim/nvim-lspconfig"
-	use "hrsh7th/cmp-nvim-lsp"
-	use "hrsh7th/cmp-buffer"
-	use "hrsh7th/cmp-path"
-	use "hrsh7th/cmp-cmdline"
-	use "hrsh7th/nvim-cmp"
-	use "hrsh7th/cmp-vsnip"
-	use "hrsh7th/vim-vsnip"
-	use "hrsh7th/vim-vsnip-integ"
-
+	--[[ ----------------------------------
+		    End of Lazy loaded plugins
+	------------------------------------- ]]
 
 	if packer_bootstrap then
 		require("packer").sync()
