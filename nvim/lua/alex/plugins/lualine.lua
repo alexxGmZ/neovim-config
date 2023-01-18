@@ -55,8 +55,9 @@ end
 
 lualine.setup {
 	options = {
-		icons_enabled = false,
-		theme = 'molokai',
+		icons_enabled = true,
+		-- theme = 'molokai',
+		theme = 'horizon',
 		-- section_separators = { left = '', right = ''},
 		-- component_separators = { left = '', right = ''},
 		component_separators = '',
@@ -92,10 +93,10 @@ lualine.setup {
 		},
 		lualine_b = {
 			{'branch',
-				color = {
-					bg = '#f92672',
-					fg = '#f7f5f5'
-				},
+				-- color = {
+				-- 	bg = '#f92672',
+				-- 	fg = '#f7f5f5'
+				-- },
 				separator = {
 					-- right = ''
 					right = ''
@@ -212,14 +213,16 @@ lualine.setup {
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = {
-			{ 'encoding', 'filetype',
+			{ 'encoding',
 				color = {
-					fg = '#1a1b26',
+					fg = '#6C6F93',
+					bg = '#2E303E'
 				}
 			},
 			{ 'filetype',
 				color = {
-					fg = '#1a1b26',
+					fg = '#6C6F93',
+					bg = '#2E303E'
 				}
 			}
 		},
