@@ -3,6 +3,7 @@
 <br>
 
 ## Fully converted to Lua configuration
+Although some plugins are still using vimscript
 
 <br>
 
@@ -39,60 +40,59 @@ I use ```packer``` as a Plugin Manager
 
 #### Navigation
 
-* junegunn/fzf
-* ibhagwan/fzf-lua
-* preservim/tagbar
-* christoomey/vim-tmux-navigator
-* jeffkreeftmeijer/vim-numbertoggle
-* nvim-tree/nvim-tree.lua
-* stevearc/aerial.nvim
+* [junegunn/fzf                     ](https://github.com/junegunn/fzf)
+* [ibhagwan/fzf-lua                 ](https://github.com/ibhagwan/fzf-lua)
+* [preservim/tagbar                 ](https://github.com/preservim/tagbar)
+* [christoomey/vim-tmux-navigator   ](https://github.com/christoomey/vim-tmux-navigator)
+* [jeffkreeftmeijer/vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle)
+* [nvim-tree/nvim-tree.lua          ](https://github.com/nvim-tree/nvim-tree.lua)
 
 #### Syntax Highlighting
 
-* nvim-treesitter/nvim-treesitter
+* [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
-#### Auto-Completion
+#### LSP or Auto-Completion
 
-* gregsexton/MatchTag
-* AndrewRadev/tagalong.vim.git
-* neovim/nvim-lspconfig
-* williamboman/nvim-lsp-installer
-* hrsh7th/cmp-nvim-lsp
-* hrsh7th/cmp-buffer
-* hrsh7th/cmp-path
-* hrsh7th/cmp-cmdline
-* hrsh7th/nvim-cmp
-* hrsh7th/cmp-vsnip
-* hrsh7th/vim-vsnip
-* windwp/nvim-ts-autotag
+* [gregsexton/MatchTag            ](https://github.com/gregsexton/MatchTag)
+* [AndrewRadev/tagalong.vim.git   ](https://github.com/AndrewRadev/tagalong.vim)
+* [neovim/nvim-lspconfig          ](https://github.com/neovim/nvim-lspconfig)
+* [williamboman/nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
+* [hrsh7th/cmp-nvim-lsp           ](https://github.com/hrsh7th/cmp-nvim-lsp)
+* [hrsh7th/cmp-buffer             ](https://github.com/hrsh7th/cmp-buffer)
+* [hrsh7th/cmp-path               ](https://github.com/hrsh7th/cmp-path)
+* [hrsh7th/cmp-cmdline            ](https://github.com/hrsh7th/cmp-cmdline)
+* [hrsh7th/nvim-cmp               ](https://github.com/hrsh7th/nvim-cmp)
+* [hrsh7th/cmp-vsnip              ](https://github.com/hrsh7th/cmp-vsnip)
+* [hrsh7th/vim-vsnip              ](https://github.com/hrsh7th/vim-vsnip)
+* [windwp/nvim-ts-autotag         ](https://github.com/windwp/nvim-ts-autotag)
 
 Lightweight Alternatives:
 
-* maxboisvert/vim-simple-complete
-* ackyshake/VimCompletesMe
+* [maxboisvert/vim-simple-complete](https://github.com/maxboisvert/vim-simple-complete)
+* [ackyshake/VimCompletesMe       ](https://github.com/ackyshake/VimCompletesMe)
 
 #### Aesthetic or UI
 
-* lukas-reineke/indent-blankline.nvim
-* nvim-lualine/lualine.nvim
-* catppuccin/nvim
-* akinsho/bufferline.nvim
-* SmiteshP/nvim-navic
-* nvim-tree/nvim-web-devicons
-* gorbit99/codewindow.nvim
+* [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+* [nvim-lualine/lualine.nvim          ](https://github.com/nvim-lualine/lualine.nvim)
+* [catppuccin/nvim                    ](https://github.com/catppuccin/nvim)
+* [akinsho/bufferline.nvim            ](https://github.com/akinsho/bufferline.nvim)
+* [SmiteshP/nvim-navic                ](https://github.com/SmiteshP/nvim-navic)
+* [nvim-tree/nvim-web-devicons        ](https://github.com/nvim-tree/nvim-web-devicons)
+* [gorbit99/codewindow.nvim           ](https://github.com/gorbit99/codewindow.nvim)
 
 #### Git Integration
-* tpope/vim-fugitive
-* idanarye/vim-merginal
+* [tpope/vim-fugitive   ](https://github.com/tpope/vim-fugitive)
+* [idanarye/vim-merginal](https://github.com/idanarye/vim-merginal)
 
 #### Quality of Life
 
-* norcalli/nvim-colorizer.lua
-* nvim-treesitter/nvim-treesitter-context
-* numToStr/Comment.nvim
-* nullchilly/fsread.nvim
-* davidgranstrom/nvim-markdown-preview
-* manzeloth/live-server
-* RRethy/vim-illuminate
+* [norcalli/nvim-colorizer.lua            ](https://github.com/norcalli/nvim-colorizer.lua)
+* [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
+* [numToStr/Comment.nvim                  ](https://github.com/numToStr/Comment.nvim)
+* [nullchilly/fsread.nvim                 ](https://github.com/nullchilly/fsread.nvim)
+* [davidgranstrom/nvim-markdown-preview   ](https://github.com/davidgranstrom/nvim-markdown-preview)
+* [manzeloth/live-server                  ](https://github.com/manzeloth/live-server)
+* [RRethy/vim-illuminate                  ](https://github.com/RRethy/vim-illuminate)
 
 <br>
