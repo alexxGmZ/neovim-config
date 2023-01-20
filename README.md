@@ -139,8 +139,8 @@ type ```:LspInstall <lsp-name>``` inside Neovim. Then, open the ```nvim/lua/alex
 and add this code at the bottom of the file
 ```lua
 lspconfig['<lsp-server-name-here>'].setup{
-	capabilities = capabilities,
-	on_attach = navic_on_attach,
+   capabilities = capabilities,
+   on_attach = navic_on_attach,
    -- additional options below
 }
 
