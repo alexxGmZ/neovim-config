@@ -23,7 +23,7 @@ Tagbar and nvim-tree
    + [Quality of Life](#quality-of-life)
 * [Configured LSPs](#configured-lsps)
    + [How to Install LSPs and Do a Basic Configuration](#how-to-install-lsps-and-do-a-basic-configuration)
-+ [To Do/s](#to-dos)
+<!-- + [To Do/s](#to-dos) -->
 
 ### Dependencies
 * [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and other utf-8 characters)
@@ -137,13 +137,13 @@ You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/bl
       - ```npm i -g bash-language-server```
 
 #### How to Install LSPs and Do a Basic Configuration
-Using the [```nvim-lsp-installer```](https://github.com/williamboman/nvim-lsp-installer) plugin,
-type ```:LspInstall <lsp-name>``` inside Neovim. Then, open the ```nvim/lua/alex/plugins/lsp/lspconfig.lua```
+Using the ```mason.nvim``` plugin and acts as the lsp mananger,
+type ```:MasonInstall <lsp-name or the programming language name>``` inside Neovim. Then, open the ```nvim/lua/alex/plugins/lsp/lspconfig.lua```
 and add this code at the bottom of the file
 ```lua
 lspconfig['<lsp-server-name-here>'].setup{
    capabilities = capabilities,
-   on_attach = navic_on_attach,
+   on_attach = on_attach,
    -- additional options below
 }
 
@@ -151,8 +151,3 @@ lspconfig['<lsp-server-name-here>'].setup{
 
 <br>
 
-### To Do/s:
-* Soon migrate to [```mason.nvim```](https://github.com/williamboman/mason.nvim), because
-```nvim-lsp-installer``` is already archived.
-
-<br>
