@@ -78,7 +78,9 @@ return packer.startup(function(use)
 	use "jeffkreeftmeijer/vim-numbertoggle"
 
 	-- lsp
-	use "williamboman/nvim-lsp-installer"
+	-- use "williamboman/nvim-lsp-installer"
+	use"williamboman/mason.nvim"
+	use "williamboman/mason-lspconfig.nvim"
 	use "neovim/nvim-lspconfig"
 	use "hrsh7th/cmp-nvim-lsp"
 	use "hrsh7th/cmp-buffer"
@@ -113,7 +115,7 @@ return packer.startup(function(use)
 		cmd = {'LiveServer'}
 	}
 
-	use{"nvim-tree/nvim-tree.lua",
+	use{ "nvim-tree/nvim-tree.lua",
 		config = function()
 			require("alex.plugins.nvim-tree")
 		end,
@@ -130,7 +132,7 @@ return packer.startup(function(use)
 		config = vim.cmd("let g:tagbar_sort = 0")
 	}
 
-	use{"gorbit99/codewindow.nvim",
+	use{ "gorbit99/codewindow.nvim",
 		-- opt = true,
 		config = function()
 			require("alex.plugins.codewindow")
