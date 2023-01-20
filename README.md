@@ -4,9 +4,12 @@
 
 ### Screenshots
 
+I don't own this "GET SHIT DONE" wallpaper and it's not part of the config. It's in my ```kitty.conf```
 ![image1](./assets/images/img1.png)
 ![image2](./assets/images/img2.png)
+Lazy load some plugins
 ![image3](./assets/images/img3.png)
+Tagbar and nvim-tree
 ![image4](./assets/images/img4.png)
 
 ## Table of Contents
