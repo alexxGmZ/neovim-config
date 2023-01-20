@@ -36,7 +36,7 @@ lspconfig['html'].setup{
 	on_attach = navic_on_attach
 }
 
--- c, c++, objective c, c#
+-- c, c++
 lspconfig['clangd'].setup{
 	capabilities = capabilities,
 	on_attach = navic_on_attach

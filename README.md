@@ -2,11 +2,6 @@
 
 <br>
 
-## Fully converted to Lua configuration
-Although some plugins are still using vimscript
-
-<br>
-
 ### Screenshots
 
 ![image1](./assets/images/img1.png)
@@ -14,29 +9,39 @@ Although some plugins are still using vimscript
 ![image3](./assets/images/img3.png)
 ![image4](./assets/images/img4.png)
 
-### Tools I use or need
+## Table of Contents
+* [Dependencies](#dependencies)
+* [Plugins](#plugins)
+   + [Navigation](#navigation)
+   + [Syntax Highlighting](#syntax-highlighting)
+   + [LSP or Auto-Completion](#lsp-or-auto-completion)
+   + [Aesthetic or UI](#aesthetic-or-ui)
+   + [Git Integration](#git-integration)
+   + [Quality of Life](#quality-of-life)
+* [Configured LSPs](#configured-lsps)
+   + [How to Install LSPs and Do a Basic Configuration](#how-to-install-lsps-and-do-a-basic-configuration)
++ [To Do/s](#to-dos)
 
-* Fedora 36 OS
-* Gnome Desktop Environment
-* zsh (oh-my-zsh)
-* Kitty Terminal (coz it supports font ligature and other utf-8 symbols)
-* npm
-* python3 (for pyright LSP)
-* clang (for clangd LSP)
-* java-devel (for jdtls LSP)
-* ctags (for tagbar to work)
-* go (for sqls LSP)
-* lua (for sumneko_lua LSP)
-* composer (for phpactor LSP)
+### Dependencies
+* [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and other utf-8 characters)
 * neovim v0.8.0
-* packer as the plugin manager
-* Fira Code Nerd Font and Victor Mono Font for sweet cursive italics (configured in Kitty)
+* [packer](https://github.com/wbthomason/packer.nvim) as the plugin manager
+* [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+   and [Victor Mono Font](https://github.com/rubjo/victor-mono) for sweet cursive italics
+   (configured in Kitty's ```kitty.conf```)
+```
+font_family Fira Code Semi Bold
+italic_font Victor Mono Bold Italic
+bold_font Fira Code Bold
+bold_italic_font Victor Mono Bold Italic
+```
+* [ctags](https://github.com/universal-ctags/ctags) (for tagbar to work)
 
 <br>
 
 ### Plugins
 
-I use ```packer``` as a Plugin Manager
+I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Manager
 
 #### Navigation
 
@@ -50,6 +55,7 @@ I use ```packer``` as a Plugin Manager
 #### Syntax Highlighting
 
 * [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+* [mtdl9/vim-log-highlighting     ](https://github.com/MTDL9/vim-log-highlighting)
 
 #### LSP or Auto-Completion
 
@@ -66,10 +72,8 @@ I use ```packer``` as a Plugin Manager
 * [hrsh7th/vim-vsnip              ](https://github.com/hrsh7th/vim-vsnip)
 * [windwp/nvim-ts-autotag         ](https://github.com/windwp/nvim-ts-autotag)
 
-Lightweight Alternatives:
-
-* [maxboisvert/vim-simple-complete](https://github.com/maxboisvert/vim-simple-complete)
-* [ackyshake/VimCompletesMe       ](https://github.com/ackyshake/VimCompletesMe)
+<!-- * [maxboisvert/vim-simple-complete](https://github.com/maxboisvert/vim-simple-complete) -->
+<!-- * [ackyshake/VimCompletesMe       ](https://github.com/ackyshake/VimCompletesMe) -->
 
 #### Aesthetic or UI
 
@@ -94,5 +98,58 @@ Lightweight Alternatives:
 * [davidgranstrom/nvim-markdown-preview   ](https://github.com/davidgranstrom/nvim-markdown-preview)
 * [manzeloth/live-server                  ](https://github.com/manzeloth/live-server)
 * [RRethy/vim-illuminate                  ](https://github.com/RRethy/vim-illuminate)
+
+<br>
+
+### Configured LSPs
+You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
+* [pyright](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright) (python)
+   + ```python3``` and is required. Install through ```npm```
+      - ```npm i -g pyright```
+* [jdtls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jdtls) (java)
+   + ```java-devel``` is required
+* [html](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html)
+   + install through ```npm```
+      - ```npm i -g vscode-langservers-extracted```
+* [clangd](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd) (c/c++)
+   + ```clang``` is required
+* [sumneko_lua](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua) (lua)
+   + ```lua``` is required
+* [intelephense](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#intelephense) (php)
+   + install through ```npm```
+      - ```npm i -g intelephese```
+* [vimls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls) (vimscript)
+   + install through ```npm```
+      - ```npm i -g vim-language-server```
+* [cssls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls) (css)
+   + install through ```npm```
+      - ```npm i -g vscode-langservers-extracted```
+* [marksman](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman) (markdown)
+* [texlab](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html) (LaTeX)
+* [tailwindcss](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss) (tailwind)
+   + install through ```npm```
+      - ```npm install -g @tailwindcss/language-server```
+* [bashls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls) (zsh, bash, sh)
+   + install through ```npm```
+      - ```npm i -g bash-language-server```
+
+#### How to Install LSPs and Do a Basic Configuration
+Using the [```nvim-lsp-installer```](https://github.com/williamboman/nvim-lsp-installer) plugin,
+type ```:LspInstall <lsp-name>``` inside Neovim. Then, open the ```nvim/lua/alex/plugins/lsp/lspconfig.lua```
+and add this code at the bottom of the file
+```lua
+lspconfig['<lsp-server-name-here>'].setup{
+	capabilities = capabilities,
+	on_attach = navic_on_attach,
+   -- additional options below
+}
+
+```
+
+<br>
+
+### To Do/s:
+* Soon migrate to [```mason.nvim```](https://github.com/williamboman/mason.nvim), because
+```nvim-lsp-installer``` is already archived.
 
 <br>
