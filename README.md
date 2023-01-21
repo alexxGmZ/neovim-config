@@ -25,6 +25,8 @@ Tagbar and nvim-tree
    + [How to Install LSPs and Do a Basic Configuration](#how-to-install-lsps-and-do-a-basic-configuration)
 <!-- + [To Do/s](#to-dos) -->
 
+<br>
+
 ### Dependencies
 * [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and other utf-8 characters)
 * neovim v0.8.0
@@ -32,12 +34,12 @@ Tagbar and nvim-tree
 * [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
    and [Victor Mono Font](https://github.com/rubjo/victor-mono) for sweet cursive italics
    (configured in Kitty's ```kitty.conf```)
-```
-font_family Fira Code Semi Bold
-italic_font Victor Mono Bold Italic
-bold_font Fira Code Bold
-bold_italic_font Victor Mono Bold Italic
-```
+   ```
+      font_family Fira Code Semi Bold
+      italic_font Victor Mono Bold Italic
+      bold_font Fira Code Bold
+      bold_italic_font Victor Mono Bold Italic
+   ```
 * [ctags](https://github.com/universal-ctags/ctags) (for tagbar to work)
 
 <br>
@@ -62,18 +64,19 @@ I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Mana
 
 #### LSP or Auto-Completion
 
-* [gregsexton/MatchTag            ](https://github.com/gregsexton/MatchTag)
-* [AndrewRadev/tagalong.vim.git   ](https://github.com/AndrewRadev/tagalong.vim)
-* [neovim/nvim-lspconfig          ](https://github.com/neovim/nvim-lspconfig)
-* [williamboman/nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
-* [hrsh7th/cmp-nvim-lsp           ](https://github.com/hrsh7th/cmp-nvim-lsp)
-* [hrsh7th/cmp-buffer             ](https://github.com/hrsh7th/cmp-buffer)
-* [hrsh7th/cmp-path               ](https://github.com/hrsh7th/cmp-path)
-* [hrsh7th/cmp-cmdline            ](https://github.com/hrsh7th/cmp-cmdline)
-* [hrsh7th/nvim-cmp               ](https://github.com/hrsh7th/nvim-cmp)
-* [hrsh7th/cmp-vsnip              ](https://github.com/hrsh7th/cmp-vsnip)
-* [hrsh7th/vim-vsnip              ](https://github.com/hrsh7th/vim-vsnip)
-* [windwp/nvim-ts-autotag         ](https://github.com/windwp/nvim-ts-autotag)
+* [gregsexton/MatchTag              ](https://github.com/gregsexton/MatchTag)
+* [AndrewRadev/tagalong.vim.git     ](https://github.com/AndrewRadev/tagalong.vim)
+* [windwp/nvim-ts-autotag           ](https://github.com/windwp/nvim-ts-autotag)
+* [williamboman/mason.nvim          ](https://github.com/williamboman/mason.nvim)
+* [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+* [neovim/nvim-lspconfig            ](https://github.com/neovim/nvim-lspconfig)
+* [hrsh7th/cmp-nvim-lsp             ](https://github.com/hrsh7th/cmp-nvim-lsp)
+* [hrsh7th/cmp-buffer               ](https://github.com/hrsh7th/cmp-buffer)
+* [hrsh7th/cmp-path                 ](https://github.com/hrsh7th/cmp-path)
+* [hrsh7th/cmp-cmdline              ](https://github.com/hrsh7th/cmp-cmdline)
+* [hrsh7th/nvim-cmp                 ](https://github.com/hrsh7th/nvim-cmp)
+* [hrsh7th/cmp-vsnip                ](https://github.com/hrsh7th/cmp-vsnip)
+* [hrsh7th/vim-vsnip                ](https://github.com/hrsh7th/vim-vsnip)
 
 <!-- * [maxboisvert/vim-simple-complete](https://github.com/maxboisvert/vim-simple-complete) -->
 <!-- * [ackyshake/VimCompletesMe       ](https://github.com/ackyshake/VimCompletesMe) -->
@@ -137,7 +140,7 @@ You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/bl
       - ```npm i -g bash-language-server```
 
 #### How to Install LSPs and Do a Basic Configuration
-Using the ```mason.nvim``` plugin and acts as the lsp mananger,
+Using the [```mason.nvim```](https://github.com/williamboman/mason.nvim) plugin and acts as the lsp mananger,
 type ```:MasonInstall <lsp-name or the programming language name>``` inside Neovim. Then, open the ```nvim/lua/alex/plugins/lsp/lspconfig.lua```
 and add this code at the bottom of the file
 ```lua
