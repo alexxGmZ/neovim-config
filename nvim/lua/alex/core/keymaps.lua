@@ -55,4 +55,3 @@ map.set("n", "<leader>,", "<C-w>3<")
 
 -- codewindow (custom command)
 map.set("n", "<leader>mm", ":CWToggle<CR>")
-
