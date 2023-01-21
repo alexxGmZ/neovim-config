@@ -78,8 +78,7 @@ return packer.startup(function(use)
 	use "jeffkreeftmeijer/vim-numbertoggle"
 
 	-- lsp
-	-- use "williamboman/nvim-lsp-installer"
-	use"williamboman/mason.nvim"
+	use "williamboman/mason.nvim"
 	use "williamboman/mason-lspconfig.nvim"
 	use "neovim/nvim-lspconfig"
 	use "hrsh7th/cmp-nvim-lsp"
@@ -90,6 +89,7 @@ return packer.startup(function(use)
 	use "hrsh7th/cmp-vsnip"
 	use "hrsh7th/vim-vsnip"
 	use "hrsh7th/vim-vsnip-integ"
+
 
 	--[[ ----------------------------------
 		      Lazy loaded plugins
