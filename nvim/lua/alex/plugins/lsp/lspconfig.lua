@@ -3,14 +3,31 @@ local cmp_nvim_lsp_setup, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 local lspconfig_setup, lspconfig = pcall(require, "lspconfig")
 local mason_lspconfig_setup, mason_lspconfig = pcall(require, "mason-lspconfig")
 
-if not navic_setup or
-	not cmp_nvim_lsp_setup or
-	not lspconfig_setup or
-	not mason_lspconfig_setup then
+if not navic_setup or not cmp_nvim_lsp_setup or
+	not lspconfig_setup or not mason_lspconfig_setup then
 	return
 end
 
+-- table of installed lsps
+-- add the lsp server name here after installing
+local LSP_LIST = {
+	"pyright",
+	"jdtls",
+	"html",
+	"clangd",
+	"sumneko_lua",
+	"intelephense",
+	"vimls",
+	"cssls",
+	"marksman",
+	"texlab",
+	"tailwindcss",
+	"bashls",
+}
+
 local map = vim.keymap
+local lsp = vim.lsp
+
 local opts = {
 	noremap = true,
 	silent = true
@@ -20,18 +37,18 @@ map.set("n", "<leader>qls", vim.diagnostic.setloclist, opts)
 
 local on_attach = function(client, bufnr)
 	local bufopts = { noremap=true, silent=true, buffer=bufnr }
-	vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-	vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-	vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-	vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+	map.set('n', 'gD', lsp.buf.declaration, bufopts)
+	map.set('n', 'gd', lsp.buf.definition, bufopts)
+	map.set('n', 'gr', lsp.buf.references, bufopts)
+	map.set('n', 'gi', lsp.buf.implementation, bufopts)
 
-	vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-	vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+	map.set('n', 'K', lsp.buf.hover, bufopts)
+	map.set('n', '<C-k>', lsp.buf.signature_help, bufopts)
 
-	vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-	vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-	vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-	vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+	map.set('n', '<space>D', lsp.buf.type_definition, bufopts)
+	map.set('n', '<space>rn', lsp.buf.rename, bufopts)
+	map.set('n', '<space>ca', lsp.buf.code_action, bufopts)
+	map.set('n', '<space>f', function() lsp.buf.format { async = true } end, bufopts)
 
 	-- add nvim-navic
 	if client.server_capabilities.documentSymbolProvider then
@@ -42,92 +59,21 @@ end
 -- cmp-nvim-lsp plugin
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
--- python
-lspconfig['pyright'].setup {
-	capabilities = capabilities,
-	on_attach = on_attach
-}
+-- loop all the avaibale lsp inside LSP_LIST
+for _, lsp_server in pairs(LSP_LIST) do
+	-- basic configuration for installed lsp servers
+	lspconfig[lsp_server].setup{
+		capabilities = capabilities,
+		on_attach = on_attach,
+	}
 
--- java
-lspconfig['jdtls'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach
-}
+	-- custom lsp configuration below
 
--- hmtl
-lspconfig['html'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach
-}
-
--- c, c++, objective c, c#
-lspconfig['clangd'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach
-}
-
--- lua
-lspconfig['sumneko_lua'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach
-}
-
--- php
-lspconfig['intelephense'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach
-}
-
--- php
--- ['phpactor'].setup{
--- 	capabilities = capabilities,
--- }
-
--- vimscript
-lspconfig['vimls'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach
-}
-
--- sql
--- lspconfig['sqls'].setup{
--- 	capabilities = capabilities,
--- 	on_attach = navic_on_attach
--- }
-
--- R
--- lspconfig['r_language_server'].setup{
--- 	capabilities = capabilities,
--- 	on_attach = navic_on_attach
--- }
-
--- css
-lspconfig['cssls'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach
-}
-
--- markdown
-lspconfig['marksman'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach
-}
-
--- latex
-lspconfig['texlab'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach
-}
-
--- latex
-lspconfig['tailwindcss'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach
-}
-
-lspconfig['bashls'].setup{
-	capabilities = capabilities,
-	on_attach = on_attach,
-	filetypes = {'zsh', 'bash', 'sh'}
-}
-
+	if lsp_server == "bashls" then
+		lspconfig[lsp_server].setup{
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = {'zsh', 'bash', 'sh'}
+		}
+	end
+end
