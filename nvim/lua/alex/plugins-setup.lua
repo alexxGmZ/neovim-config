@@ -68,9 +68,6 @@ return packer.startup(function(use)
 	-- navic (winbar)
 	use "SmiteshP/nvim-navic"
 
-	-- git stuff
-	use "tpope/vim-fugitive"
-
 	-- fzf
 	use "junegunn/fzf"
 
@@ -122,7 +119,19 @@ return packer.startup(function(use)
 		cmd = {'NvimTreeOpen', 'NvimTreeToggle'}
 	}
 
+	-- git stuff
+	use{ "tpope/vim-fugitive",
+		cond = function()
+			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
+			return git_dir ~= ""
+		end,
+	}
+
 	use{ "idanarye/vim-merginal",
+		cond = function()
+			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
+			return git_dir ~= ""
+		end,
 		cmd = {'Merginal', 'MerginalToggle'}
 	}
 
