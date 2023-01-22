@@ -2,6 +2,7 @@
 
 <br>
 
+
 ### Screenshots
 
 I don't own this "GET SHIT DONE" wallpaper and it's not part of the config. It's in my ```kitty.conf```
@@ -13,6 +14,7 @@ Tagbar and nvim-tree
 ![image4](./assets/images/img4.png)
 
 ## Table of Contents
+
 * [Dependencies](#dependencies)
 * [Plugins](#plugins)
    + [Navigation](#navigation)
@@ -27,7 +29,9 @@ Tagbar and nvim-tree
 
 <br>
 
+
 ### Dependencies
+
 * [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and other utf-8 characters)
 * neovim v0.8.0
 * [packer](https://github.com/wbthomason/packer.nvim) as the plugin manager
@@ -43,6 +47,7 @@ Tagbar and nvim-tree
 * [ctags](https://github.com/universal-ctags/ctags) (for tagbar to work)
 
 <br>
+
 
 ### Plugins
 
@@ -92,6 +97,7 @@ I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Mana
 * [gorbit99/codewindow.nvim           ](https://github.com/gorbit99/codewindow.nvim)
 
 #### Git Integration
+
 * [tpope/vim-fugitive   ](https://github.com/tpope/vim-fugitive)
 * [idanarye/vim-merginal](https://github.com/idanarye/vim-merginal)
 
@@ -107,8 +113,13 @@ I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Mana
 
 <br>
 
+
 ### Configured LSPs
-You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
+
+You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md).
+Before installing them through ```npm``` try to do it first in ```mason.nvim``` by doing
+```:MasonInstall <lsp>```.
+
 * [pyright](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright) (python)
    + ```python3``` and is required. Install through ```npm```
       - ```npm i -g pyright```
@@ -140,17 +151,52 @@ You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/bl
       - ```npm i -g bash-language-server```
 
 #### How to Install LSPs and Do a Basic Configuration
-Using the [```mason.nvim```](https://github.com/williamboman/mason.nvim) plugin and acts as the lsp mananger,
-type ```:MasonInstall <lsp-name or the programming language name>``` inside Neovim. Then, open the ```nvim/lua/alex/plugins/lsp/lspconfig.lua```
-and add this code at the bottom of the file
+
+Using the [```mason.nvim```](https://github.com/williamboman/mason.nvim) plugin and acts
+as the lsp mananger, type ```:MasonInstall <lsp-name or the programming language name>```
+inside Neovim. Then, open the ```nvim/lua/alex/plugins/lsp/lspconfig.lua``` and add the lsp
+client inside the ```LSP_LIST``` table.
+
 ```lua
-lspconfig['<lsp-server-name-here>'].setup{
-   capabilities = capabilities,
-   on_attach = on_attach,
-   -- additional options below
+local LSP_LIST = {
+   "pyright",
+   "jdtls",
+   "html",
+   "clangd",
+   "sumneko_lua",
+   "intelephense",
+   "vimls",
+   "cssls",
+   "marksman",
+   "texlab",
+   "tailwindcss",
+   "bashls",
+   "<add lsp name here>"
 }
 
 ```
 
-<br>
+The lsp clients will be looped to do a basic configuration.
 
+```lua
+-- loop all the avaibale lsp inside LSP_LIST
+for _, lsp_server in pairs(LSP_LIST) do
+   -- basic configuration for installed lsp servers
+   lspconfig[lsp_server].setup{
+      capabilities = capabilities,
+      on_attach = on_attach,
+   }
+
+   -- custom lsp configuration below
+
+   if lsp_server == "bashls" then
+      lspconfig[lsp_server].setup{
+         capabilities = capabilities,
+         on_attach = on_attach,
+         filetypes = {'zsh', 'bash', 'sh'}
+      }
+   end
+end
+```
+
+<br>
