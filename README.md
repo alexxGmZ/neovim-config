@@ -16,6 +16,7 @@ Tagbar and nvim-tree
 ## Table of Contents
 
 * [Dependencies](#dependencies)
+* [Installation](#installation)
 * [Plugins](#plugins)
    + [Navigation](#navigation)
    + [Syntax Highlighting](#syntax-highlighting)
@@ -45,6 +46,19 @@ Tagbar and nvim-tree
       bold_italic_font Victor Mono Bold Italic
    ```
 * [ctags](https://github.com/universal-ctags/ctags) (for tagbar to work)
+
+<br>
+
+
+### Installation
+
+Enter these commands in the terminal.
+```bash
+git clone https://github.com/alexxShandsome/neovim-config
+cd neovim-config
+mkdir -v ~/.config/nvim
+cp -vr nvim ~/.config/
+```
 
 <br>
 
