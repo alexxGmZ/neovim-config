@@ -49,7 +49,7 @@ local on_attach = function(client, bufnr)
 	map.set('n', 'gi', lsp.buf.implementation, bufopts)
 
 	map.set('n', 'K', lsp.buf.hover, bufopts)
-	map.set('n', '<C-k>', lsp.buf.signature_help, bufopts)
+	-- map.set('n', '<C-k>', lsp.buf.signature_help, bufopts)
 
 	map.set('n', '<space>D', lsp.buf.type_definition, bufopts)
 	map.set('n', '<space>rn', lsp.buf.rename, bufopts)
