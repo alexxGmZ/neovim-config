@@ -17,4 +17,9 @@ vim.cmd([[
 		autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
 		" autocmd FileType markdown MarkdownPreview
 	augroup END
+
+	augroup cdpwd
+		autocmd!
+		autocmd VimEnter * cd $PWD
+	augroup END
 ]])
