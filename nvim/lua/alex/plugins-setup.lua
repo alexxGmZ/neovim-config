@@ -11,10 +11,11 @@ end
 
 local packer_bootstrap = ensure_packer()
 vim.cmd([[
-	" augroup packer_user_config
-	" 	autocmd!
-	" 	autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
-	" augroup end
+	augroup packer_user_config
+		autocmd!
+		" autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
+		autocmd BufWritePost plugins-setup.lua source <afile> | PackerCompile
+	augroup end
 ]])
 
 local status, packer = pcall(require, "packer")
@@ -68,9 +69,6 @@ return packer.startup(function(use)
 	-- navic (winbar)
 	use "SmiteshP/nvim-navic"
 
-	-- git stuff
-	use "tpope/vim-fugitive"
-
 	-- fzf
 	use "junegunn/fzf"
 
@@ -95,7 +93,6 @@ return packer.startup(function(use)
 		      Lazy loaded plugins
 	------------------------------------- ]]
 	use{ "ibhagwan/fzf-lua",
-		config = function() require('fzf-lua') end,
 		cmd = {'FzfLua'}
 	}
 
@@ -122,7 +119,19 @@ return packer.startup(function(use)
 		cmd = {'NvimTreeOpen', 'NvimTreeToggle'}
 	}
 
+	-- git stuff
+	use{ "tpope/vim-fugitive",
+		cond = function()
+			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
+			return git_dir ~= ""
+		end,
+	}
+
 	use{ "idanarye/vim-merginal",
+		cond = function()
+			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
+			return git_dir ~= ""
+		end,
 		cmd = {'Merginal', 'MerginalToggle'}
 	}
 
