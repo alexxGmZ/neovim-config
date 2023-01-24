@@ -35,6 +35,12 @@ bufferline.setup {
 				text = "Source Control",
 				highlight = "Directory",
 				separator = true -- use a "true" to enable the default, or set your own character
+			},
+			{
+				filetype = "packer",
+				text = "Plugins",
+				highlight = "Directory",
+				separator = true -- use a "true" to enable the default, or set your own character
 			}
 		}
 	},
