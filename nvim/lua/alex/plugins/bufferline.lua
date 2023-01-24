@@ -16,6 +16,26 @@ bufferline.setup {
 			style = "none"
 		},
 		separator_style = "slant",
-		diagnostics = "nvim_lsp"
-	}
+		diagnostics = "nvim_lsp",
+		offsets = {
+			{
+				filetype = "NvimTree",
+				text = "File Explorer",
+				highlight = "Directory",
+				separator = true -- use a "true" to enable the default, or set your own character
+			},
+			{
+				filetype = "tagbar",
+				text = "Tag Bar",
+				highlight = "Directory",
+				separator = true -- use a "true" to enable the default, or set your own character
+			},
+			{
+				filetype = "merginal",
+				text = "Source Control",
+				highlight = "Directory",
+				separator = true -- use a "true" to enable the default, or set your own character
+			}
+		}
+	},
 }

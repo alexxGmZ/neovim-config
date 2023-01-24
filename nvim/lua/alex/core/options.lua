@@ -30,6 +30,7 @@ vim.cmd [[
 	set ignorecase
 	set smartcase
 
+	" set autochdir
 	set colorcolumn=90
 	set complete-=t " disable tags
 	set nocompatible
