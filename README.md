@@ -75,6 +75,7 @@ I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Mana
 * [christoomey/vim-tmux-navigator   ](https://github.com/christoomey/vim-tmux-navigator)
 * [jeffkreeftmeijer/vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle)
 * [nvim-tree/nvim-tree.lua          ](https://github.com/nvim-tree/nvim-tree.lua)
+* [simrat39/symbols-outline.nvim    ](https://github.com/simrat39/symbols-outline.nvim)
 
 #### Syntax Highlighting
 
