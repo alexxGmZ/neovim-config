@@ -1,9 +1,9 @@
--- local codewindow_setup, codewindow = pcall(require, "codewindow")
--- if not codewindow_setup then
+-- local success, codewindow = pcall(require, "codewindow")
+-- if not success then
 -- 	return
 -- end
 
-require("codewindow").setup{
+require('codewindow').setup{
 	active_in_terminals = false,
 	auto_enable = false,
 	exclude_filetypes = {},

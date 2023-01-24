@@ -71,6 +71,7 @@ lualine.setup {
 				"tagbar",
 				"merginal",
 				"packer",
+				"Outline"
 			},
 			winbar = {
 				"NvimTree",
@@ -78,6 +79,8 @@ lualine.setup {
 				"merginal",
 				"fugitive",
 				"packer",
+				"netrw",
+				"Outline"
 			},
 		},
 		ignore_focus = {},
