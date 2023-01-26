@@ -69,9 +69,6 @@ return packer.startup(function(use)
 	-- navic (winbar)
 	use "SmiteshP/nvim-navic"
 
-	-- fzf
-	use "junegunn/fzf"
-
 	-- auto relative line number
 	use "jeffkreeftmeijer/vim-numbertoggle"
 
@@ -88,10 +85,13 @@ return packer.startup(function(use)
 	use "hrsh7th/vim-vsnip"
 	use "hrsh7th/vim-vsnip-integ"
 
-
 	--[[ ----------------------------------
 		      Lazy loaded plugins
 	------------------------------------- ]]
+	-- fzf
+	use{ "junegunn/fzf",
+		cmd = {'FzfLua'}
+	}
 	use{ "ibhagwan/fzf-lua",
 		cmd = {'FzfLua'}
 	}
@@ -113,6 +113,7 @@ return packer.startup(function(use)
 	}
 
 	use{ "nvim-tree/nvim-tree.lua",
+		opt = true,
 		config = function()
 			require("alex.plugins.nvim-tree")
 		end,
@@ -142,7 +143,7 @@ return packer.startup(function(use)
 	}
 
 	use{ "gorbit99/codewindow.nvim",
-		-- opt = true,
+		opt = true,
 		config = function()
 			require("alex.plugins.codewindow")
 		end,
@@ -165,6 +166,15 @@ return packer.startup(function(use)
 	use{ "windwp/nvim-ts-autotag",
 		ft = {'markdown', 'html', 'php', 'xml', 'javascript'}
 	}
+
+	-- lsp based code outline
+	use{ "simrat39/symbols-outline.nvim",
+		config = function()
+			require("alex.plugins.symbols-outline")
+		end,
+		cmd = {'SymbolsOutline', 'SymbolsOutlineOpen'}
+	}
+
 	--[[ ----------------------------------
 		    End of Lazy loaded plugins
 	------------------------------------- ]]

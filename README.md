@@ -75,6 +75,7 @@ I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Mana
 * [christoomey/vim-tmux-navigator   ](https://github.com/christoomey/vim-tmux-navigator)
 * [jeffkreeftmeijer/vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle)
 * [nvim-tree/nvim-tree.lua          ](https://github.com/nvim-tree/nvim-tree.lua)
+* [simrat39/symbols-outline.nvim    ](https://github.com/simrat39/symbols-outline.nvim)
 
 #### Syntax Highlighting
 
@@ -131,38 +132,25 @@ I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Mana
 ### Configured LSPs
 
 You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md).
-Before installing them through ```npm``` try to do it first in ```mason.nvim``` by doing
-```:MasonInstall <lsp>```.
+```npm``` is a hard dependency. If you already installed ```npm``` then just do a ```:MasonInstall <lsp>```.
 
 * [pyright](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright) (python)
-   + ```python3``` and is required. Install through ```npm```
-      - ```npm i -g pyright```
+   + ```python3``` and is required.
 * [jdtls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jdtls) (java)
-   + ```java-devel``` is required
-* [html](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html)
-   + install through ```npm```
-      - ```npm i -g vscode-langservers-extracted```
-* [clangd](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd) (c/c++)
-   + ```clang``` is required
+   + ```java-devel``` is required.
+* [html](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html) (html)
+* [clangd](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd) (c/c++, objc, objcpp, cuda, proto)
+   + ```clang``` is required.
 * [sumneko_lua](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua) (lua)
-   + ```lua``` is required
+   + ```lua``` is required.
 * [intelephense](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#intelephense) (php)
-   + install through ```npm```
-      - ```npm i -g intelephese```
 * [vimls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls) (vimscript)
-   + install through ```npm```
-      - ```npm i -g vim-language-server```
-* [cssls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls) (css)
-   + install through ```npm```
-      - ```npm i -g vscode-langservers-extracted```
+* [cssls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls) (css, scss, less)
 * [marksman](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman) (markdown)
 * [texlab](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html) (LaTeX)
-* [tailwindcss](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss) (tailwind)
-   + install through ```npm```
-      - ```npm install -g @tailwindcss/language-server```
+* [tailwindcss](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss) (tailwind, etc.)
 * [bashls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls) (zsh, bash, sh)
-   + install through ```npm```
-      - ```npm i -g bash-language-server```
+* [lemminx](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lemminx) (xml, xsd, xsl, xslt, svg)
 
 #### How to Install LSPs and Do a Basic Configuration
 
@@ -185,6 +173,7 @@ local LSP_LIST = {
    "texlab",
    "tailwindcss",
    "bashls",
+   "lemminx",
    "<add lsp name here>"
 }
 

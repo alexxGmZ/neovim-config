@@ -22,20 +22,32 @@ bufferline.setup {
 				filetype = "NvimTree",
 				text = "File Explorer",
 				highlight = "Directory",
-				separator = true -- use a "true" to enable the default, or set your own character
+				separator = true
 			},
 			{
 				filetype = "tagbar",
 				text = "Tag Bar",
 				highlight = "Directory",
-				separator = true -- use a "true" to enable the default, or set your own character
+				separator = true
 			},
 			{
 				filetype = "merginal",
 				text = "Source Control",
 				highlight = "Directory",
-				separator = true -- use a "true" to enable the default, or set your own character
-			}
+				separator = true
+			},
+			{
+				filetype = "packer",
+				text = "Plugins",
+				highlight = "Directory",
+				separator = true
+			},
+			{
+				filetype = "Outline",
+				text = "Outline",
+				highlight = "Directory",
+				separator = true
+			},
 		}
 	},
 }

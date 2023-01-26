@@ -66,8 +66,23 @@ lualine.setup {
 			right = ''
 		},
 		disabled_filetypes = {
-			statusline = {},
-			winbar = {},
+			statusline = {
+				"NvimTree",
+				"tagbar",
+				"merginal",
+				"packer",
+				"Outline"
+			},
+			winbar = {
+				"NvimTree",
+				"tagbar",
+				"merginal",
+				"fugitive",
+				"packer",
+				"netrw",
+				"Outline",
+				"text"
+			},
 		},
 		ignore_focus = {},
 		always_divide_middle = true,
@@ -97,11 +112,18 @@ lualine.setup {
 				-- 	bg = '#f92672',
 				-- 	fg = '#f7f5f5'
 				-- },
+				icons_enabled = true,
+			},
+			{'filename',
+				path = 0,
 				separator = {
 					-- right = ''
 					right = ''
 				},
-				icons_enabled = true,
+				symbols = {
+					modified = "●",
+					readonly = "[RO]"
+				}
 			},
 			{'diff',
 				colored = true,
@@ -163,6 +185,20 @@ lualine.setup {
 
 	inactive_sections = {
 		lualine_a = {
+			{'filename',
+				path = 0,
+				color = {
+					fg = '#6C6F93',
+					bg = '#2E303E'
+				},
+				separator = {
+					right = ''
+				},
+				symbols = {
+					modified = "●",
+					readonly = "[RO]"
+				}
+			},
 			{'diff',
 				colored = true,
 				color = {

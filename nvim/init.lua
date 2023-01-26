@@ -25,3 +25,4 @@ require("alex.plugins.lsp.nvim-cmp")
 -- lazy loads
 -- require("alex.plugins.nvim-tree")
 -- require("alex.plugins.codewindow")
+-- require("alex.plugins.symbols-outline")

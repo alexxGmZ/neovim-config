@@ -25,6 +25,7 @@ local LSP_LIST = {
 	"texlab",
 	"tailwindcss",
 	"bashls",
+	"lemminx",
 }
 
 local map = vim.keymap

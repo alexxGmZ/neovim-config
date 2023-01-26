@@ -1,5 +1,5 @@
 vim.cmd [[
-	set clipboard=unnamedplus
+	set clipboard+=unnamedplus
 	set termguicolors
 	set completeopt=menu,menuone,noselect
 
