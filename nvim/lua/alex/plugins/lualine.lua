@@ -80,7 +80,8 @@ lualine.setup {
 				"fugitive",
 				"packer",
 				"netrw",
-				"Outline"
+				"Outline",
+				"text"
 			},
 		},
 		ignore_focus = {},
