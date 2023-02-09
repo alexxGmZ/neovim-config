@@ -46,6 +46,7 @@ Tagbar and nvim-tree
       bold_italic_font Victor Mono Bold Italic
    ```
 * [ctags](https://github.com/universal-ctags/ctags) (for tagbar to work)
+* live-server (npm)
 
 <br>
 
