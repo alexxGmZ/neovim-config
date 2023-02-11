@@ -46,7 +46,7 @@ Tagbar and nvim-tree
       bold_italic_font Victor Mono Bold Italic
    ```
 * [ctags](https://github.com/universal-ctags/ctags) (for tagbar to work)
-* live-server (npm)
+* live-server (for nvim-markdown-preview)
 
 <br>
 
@@ -114,8 +114,9 @@ I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Mana
 
 #### Git Integration
 
-* [tpope/vim-fugitive   ](https://github.com/tpope/vim-fugitive)
-* [idanarye/vim-merginal](https://github.com/idanarye/vim-merginal)
+* [tpope/vim-fugitive     ](https://github.com/tpope/vim-fugitive)
+* [idanarye/vim-merginal  ](https://github.com/idanarye/vim-merginal)
+* [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 
 #### Quality of Life
 
