@@ -81,7 +81,8 @@ lualine.setup {
 				"packer",
 				"netrw",
 				"Outline",
-				"text"
+				"text",
+				"log"
 			},
 		},
 		ignore_focus = {},
