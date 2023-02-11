@@ -32,9 +32,6 @@ return packer.startup(function(use)
 		as = "catppuccin"
 	}
 
-	-- file explorer
-	use "nvim-tree/nvim-tree.lua"
-
 	-- tokyonight colorscheme
 	use "folke/tokyonight.nvim"
 
@@ -88,23 +85,17 @@ return packer.startup(function(use)
 	use "hrsh7th/vim-vsnip"
 	use "hrsh7th/vim-vsnip-integ"
 
-	-- fzf
-	use "junegunn/fzf"
-	use "ibhagwan/fzf-lua"
-
 	--[[ ----------------------------------
 		      Lazy loaded plugins
 	------------------------------------- ]]
-	use {
-		'lewis6991/gitsigns.nvim',
-		config = function()
-			require('gitsigns').setup()
-		end,
-		cond = function()
-			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
-			return git_dir ~= ""
-		end,
+	-- fzf
+	use{ "junegunn/fzf",
+		cmd = {'FzfLua'}
 	}
+	use{ "ibhagwan/fzf-lua",
+		cmd = {'FzfLua'}
+	}
+
 	-- previewe for markdown files to browser
 	use{ "davidgranstrom/nvim-markdown-preview",
 		-- opt = true,
@@ -119,6 +110,14 @@ return packer.startup(function(use)
 	use{ "manzeloth/live-server",
 		-- opt = true,
 		cmd = {'LiveServer'}
+	}
+
+	use{ "nvim-tree/nvim-tree.lua",
+		opt = true,
+		config = function()
+			require("alex.plugins.nvim-tree")
+		end,
+		cmd = {'NvimTreeOpen', 'NvimTreeToggle'}
 	}
 
 	-- git stuff
