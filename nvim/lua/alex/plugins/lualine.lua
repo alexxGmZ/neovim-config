@@ -21,33 +21,23 @@ local mode_map = {
 	c = "COM"
 }
 
--- this function is mainly for winbar
-function custom_filename_path()
-	local modified_symbol = ""
-	local readonly_symbol = ""
-	local navic_location = ""
+local colors = {
+	git_added = "#9ece6a",
+	git_modified = "#7dcfff",
+	git_removed = "#f7768e"
+}
 
-	-- relative path, replace directory slashes to a bigger arrow
-	-- local file_name = string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
+-- this function is mainly for winbar
+function custom_winbar_path()
+	local navic_location = ""
 
 	-- enable navic if it's available
 	if navic.is_available() and navic.get_location() ~= "" then
 		navic_location =  navic.get_location()
 	end
 
-	-- if the current file is modified
-	if vim.bo.modified then
-		modified_symbol = " ●"
-	end
-
-	-- if the current file is readonly
-	if vim.bo.readonly then
-		readonly_symbol = " [RO]"
-	end
-
 	-- returns the stuff that is being outputted in winbar
-	-- return file_name .. navic_location .. readonly_symbol .. modified_symbol
-	return navic_location .. readonly_symbol .. modified_symbol
+	return navic_location
 end
 
 function buffer_name(buf)
@@ -83,7 +73,7 @@ lualine.setup {
 				"netrw",
 				"Outline",
 				"text",
-				"log"
+				"log",
 			},
 		},
 		ignore_focus = {},
@@ -126,13 +116,13 @@ lualine.setup {
 				},
 				diff_color = {
 					added = {
-						fg = '#9ece6a',
+						fg = colors.git_added,
 					},
 					modified = {
-						fg = '#7dcfff',
+						fg = colors.git_modified,
 					},
 					removed = {
-						fg = '#f7768e',
+						fg = colors.git_removed,
 					},
 				},
 				symbols = {
@@ -211,13 +201,13 @@ lualine.setup {
 				},
 				diff_color = {
 					added = {
-						fg = '#9ece6a',
+						fg = colors.git_added,
 					},
 					modified = {
-						fg = '#7dcfff',
+						fg = colors.git_modified,
 					},
 					removed = {
-						fg = '#f7768e',
+						fg = colors.git_removed,
 					},
 				},
 				symbols = {
@@ -290,6 +280,10 @@ lualine.setup {
 				separator = {
 					right = ''
 				},
+				symbols = {
+					modified = "●",
+					readonly = "[RO]"
+				},
 				path = 0
 			},
 			{'filename',
@@ -300,7 +294,7 @@ lualine.setup {
 				separator = {
 					right = ''
 				},
-				fmt = custom_filename_path,
+				fmt = custom_winbar_path,
 			},
 		},
 		lualine_b = {
@@ -321,6 +315,10 @@ lualine.setup {
 				separator = {
 					right = ''
 				},
+				symbols = {
+					modified = "●",
+					readonly = "[RO]"
+				},
 				path = 0
 			},
 			{'filename',
@@ -331,7 +329,7 @@ lualine.setup {
 				separator = {
 					right = ''
 				},
-				fmt = custom_filename_path,
+				fmt = custom_winbar_path,
 			},
 		},
 		lualine_b = {},
