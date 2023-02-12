@@ -21,32 +21,23 @@ local mode_map = {
 	c = "COM"
 }
 
--- this function is mainly for winbar
-function custom_filename_path()
-	local modified_symbol = ""
-	local readonly_symbol = ""
-	local navic_location = ""
+local colors = {
+	git_added = "#9ece6a",
+	git_modified = "#7dcfff",
+	git_removed = "#f7768e"
+}
 
-	-- relative path, replace directory slashes to a bigger arrow
-	local file_name = string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
+-- this function is mainly for winbar
+function custom_winbar_path()
+	local navic_location = ""
 
 	-- enable navic if it's available
 	if navic.is_available() and navic.get_location() ~= "" then
-		navic_location = "  " .. navic.get_location()
-	end
-
-	-- if the current file is modified
-	if vim.bo.modified then
-		modified_symbol = " ●"
-	end
-
-	-- if the current file is readonly
-	if vim.bo.readonly then
-		readonly_symbol = " [RO]"
+		navic_location =  navic.get_location()
 	end
 
 	-- returns the stuff that is being outputted in winbar
-	return file_name .. navic_location .. readonly_symbol .. modified_symbol
+	return navic_location
 end
 
 function buffer_name(buf)
@@ -81,7 +72,8 @@ lualine.setup {
 				"packer",
 				"netrw",
 				"Outline",
-				"text"
+				"text",
+				"log",
 			},
 		},
 		ignore_focus = {},
@@ -108,22 +100,14 @@ lualine.setup {
 		},
 		lualine_b = {
 			{'branch',
-				-- color = {
-				-- 	bg = '#f92672',
-				-- 	fg = '#f7f5f5'
-				-- },
+				color = {
+					bg = '#66d9ef',
+					fg = '#1a1b26'
+				},
 				icons_enabled = true,
-			},
-			{'filename',
-				path = 0,
 				separator = {
-					-- right = ''
 					right = ''
 				},
-				symbols = {
-					modified = "●",
-					readonly = "[RO]"
-				}
 			},
 			{'diff',
 				colored = true,
@@ -132,13 +116,13 @@ lualine.setup {
 				},
 				diff_color = {
 					added = {
-						fg = '#9ece6a',
+						fg = colors.git_added,
 					},
 					modified = {
-						fg = '#7dcfff',
+						fg = colors.git_modified,
 					},
 					removed = {
-						fg = '#f7768e',
+						fg = colors.git_removed,
 					},
 				},
 				symbols = {
@@ -150,6 +134,17 @@ lualine.setup {
 					right = ''
 				},
 				source = nil,
+			},
+			{'filename',
+				path = 0,
+				separator = {
+					-- right = ''
+					right = ''
+				},
+				symbols = {
+					modified = "●",
+					readonly = "[RO]"
+				}
 			},
 		},
 		lualine_c = {
@@ -206,13 +201,13 @@ lualine.setup {
 				},
 				diff_color = {
 					added = {
-						fg = '#9ece6a',
+						fg = colors.git_added,
 					},
 					modified = {
-						fg = '#7dcfff',
+						fg = colors.git_modified,
 					},
 					removed = {
-						fg = '#f7768e',
+						fg = colors.git_removed,
 					},
 				},
 				symbols = {
@@ -279,13 +274,27 @@ lualine.setup {
 		lualine_a = {
 			{'filename',
 				color = {
+					bg = '#66d9ef',
+					fg = '#1a1b26'
+				},
+				separator = {
+					right = ''
+				},
+				symbols = {
+					modified = "●",
+					readonly = "[RO]"
+				},
+				path = 0
+			},
+			{'filename',
+				color = {
 					bg = '#474973',
 					fg = '#cdd6f4'
 				},
 				separator = {
 					right = ''
 				},
-				fmt = custom_filename_path
+				fmt = custom_winbar_path,
 			},
 		},
 		lualine_b = {
@@ -300,13 +309,27 @@ lualine.setup {
 		lualine_a = {
 			{'filename',
 				color = {
+					bg = '#66d9ef',
+					fg = '#1a1b26'
+				},
+				separator = {
+					right = ''
+				},
+				symbols = {
+					modified = "●",
+					readonly = "[RO]"
+				},
+				path = 0
+			},
+			{'filename',
+				color = {
 					bg = '#474973',
 					fg = '#cdd6f4'
 				},
 				separator = {
 					right = ''
 				},
-				fmt = custom_filename_path
+				fmt = custom_winbar_path,
 			},
 		},
 		lualine_b = {},

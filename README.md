@@ -7,10 +7,10 @@
 
 I don't own this "GET SHIT DONE" wallpaper and it's not part of the config. It's in my ```kitty.conf```
 ![image1](./assets/images/img1.png)
+Symbols Outline and Nvim Tree
 ![image2](./assets/images/img2.png)
-Lazy load some plugins
 ![image3](./assets/images/img3.png)
-Tagbar and nvim-tree
+Lazy load some plugins
 ![image4](./assets/images/img4.png)
 
 ## Table of Contents
@@ -46,6 +46,7 @@ Tagbar and nvim-tree
       bold_italic_font Victor Mono Bold Italic
    ```
 * [ctags](https://github.com/universal-ctags/ctags) (for tagbar to work)
+* live-server (for nvim-markdown-preview)
 
 <br>
 
@@ -113,8 +114,9 @@ I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Mana
 
 #### Git Integration
 
-* [tpope/vim-fugitive   ](https://github.com/tpope/vim-fugitive)
-* [idanarye/vim-merginal](https://github.com/idanarye/vim-merginal)
+* [tpope/vim-fugitive     ](https://github.com/tpope/vim-fugitive)
+* [idanarye/vim-merginal  ](https://github.com/idanarye/vim-merginal)
+* [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 
 #### Quality of Life
 
