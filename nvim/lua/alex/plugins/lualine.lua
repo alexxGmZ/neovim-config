@@ -109,22 +109,14 @@ lualine.setup {
 		},
 		lualine_b = {
 			{'branch',
-				-- color = {
-				-- 	bg = '#f92672',
-				-- 	fg = '#f7f5f5'
-				-- },
+				color = {
+					bg = '#66d9ef',
+					fg = '#1a1b26'
+				},
 				icons_enabled = true,
-			},
-			{'filename',
-				path = 0,
 				separator = {
-					-- right = ''
 					right = ''
 				},
-				symbols = {
-					modified = "●",
-					readonly = "[RO]"
-				}
 			},
 			{'diff',
 				colored = true,
@@ -151,6 +143,17 @@ lualine.setup {
 					right = ''
 				},
 				source = nil,
+			},
+			{'filename',
+				path = 0,
+				separator = {
+					-- right = ''
+					right = ''
+				},
+				symbols = {
+					modified = "●",
+					readonly = "[RO]"
+				}
 			},
 		},
 		lualine_c = {
