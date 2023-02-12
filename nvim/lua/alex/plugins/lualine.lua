@@ -28,11 +28,11 @@ function custom_filename_path()
 	local navic_location = ""
 
 	-- relative path, replace directory slashes to a bigger arrow
-	local file_name = string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
+	-- local file_name = string.gsub(vim.fn.expand('%:~:.'), '/', "  ")
 
 	-- enable navic if it's available
 	if navic.is_available() and navic.get_location() ~= "" then
-		navic_location = "  " .. navic.get_location()
+		navic_location =  navic.get_location()
 	end
 
 	-- if the current file is modified
@@ -46,7 +46,8 @@ function custom_filename_path()
 	end
 
 	-- returns the stuff that is being outputted in winbar
-	return file_name .. navic_location .. readonly_symbol .. modified_symbol
+	-- return file_name .. navic_location .. readonly_symbol .. modified_symbol
+	return navic_location .. readonly_symbol .. modified_symbol
 end
 
 function buffer_name(buf)
@@ -283,13 +284,23 @@ lualine.setup {
 		lualine_a = {
 			{'filename',
 				color = {
+					bg = '#66d9ef',
+					fg = '#1a1b26'
+				},
+				separator = {
+					right = ''
+				},
+				path = 0
+			},
+			{'filename',
+				color = {
 					bg = '#474973',
 					fg = '#cdd6f4'
 				},
 				separator = {
 					right = ''
 				},
-				fmt = custom_filename_path
+				fmt = custom_filename_path,
 			},
 		},
 		lualine_b = {
@@ -304,13 +315,23 @@ lualine.setup {
 		lualine_a = {
 			{'filename',
 				color = {
+					bg = '#66d9ef',
+					fg = '#1a1b26'
+				},
+				separator = {
+					right = ''
+				},
+				path = 0
+			},
+			{'filename',
+				color = {
 					bg = '#474973',
 					fg = '#cdd6f4'
 				},
 				separator = {
 					right = ''
 				},
-				fmt = custom_filename_path
+				fmt = custom_filename_path,
 			},
 		},
 		lualine_b = {},
