@@ -8,6 +8,7 @@
 -- })
 
 require("symbols-outline").setup({
-	highlight_hovered_item = false,
-	autofold_depth = 1
+	highlight_hovered_item = true,
+	autofold_depth = 1,
+	width = 20,
 })
