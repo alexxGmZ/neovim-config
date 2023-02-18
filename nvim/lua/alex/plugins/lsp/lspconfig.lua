@@ -8,8 +8,6 @@ local cmp_nvim_lsp = require('cmp_nvim_lsp')
 local lspconfig = require('lspconfig')
 local mason_lspconfig = require('mason-lspconfig')
 
-mason_lspconfig.setup()
-
 -- table of installed lsps
 -- add the lsp server name here after installing
 local LSP_LIST = {
@@ -17,7 +15,7 @@ local LSP_LIST = {
 	"jdtls",
 	"html",
 	"clangd",
-	"sumneko_lua",
+	"lua_ls",
 	"intelephense",
 	"vimls",
 	"cssls",
@@ -26,6 +24,11 @@ local LSP_LIST = {
 	"tailwindcss",
 	"bashls",
 	"lemminx",
+	"sqls",
+}
+
+mason_lspconfig.setup{
+	ensure_installed = LSP_LIST
 }
 
 local map = vim.keymap
