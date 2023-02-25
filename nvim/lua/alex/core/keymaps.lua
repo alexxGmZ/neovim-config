@@ -36,9 +36,9 @@ map.set("n", "<Esc>", ":noh<CR>")
 -- fzf
 map.set("n", "<C-p>", ":FzfLua files<CR>")
 
--- tagbar
-map.set("n", "<F8>", ":TagbarToggle<CR>")
-map.set("n", "<leader>tt", ":TagbarToggle<CR>")
+-- Symbols Outline
+map.set("n", "<F8>", ":SymbolsOutline<CR>")
+map.set("n", "<leader>tt", ":SymbolsOutline<CR>")
 
 -- autoclose brackets
 map.set("i", "{", "{}<Esc>ha")
