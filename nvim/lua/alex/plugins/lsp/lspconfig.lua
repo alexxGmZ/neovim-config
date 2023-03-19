@@ -1,8 +1,3 @@
--- local navic_setup, navic = pcall(require, "nvim-navic")
--- local cmp_nvim_lsp_setup, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
--- local lspconfig_setup, lspconfig = pcall(require, "lspconfig")
--- local mason_lspconfig_setup, mason_lspconfig = pcall(require, "mason-lspconfig")
-
 local navic = require('nvim-navic')
 local cmp_nvim_lsp = require('cmp_nvim_lsp')
 local lspconfig = require('lspconfig')
