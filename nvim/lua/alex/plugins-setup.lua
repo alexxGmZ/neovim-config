@@ -137,12 +137,6 @@ return packer.startup(function(use)
 		cmd = {'Merginal', 'MerginalToggle'}
 	}
 
-	use{ "preservim/tagbar",
-		-- opt = true,
-		cmd = {'TagbarOpen', 'TagbarToggle', 'Tagbar'},
-		config = vim.cmd("let g:tagbar_sort = 0")
-	}
-
 	use{ "gorbit99/codewindow.nvim",
 		opt = true,
 		config = function()

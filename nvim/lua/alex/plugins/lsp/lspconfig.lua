@@ -1,14 +1,7 @@
--- local navic_setup, navic = pcall(require, "nvim-navic")
--- local cmp_nvim_lsp_setup, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
--- local lspconfig_setup, lspconfig = pcall(require, "lspconfig")
--- local mason_lspconfig_setup, mason_lspconfig = pcall(require, "mason-lspconfig")
-
 local navic = require('nvim-navic')
 local cmp_nvim_lsp = require('cmp_nvim_lsp')
 local lspconfig = require('lspconfig')
 local mason_lspconfig = require('mason-lspconfig')
-
-mason_lspconfig.setup()
 
 -- table of installed lsps
 -- add the lsp server name here after installing
@@ -17,7 +10,7 @@ local LSP_LIST = {
 	"jdtls",
 	"html",
 	"clangd",
-	"sumneko_lua",
+	"lua_ls",
 	"intelephense",
 	"vimls",
 	"cssls",
@@ -26,6 +19,11 @@ local LSP_LIST = {
 	"tailwindcss",
 	"bashls",
 	"lemminx",
+	"sqls",
+}
+
+mason_lspconfig.setup{
+	ensure_installed = LSP_LIST
 }
 
 local map = vim.keymap

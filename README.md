@@ -72,7 +72,6 @@ I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Mana
 
 * [junegunn/fzf                     ](https://github.com/junegunn/fzf)
 * [ibhagwan/fzf-lua                 ](https://github.com/ibhagwan/fzf-lua)
-* [preservim/tagbar                 ](https://github.com/preservim/tagbar)
 * [christoomey/vim-tmux-navigator   ](https://github.com/christoomey/vim-tmux-navigator)
 * [jeffkreeftmeijer/vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle)
 * [nvim-tree/nvim-tree.lua          ](https://github.com/nvim-tree/nvim-tree.lua)
