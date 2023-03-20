@@ -19,7 +19,6 @@ local LSP_LIST = {
 	"tailwindcss",
 	"bashls",
 	"lemminx",
-	"sqls",
 }
 
 mason_lspconfig.setup{
