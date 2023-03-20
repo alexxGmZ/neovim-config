@@ -15,9 +15,6 @@ map.set("n", "N", "Nzzzv")
 map.set("n", "<C-o>", "<C-o>zz")
 map.set("n", "<C-i>", "<C-i>zz")
 
--- aerial
--- map.set("n", "<leader>a", ":AerialToggle<CR>")
-
 -- nvim-tree
 map.set("n", "<leader>F", ":NvimTreeToggle<CR>")
 map.set("n", "<leader><leader>f", ":NvimTreeToggle<CR>")
