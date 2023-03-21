@@ -1,9 +1,10 @@
-local bufferline_setup, bufferline = pcall(require, "bufferline")
-if not bufferline_setup then
-	return
-end
-
-bufferline.setup {
+-- local bufferline_setup, bufferline = pcall(require, "bufferline")
+-- if not bufferline_setup then
+-- 	return
+-- end
+--
+require("bufferline").setup {
+	highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	options = {
 		always_show_bufferline = true,
 		mode = "tabs",

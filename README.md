@@ -35,7 +35,7 @@ Lazy load some plugins
 
 * [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and other utf-8 characters)
 * neovim v0.8.0
-* [packer](https://github.com/wbthomason/packer.nvim) as the plugin manager
+* [lazy](https://github.com/folke/lazy.nvim) as the plugin manager
 * [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
    and [Victor Mono Font](https://github.com/rubjo/victor-mono) for sweet cursive italics
    (configured in Kitty's ```kitty.conf```)
@@ -45,7 +45,6 @@ Lazy load some plugins
       bold_font Fira Code Bold
       bold_italic_font Victor Mono Bold Italic
    ```
-* [ctags](https://github.com/universal-ctags/ctags) (for tagbar to work)
 * live-server (for nvim-markdown-preview)
 
 <br>
@@ -66,7 +65,7 @@ cp -vr nvim ~/.config/
 
 ### Plugins
 
-I use [```packer```](https://github.com/wbthomason/packer.nvim) as a Plugin Manager
+I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Navigation
 
@@ -185,21 +184,23 @@ The lsp clients will be looped to do a basic configuration.
 ```lua
 -- loop all the avaibale lsp inside LSP_LIST
 for _, lsp_server in pairs(LSP_LIST) do
-   -- basic configuration for installed lsp servers
-   lspconfig[lsp_server].setup{
-      capabilities = capabilities,
-      on_attach = on_attach,
-   }
+	-- basic configuration for installed lsp servers
+	lspconfig[lsp_server].setup{
+		capabilities = cmp_capabilities,
+		on_attach = on_attach,
+		flags = lsp_flags
+	}
 
-   -- custom lsp configuration below
+	-- custom lsp configuration below
 
-   if lsp_server == "bashls" then
-      lspconfig[lsp_server].setup{
-         capabilities = capabilities,
-         on_attach = on_attach,
-         filetypes = {'zsh', 'bash', 'sh'}
-      }
-   end
+	if lsp_server == "bashls" then
+		lspconfig[lsp_server].setup{
+			capabilities = cmp_capabilities,
+			on_attach = on_attach,
+			flags = lsp_flags,
+			filetypes = {'zsh', 'bash', 'sh'}
+		}
+	end
 end
 ```
 

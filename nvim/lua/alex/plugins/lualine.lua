@@ -6,6 +6,10 @@ if not nvim_navic_setup or
 	return
 end
 
+navic.setup{
+	highlight = true,
+}
+
 -- rename mode names to shorter ones
 local mode_map = {
 	n = "NOR",
@@ -53,7 +57,7 @@ lualine.setup {
 		-- component_separators = { left = '', right = ''},
 		component_separators = '',
 		section_separators = {
-			left = '',
+			-- left = '',
 			right = ''
 		},
 		disabled_filetypes = {
@@ -287,13 +291,6 @@ lualine.setup {
 				path = 0
 			},
 			{'filename',
-				color = {
-					bg = '#474973',
-					fg = '#cdd6f4'
-				},
-				separator = {
-					right = ''
-				},
 				fmt = custom_winbar_path,
 			},
 		},
@@ -322,13 +319,6 @@ lualine.setup {
 				path = 0
 			},
 			{'filename',
-				color = {
-					bg = '#474973',
-					fg = '#cdd6f4'
-				},
-				separator = {
-					right = ''
-				},
 				fmt = custom_winbar_path,
 			},
 		},
