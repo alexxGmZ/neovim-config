@@ -184,23 +184,23 @@ The lsp clients will be looped to do a basic configuration.
 ```lua
 -- loop all the avaibale lsp inside LSP_LIST
 for _, lsp_server in pairs(LSP_LIST) do
-	-- basic configuration for installed lsp servers
-	lspconfig[lsp_server].setup{
-		capabilities = cmp_capabilities,
-		on_attach = on_attach,
-		flags = lsp_flags
-	}
+   -- basic configuration for installed lsp servers
+   lspconfig[lsp_server].setup{
+      capabilities = cmp_capabilities,
+      on_attach = on_attach,
+      flags = lsp_flags
+   }
 
-	-- custom lsp configuration below
+   -- custom lsp configuration below
 
-	if lsp_server == "bashls" then
-		lspconfig[lsp_server].setup{
-			capabilities = cmp_capabilities,
-			on_attach = on_attach,
-			flags = lsp_flags,
-			filetypes = {'zsh', 'bash', 'sh'}
-		}
-	end
+   if lsp_server == "bashls" then
+      lspconfig[lsp_server].setup{
+         capabilities = cmp_capabilities,
+         on_attach = on_attach,
+         flags = lsp_flags,
+         filetypes = {'zsh', 'bash', 'sh'}
+      }
+   end
 end
 ```
 
