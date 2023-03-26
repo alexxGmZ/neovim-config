@@ -18,8 +18,8 @@ vim.cmd([[
 		" autocmd FileType markdown MarkdownPreview
 	augroup END
 
-	augroup cdpwd
-		autocmd!
-		autocmd VimEnter * cd $PWD
-	augroup END
+	" augroup cdpwd
+	" 	autocmd!
+	" 	autocmd VimEnter * cd $PWD
+	" augroup END
 ]])
