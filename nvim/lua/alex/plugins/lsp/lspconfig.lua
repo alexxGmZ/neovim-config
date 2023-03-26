@@ -19,6 +19,7 @@ local LSP_LIST = {
 	"tailwindcss",
 	"bashls",
 	"lemminx",
+	"csharp_ls"
 }
 
 mason_lspconfig.setup{
@@ -61,13 +62,13 @@ local on_attach = function(client, bufnr)
 end
 
 -- cmp-nvim-lsp plugin
-local cmp_capabilities = cmp_nvim_lsp.default_capabilities()
+local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- loop all the avaibale lsp inside LSP_LIST
 for _, lsp_server in pairs(LSP_LIST) do
 	-- basic configuration for installed lsp servers
 	lspconfig[lsp_server].setup{
-		capabilities = cmp_capabilities,
+		capabilities = capabilities,
 		on_attach = on_attach,
 		flags = lsp_flags
 	}
@@ -76,7 +77,7 @@ for _, lsp_server in pairs(LSP_LIST) do
 
 	if lsp_server == "bashls" then
 		lspconfig[lsp_server].setup{
-			capabilities = cmp_capabilities,
+			capabilities = capabilities,
 			on_attach = on_attach,
 			flags = lsp_flags,
 			filetypes = {'zsh', 'bash', 'sh'}

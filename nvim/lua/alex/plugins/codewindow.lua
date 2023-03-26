@@ -1,8 +1,3 @@
--- local success, codewindow = pcall(require, "codewindow")
--- if not success then
--- 	return
--- end
-
 require('codewindow').setup{
 	active_in_terminals = false,
 	auto_enable = false,

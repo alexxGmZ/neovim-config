@@ -1,8 +1,3 @@
--- local bufferline_setup, bufferline = pcall(require, "bufferline")
--- if not bufferline_setup then
--- 	return
--- end
---
 require("bufferline").setup {
 	highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	options = {
