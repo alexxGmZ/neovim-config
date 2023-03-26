@@ -44,10 +44,6 @@ function custom_winbar_path()
 	return navic_location
 end
 
-function buffer_name(buf)
-	return buf.name
-end
-
 lualine.setup {
 	options = {
 		icons_enabled = true,

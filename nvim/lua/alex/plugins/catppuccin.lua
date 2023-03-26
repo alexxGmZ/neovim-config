@@ -5,7 +5,7 @@ require("catppuccin").setup({
 		dark = "mocha",
 	},
 	transparent_background = false,
-	term_colors = false,
+	term_colors = true,
 	dim_inactive = {
 		enabled = false,
 		shade = "dark",
@@ -42,6 +42,10 @@ require("catppuccin").setup({
 		},
 		navic = {
 			enabled = true,
-		}
+		},
+		illuminate = true,
+		mason = true,
+		symbols_outline = true,
+		-- treesitter_context = true,
 	},
 })
