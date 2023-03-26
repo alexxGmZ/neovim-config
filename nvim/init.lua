@@ -1,4 +1,5 @@
--- require("alex.plugins-setup")
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 require("alex.core.autocmds")
 require("alex.core.keymaps")
@@ -20,8 +21,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{
 		"nvim-tree/nvim-tree.lua",
-		lazy = false,
-		-- cmd = "NvimTreeToggle",
 		config = function()
 			require("alex.plugins.nvim-tree")
 		end,
@@ -85,7 +84,6 @@ require("lazy").setup({
 
 	{
 		"akinsho/bufferline.nvim",
-		lazy = false,
 		config = function()
 			require("alex.plugins.bufferline")
 		end
@@ -93,7 +91,6 @@ require("lazy").setup({
 
 	{
 		"RRethy/vim-illuminate",
-		lazy = false,
 		config = function()
 			require("alex.plugins.vim-illuminate")
 		end
@@ -120,8 +117,7 @@ require("lazy").setup({
 
 	{
 		"davidgranstrom/nvim-markdown-preview",
-		-- opt = true,
-		cmd = 'MarkdownPreview'
+		ft = "markdown",
 	},
 
 	{
@@ -185,19 +181,30 @@ require("lazy").setup({
 
 	{
 		"numToStr/Comment.nvim",
-		lazy = false,
 		config = function ()
 			require("Comment").setup()
 		end
 	},
 
-	"christoomey/vim-tmux-navigator",
-	"jeffkreeftmeijer/vim-numbertoggle",
-
 	{
-		'norcalli/nvim-colorizer.lua',
+		"norcalli/nvim-colorizer.lua",
 		config = function()
 			require("colorizer").setup()
+		end
+	},
+
+	"christoomey/vim-tmux-navigator",
+	"sitiom/nvim-numbertoggle",
+
+	{
+		"Bekaboo/deadcolumn.nvim",
+		config = function ()
+			require("deadcolumn").setup({
+				warning = {
+					alpha = 0.3,
+					colorcode = "#F38BA8",
+				}
+			})
 		end
 	}
 
