@@ -69,12 +69,12 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Navigation
 
-* [junegunn/fzf                     ](https://github.com/junegunn/fzf)
-* [ibhagwan/fzf-lua                 ](https://github.com/ibhagwan/fzf-lua)
-* [christoomey/vim-tmux-navigator   ](https://github.com/christoomey/vim-tmux-navigator)
-* [jeffkreeftmeijer/vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle)
-* [nvim-tree/nvim-tree.lua          ](https://github.com/nvim-tree/nvim-tree.lua)
-* [simrat39/symbols-outline.nvim    ](https://github.com/simrat39/symbols-outline.nvim)
+* [junegunn/fzf                  ](https://github.com/junegunn/fzf)
+* [ibhagwan/fzf-lua              ](https://github.com/ibhagwan/fzf-lua)
+* [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+* [sitiom/nvim-numbertoggle      ](https://github.com/sitiom/nvim-numbertoggle)
+* [nvim-tree/nvim-tree.lua       ](https://github.com/nvim-tree/nvim-tree.lua)
+* [simrat39/symbols-outline.nvim ](https://github.com/simrat39/symbols-outline.nvim)
 
 #### Syntax Highlighting
 
@@ -97,10 +97,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [hrsh7th/cmp-vsnip                ](https://github.com/hrsh7th/cmp-vsnip)
 * [hrsh7th/vim-vsnip                ](https://github.com/hrsh7th/vim-vsnip)
 
-<!-- * [maxboisvert/vim-simple-complete](https://github.com/maxboisvert/vim-simple-complete) -->
-<!-- * [ackyshake/VimCompletesMe       ](https://github.com/ackyshake/VimCompletesMe) -->
-
-#### Aesthetic or UI
+#### Aesthetic or Interface
 
 * [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 * [nvim-lualine/lualine.nvim          ](https://github.com/nvim-lualine/lualine.nvim)
@@ -109,6 +106,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [SmiteshP/nvim-navic                ](https://github.com/SmiteshP/nvim-navic)
 * [nvim-tree/nvim-web-devicons        ](https://github.com/nvim-tree/nvim-web-devicons)
 * [gorbit99/codewindow.nvim           ](https://github.com/gorbit99/codewindow.nvim)
+* [Bekaboo/deadcolumn.nvim            ](https://github.com/Bekaboo/deadcolumn.nvim)
 
 #### Git Integration
 
@@ -125,6 +123,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [davidgranstrom/nvim-markdown-preview   ](https://github.com/davidgranstrom/nvim-markdown-preview)
 * [manzeloth/live-server                  ](https://github.com/manzeloth/live-server)
 * [RRethy/vim-illuminate                  ](https://github.com/RRethy/vim-illuminate)
+* [NMAC427/guess-indent.nvim              ](https://github.com/NMAC427/guess-indent.nvim)
 
 <br>
 
