@@ -21,7 +21,7 @@ Lazy load some plugins
    + [Navigation](#navigation)
    + [Syntax Highlighting](#syntax-highlighting)
    + [LSP or Auto-Completion](#lsp-or-auto-completion)
-   + [Aesthetic or UI](#aesthetic-or-ui)
+   + [Aesthetic or Interface](#aesthetic-or-interface)
    + [Git Integration](#git-integration)
    + [Quality of Life](#quality-of-life)
 * [Configured LSPs](#configured-lsps)
