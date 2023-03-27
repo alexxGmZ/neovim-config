@@ -31,7 +31,6 @@ require("lazy").setup({
 
 	{
 		"nvim-treesitter/nvim-treesitter",
-		lazy = false,
 		config = function()
 			require("alex.plugins.treesitter")
 			require("alex.plugins.treesitter-context")
@@ -79,7 +78,10 @@ require("lazy").setup({
 		"nvim-lualine/lualine.nvim",
 		config = function()
 			require("alex.plugins.lualine")
-		end
+		end,
+		dependencies = {
+			"SmiteshP/nvim-navic"
+		}
 	},
 
 	{
@@ -161,6 +163,7 @@ require("lazy").setup({
 		dependencies = {
 			"AndrewRadev/tagalong.vim",
 			"gregsexton/MatchTag",
+			"nvim-treesitter/nvim-treesitter",
 		}
 	},
 
@@ -205,6 +208,13 @@ require("lazy").setup({
 					colorcode = "#F38BA8",
 				}
 			})
+		end
+	},
+
+	{
+		"NMAC427/guess-indent.nvim",
+		config = function ()
+			require("guess-indent").setup{}
 		end
 	}
 
