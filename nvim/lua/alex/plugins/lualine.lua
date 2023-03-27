@@ -33,15 +33,10 @@ local colors = {
 
 -- this function is mainly for winbar
 function custom_winbar_path()
-	local navic_location = ""
-
 	-- enable navic if it's available
 	if navic.is_available() and navic.get_location() ~= "" then
-		navic_location =  navic.get_location()
+		return navic.get_location()
 	end
-
-	-- returns the stuff that is being outputted in winbar
-	return navic_location
 end
 
 lualine.setup {
