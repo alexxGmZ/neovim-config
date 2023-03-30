@@ -51,6 +51,16 @@ require("lazy").setup({
 		end
 	},
 
+	-- {
+	-- 	"folke/tokyonight.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("alex.plugins.tokyonight")
+	-- 		vim.cmd.colorscheme "tokyonight"
+	-- 	end
+	-- },
+
 	{
 		"neovim/nvim-lspconfig",
 		lazy = false,
