@@ -14,13 +14,13 @@ require("catppuccin").setup({
 	no_italic = false, -- Force no italic
 	no_bold = false, -- Force no bold
 	styles = {
-		comments = { "italic" },
-		conditionals = { "italic" },
-		loops = {},
+		comments = {"italic"},
+		conditionals = {"italic"},
+		loops = {"italic"},
 		functions = {},
-		keywords = {},
-		strings = {},
-		variables = {},
+		keywords = {"italic"},
+		strings = { "bold" },
+		variables = {"bold"},
 		numbers = {},
 		booleans = {},
 		properties = {},
@@ -46,6 +46,6 @@ require("catppuccin").setup({
 		illuminate = true,
 		mason = true,
 		symbols_outline = true,
-		-- treesitter_context = true,
+		treesitter_context = true,
 	},
 })
