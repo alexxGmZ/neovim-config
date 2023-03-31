@@ -206,9 +206,6 @@ require("lazy").setup({
 		end
 	},
 
-	"christoomey/vim-tmux-navigator",
-	"sitiom/nvim-numbertoggle",
-
 	{
 		"Bekaboo/deadcolumn.nvim",
 		config = function ()
@@ -226,6 +223,20 @@ require("lazy").setup({
 		config = function ()
 			require("guess-indent").setup{}
 		end
-	}
+	},
 
+	{
+		"folke/noice.nvim",
+		config = function()
+			require("alex.plugins.notify")
+			require("alex.plugins.noice")
+		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify"
+		}
+	},
+
+	"christoomey/vim-tmux-navigator",
+	"sitiom/nvim-numbertoggle",
 })
