@@ -107,9 +107,6 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-tree/nvim-web-devicons        ](https://github.com/nvim-tree/nvim-web-devicons)
 * [gorbit99/codewindow.nvim           ](https://github.com/gorbit99/codewindow.nvim)
 * [Bekaboo/deadcolumn.nvim            ](https://github.com/Bekaboo/deadcolumn.nvim)
-* [folke/noice.nvim                   ](https://github.com/folke/noice.nvim)
-* [MunifTanjim/nui.nvim               ](https://github.com/MunifTanjim/nui.nvim)
-* [rcarriga/nvim-notify               ](https://github.com/rcarriga/nvim-notify)
 
 #### Git Integration
 
