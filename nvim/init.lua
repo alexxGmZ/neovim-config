@@ -20,6 +20,25 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
+		"catppuccin/nvim",
+		lazy = false,
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			require("alex.plugins.catppuccin")
+			vim.cmd.colorscheme "catppuccin"
+		end
+	},
+
+	{
+		"rcarriga/nvim-notify",
+		priority = 999,
+		config = function ()
+			require("alex.plugins.notify")
+		end
+	},
+
+	{
 		"nvim-tree/nvim-tree.lua",
 		config = function()
 			require("alex.plugins.nvim-tree")
@@ -38,17 +57,6 @@ require("lazy").setup({
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-context"
 		}
-	},
-
-	{
-		"catppuccin/nvim",
-		lazy = false,
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			require("alex.plugins.catppuccin")
-			vim.cmd.colorscheme "catppuccin"
-		end
 	},
 
 	-- {
@@ -206,9 +214,6 @@ require("lazy").setup({
 		end
 	},
 
-	"christoomey/vim-tmux-navigator",
-	"sitiom/nvim-numbertoggle",
-
 	{
 		"Bekaboo/deadcolumn.nvim",
 		config = function ()
@@ -226,6 +231,17 @@ require("lazy").setup({
 		config = function ()
 			require("guess-indent").setup{}
 		end
-	}
+	},
+
+	{
+		"chrisgrieser/nvim-early-retirement",
+		config = function ()
+			require("alex.plugins.early-retirement")
+		end,
+		event = "VeryLazy",
+	},
+
+	"christoomey/vim-tmux-navigator",
+	"sitiom/nvim-numbertoggle",
 
 })
