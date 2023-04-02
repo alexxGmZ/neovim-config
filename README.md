@@ -107,6 +107,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-tree/nvim-web-devicons        ](https://github.com/nvim-tree/nvim-web-devicons)
 * [gorbit99/codewindow.nvim           ](https://github.com/gorbit99/codewindow.nvim)
 * [Bekaboo/deadcolumn.nvim            ](https://github.com/Bekaboo/deadcolumn.nvim)
+* [rcarriga/nvim-notify               ](https://github.com/rcarriga/nvim-notify)
 
 #### Git Integration
 
@@ -124,6 +125,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [manzeloth/live-server                  ](https://github.com/manzeloth/live-server)
 * [RRethy/vim-illuminate                  ](https://github.com/RRethy/vim-illuminate)
 * [NMAC427/guess-indent.nvim              ](https://github.com/NMAC427/guess-indent.nvim)
+* [chrisgrieser/nvim-early-retirement     ](https://github.com/chrisgrieser/nvim-early-retirement)
 
 <br>
 
