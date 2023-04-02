@@ -10,7 +10,6 @@ I don't own this "GET SHIT DONE" wallpaper and it's not part of the config. It's
 Symbols Outline and Nvim Tree
 ![image2](./assets/images/img2.png)
 ![image3](./assets/images/img3.png)
-Lazy load some plugins
 ![image4](./assets/images/img4.png)
 
 ## Table of Contents
@@ -26,7 +25,6 @@ Lazy load some plugins
    + [Quality of Life](#quality-of-life)
 * [Configured LSPs](#configured-lsps)
    + [How to Install LSPs and Do a Basic Configuration](#how-to-install-lsps-and-do-a-basic-configuration)
-<!-- + [To Do/s](#to-dos) -->
 
 <br>
 
@@ -34,18 +32,18 @@ Lazy load some plugins
 ### Dependencies
 
 * [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and other utf-8 characters)
-* neovim v0.8.0
+* neovim v0.8.+
 * [lazy](https://github.com/folke/lazy.nvim) as the plugin manager
 * [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
    and [Victor Mono Font](https://github.com/rubjo/victor-mono) for sweet cursive italics
    (configured in Kitty's ```kitty.conf```)
    ```
-      font_family Fira Code Semi Bold
-      italic_font Victor Mono Bold Italic
+      font_family Fira Code Regular
       bold_font Fira Code Bold
+      italic_font Victor Mono SemiBold Italic
       bold_italic_font Victor Mono Bold Italic
    ```
-* live-server (for nvim-markdown-preview)
+* live-server (for nvim-markdown-preview, install by ```npm i -g live-server```)
 
 <br>
 
