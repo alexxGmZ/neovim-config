@@ -69,7 +69,8 @@ lualine.setup {
 				"Outline",
 				"text",
 				"log",
-				"help"
+				"help",
+				"Jaq"
 			},
 		},
 		ignore_focus = {},

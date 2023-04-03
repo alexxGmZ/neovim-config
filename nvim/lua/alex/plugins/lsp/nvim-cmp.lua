@@ -11,10 +11,12 @@ cmp.setup({
 		  vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
 		end,
 	},
+
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
+
 	mapping = cmp.mapping.preset.insert({
 		['<C-b>'] = cmp.mapping.scroll_docs(-4),
 		['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -36,11 +38,25 @@ cmp.setup({
 			end
 		end, { "i", "s" }),
 	}),
+
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'vsnip' }, -- For vsnip users.
 		{ name = 'buffer' },
-	})
+	}),
+
+	sorting = {
+		comparators = {
+			cmp.config.compare.offset,
+			cmp.config.compare.exact,
+			cmp.config.compare.score,
+			require "cmp-under-comparator".under,
+			cmp.config.compare.kind,
+			cmp.config.compare.sort_text,
+			cmp.config.compare.length,
+			cmp.config.compare.order,
+		},
+	},
 })
 
 -- Set configuration for specific filetype.

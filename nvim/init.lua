@@ -56,7 +56,7 @@ require("lazy").setup({
 		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-context"
-		}
+		},
 	},
 
 	-- {
@@ -75,19 +75,27 @@ require("lazy").setup({
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-cmdline",
-			"hrsh7th/nvim-cmp",
-			"hrsh7th/cmp-vsnip",
-			"hrsh7th/vim-vsnip",
-			"hrsh7th/vim-vsnip-integ",
-			"SmiteshP/nvim-navic"
+			"SmiteshP/nvim-navic",
 		},
 		config = function()
 			require("alex.plugins.lsp.mason")
 			require("alex.plugins.lsp.lspconfig")
+		end
+	},
+
+	{
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"hrsh7th/cmp-vsnip",
+			"hrsh7th/vim-vsnip",
+			"hrsh7th/vim-vsnip-integ",
+			"lukas-reineke/cmp-under-comparator"
+		},
+		config = function ()
 			require("alex.plugins.lsp.nvim-cmp")
 		end
 	},
@@ -190,7 +198,10 @@ require("lazy").setup({
 		config = function()
 			require("alex.plugins.symbols-outline")
 		end,
-		cmd = {'SymbolsOutline', 'SymbolsOutlineOpen'}
+		cmd = {'SymbolsOutline', 'SymbolsOutlineOpen'},
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		}
 	},
 
 	{
@@ -239,6 +250,14 @@ require("lazy").setup({
 			require("alex.plugins.early-retirement")
 		end,
 		event = "VeryLazy",
+	},
+
+	{
+		"is0n/jaq-nvim",
+		config = function ()
+			require("alex.plugins.jaq-nvim")
+		end,
+		cmd = {"Jaq"}
 	},
 
 	"christoomey/vim-tmux-navigator",
