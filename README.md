@@ -97,15 +97,17 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Aesthetic or Interface
 
-* [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-* [nvim-lualine/lualine.nvim          ](https://github.com/nvim-lualine/lualine.nvim)
-* [catppuccin/nvim                    ](https://github.com/catppuccin/nvim)
-* [akinsho/bufferline.nvim            ](https://github.com/akinsho/bufferline.nvim)
-* [SmiteshP/nvim-navic                ](https://github.com/SmiteshP/nvim-navic)
-* [nvim-tree/nvim-web-devicons        ](https://github.com/nvim-tree/nvim-web-devicons)
-* [gorbit99/codewindow.nvim           ](https://github.com/gorbit99/codewindow.nvim)
-* [Bekaboo/deadcolumn.nvim            ](https://github.com/Bekaboo/deadcolumn.nvim)
-* [rcarriga/nvim-notify               ](https://github.com/rcarriga/nvim-notify)
+* [lukas-reineke/indent-blankline.nvim    ](https://github.com/lukas-reineke/indent-blankline.nvim)
+* [nvim-lualine/lualine.nvim              ](https://github.com/nvim-lualine/lualine.nvim)
+* [catppuccin/nvim                        ](https://github.com/catppuccin/nvim)
+* [akinsho/bufferline.nvim                ](https://github.com/akinsho/bufferline.nvim)
+* [SmiteshP/nvim-navic                    ](https://github.com/SmiteshP/nvim-navic)
+* [nvim-tree/nvim-web-devicons            ](https://github.com/nvim-tree/nvim-web-devicons)
+* [gorbit99/codewindow.nvim               ](https://github.com/gorbit99/codewindow.nvim)
+* [Bekaboo/deadcolumn.nvim                ](https://github.com/Bekaboo/deadcolumn.nvim)
+* [rcarriga/nvim-notify                   ](https://github.com/rcarriga/nvim-notify)
+* [NMAC427/guess-indent.nvim              ](https://github.com/NMAC427/guess-indent.nvim)
+* [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 
 #### Git Integration
 
@@ -116,14 +118,13 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 #### Quality of Life
 
 * [norcalli/nvim-colorizer.lua            ](https://github.com/norcalli/nvim-colorizer.lua)
-* [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 * [numToStr/Comment.nvim                  ](https://github.com/numToStr/Comment.nvim)
 * [nullchilly/fsread.nvim                 ](https://github.com/nullchilly/fsread.nvim)
 * [davidgranstrom/nvim-markdown-preview   ](https://github.com/davidgranstrom/nvim-markdown-preview)
 * [manzeloth/live-server                  ](https://github.com/manzeloth/live-server)
 * [RRethy/vim-illuminate                  ](https://github.com/RRethy/vim-illuminate)
-* [NMAC427/guess-indent.nvim              ](https://github.com/NMAC427/guess-indent.nvim)
 * [chrisgrieser/nvim-early-retirement     ](https://github.com/chrisgrieser/nvim-early-retirement)
+* [is0n/jaq-nvim                          ](https://github.com/is0n/jaq-nvim)
 
 <br>
 
