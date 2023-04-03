@@ -50,6 +50,7 @@ require("lazy").setup({
 
 	{
 		"nvim-treesitter/nvim-treesitter",
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.treesitter")
 			require("alex.plugins.treesitter-context")
@@ -71,7 +72,7 @@ require("lazy").setup({
 
 	{
 		"neovim/nvim-lspconfig",
-		lazy = false,
+		event = "VeryLazy",
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
@@ -85,6 +86,7 @@ require("lazy").setup({
 
 	{
 		"hrsh7th/nvim-cmp",
+		event = "VeryLazy",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
@@ -102,6 +104,7 @@ require("lazy").setup({
 
 	{
 		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.lualine")
 		end,
@@ -112,6 +115,7 @@ require("lazy").setup({
 
 	{
 		"akinsho/bufferline.nvim",
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.bufferline")
 		end
@@ -119,6 +123,7 @@ require("lazy").setup({
 
 	{
 		"RRethy/vim-illuminate",
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.vim-illuminate")
 		end
@@ -209,10 +214,12 @@ require("lazy").setup({
 		config = function()
 			require("alex.plugins.indent-blankline")
 		end,
+		event = "VeryLazy",
 	},
 
 	{
 		"numToStr/Comment.nvim",
+		event = "VeryLazy",
 		config = function ()
 			require("Comment").setup()
 		end
@@ -220,6 +227,7 @@ require("lazy").setup({
 
 	{
 		"norcalli/nvim-colorizer.lua",
+		event = "VeryLazy",
 		config = function()
 			require("colorizer").setup()
 		end
@@ -234,14 +242,15 @@ require("lazy").setup({
 					colorcode = "#F38BA8",
 				}
 			})
-		end
+		end,
+		event = "VeryLazy",
 	},
 
 	{
 		"NMAC427/guess-indent.nvim",
 		config = function ()
 			require("guess-indent").setup{}
-		end
+		end,
 	},
 
 	{
@@ -260,7 +269,13 @@ require("lazy").setup({
 		cmd = {"Jaq"}
 	},
 
-	"christoomey/vim-tmux-navigator",
-	"sitiom/nvim-numbertoggle",
+	{
+		"christoomey/vim-tmux-navigator",
+		event = "VeryLazy",
+	},
 
+	{
+		"sitiom/nvim-numbertoggle",
+		event = "VeryLazy",
+	}
 })
