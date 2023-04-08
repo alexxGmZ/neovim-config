@@ -51,6 +51,7 @@ require("lazy").setup({
 	{
 		"nvim-treesitter/nvim-treesitter",
 		event = "VeryLazy",
+		build = ":TSUpdate",
 		config = function()
 			require("alex.plugins.treesitter")
 			require("alex.plugins.treesitter-context")
@@ -72,7 +73,6 @@ require("lazy").setup({
 
 	{
 		"neovim/nvim-lspconfig",
-		event = "VeryLazy",
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
@@ -277,5 +277,5 @@ require("lazy").setup({
 	{
 		"sitiom/nvim-numbertoggle",
 		event = "VeryLazy",
-	}
+	},
 })
