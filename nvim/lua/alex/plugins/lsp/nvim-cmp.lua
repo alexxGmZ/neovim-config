@@ -43,6 +43,7 @@ cmp.setup({
 		{ name = 'nvim_lsp' },
 		{ name = 'vsnip' }, -- For vsnip users.
 		{ name = 'buffer' },
+		{ name = 'path' },
 	}),
 
 	sorting = {
