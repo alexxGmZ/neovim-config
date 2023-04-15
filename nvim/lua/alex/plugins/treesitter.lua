@@ -17,7 +17,6 @@ treesitter.setup {
 		"latex",
 		"python",
 		"java",
-		"sql",
 		"bash",
 		"cpp",
 		"json",
