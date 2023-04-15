@@ -50,7 +50,6 @@ require("lazy").setup({
 
 	{
 		"nvim-treesitter/nvim-treesitter",
-		event = "VeryLazy",
 		build = ":TSUpdate",
 		config = function()
 			require("alex.plugins.treesitter")
@@ -270,12 +269,15 @@ require("lazy").setup({
 	},
 
 	{
-		"christoomey/vim-tmux-navigator",
+		"sitiom/nvim-numbertoggle",
 		event = "VeryLazy",
 	},
 
 	{
-		"sitiom/nvim-numbertoggle",
+		"alexghergh/nvim-tmux-navigation",
 		event = "VeryLazy",
+		config = function()
+			require("alex.plugins.nvim-tmux-navigation")
+		end
 	},
 })

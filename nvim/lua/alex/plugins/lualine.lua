@@ -136,7 +136,6 @@ lualine.setup {
 			{'filename',
 				path = 0,
 				separator = {
-					-- right = ''
 					right = ''
 				},
 				symbols = {
