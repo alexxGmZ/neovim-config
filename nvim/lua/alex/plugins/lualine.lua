@@ -69,7 +69,9 @@ lualine.setup {
 				"Outline",
 				"text",
 				"log",
-				"help"
+				"help",
+				"Jaq",
+				"qf"
 			},
 		},
 		ignore_focus = {},
@@ -134,7 +136,6 @@ lualine.setup {
 			{'filename',
 				path = 0,
 				separator = {
-					-- right = ''
 					right = ''
 				},
 				symbols = {

@@ -50,13 +50,14 @@ require("lazy").setup({
 
 	{
 		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
 		config = function()
 			require("alex.plugins.treesitter")
 			require("alex.plugins.treesitter-context")
 		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-context"
-		}
+		},
 	},
 
 	-- {
@@ -71,29 +72,38 @@ require("lazy").setup({
 
 	{
 		"neovim/nvim-lspconfig",
-		lazy = false,
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-cmdline",
-			"hrsh7th/nvim-cmp",
-			"hrsh7th/cmp-vsnip",
-			"hrsh7th/vim-vsnip",
-			"hrsh7th/vim-vsnip-integ",
-			"SmiteshP/nvim-navic"
+			"SmiteshP/nvim-navic",
 		},
 		config = function()
 			require("alex.plugins.lsp.mason")
 			require("alex.plugins.lsp.lspconfig")
+		end
+	},
+
+	{
+		"hrsh7th/nvim-cmp",
+		event = "VeryLazy",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"hrsh7th/cmp-vsnip",
+			"hrsh7th/vim-vsnip",
+			"hrsh7th/vim-vsnip-integ",
+			"lukas-reineke/cmp-under-comparator"
+		},
+		config = function ()
 			require("alex.plugins.lsp.nvim-cmp")
 		end
 	},
 
 	{
 		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.lualine")
 		end,
@@ -104,6 +114,7 @@ require("lazy").setup({
 
 	{
 		"akinsho/bufferline.nvim",
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.bufferline")
 		end
@@ -111,6 +122,7 @@ require("lazy").setup({
 
 	{
 		"RRethy/vim-illuminate",
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.vim-illuminate")
 		end
@@ -190,7 +202,10 @@ require("lazy").setup({
 		config = function()
 			require("alex.plugins.symbols-outline")
 		end,
-		cmd = {'SymbolsOutline', 'SymbolsOutlineOpen'}
+		cmd = {'SymbolsOutline', 'SymbolsOutlineOpen'},
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		}
 	},
 
 	{
@@ -198,10 +213,12 @@ require("lazy").setup({
 		config = function()
 			require("alex.plugins.indent-blankline")
 		end,
+		event = "VeryLazy",
 	},
 
 	{
 		"numToStr/Comment.nvim",
+		event = "VeryLazy",
 		config = function ()
 			require("Comment").setup()
 		end
@@ -209,6 +226,7 @@ require("lazy").setup({
 
 	{
 		"norcalli/nvim-colorizer.lua",
+		event = "VeryLazy",
 		config = function()
 			require("colorizer").setup()
 		end
@@ -223,14 +241,15 @@ require("lazy").setup({
 					colorcode = "#F38BA8",
 				}
 			})
-		end
+		end,
+		event = "VeryLazy",
 	},
 
 	{
 		"NMAC427/guess-indent.nvim",
 		config = function ()
 			require("guess-indent").setup{}
-		end
+		end,
 	},
 
 	{
@@ -241,7 +260,24 @@ require("lazy").setup({
 		event = "VeryLazy",
 	},
 
-	"christoomey/vim-tmux-navigator",
-	"sitiom/nvim-numbertoggle",
+	{
+		"is0n/jaq-nvim",
+		config = function ()
+			require("alex.plugins.jaq-nvim")
+		end,
+		cmd = {"Jaq"}
+	},
 
+	{
+		"sitiom/nvim-numbertoggle",
+		event = "VeryLazy",
+	},
+
+	{
+		"alexghergh/nvim-tmux-navigation",
+		event = "VeryLazy",
+		config = function()
+			require("alex.plugins.nvim-tmux-navigation")
+		end
+	},
 })

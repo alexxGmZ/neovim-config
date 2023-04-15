@@ -19,43 +19,44 @@ local LSP_LIST = {
 	"tailwindcss",
 	"bashls",
 	"lemminx",
-	"csharp_ls"
 }
 
 mason_lspconfig.setup{
 	ensure_installed = LSP_LIST
 }
 
-local map = vim.keymap
-local lsp = vim.lsp
+-- Use LspAttach autocommand to only map the following keys
+-- after the language server attaches to the current buffer
+vim.api.nvim_create_autocmd('LspAttach', {
+	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+	callback = function(ev)
+		-- Enable completion triggered by <c-x><c-o>
+		vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-local opts = {
-	noremap = true,
-	silent = true
-}
+		-- Buffer local mappings.
+		-- See `:help vim.lsp.*` for documentation on any of the below functions
+		local opts = { buffer = ev.buf }
+		vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+		vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+		vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+		vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+		vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
+		vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
+		vim.keymap.set('n', '<leader>wl', function()
+			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+		end, opts)
+		vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, opts)
+		vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+		vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+		vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+		vim.keymap.set('n', '<leader>f', function()
+			vim.lsp.buf.format { async = true }
+		end, opts)
+	end,
+})
 
-local lsp_flags = {
-	debounce_text_changes = 150
-}
-
-map.set("n", "<leader>qls", vim.diagnostic.setloclist, opts)
-
+-- add nvim-navic
 local on_attach = function(client, bufnr)
-	local bufopts = { noremap=true, silent=true, buffer=bufnr }
-	map.set('n', 'gD', lsp.buf.declaration, bufopts)
-	map.set('n', 'gd', lsp.buf.definition, bufopts)
-	map.set('n', 'gr', lsp.buf.references, bufopts)
-	map.set('n', 'gi', lsp.buf.implementation, bufopts)
-
-	map.set('n', 'K', lsp.buf.hover, bufopts)
-	-- map.set('n', '<C-k>', lsp.buf.signature_help, bufopts)
-
-	map.set('n', '<space>D', lsp.buf.type_definition, bufopts)
-	map.set('n', '<space>rn', lsp.buf.rename, bufopts)
-	map.set('n', '<space>ca', lsp.buf.code_action, bufopts)
-	map.set('n', '<space>f', function() lsp.buf.format { async = true } end, bufopts)
-
-	-- add nvim-navic
 	if client.server_capabilities.documentSymbolProvider then
 		return navic.attach(client, bufnr)
 	end
@@ -70,7 +71,6 @@ for _, lsp_server in pairs(LSP_LIST) do
 	lspconfig[lsp_server].setup{
 		capabilities = capabilities,
 		on_attach = on_attach,
-		flags = lsp_flags
 	}
 
 	-- custom lsp configuration below
@@ -79,8 +79,8 @@ for _, lsp_server in pairs(LSP_LIST) do
 		lspconfig[lsp_server].setup{
 			capabilities = capabilities,
 			on_attach = on_attach,
-			flags = lsp_flags,
 			filetypes = {'zsh', 'bash', 'sh'}
 		}
 	end
 end
+

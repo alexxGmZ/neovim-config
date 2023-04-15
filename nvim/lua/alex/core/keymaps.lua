@@ -52,3 +52,6 @@ map.set("n", "<leader>,", "<C-w>3<")
 
 -- codewindow (custom command)
 map.set("n", "<leader>mm", ":CWToggle<CR>")
+
+-- jaq
+map.set("n", "<leader>rr", ":Jaq<CR>")
