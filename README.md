@@ -1,5 +1,7 @@
 # My Neovim Setup
 
+My neovim setup and development workflow
+
 <br>
 
 
@@ -67,12 +69,12 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Navigation
 
-* [junegunn/fzf                  ](https://github.com/junegunn/fzf)
-* [ibhagwan/fzf-lua              ](https://github.com/ibhagwan/fzf-lua)
-* [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
-* [sitiom/nvim-numbertoggle      ](https://github.com/sitiom/nvim-numbertoggle)
-* [nvim-tree/nvim-tree.lua       ](https://github.com/nvim-tree/nvim-tree.lua)
-* [simrat39/symbols-outline.nvim ](https://github.com/simrat39/symbols-outline.nvim)
+* [junegunn/fzf                   ](https://github.com/junegunn/fzf)
+* [ibhagwan/fzf-lua               ](https://github.com/ibhagwan/fzf-lua)
+* [alexghergh/nvim-tmux-navigation](https://github.com/alexghergh/nvim-tmux-navigation)
+* [sitiom/nvim-numbertoggle       ](https://github.com/sitiom/nvim-numbertoggle)
+* [nvim-tree/nvim-tree.lua        ](https://github.com/nvim-tree/nvim-tree.lua)
+* [simrat39/symbols-outline.nvim  ](https://github.com/simrat39/symbols-outline.nvim)
 
 #### Syntax Highlighting
 
@@ -117,14 +119,14 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Quality of Life
 
-* [norcalli/nvim-colorizer.lua            ](https://github.com/norcalli/nvim-colorizer.lua)
-* [numToStr/Comment.nvim                  ](https://github.com/numToStr/Comment.nvim)
-* [nullchilly/fsread.nvim                 ](https://github.com/nullchilly/fsread.nvim)
-* [davidgranstrom/nvim-markdown-preview   ](https://github.com/davidgranstrom/nvim-markdown-preview)
-* [manzeloth/live-server                  ](https://github.com/manzeloth/live-server)
-* [RRethy/vim-illuminate                  ](https://github.com/RRethy/vim-illuminate)
-* [chrisgrieser/nvim-early-retirement     ](https://github.com/chrisgrieser/nvim-early-retirement)
-* [is0n/jaq-nvim                          ](https://github.com/is0n/jaq-nvim)
+* [norcalli/nvim-colorizer.lua         ](https://github.com/norcalli/nvim-colorizer.lua)
+* [numToStr/Comment.nvim               ](https://github.com/numToStr/Comment.nvim)
+* [nullchilly/fsread.nvim              ](https://github.com/nullchilly/fsread.nvim)
+* [davidgranstrom/nvim-markdown-preview](https://github.com/davidgranstrom/nvim-markdown-preview)
+* [manzeloth/live-server               ](https://github.com/manzeloth/live-server)
+* [RRethy/vim-illuminate               ](https://github.com/RRethy/vim-illuminate)
+* [chrisgrieser/nvim-early-retirement  ](https://github.com/chrisgrieser/nvim-early-retirement)
+* [is0n/jaq-nvim                       ](https://github.com/is0n/jaq-nvim)
 
 <br>
 
@@ -188,7 +190,6 @@ for _, lsp_server in pairs(LSP_LIST) do
    lspconfig[lsp_server].setup{
       capabilities = cmp_capabilities,
       on_attach = on_attach,
-      flags = lsp_flags
    }
 
    -- custom lsp configuration below
@@ -197,7 +198,6 @@ for _, lsp_server in pairs(LSP_LIST) do
       lspconfig[lsp_server].setup{
          capabilities = cmp_capabilities,
          on_attach = on_attach,
-         flags = lsp_flags,
          filetypes = {'zsh', 'bash', 'sh'}
       }
    end
