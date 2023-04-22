@@ -7,6 +7,7 @@ local mason_lspconfig = require('mason-lspconfig')
 -- add the lsp server name here after installing
 local LSP_LIST = {
 	"pyright",
+	-- "pylsp",
 	"jdtls",
 	"html",
 	"clangd",
@@ -57,6 +58,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 -- add nvim-navic
 local on_attach = function(client, bufnr)
+	-- require "lsp_signature".on_attach(signature_setup, bufnr)
 	if client.server_capabilities.documentSymbolProvider then
 		return navic.attach(client, bufnr)
 	end
