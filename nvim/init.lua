@@ -76,6 +76,7 @@ require("lazy").setup({
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"SmiteshP/nvim-navic",
+			-- "ray-x/lsp_signature.nvim"
 		},
 		config = function()
 			require("alex.plugins.lsp.mason")

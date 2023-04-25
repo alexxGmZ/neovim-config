@@ -60,6 +60,8 @@ mkdir -v ~/.config/nvim
 cp -vr nvim ~/.config/
 ```
 
+**Note:** This config doesn't fully work in Windows
+
 <br>
 
 

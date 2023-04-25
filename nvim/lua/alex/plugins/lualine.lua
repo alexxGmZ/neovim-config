@@ -31,24 +31,13 @@ local colors = {
 	git_removed = "#f7768e"
 }
 
--- this function is mainly for winbar
-function custom_winbar_path()
-	-- enable navic if it's available
-	if navic.is_available() and navic.get_location() ~= "" then
-		return navic.get_location()
-	end
-end
-
 lualine.setup {
 	options = {
 		icons_enabled = true,
 		-- theme = 'molokai',
 		theme = 'horizon',
-		-- section_separators = { left = '', right = ''},
-		-- component_separators = { left = '', right = ''},
 		component_separators = '',
 		section_separators = {
-			-- left = '',
 			right = ''
 		},
 		disabled_filetypes = {
@@ -283,9 +272,7 @@ lualine.setup {
 				},
 				path = 0
 			},
-			{'filename',
-				fmt = custom_winbar_path,
-			},
+			{"navic"},
 		},
 		lualine_b = {
 		},
@@ -310,9 +297,6 @@ lualine.setup {
 					readonly = "[RO]"
 				},
 				path = 0
-			},
-			{'filename',
-				fmt = custom_winbar_path,
 			},
 		},
 		lualine_b = {},
