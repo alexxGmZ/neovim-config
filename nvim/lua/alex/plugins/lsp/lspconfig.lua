@@ -22,6 +22,12 @@ local LSP_LIST = {
 	"lemminx",
 }
 
+navic.setup{
+	lsp = {
+		auto_attach = true
+	}
+}
+
 mason_lspconfig.setup{
 	ensure_installed = LSP_LIST
 }
@@ -56,13 +62,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
--- add nvim-navic
-local on_attach = function(client, bufnr)
-	-- require "lsp_signature".on_attach(signature_setup, bufnr)
-	if client.server_capabilities.documentSymbolProvider then
-		return navic.attach(client, bufnr)
-	end
-end
+-- -- add nvim-navic
+-- local on_attach = function(client, bufnr)
+-- 	-- require "lsp_signature".on_attach(signature_setup, bufnr)
+-- 	if client.server_capabilities.documentSymbolProvider then
+-- 		return navic.attach(client, bufnr)
+-- 	end
+-- end
 
 -- cmp-nvim-lsp plugin
 local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -72,7 +78,7 @@ for _, lsp_server in pairs(LSP_LIST) do
 	-- basic configuration for installed lsp servers
 	lspconfig[lsp_server].setup{
 		capabilities = capabilities,
-		on_attach = on_attach,
+		-- on_attach = on_attach,
 	}
 
 	-- custom lsp configuration below
@@ -80,7 +86,7 @@ for _, lsp_server in pairs(LSP_LIST) do
 	if lsp_server == "bashls" then
 		lspconfig[lsp_server].setup{
 			capabilities = capabilities,
-			on_attach = on_attach,
+			-- on_attach = on_attach,
 			filetypes = {'zsh', 'bash', 'sh'}
 		}
 	end
