@@ -1,7 +1,7 @@
 require("bufferline").setup {
 	highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	options = {
-		always_show_bufferline = true,
+		always_show_bufferline = false,
 		mode = "tabs",
 		truncate_names = false,
 		name_formatter = function(buf)

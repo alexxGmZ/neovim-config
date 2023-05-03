@@ -19,6 +19,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	-- #### COLORSCHEME #### --
 	{
 		"catppuccin/nvim",
 		lazy = false,
@@ -30,36 +31,6 @@ require("lazy").setup({
 		end
 	},
 
-	{
-		"rcarriga/nvim-notify",
-		priority = 999,
-		config = function ()
-			require("alex.plugins.notify")
-		end
-	},
-
-	{
-		"nvim-tree/nvim-tree.lua",
-		config = function()
-			require("alex.plugins.nvim-tree")
-		end,
-		dependencies = {
-			"nvim-tree/nvim-web-devicons"
-		}
-	},
-
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			require("alex.plugins.treesitter")
-			require("alex.plugins.treesitter-context")
-		end,
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter-context"
-		},
-	},
-
 	-- {
 	-- 	"folke/tokyonight.nvim",
 	-- 	lazy = false,
@@ -69,21 +40,115 @@ require("lazy").setup({
 	-- 		vim.cmd.colorscheme "tokyonight"
 	-- 	end
 	-- },
+	-- #### COLORSCHEME #### --
 
+
+	-- #### LOAD BY COMMAND #### --
 	{
-		"neovim/nvim-lspconfig",
+		"ibhagwan/fzf-lua",
+		cmd = "FzfLua",
 		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-			"SmiteshP/nvim-navic",
-			-- "ray-x/lsp_signature.nvim"
-		},
-		config = function()
-			require("alex.plugins.lsp.mason")
-			require("alex.plugins.lsp.lspconfig")
-		end
+			"junegunn/fzf"
+		}
 	},
 
+	{
+		"folke/trouble.nvim",
+		config = function ()
+			require("alex.plugins.trouble")
+		end,
+		cmd = {"Trouble", "TroubleToggle"},
+	},
+
+	{
+		"is0n/jaq-nvim",
+		config = function ()
+			require("alex.plugins.jaq-nvim")
+		end,
+		cmd = {"Jaq"}
+	},
+
+	{
+		"nullchilly/fsread.nvim",
+		cmd = {'FSRead', 'FSToggle'}
+	},
+
+	{
+		"manzeloth/live-server",
+		cmd = {'LiveServer'}
+	},
+
+	{
+		"simrat39/symbols-outline.nvim",
+		config = function()
+			require("alex.plugins.symbols-outline")
+		end,
+		cmd = {'SymbolsOutline', 'SymbolsOutlineOpen'},
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		}
+	},
+
+	{
+		"gorbit99/codewindow.nvim",
+		config = function()
+			require("alex.plugins.codewindow")
+		end,
+		cmd = {'CWToggle', 'CWOpen'}
+	},
+
+	{
+		"idanarye/vim-merginal",
+		dependencies = {
+			"tpope/vim-fugitive",
+		},
+		cond = function()
+			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
+			return git_dir ~= ""
+		end,
+		cmd = {'Merginal', 'MerginalToggle', 'Git'}
+	},
+	-- #### LOAD BY COMMAND #### --
+
+
+	-- #### LOAD BY FILETYPE #### --
+	{
+		"davidgranstrom/nvim-markdown-preview",
+		ft = "markdown",
+	},
+
+	{
+		"mtdl9/vim-log-highlighting",
+		ft = {'log'}
+	},
+
+	{
+		"windwp/nvim-ts-autotag",
+		ft = {'markdown', 'html', 'php', 'xml', 'javascript'},
+		dependencies = {
+			"AndrewRadev/tagalong.vim",
+			"gregsexton/MatchTag",
+			"nvim-treesitter/nvim-treesitter",
+		}
+	},
+	-- #### LOAD BY FILETYPE #### --
+
+
+	-- #### LOAD IN GIT DIRECTORY #### --
+	{
+		'lewis6991/gitsigns.nvim',
+		config = function()
+			require('gitsigns').setup()
+		end,
+		cond = function()
+			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
+			return git_dir ~= ""
+		end,
+	},
+	-- #### LOAD IN GIT DIRECTORY #### --
+
+
+	-- #### LOAD IN VeryLazy EVENT #### --
 	{
 		"hrsh7th/nvim-cmp",
 		event = "VeryLazy",
@@ -130,91 +195,11 @@ require("lazy").setup({
 	},
 
 	{
-		"ibhagwan/fzf-lua",
-		cmd = "FzfLua",
-		dependencies = {
-			"junegunn/fzf"
-		}
-	},
-
-	{
-		'lewis6991/gitsigns.nvim',
-		config = function()
-			require('gitsigns').setup()
-		end,
-		cond = function()
-			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
-			return git_dir ~= ""
-		end,
-	},
-
-	{
-		"davidgranstrom/nvim-markdown-preview",
-		ft = "markdown",
-	},
-
-	{
-		"nullchilly/fsread.nvim",
-		cmd = {'FSRead', 'FSToggle'}
-	},
-
-	{
-		"manzeloth/live-server",
-		cmd = {'LiveServer'}
-	},
-
-	{
-		"idanarye/vim-merginal",
-		dependencies = {
-			"tpope/vim-fugitive",
-		},
-		cond = function()
-			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
-			return git_dir ~= ""
-		end,
-		cmd = {'Merginal', 'MerginalToggle', 'Git'}
-	},
-
-	{
-		"gorbit99/codewindow.nvim",
-		config = function()
-			require("alex.plugins.codewindow")
-		end,
-		cmd = {'CWToggle', 'CWOpen'}
-	},
-
-	{
-		"mtdl9/vim-log-highlighting",
-		ft = {'log'}
-	},
-
-	{
-		"windwp/nvim-ts-autotag",
-		ft = {'markdown', 'html', 'php', 'xml', 'javascript'},
-		dependencies = {
-			"AndrewRadev/tagalong.vim",
-			"gregsexton/MatchTag",
-			"nvim-treesitter/nvim-treesitter",
-		}
-	},
-
-	{
-		"simrat39/symbols-outline.nvim",
-		config = function()
-			require("alex.plugins.symbols-outline")
-		end,
-		cmd = {'SymbolsOutline', 'SymbolsOutlineOpen'},
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		}
-	},
-
-	{
 		"lukas-reineke/indent-blankline.nvim",
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.indent-blankline")
 		end,
-		event = "VeryLazy",
 	},
 
 	{
@@ -235,6 +220,7 @@ require("lazy").setup({
 
 	{
 		"Bekaboo/deadcolumn.nvim",
+		event = "VeryLazy",
 		config = function ()
 			require("deadcolumn").setup({
 				warning = {
@@ -243,30 +229,14 @@ require("lazy").setup({
 				}
 			})
 		end,
-		event = "VeryLazy",
-	},
-
-	{
-		"NMAC427/guess-indent.nvim",
-		config = function ()
-			require("guess-indent").setup{}
-		end,
 	},
 
 	{
 		"chrisgrieser/nvim-early-retirement",
+		event = "VeryLazy",
 		config = function ()
 			require("alex.plugins.early-retirement")
 		end,
-		event = "VeryLazy",
-	},
-
-	{
-		"is0n/jaq-nvim",
-		config = function ()
-			require("alex.plugins.jaq-nvim")
-		end,
-		cmd = {"Jaq"}
 	},
 
 	{
@@ -281,12 +251,58 @@ require("lazy").setup({
 			require("alex.plugins.nvim-tmux-navigation")
 		end
 	},
+	-- #### LOAD IN VeryLazy EVENT #### --
+
 
 	{
-		"folke/trouble.nvim",
+		"rcarriga/nvim-notify",
+		priority = 999,
 		config = function ()
-			require("alex.plugins.trouble")
+			require("alex.plugins.notify")
+		end
+	},
+
+	{
+		"nvim-tree/nvim-tree.lua",
+		config = function()
+			require("alex.plugins.nvim-tree")
 		end,
-		cmd = {"Trouble", "TroubleToggle"},
-	}
+		dependencies = {
+			"nvim-tree/nvim-web-devicons"
+		}
+	},
+
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			require("alex.plugins.treesitter")
+			require("alex.plugins.treesitter-context")
+		end,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter-context"
+		},
+	},
+
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"SmiteshP/nvim-navic",
+			-- "ray-x/lsp_signature.nvim"
+		},
+		config = function()
+			require("alex.plugins.lsp.mason")
+			require("alex.plugins.lsp.lspconfig")
+		end
+	},
+
+	{
+		"NMAC427/guess-indent.nvim",
+		config = function ()
+			require("guess-indent").setup{}
+		end,
+	},
+
 })
