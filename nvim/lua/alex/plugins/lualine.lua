@@ -60,7 +60,8 @@ lualine.setup {
 				"log",
 				"help",
 				"Jaq",
-				"qf"
+				"qf",
+				"Trouble"
 			},
 		},
 		ignore_focus = {},

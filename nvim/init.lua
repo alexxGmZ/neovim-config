@@ -281,4 +281,12 @@ require("lazy").setup({
 			require("alex.plugins.nvim-tmux-navigation")
 		end
 	},
+
+	{
+		"folke/trouble.nvim",
+		config = function ()
+			require("alex.plugins.trouble")
+		end,
+		cmd = {"Trouble", "TroubleToggle"},
+	}
 })

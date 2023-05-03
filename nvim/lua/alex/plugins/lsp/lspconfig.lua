@@ -62,14 +62,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
--- -- add nvim-navic
--- local on_attach = function(client, bufnr)
--- 	-- require "lsp_signature".on_attach(signature_setup, bufnr)
--- 	if client.server_capabilities.documentSymbolProvider then
--- 		return navic.attach(client, bufnr)
--- 	end
--- end
-
 -- cmp-nvim-lsp plugin
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
