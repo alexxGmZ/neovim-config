@@ -77,6 +77,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [sitiom/nvim-numbertoggle       ](https://github.com/sitiom/nvim-numbertoggle)
 * [nvim-tree/nvim-tree.lua        ](https://github.com/nvim-tree/nvim-tree.lua)
 * [simrat39/symbols-outline.nvim  ](https://github.com/simrat39/symbols-outline.nvim)
+* [folke/trouble.nvim             ](https://github.com/folke/trouble.nvim)
 
 #### Syntax Highlighting
 
@@ -145,7 +146,7 @@ You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/bl
 * [html](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html) (html)
 * [clangd](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd) (c/c++, objc, objcpp, cuda, proto)
    + ```clang``` is required.
-* [sumneko_lua](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua) (lua)
+* [lua_ls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua) (lua)
    + ```lua``` is required.
 * [intelephense](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#intelephense) (php)
 * [vimls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls) (vimscript)
@@ -169,7 +170,7 @@ local LSP_LIST = {
    "jdtls",
    "html",
    "clangd",
-   "sumneko_lua",
+   "lua_ls",
    "intelephense",
    "vimls",
    "cssls",
