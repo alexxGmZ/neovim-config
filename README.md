@@ -7,12 +7,14 @@ My neovim setup and development workflow
 
 ### Screenshots
 
-I don't own this "GET SHIT DONE" wallpaper and it's not part of the config. It's in my ```kitty.conf```
+I don't own this "GET SHIT DONE" wallpaper and it's not part of the config. It's in my
+```kitty.conf``` to avoid copyright stuff, I will not include the image
 ![image1](./assets/images/img1.png)
-Symbols Outline and Nvim Tree
 ![image2](./assets/images/img2.png)
 ![image3](./assets/images/img3.png)
 ![image4](./assets/images/img4.png)
+With TMUX
+![image5](./assets/images/img5.png)
 
 ## Table of Contents
 
