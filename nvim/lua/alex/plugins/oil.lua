@@ -4,7 +4,7 @@ require("oil").setup({
 		"icon",
 		"permissions"
 	},
-	default_file_explorer = true,
+	default_file_explorer = false,
 	use_default_keymaps = false,
 	keymaps = {
 		["g?"] = "actions.show_help",

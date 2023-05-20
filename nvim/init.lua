@@ -308,6 +308,7 @@ require("lazy").setup({
 
 	{
 		"stevearc/oil.nvim",
+		cmd = "Oil",
 		config = function ()
 			require("alex.plugins.oil")
 		end

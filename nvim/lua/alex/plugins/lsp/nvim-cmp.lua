@@ -6,8 +6,9 @@ end
 
 cmp.setup({
 	experimental = {
-		ghost_text = true
+		ghost_text = false
 	},
+
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
@@ -47,6 +48,7 @@ cmp.setup({
 		{ name = 'vsnip' }, -- For vsnip users.
 		{ name = 'buffer' },
 		{ name = 'path' },
+		{ name = 'nvim_lsp_signature_help' },
 	}),
 
 	sorting = {

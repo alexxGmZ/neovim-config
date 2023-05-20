@@ -46,7 +46,8 @@ lualine.setup {
 				"tagbar",
 				"merginal",
 				"packer",
-				"Outline"
+				"Outline",
+				"oil"
 			},
 			winbar = {
 				"NvimTree",
@@ -61,7 +62,8 @@ lualine.setup {
 				"help",
 				"Jaq",
 				"qf",
-				"Trouble"
+				"Trouble",
+				"oil"
 			},
 		},
 		ignore_focus = {},
