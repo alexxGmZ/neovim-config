@@ -80,6 +80,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-tree/nvim-tree.lua        ](https://github.com/nvim-tree/nvim-tree.lua)
 * [simrat39/symbols-outline.nvim  ](https://github.com/simrat39/symbols-outline.nvim)
 * [folke/trouble.nvim             ](https://github.com/folke/trouble.nvim)
+* [stevearc/oil.nvim              ](https://github.com/stevearc/oil.nvim)
 
 #### Syntax Highlighting
 
