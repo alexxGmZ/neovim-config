@@ -160,6 +160,7 @@ require("lazy").setup({
 			"hrsh7th/cmp-vsnip",
 			"hrsh7th/vim-vsnip",
 			"hrsh7th/vim-vsnip-integ",
+			"hrsh7th/cmp-nvim-lsp-signature-help",
 			"lukas-reineke/cmp-under-comparator"
 		},
 		config = function ()
@@ -304,5 +305,12 @@ require("lazy").setup({
 			require("guess-indent").setup{}
 		end,
 	},
+
+	{
+		"stevearc/oil.nvim",
+		config = function ()
+			require("alex.plugins.oil")
+		end
+	}
 
 })
