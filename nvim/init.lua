@@ -31,15 +31,35 @@ require("lazy").setup({
 		end
 	},
 
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("alex.plugins.tokyonight")
-	-- 		vim.cmd.colorscheme "tokyonight"
-	-- 	end
-	-- },
+	{
+		"bluz71/vim-moonfly-colors",
+		name = "moonfly",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			-- vim.cmd.colorscheme "moonfly"
+		end
+	},
+
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("alex.plugins.tokyonight")
+			-- vim.cmd.colorscheme "tokyonight"
+		end
+	},
+
+	{
+		'projekt0n/github-nvim-theme',
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("alex.plugins.github-theme")
+			-- vim.cmd('colorscheme github_dark')
+		end,
+	},
 	-- #### COLORSCHEME #### --
 
 
@@ -199,7 +219,7 @@ require("lazy").setup({
 		"lukas-reineke/indent-blankline.nvim",
 		event = "VeryLazy",
 		config = function()
-			require("alex.plugins.indent-blankline")
+			-- require("alex.plugins.indent-blankline")
 		end,
 	},
 
