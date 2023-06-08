@@ -20,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	-- #### COLORSCHEME #### --
+	-- catppuccin
 	{
 		"catppuccin/nvim",
 		lazy = false,
@@ -31,33 +32,45 @@ require("lazy").setup({
 		end
 	},
 
+	-- moonfly
 	{
 		"bluz71/vim-moonfly-colors",
 		name = "moonfly",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- vim.cmd.colorscheme "moonfly"
+			require("alex.plugins.moonfly")
 		end
 	},
 
+	-- tokyonight
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
 			require("alex.plugins.tokyonight")
-			-- vim.cmd.colorscheme "tokyonight"
 		end
 	},
 
+	-- github
 	{
 		'projekt0n/github-nvim-theme',
 		lazy = false,
 		priority = 1000,
 		config = function()
 			require("alex.plugins.github-theme")
-			-- vim.cmd('colorscheme github_dark')
+		end,
+	},
+
+	-- rose pine
+	{
+		'rose-pine/neovim',
+		name = 'rose-pine',
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("alex.plugins.rose-pine")
 		end,
 	},
 	-- #### COLORSCHEME #### --
