@@ -20,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	-- #### COLORSCHEME #### --
+	-- catppuccin
 	{
 		"catppuccin/nvim",
 		lazy = false,
@@ -31,15 +32,47 @@ require("lazy").setup({
 		end
 	},
 
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("alex.plugins.tokyonight")
-	-- 		vim.cmd.colorscheme "tokyonight"
-	-- 	end
-	-- },
+	-- moonfly
+	{
+		"bluz71/vim-moonfly-colors",
+		name = "moonfly",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("alex.plugins.moonfly")
+		end
+	},
+
+	-- tokyonight
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("alex.plugins.tokyonight")
+		end
+	},
+
+	-- github
+	{
+		'projekt0n/github-nvim-theme',
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("alex.plugins.github-theme")
+		end,
+	},
+
+	-- rose pine
+	{
+		'rose-pine/neovim',
+		name = 'rose-pine',
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("alex.plugins.rose-pine")
+		end,
+	},
 	-- #### COLORSCHEME #### --
 
 
@@ -199,7 +232,7 @@ require("lazy").setup({
 		"lukas-reineke/indent-blankline.nvim",
 		event = "VeryLazy",
 		config = function()
-			require("alex.plugins.indent-blankline")
+			-- require("alex.plugins.indent-blankline")
 		end,
 	},
 
