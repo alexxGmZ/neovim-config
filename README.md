@@ -25,6 +25,7 @@ With TMUX
    + [Syntax Highlighting](#syntax-highlighting)
    + [LSP or Auto-Completion](#lsp-or-auto-completion)
    + [Aesthetic or Interface](#aesthetic-or-interface)
+   + [Colorscheme](#colorscheme)
    + [Git Integration](#git-integration)
    + [Quality of Life](#quality-of-life)
 * [Configured LSPs](#configured-lsps)
