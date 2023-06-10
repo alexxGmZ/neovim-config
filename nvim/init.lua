@@ -192,6 +192,13 @@ require("lazy").setup({
 
 	-- #### LOAD IN VeryLazy EVENT #### --
 	{
+		"m4xshen/autoclose.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("alex.plugins.autoclose")
+		end,
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		event = "VeryLazy",
 		dependencies = {
