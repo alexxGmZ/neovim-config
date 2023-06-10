@@ -38,11 +38,11 @@ map.set("n", "<F8>", ":SymbolsOutline<CR>")
 map.set("n", "<leader>tt", ":SymbolsOutline<CR>")
 
 -- autoclose brackets
-map.set("i", "{", "{}<Esc>ha")
-map.set("i", "[", "[]<Esc>ha")
-map.set("i", "(", "()<Esc>ha")
-map.set("i", "\"", "\"\"<Esc>ha")
-map.set("i", "\'", "\'\'<Esc>ha")
+-- map.set("i", "{", "{}<Esc>ha")
+-- map.set("i", "[", "[]<Esc>ha")
+-- map.set("i", "(", "()<Esc>ha")
+-- map.set("i", "\"", "\"\"<Esc>ha")
+-- map.set("i", "\'", "\'\'<Esc>ha")
 
 -- split resizing
 map.set("n", "<leader>-", "<C-w>3-")
