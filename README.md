@@ -107,7 +107,6 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 * [lukas-reineke/indent-blankline.nvim    ](https://github.com/lukas-reineke/indent-blankline.nvim)
 * [nvim-lualine/lualine.nvim              ](https://github.com/nvim-lualine/lualine.nvim)
-* [catppuccin/nvim                        ](https://github.com/catppuccin/nvim)
 * [akinsho/bufferline.nvim                ](https://github.com/akinsho/bufferline.nvim)
 * [SmiteshP/nvim-navic                    ](https://github.com/SmiteshP/nvim-navic)
 * [nvim-tree/nvim-web-devicons            ](https://github.com/nvim-tree/nvim-web-devicons)
@@ -116,6 +115,14 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [rcarriga/nvim-notify                   ](https://github.com/rcarriga/nvim-notify)
 * [NMAC427/guess-indent.nvim              ](https://github.com/NMAC427/guess-indent.nvim)
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
+* [folke/twilight.nvim                    ](https://github.com/folke/twilight.nvim)
+
+#### Colorscheme
+* [catppuccin/nvim            ](https://github.com/catppuccin/nvim)
+* [bluz71/vim-moonfly-colors  ](https://github.com/bluz71/vim-moonfly-colors)
+* [folke/tokyonight.nvim      ](https://github.com/folke/tokyonight.nvim)
+* [projekt0n/github-nvim-theme](https://github.com/projekt0n/github-nvim-theme)
+* [rose-pine/neovim           ](https://github.com/rose-pine/neovim)
 
 #### Git Integration
 
