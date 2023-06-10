@@ -86,6 +86,15 @@ require("lazy").setup({
 	},
 
 	{
+		"folke/twilight.nvim",
+		opts = {
+			context = 11,
+			treesitter = false,
+		},
+		cmd = {"Twilight", "TwilightEnable"}
+	},
+
+	{
 		"folke/trouble.nvim",
 		config = function ()
 			require("alex.plugins.trouble")
