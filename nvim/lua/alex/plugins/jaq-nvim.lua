@@ -69,7 +69,3 @@ require('jaq-nvim').setup{
 		}
 	}
 }
-
--- keymap
-local map = vim.keymap
-map.set("n", "<leader>rr", ":Jaq<CR>")
