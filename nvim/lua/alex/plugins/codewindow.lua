@@ -14,14 +14,12 @@ require('codewindow').setup{
 	window_border = 'single'
 }
 
--- custom codewindow commands
+-- codewindow.apply_default_keybinds()
+
 local api = vim.api
+
+-- custom codewindow commands
 api.nvim_create_user_command('CWToggle', function() require('codewindow').toggle_minimap() end, {})
 api.nvim_create_user_command('CWFocus', function() require('codewindow').toggle_focus() end, {})
 api.nvim_create_user_command('CWOpen', function() require('codewindow').open_minimap() end, {})
 api.nvim_create_user_command('CWClose', function() require('codewindow').close_minimap() end, {})
-
--- keymap
-local map = vim.keymap
-map.set("n", "<leader>mm", ":CWToggle<CR>")
-

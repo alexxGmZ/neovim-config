@@ -1,4 +1,5 @@
 vim.opt.termguicolors = true
+
 -- empty setup using defaults
 require("nvim-tree").setup{
 	sort_by = "name",
@@ -35,13 +36,6 @@ require("nvim-tree").setup{
 	},
 }
 
--- keymap
-local map = vim.keymap
-map.set("n", "<leader>F", ":NvimTreeToggle<CR>")
-map.set("n", "<leader><leader>f", ":NvimTreeToggle<CR>")
-map.set("n", "<F6>", ":NvimTreeToggle<CR>")
-
--- open nvim-tree when "nvim ."
 local function open_nvim_tree(data)
 	-- buffer is a directory
 	local directory = vim.fn.isdirectory(data.file) == 1
@@ -56,5 +50,6 @@ local function open_nvim_tree(data)
 	-- open the tree
 	require("nvim-tree.api").tree.open()
 end
+
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
