@@ -119,6 +119,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [folke/twilight.nvim                    ](https://github.com/folke/twilight.nvim)
 
 #### Colorscheme
+
 * [catppuccin/nvim            ](https://github.com/catppuccin/nvim)
 * [bluz71/vim-moonfly-colors  ](https://github.com/bluz71/vim-moonfly-colors)
 * [folke/tokyonight.nvim      ](https://github.com/folke/tokyonight.nvim)
@@ -140,6 +141,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [RRethy/vim-illuminate               ](https://github.com/RRethy/vim-illuminate)
 * [chrisgrieser/nvim-early-retirement  ](https://github.com/chrisgrieser/nvim-early-retirement)
 * [is0n/jaq-nvim                       ](https://github.com/is0n/jaq-nvim)
+* [kylechui/nvim-surround              ](https://github.com/kylechui/nvim-surround)
 
 <br>
 
