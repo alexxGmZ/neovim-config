@@ -116,11 +116,6 @@ require("lazy").setup({
 	},
 
 	{
-		"manzeloth/live-server",
-		cmd = {'LiveServer'}
-	},
-
-	{
 		"simrat39/symbols-outline.nvim",
 		config = function()
 			require("alex.plugins.symbols-outline")

@@ -137,7 +137,6 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [numToStr/Comment.nvim               ](https://github.com/numToStr/Comment.nvim)
 * [nullchilly/fsread.nvim              ](https://github.com/nullchilly/fsread.nvim)
 * [davidgranstrom/nvim-markdown-preview](https://github.com/davidgranstrom/nvim-markdown-preview)
-* [manzeloth/live-server               ](https://github.com/manzeloth/live-server)
 * [RRethy/vim-illuminate               ](https://github.com/RRethy/vim-illuminate)
 * [chrisgrieser/nvim-early-retirement  ](https://github.com/chrisgrieser/nvim-early-retirement)
 * [is0n/jaq-nvim                       ](https://github.com/is0n/jaq-nvim)
