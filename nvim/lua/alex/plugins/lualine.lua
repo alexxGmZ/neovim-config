@@ -35,7 +35,8 @@ lualine.setup {
 	options = {
 		icons_enabled = true,
 		-- theme = 'molokai',
-		theme = 'horizon',
+		-- theme = 'horizon',
+		theme = 'auto',
 		component_separators = '',
 		section_separators = {
 			right = ''
@@ -101,20 +102,20 @@ lualine.setup {
 			},
 			{'diff',
 				colored = true,
-				color = {
-					bg = '#1a1b26',
-				},
-				diff_color = {
-					added = {
-						fg = colors.git_added,
-					},
-					modified = {
-						fg = colors.git_modified,
-					},
-					removed = {
-						fg = colors.git_removed,
-					},
-				},
+				-- color = {
+				-- 	bg = '#1a1b26',
+				-- },
+				-- diff_color = {
+				-- 	added = {
+				-- 		fg = colors.git_added,
+				-- 	},
+				-- 	modified = {
+				-- 		fg = colors.git_modified,
+				-- 	},
+				-- 	removed = {
+				-- 		fg = colors.git_removed,
+				-- 	},
+				-- },
 				symbols = {
 					added = '+',
 					modified = '~',
@@ -138,9 +139,9 @@ lualine.setup {
 		},
 		lualine_c = {
 			{'diagnostics',
-				color = {
-					bg = '#1a1b26',
-				},
+				-- color = {
+				-- 	bg = '#1a1b26',
+				-- },
 				sources = { 'nvim_diagnostic', 'coc', 'ale', 'nvim_lsp' },
 				sections = { 'error', 'warn', 'info', },
 				symbols = {
@@ -171,10 +172,10 @@ lualine.setup {
 		lualine_a = {
 			{'filename',
 				path = 0,
-				color = {
-					fg = '#6C6F93',
-					bg = '#2E303E'
-				},
+				-- color = {
+				-- 	fg = '#6C6F93',
+				-- 	bg = '#2E303E'
+				-- },
 				separator = {
 					right = ''
 				},
@@ -185,20 +186,20 @@ lualine.setup {
 			},
 			{'diff',
 				colored = true,
-				color = {
-					bg = '#1a1b26',
-				},
-				diff_color = {
-					added = {
-						fg = colors.git_added,
-					},
-					modified = {
-						fg = colors.git_modified,
-					},
-					removed = {
-						fg = colors.git_removed,
-					},
-				},
+				-- color = {
+				-- 	bg = '#1a1b26',
+				-- },
+				-- diff_color = {
+				-- 	added = {
+				-- 		fg = colors.git_added,
+				-- 	},
+				-- 	modified = {
+				-- 		fg = colors.git_modified,
+				-- 	},
+				-- 	removed = {
+				-- 		fg = colors.git_removed,
+				-- 	},
+				-- },
 				symbols = {
 					added = '+',
 					modified = '~',
@@ -212,9 +213,9 @@ lualine.setup {
 		},
 		lualine_b = {
 			{'diagnostics',
-				color = {
-					bg = '#1a1b26',
-				},
+				-- color = {
+				-- 	bg = '#1a1b26',
+				-- },
 				sources = { 'nvim_diagnostic', 'coc', 'ale', 'nvim_lsp' },
 				sections = { 'error', 'warn', 'info', },
 				symbols = {
@@ -234,24 +235,24 @@ lualine.setup {
 		lualine_x = {},
 		lualine_y = {
 			{ 'encoding',
-				color = {
-					fg = '#6C6F93',
-					bg = '#2E303E'
-				}
+				-- color = {
+				-- 	fg = '#6C6F93',
+				-- 	bg = '#2E303E'
+				-- }
 			},
 			{ 'filetype',
-				color = {
-					fg = '#6C6F93',
-					bg = '#2E303E'
-				}
+				-- color = {
+				-- 	fg = '#6C6F93',
+				-- 	bg = '#2E303E'
+				-- }
 			}
 		},
 		lualine_z = {
 			{'location',
-				color = {
-					bg = '#66d9ef',
-					fg = '#1a1b26'
-				},
+				-- color = {
+				-- 	bg = '#66d9ef',
+				-- 	fg = '#1a1b26'
+				-- },
 				separator = {
 					left = '',
 				},
@@ -262,10 +263,10 @@ lualine.setup {
 	winbar = {
 		lualine_a = {
 			{'filename',
-				color = {
-					bg = '#66d9ef',
-					fg = '#1a1b26'
-				},
+				-- color = {
+				-- 	bg = '#66d9ef',
+				-- 	fg = '#1a1b26'
+				-- },
 				separator = {
 					right = ''
 				},
@@ -275,9 +276,9 @@ lualine.setup {
 				},
 				path = 0
 			},
-			{"navic"},
 		},
 		lualine_b = {
+			{"navic"},
 		},
 		lualine_c = {},
 		lualine_x = {},
@@ -288,10 +289,10 @@ lualine.setup {
 	inactive_winbar = {
 		lualine_a = {
 			{'filename',
-				color = {
-					bg = '#66d9ef',
-					fg = '#1a1b26'
-				},
+				-- color = {
+				-- 	bg = '#66d9ef',
+				-- 	fg = '#1a1b26'
+				-- },
 				separator = {
 					right = ''
 				},
