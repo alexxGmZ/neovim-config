@@ -78,6 +78,13 @@ require("lazy").setup({
 
 	-- #### LOAD BY COMMAND #### --
 	{
+		"aca/marp.nvim",
+		config = function ()
+			require("alex.plugins.marp")
+		end,
+		cmd = "MarpStart"
+	},
+	{
 		"ibhagwan/fzf-lua",
 		cmd = "FzfLua",
 		dependencies = {
@@ -273,19 +280,6 @@ require("lazy").setup({
 	},
 
 	{
-		"Bekaboo/deadcolumn.nvim",
-		event = "VeryLazy",
-		config = function ()
-			require("deadcolumn").setup({
-				warning = {
-					alpha = 0.3,
-					colorcode = "#F38BA8",
-				}
-			})
-		end,
-	},
-
-	{
 		"chrisgrieser/nvim-early-retirement",
 		event = "VeryLazy",
 		config = function ()
@@ -306,8 +300,6 @@ require("lazy").setup({
 		end
 	},
 	-- #### LOAD IN VeryLazy EVENT #### --
-
-
 	{
 		"rcarriga/nvim-notify",
 		priority = 999,

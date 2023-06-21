@@ -53,8 +53,8 @@ cmp.setup({
 
 	sorting = {
 		comparators = {
-			cmp.config.compare.offset,
 			cmp.config.compare.exact,
+			cmp.config.compare.offset,
 			cmp.config.compare.score,
 			require "cmp-under-comparator".under,
 			cmp.config.compare.kind,
