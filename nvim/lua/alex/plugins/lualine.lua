@@ -22,7 +22,8 @@ local mode_map = {
 	["\22"] = "VBL",
 	t = "TER",
 	['!'] = "SH",
-	c = "COM"
+	c = "COM",
+	s = "SUB"
 }
 
 local colors = {
