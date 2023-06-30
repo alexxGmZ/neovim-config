@@ -81,7 +81,6 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-tree/nvim-tree.lua        ](https://github.com/nvim-tree/nvim-tree.lua)
 * [simrat39/symbols-outline.nvim  ](https://github.com/simrat39/symbols-outline.nvim)
 * [folke/trouble.nvim             ](https://github.com/folke/trouble.nvim)
-* [stevearc/oil.nvim              ](https://github.com/stevearc/oil.nvim)
 
 #### Syntax Highlighting
 
@@ -90,19 +89,22 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### LSP or Auto-Completion
 
-* [gregsexton/MatchTag              ](https://github.com/gregsexton/MatchTag)
-* [AndrewRadev/tagalong.vim.git     ](https://github.com/AndrewRadev/tagalong.vim)
-* [windwp/nvim-ts-autotag           ](https://github.com/windwp/nvim-ts-autotag)
-* [williamboman/mason.nvim          ](https://github.com/williamboman/mason.nvim)
-* [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
-* [neovim/nvim-lspconfig            ](https://github.com/neovim/nvim-lspconfig)
-* [hrsh7th/cmp-nvim-lsp             ](https://github.com/hrsh7th/cmp-nvim-lsp)
-* [hrsh7th/cmp-buffer               ](https://github.com/hrsh7th/cmp-buffer)
-* [hrsh7th/cmp-path                 ](https://github.com/hrsh7th/cmp-path)
-* [hrsh7th/cmp-cmdline              ](https://github.com/hrsh7th/cmp-cmdline)
-* [hrsh7th/nvim-cmp                 ](https://github.com/hrsh7th/nvim-cmp)
-* [hrsh7th/cmp-vsnip                ](https://github.com/hrsh7th/cmp-vsnip)
-* [hrsh7th/vim-vsnip                ](https://github.com/hrsh7th/vim-vsnip)
+* [gregsexton/MatchTag               ](https://github.com/gregsexton/MatchTag)
+* [AndrewRadev/tagalong.vim.git      ](https://github.com/AndrewRadev/tagalong.vim)
+* [windwp/nvim-ts-autotag            ](https://github.com/windwp/nvim-ts-autotag)
+* [williamboman/mason.nvim           ](https://github.com/williamboman/mason.nvim)
+* [williamboman/mason-lspconfig.nvim ](https://github.com/williamboman/mason-lspconfig.nvim)
+* [neovim/nvim-lspconfig             ](https://github.com/neovim/nvim-lspconfig)
+* [hrsh7th/cmp-nvim-lsp              ](https://github.com/hrsh7th/cmp-nvim-lsp)
+* [hrsh7th/cmp-buffer                ](https://github.com/hrsh7th/cmp-buffer)
+* [hrsh7th/cmp-path                  ](https://github.com/hrsh7th/cmp-path)
+* [hrsh7th/cmp-cmdline               ](https://github.com/hrsh7th/cmp-cmdline)
+* [hrsh7th/nvim-cmp                  ](https://github.com/hrsh7th/nvim-cmp)
+* [hrsh7th/cmp-vsnip                 ](https://github.com/hrsh7th/cmp-vsnip)
+* [hrsh7th/vim-vsnip                 ](https://github.com/hrsh7th/vim-vsnip)
+* [m4xshen/autoclose.nvim            ](https://github.com/m4xshen/autoclose.nvim)
+* [lukas-reineke/cmp-under-comparator](https://github.com/lukas-reineke/cmp-under-comparator)
+* [rafamadriz/friendly-snippets      ](https://github.com/rafamadriz/friendly-snippets)
 
 #### Aesthetic or Interface
 
@@ -112,11 +114,11 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [SmiteshP/nvim-navic                    ](https://github.com/SmiteshP/nvim-navic)
 * [nvim-tree/nvim-web-devicons            ](https://github.com/nvim-tree/nvim-web-devicons)
 * [gorbit99/codewindow.nvim               ](https://github.com/gorbit99/codewindow.nvim)
-* [Bekaboo/deadcolumn.nvim                ](https://github.com/Bekaboo/deadcolumn.nvim)
 * [rcarriga/nvim-notify                   ](https://github.com/rcarriga/nvim-notify)
 * [NMAC427/guess-indent.nvim              ](https://github.com/NMAC427/guess-indent.nvim)
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 * [folke/twilight.nvim                    ](https://github.com/folke/twilight.nvim)
+* [onsails/lspkind.nvim                   ](https://github.com/onsails/lspkind.nvim)
 
 #### Colorscheme
 
@@ -125,6 +127,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [folke/tokyonight.nvim      ](https://github.com/folke/tokyonight.nvim)
 * [projekt0n/github-nvim-theme](https://github.com/projekt0n/github-nvim-theme)
 * [rose-pine/neovim           ](https://github.com/rose-pine/neovim)
+* [yorik1984/newpaper.nvim    ](https://github.com/yorik1984/newpaper.nvim)
 
 #### Git Integration
 
@@ -142,6 +145,9 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [chrisgrieser/nvim-early-retirement  ](https://github.com/chrisgrieser/nvim-early-retirement)
 * [is0n/jaq-nvim                       ](https://github.com/is0n/jaq-nvim)
 * [kylechui/nvim-surround              ](https://github.com/kylechui/nvim-surround)
+* [stevearc/oil.nvim                   ](https://github.com/stevearc/oil.nvim)
+* [aca/marp.nvim                       ](https://github.com/aca/marp.nvim)
+* [f3fora/cmp-spell                    ](https://github.com/f3fora/cmp-spell)
 
 <br>
 
