@@ -1,6 +1,7 @@
 -- for cmp-spell
 vim.opt.spell = false
 vim.opt.spelllang = { 'en_us' }
+vim.cmd("let g:vsnip_filetypes = {}")
 
 local cmp_setup, cmp = pcall(require, "cmp")
 local lspkind = require('lspkind')

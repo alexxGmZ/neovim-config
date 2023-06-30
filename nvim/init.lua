@@ -238,7 +238,8 @@ require("lazy").setup({
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 			"lukas-reineke/cmp-under-comparator",
 			"f3fora/cmp-spell",
-			"onsails/lspkind.nvim"
+			"onsails/lspkind.nvim",
+			"rafamadriz/friendly-snippets"
 		},
 		config = function ()
 			require("alex.plugins.lsp.nvim-cmp")
