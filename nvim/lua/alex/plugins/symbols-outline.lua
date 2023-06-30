@@ -3,4 +3,5 @@ require("symbols-outline").setup({
 	autofold_depth = 1,
 	auto_unfold_hover = false,
 	width = 20,
+	show_guides = true,
 })

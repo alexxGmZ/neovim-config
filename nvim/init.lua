@@ -73,10 +73,25 @@ require("lazy").setup({
 			require("alex.plugins.rose-pine")
 		end,
 	},
+
+	-- newpaper
+	{
+		"yorik1984/newpaper.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 	-- #### COLORSCHEME #### --
 
 
 	-- #### LOAD BY COMMAND #### --
+	{
+		"stevearc/oil.nvim",
+		cmd = "Oil",
+		config = function ()
+			require("alex.plugins.oil")
+		end
+	},
+
 	{
 		"aca/marp.nvim",
 		config = function ()
@@ -221,7 +236,9 @@ require("lazy").setup({
 			"hrsh7th/vim-vsnip",
 			"hrsh7th/vim-vsnip-integ",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
-			"lukas-reineke/cmp-under-comparator"
+			"lukas-reineke/cmp-under-comparator",
+			"f3fora/cmp-spell",
+			"onsails/lspkind.nvim"
 		},
 		config = function ()
 			require("alex.plugins.lsp.nvim-cmp")
@@ -300,6 +317,7 @@ require("lazy").setup({
 		end
 	},
 	-- #### LOAD IN VeryLazy EVENT #### --
+
 	{
 		"rcarriga/nvim-notify",
 		priority = 999,
@@ -350,13 +368,4 @@ require("lazy").setup({
 			require("guess-indent").setup{}
 		end,
 	},
-
-	{
-		"stevearc/oil.nvim",
-		cmd = "Oil",
-		config = function ()
-			require("alex.plugins.oil")
-		end
-	}
-
 })

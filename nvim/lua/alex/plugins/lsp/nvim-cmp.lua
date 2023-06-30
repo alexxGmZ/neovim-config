@@ -1,10 +1,25 @@
+-- for cmp-spell
+vim.opt.spell = false
+vim.opt.spelllang = { 'en_us' }
+
 local cmp_setup, cmp = pcall(require, "cmp")
+local lspkind = require('lspkind')
 
 if not cmp_setup then
 	return
 end
 
 cmp.setup({
+	formatting = {
+		format = lspkind.cmp_format({
+			mode = 'symbol_text',
+			maxwidth = 50,
+			ellipsis_char = '...',
+			before = function (entry, vim_item)
+				return vim_item
+			end
+		})
+	},
 	experimental = {
 		ghost_text = false
 	},
@@ -49,6 +64,15 @@ cmp.setup({
 		{ name = 'buffer' },
 		{ name = 'path' },
 		{ name = 'nvim_lsp_signature_help' },
+		{
+			name = 'spell',
+			option = {
+				keep_all_entries = false,
+				enable_in_context = function()
+					return true
+				end
+			}
+		}
 	}),
 
 	sorting = {
