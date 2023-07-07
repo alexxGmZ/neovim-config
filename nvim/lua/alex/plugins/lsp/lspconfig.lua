@@ -20,6 +20,8 @@ local LSP_LIST = {
 	"tailwindcss",
 	"bashls",
 	"lemminx",
+	"quick_lint_js",
+	"tsserver"
 }
 
 navic.setup{
