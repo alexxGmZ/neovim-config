@@ -8,14 +8,14 @@ require('github-theme').setup({
     hide_nc_statusline = true, -- Override the underline style for non-active statuslines
     transparent = false,       -- Disable setting background
     terminal_colors = true,    -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
-    dim_inactive = false,      -- Non focused panes set to alternative background
+    dim_inactive = true,      -- Non focused panes set to alternative background
     module_default = true,     -- Default enable value for modules
     styles = {                 -- Style to be applied to different syntax groups
       comments = 'italic',     -- Value is any valid attr-list value `:help attr-list`
       functions = 'NONE',
       keywords = 'italic',
       variables = 'bold',
-      conditionals = 'NONE',
+      conditionals = 'italic',
       constants = 'NONE',
       numbers = 'NONE',
       operators = 'NONE',
