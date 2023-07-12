@@ -148,6 +148,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [stevearc/oil.nvim                   ](https://github.com/stevearc/oil.nvim)
 * [aca/marp.nvim                       ](https://github.com/aca/marp.nvim)
 * [f3fora/cmp-spell                    ](https://github.com/f3fora/cmp-spell)
+* [dgagn/diagflow.nvim                 ](https://github.com/dgagn/diagflow.nvim)
 
 <br>
 
@@ -197,6 +198,8 @@ local LSP_LIST = {
    "tailwindcss",
    "bashls",
    "lemminx",
+	"quick_lint_js",
+	"tsserver",
    "<add lsp name here>"
 }
 
