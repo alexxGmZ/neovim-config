@@ -209,6 +209,13 @@ require("lazy").setup({
 
 	-- #### LOAD IN VeryLazy EVENT #### --
 	{
+		"dgagn/diagflow.nvim",
+		config = function ()
+			require("alex.plugins.diagflow")
+		end,
+		event = "VeryLazy",
+	},
+	{
 		"kylechui/nvim-surround",
 		version = "*", -- Use for stability; omit to use `main` branch for the latest features
 		event = "VeryLazy",
