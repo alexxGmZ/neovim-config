@@ -55,7 +55,7 @@ require("lazy").setup({
 
 	-- github
 	{
-		'projekt0n/github-nvim-theme',
+		"projekt0n/github-nvim-theme",
 		lazy = false,
 		priority = 1000,
 		config = function()
@@ -65,8 +65,8 @@ require("lazy").setup({
 
 	-- rose pine
 	{
-		'rose-pine/neovim',
-		name = 'rose-pine',
+		"rose-pine/neovim",
+		name = "rose-pine",
 		lazy = false,
 		priority = 1000,
 		config = function()
@@ -84,6 +84,11 @@ require("lazy").setup({
 
 
 	-- #### LOAD BY COMMAND #### --
+	{
+		"barrett-ruth/live-server.nvim",
+		config = true,
+		cmd = {"LiveServerStart"}
+	},
 	{
 		"stevearc/oil.nvim",
 		cmd = "Oil",
