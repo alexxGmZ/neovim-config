@@ -38,7 +38,7 @@ require("nvim-tree").setup{
 		dotfiles = false,
 		git_clean = false,
 		no_buffer = false,
-		custom = { ".git" },
+		custom = {},
 		exclude = {},
 	},
 }
