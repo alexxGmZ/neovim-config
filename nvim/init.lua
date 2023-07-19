@@ -18,6 +18,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local function if_git_dir()
+	local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
+	return git_dir ~= ""
+end
+
 require("lazy").setup({
 	-- #### COLORSCHEME #### --
 	-- catppuccin
@@ -166,10 +171,7 @@ require("lazy").setup({
 		dependencies = {
 			"tpope/vim-fugitive",
 		},
-		cond = function()
-			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
-			return git_dir ~= ""
-		end,
+		cond = if_git_dir,
 		cmd = {'Merginal', 'MerginalToggle', 'Git'}
 	},
 	-- #### LOAD BY COMMAND #### --
@@ -200,14 +202,19 @@ require("lazy").setup({
 
 	-- #### LOAD IN GIT DIRECTORY #### --
 	{
+		"f-person/git-blame.nvim",
+		config = function()
+			require("alex.plugins.git-blame")
+		end,
+		cmd = {"GitBlameToggle", "GitBlameEnable"},
+		cond = if_git_dir
+	},
+	{
 		'lewis6991/gitsigns.nvim',
 		config = function()
 			require('gitsigns').setup()
 		end,
-		cond = function()
-			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
-			return git_dir ~= ""
-		end,
+		cond = if_git_dir
 	},
 	-- #### LOAD IN GIT DIRECTORY #### --
 
@@ -302,14 +309,6 @@ require("lazy").setup({
 	},
 
 	{
-		"norcalli/nvim-colorizer.lua",
-		event = "VeryLazy",
-		config = function()
-			require("colorizer").setup()
-		end
-	},
-
-	{
 		"chrisgrieser/nvim-early-retirement",
 		event = "VeryLazy",
 		config = function ()
@@ -330,6 +329,13 @@ require("lazy").setup({
 		end
 	},
 	-- #### LOAD IN VeryLazy EVENT #### --
+
+	{
+		"uga-rosa/ccc.nvim",
+		config = function()
+			require("alex.plugins.ccc")
+		end
+	},
 
 	{
 		"rcarriga/nvim-notify",
