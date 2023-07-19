@@ -134,10 +134,11 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [tpope/vim-fugitive     ](https://github.com/tpope/vim-fugitive)
 * [idanarye/vim-merginal  ](https://github.com/idanarye/vim-merginal)
 * [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+* [f-person/git-blame.nvim](https://github.com/f-person/git-blame.nvim)
 
 #### Quality of Life
 
-* [norcalli/nvim-colorizer.lua         ](https://github.com/norcalli/nvim-colorizer.lua)
+* [uga-rosa/ccc.nvim                   ](https://github.com/uga-rosa/ccc.nvim)
 * [numToStr/Comment.nvim               ](https://github.com/numToStr/Comment.nvim)
 * [nullchilly/fsread.nvim              ](https://github.com/nullchilly/fsread.nvim)
 * [davidgranstrom/nvim-markdown-preview](https://github.com/davidgranstrom/nvim-markdown-preview)
