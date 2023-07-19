@@ -18,6 +18,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local function if_git_dir()
+	local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
+	return git_dir ~= ""
+end
+
 require("lazy").setup({
 	-- #### COLORSCHEME #### --
 	-- catppuccin
@@ -55,7 +60,7 @@ require("lazy").setup({
 
 	-- github
 	{
-		'projekt0n/github-nvim-theme',
+		"projekt0n/github-nvim-theme",
 		lazy = false,
 		priority = 1000,
 		config = function()
@@ -65,18 +70,45 @@ require("lazy").setup({
 
 	-- rose pine
 	{
-		'rose-pine/neovim',
-		name = 'rose-pine',
+		"rose-pine/neovim",
+		name = "rose-pine",
 		lazy = false,
 		priority = 1000,
 		config = function()
 			require("alex.plugins.rose-pine")
 		end,
 	},
+
+	-- newpaper
+	{
+		"yorik1984/newpaper.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 	-- #### COLORSCHEME #### --
 
 
 	-- #### LOAD BY COMMAND #### --
+	{
+		"barrett-ruth/live-server.nvim",
+		config = true,
+		cmd = {"LiveServerStart"}
+	},
+	{
+		"stevearc/oil.nvim",
+		cmd = "Oil",
+		config = function ()
+			require("alex.plugins.oil")
+		end
+	},
+
+	{
+		"aca/marp.nvim",
+		config = function ()
+			require("alex.plugins.marp")
+		end,
+		cmd = "MarpStart"
+	},
 	{
 		"ibhagwan/fzf-lua",
 		cmd = "FzfLua",
@@ -139,10 +171,7 @@ require("lazy").setup({
 		dependencies = {
 			"tpope/vim-fugitive",
 		},
-		cond = function()
-			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
-			return git_dir ~= ""
-		end,
+		cond = if_git_dir,
 		cmd = {'Merginal', 'MerginalToggle', 'Git'}
 	},
 	-- #### LOAD BY COMMAND #### --
@@ -173,19 +202,31 @@ require("lazy").setup({
 
 	-- #### LOAD IN GIT DIRECTORY #### --
 	{
+		"f-person/git-blame.nvim",
+		config = function()
+			require("alex.plugins.git-blame")
+		end,
+		cmd = {"GitBlameToggle", "GitBlameEnable"},
+		cond = if_git_dir
+	},
+	{
 		'lewis6991/gitsigns.nvim',
 		config = function()
 			require('gitsigns').setup()
 		end,
-		cond = function()
-			local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
-			return git_dir ~= ""
-		end,
+		cond = if_git_dir
 	},
 	-- #### LOAD IN GIT DIRECTORY #### --
 
 
 	-- #### LOAD IN VeryLazy EVENT #### --
+	{
+		"dgagn/diagflow.nvim",
+		config = function ()
+			require("alex.plugins.diagflow")
+		end,
+		event = "VeryLazy",
+	},
 	{
 		"kylechui/nvim-surround",
 		version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -214,7 +255,10 @@ require("lazy").setup({
 			"hrsh7th/vim-vsnip",
 			"hrsh7th/vim-vsnip-integ",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
-			"lukas-reineke/cmp-under-comparator"
+			"lukas-reineke/cmp-under-comparator",
+			"f3fora/cmp-spell",
+			"onsails/lspkind.nvim",
+			"rafamadriz/friendly-snippets"
 		},
 		config = function ()
 			require("alex.plugins.lsp.nvim-cmp")
@@ -265,27 +309,6 @@ require("lazy").setup({
 	},
 
 	{
-		"norcalli/nvim-colorizer.lua",
-		event = "VeryLazy",
-		config = function()
-			require("colorizer").setup()
-		end
-	},
-
-	{
-		"Bekaboo/deadcolumn.nvim",
-		event = "VeryLazy",
-		config = function ()
-			require("deadcolumn").setup({
-				warning = {
-					alpha = 0.3,
-					colorcode = "#F38BA8",
-				}
-			})
-		end,
-	},
-
-	{
 		"chrisgrieser/nvim-early-retirement",
 		event = "VeryLazy",
 		config = function ()
@@ -307,6 +330,12 @@ require("lazy").setup({
 	},
 	-- #### LOAD IN VeryLazy EVENT #### --
 
+	{
+		"uga-rosa/ccc.nvim",
+		config = function()
+			require("alex.plugins.ccc")
+		end
+	},
 
 	{
 		"rcarriga/nvim-notify",
@@ -358,13 +387,4 @@ require("lazy").setup({
 			require("guess-indent").setup{}
 		end,
 	},
-
-	{
-		"stevearc/oil.nvim",
-		cmd = "Oil",
-		config = function ()
-			require("alex.plugins.oil")
-		end
-	}
-
 })

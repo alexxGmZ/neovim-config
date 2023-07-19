@@ -1,5 +1,5 @@
 require("bufferline").setup {
-	highlights = require("catppuccin.groups.integrations.bufferline").get(),
+	-- highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	options = {
 		always_show_bufferline = false,
 		mode = "tabs",

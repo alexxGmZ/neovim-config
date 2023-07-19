@@ -24,7 +24,7 @@ require("nvim-tree").setup{
 		}
 	},
 	diagnostics = {
-		enable = false,
+		enable = true,
 		show_on_dirs = false,
 		debounce_delay = 50,
 		icons = {
@@ -33,6 +33,13 @@ require("nvim-tree").setup{
 			warning = "",
 			error = "",
 		},
+	},
+	filters = {
+		dotfiles = false,
+		git_clean = false,
+		no_buffer = false,
+		custom = {},
+		exclude = {},
 	},
 }
 
