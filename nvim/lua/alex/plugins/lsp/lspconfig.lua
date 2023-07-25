@@ -3,8 +3,10 @@ local cmp_nvim_lsp = require('cmp_nvim_lsp')
 local lspconfig = require('lspconfig')
 local mason_lspconfig = require('mason-lspconfig')
 
+--
 -- table of installed lsps
 -- add the lsp server name here after installing
+--
 local LSP_LIST = {
 	"pyright",
 	-- "pylsp",
@@ -24,18 +26,26 @@ local LSP_LIST = {
 	"tsserver"
 }
 
+--
+-- nvim navic lsp setup
+--
 navic.setup{
 	lsp = {
 		auto_attach = true
 	}
 }
 
+--
+-- mason setup
+--
 mason_lspconfig.setup{
 	ensure_installed = LSP_LIST
 }
 
+--
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
+--
 vim.api.nvim_create_autocmd('LspAttach', {
 	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
 	callback = function(ev)
@@ -64,10 +74,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
+--
 -- cmp-nvim-lsp plugin
+--
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
--- loop all the avaibale lsp inside LSP_LIST
+--
+-- lsp configurations
+--
 for _, lsp_server in pairs(LSP_LIST) do
 	-- basic configuration for installed lsp servers
 	lspconfig[lsp_server].setup{
@@ -84,5 +98,47 @@ for _, lsp_server in pairs(LSP_LIST) do
 			filetypes = {'zsh', 'bash', 'sh'}
 		}
 	end
+end
+
+--
+-- diagnostic symbols
+--
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
+--
+-- diagnostic config
+--
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
+--
+-- borders
+--
+local border = {
+      {"╭", "FloatBorder"},
+      {"─", "FloatBorder"},
+      {"╮", "FloatBorder"},
+      {"│", "FloatBorder"},
+      {"╯", "FloatBorder"},
+      {"─", "FloatBorder"},
+      {"╰", "FloatBorder"},
+      {"│", "FloatBorder"},
+}
+
+-- To instead override globally
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = opts.border or border
+  return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 
