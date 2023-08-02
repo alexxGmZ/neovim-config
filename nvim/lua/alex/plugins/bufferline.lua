@@ -44,6 +44,12 @@ require("bufferline").setup {
 				highlight = "Directory",
 				separator = true
 			},
+			{
+				filetype = "Trouble",
+				text = "Diagnostics",
+				highlight = "Directory",
+				separator = true
+			},
 		}
 	},
 }

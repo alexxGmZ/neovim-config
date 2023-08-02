@@ -1,7 +1,7 @@
-local navic = require('nvim-navic')
-local cmp_nvim_lsp = require('cmp_nvim_lsp')
-local lspconfig = require('lspconfig')
-local mason_lspconfig = require('mason-lspconfig')
+local navic = require("nvim-navic")
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
+local lspconfig = require("lspconfig")
+local mason_lspconfig = require("mason-lspconfig")
 
 --
 -- table of installed lsps
@@ -9,7 +9,6 @@ local mason_lspconfig = require('mason-lspconfig')
 --
 local LSP_LIST = {
 	"pyright",
-	-- "pylsp",
 	"jdtls",
 	"html",
 	"clangd",
@@ -87,6 +86,7 @@ for _, lsp_server in pairs(LSP_LIST) do
 	lspconfig[lsp_server].setup{
 		capabilities = capabilities,
 		-- on_attach = on_attach,
+		-- on_attach = require("virtualtypes").on_attach
 	}
 
 	-- custom lsp configuration below
@@ -95,6 +95,7 @@ for _, lsp_server in pairs(LSP_LIST) do
 		lspconfig[lsp_server].setup{
 			capabilities = capabilities,
 			-- on_attach = on_attach,
+			-- on_attach = require("virtualtypes").on_attach,
 			filetypes = {'zsh', 'bash', 'sh'}
 		}
 	end
@@ -113,32 +114,31 @@ end
 -- diagnostic config
 --
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
+	virtual_text = false,
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
 })
 
 --
 -- borders
 --
 local border = {
-      {"╭", "FloatBorder"},
-      {"─", "FloatBorder"},
-      {"╮", "FloatBorder"},
-      {"│", "FloatBorder"},
-      {"╯", "FloatBorder"},
-      {"─", "FloatBorder"},
-      {"╰", "FloatBorder"},
-      {"│", "FloatBorder"},
+	{"╭", "FloatBorder"},
+	{"─", "FloatBorder"},
+	{"╮", "FloatBorder"},
+	{"│", "FloatBorder"},
+	{"╯", "FloatBorder"},
+	{"─", "FloatBorder"},
+	{"╰", "FloatBorder"},
+	{"│", "FloatBorder"},
 }
 
--- To instead override globally
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-  opts = opts or {}
-  opts.border = opts.border or border
-  return orig_util_open_floating_preview(contents, syntax, opts, ...)
+	opts = opts or {}
+	opts.border = opts.border or border
+	return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 

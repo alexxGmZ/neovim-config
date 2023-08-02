@@ -1,6 +1,3 @@
--- for cmp-spell
-vim.opt.spell = false
-vim.opt.spelllang = { 'en_us' }
 vim.cmd("let g:vsnip_filetypes = {}")
 
 local cmp_setup, cmp = pcall(require, "cmp")
@@ -60,20 +57,21 @@ cmp.setup({
 	}),
 
 	sources = cmp.config.sources({
-		{ name = 'nvim_lsp' },
-		{ name = 'vsnip' }, -- For vsnip users.
-		{ name = 'buffer' },
-		{ name = 'path' },
-		{ name = 'nvim_lsp_signature_help' },
+		{ name = "nvim_lsp" },
+		{ name = "vsnip" }, -- For vsnip users.
+		{ name = "buffer" },
+		{ name = "path" },
+		{ name = "nvim_lsp_signature_help" },
 		{
-			name = 'spell',
+			name = "spell",
 			option = {
 				keep_all_entries = false,
 				enable_in_context = function()
 					return true
 				end
 			}
-		}
+		},
+		{ name = "bootstrap" }
 	}),
 
 	sorting = {

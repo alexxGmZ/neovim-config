@@ -26,12 +26,6 @@ local mode_map = {
 	s = "SUB"
 }
 
-local colors = {
-	git_added = "#9ece6a",
-	git_modified = "#7dcfff",
-	git_removed = "#f7768e"
-}
-
 lualine.setup {
 	options = {
 		icons_enabled = true,
@@ -103,20 +97,6 @@ lualine.setup {
 			},
 			{'diff',
 				colored = true,
-				-- color = {
-				-- 	bg = '#1a1b26',
-				-- },
-				-- diff_color = {
-				-- 	added = {
-				-- 		fg = colors.git_added,
-				-- 	},
-				-- 	modified = {
-				-- 		fg = colors.git_modified,
-				-- 	},
-				-- 	removed = {
-				-- 		fg = colors.git_removed,
-				-- 	},
-				-- },
 				symbols = {
 					added = '+',
 					modified = '~',
@@ -157,6 +137,8 @@ lualine.setup {
 					right = ''
 				}
 			},
+			{ require("dr-lsp").lspCount },
+			{ require("dr-lsp").lspProgress },
 		},
 		lualine_x = {},
 		lualine_y = {'encoding', 'filetype', 'progress'},
@@ -187,20 +169,6 @@ lualine.setup {
 			},
 			{'diff',
 				colored = true,
-				-- color = {
-				-- 	bg = '#1a1b26',
-				-- },
-				-- diff_color = {
-				-- 	added = {
-				-- 		fg = colors.git_added,
-				-- 	},
-				-- 	modified = {
-				-- 		fg = colors.git_modified,
-				-- 	},
-				-- 	removed = {
-				-- 		fg = colors.git_removed,
-				-- 	},
-				-- },
 				symbols = {
 					added = '+',
 					modified = '~',
