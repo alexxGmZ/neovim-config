@@ -12,7 +12,7 @@ require("diagflow").setup({
 	scope = "line", -- 'cursor', 'line'
 	padding_top = 5,
 	placement = "top",
-	update_event = { "DiagnosticChanged", "BufReadPost", "BufEnter" },
+	update_event = { "DiagnosticChanged", "BufReadPost", "BufEnter", "CursorMoved" },
 	toggle_event = { "InsertEnter", "BufEnter" },
 	show_sign = true, -- set to true if you want to render the diagnostic sign before the diagnostic message
 	render_event = { "DiagnosticChanged", "CursorMoved" }
