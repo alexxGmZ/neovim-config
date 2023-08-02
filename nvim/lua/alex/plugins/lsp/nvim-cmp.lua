@@ -1,6 +1,3 @@
--- for cmp-spell
-vim.opt.spell = false
-vim.opt.spelllang = { 'en_us' }
 vim.cmd("let g:vsnip_filetypes = {}")
 
 local cmp_setup, cmp = pcall(require, "cmp")
@@ -74,6 +71,7 @@ cmp.setup({
 				end
 			}
 		},
+		{ name = "bootstrap" }
 	}),
 
 	sorting = {
