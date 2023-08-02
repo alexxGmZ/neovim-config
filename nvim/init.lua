@@ -24,7 +24,9 @@ local function if_git_dir()
 end
 
 require("lazy").setup({
+	--
 	-- #### COLORSCHEME #### --
+	--
 	-- catppuccin
 	{
 		"catppuccin/nvim",
@@ -88,7 +90,25 @@ require("lazy").setup({
 	-- #### COLORSCHEME #### --
 
 
+	--
 	-- #### LOAD BY COMMAND #### --
+	--
+	{
+		"f3fora/cmp-spell",
+		config = function ()
+			require("alex.plugins.lsp.cmp-spell")
+		end,
+		cmd = { "Spell", "SpellToggle" }
+	},
+
+	{
+		"VidocqH/lsp-lens.nvim",
+		config = function ()
+			require'lsp-lens'.setup({})
+		end,
+		cmd = { "LspLensOn", "LspLensToggle" }
+
+	},
 	{
 		"barrett-ruth/live-server.nvim",
 		config = true,
@@ -166,18 +186,20 @@ require("lazy").setup({
 		cmd = {'CWToggle', 'CWOpen'}
 	},
 
-	{
-		"idanarye/vim-merginal",
-		dependencies = {
-			"tpope/vim-fugitive",
-		},
-		cond = if_git_dir,
-		cmd = {'Merginal', 'MerginalToggle', 'Git'}
-	},
 	-- #### LOAD BY COMMAND #### --
 
 
+	--
 	-- #### LOAD BY FILETYPE #### --
+	--
+	{
+		"uga-rosa/ccc.nvim",
+		config = function()
+			require("alex.plugins.ccc")
+		end,
+		ft = { "markdown", "html", "php", "javascript", "css" }
+	},
+
 	{
 		"davidgranstrom/nvim-markdown-preview",
 		ft = "markdown",
@@ -185,7 +207,7 @@ require("lazy").setup({
 
 	{
 		"mtdl9/vim-log-highlighting",
-		ft = {'log'}
+		ft = "log"
 	},
 
 	{
@@ -200,7 +222,9 @@ require("lazy").setup({
 	-- #### LOAD BY FILETYPE #### --
 
 
+	--
 	-- #### LOAD IN GIT DIRECTORY #### --
+	--
 	{
 		"f-person/git-blame.nvim",
 		config = function()
@@ -216,10 +240,36 @@ require("lazy").setup({
 		end,
 		cond = if_git_dir
 	},
+	{
+		"idanarye/vim-merginal",
+		cond = if_git_dir,
+		cmd = {'Merginal', 'MerginalToggle', 'Git'}
+	},
+	{
+		"tpope/vim-fugitive",
+		cond = if_git_dir,
+	},
 	-- #### LOAD IN GIT DIRECTORY #### --
 
 
+	--
 	-- #### LOAD IN VeryLazy EVENT #### --
+	--
+	{
+		"neovim/nvim-lspconfig",
+		event = "VeryLazy",
+		dependencies = {
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"SmiteshP/nvim-navic",
+			-- "ray-x/lsp_signature.nvim"
+		},
+		config = function()
+			require("alex.plugins.lsp.mason")
+			require("alex.plugins.lsp.lspconfig")
+		end
+	},
+
 	{
 		"dgagn/diagflow.nvim",
 		event = "LspAttach",
@@ -257,7 +307,6 @@ require("lazy").setup({
 			"hrsh7th/vim-vsnip-integ",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 			"lukas-reineke/cmp-under-comparator",
-			"f3fora/cmp-spell",
 			"onsails/lspkind.nvim",
 			"rafamadriz/friendly-snippets"
 		},
@@ -273,8 +322,12 @@ require("lazy").setup({
 			require("alex.plugins.lualine")
 		end,
 		dependencies = {
-			"SmiteshP/nvim-navic"
+			"SmiteshP/nvim-navic",
 		}
+	},
+	{
+		"chrisgrieser/nvim-dr-lsp",
+		event = "LspAttach"
 	},
 
 	{
@@ -330,12 +383,6 @@ require("lazy").setup({
 		end
 	},
 	-- #### LOAD IN VeryLazy EVENT #### --
-	{
-		"uga-rosa/ccc.nvim",
-		config = function()
-			require("alex.plugins.ccc")
-		end
-	},
 
 	{
 		"rcarriga/nvim-notify",
@@ -358,6 +405,7 @@ require("lazy").setup({
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.treesitter")
 			require("alex.plugins.treesitter-context")
@@ -365,20 +413,6 @@ require("lazy").setup({
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-context"
 		},
-	},
-
-	{
-		"neovim/nvim-lspconfig",
-		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-			"SmiteshP/nvim-navic",
-			-- "ray-x/lsp_signature.nvim"
-		},
-		config = function()
-			require("alex.plugins.lsp.mason")
-			require("alex.plugins.lsp.lspconfig")
-		end
 	},
 
 	{
