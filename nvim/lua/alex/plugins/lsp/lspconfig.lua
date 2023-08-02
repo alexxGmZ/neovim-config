@@ -1,7 +1,7 @@
-local navic = require('nvim-navic')
-local cmp_nvim_lsp = require('cmp_nvim_lsp')
-local lspconfig = require('lspconfig')
-local mason_lspconfig = require('mason-lspconfig')
+local navic = require("nvim-navic")
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
+local lspconfig = require("lspconfig")
+local mason_lspconfig = require("mason-lspconfig")
 
 --
 -- table of installed lsps
@@ -9,7 +9,6 @@ local mason_lspconfig = require('mason-lspconfig')
 --
 local LSP_LIST = {
 	"pyright",
-	-- "pylsp",
 	"jdtls",
 	"html",
 	"clangd",
@@ -87,6 +86,7 @@ for _, lsp_server in pairs(LSP_LIST) do
 	lspconfig[lsp_server].setup{
 		capabilities = capabilities,
 		-- on_attach = on_attach,
+		-- on_attach = require("virtualtypes").on_attach
 	}
 
 	-- custom lsp configuration below
@@ -95,6 +95,7 @@ for _, lsp_server in pairs(LSP_LIST) do
 		lspconfig[lsp_server].setup{
 			capabilities = capabilities,
 			-- on_attach = on_attach,
+			-- on_attach = require("virtualtypes").on_attach,
 			filetypes = {'zsh', 'bash', 'sh'}
 		}
 	end
