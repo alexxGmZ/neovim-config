@@ -124,9 +124,9 @@ lualine.setup {
 				sources = { "nvim_diagnostic"},
 				sections = { "error", "warn", "info", },
 				symbols = {
-					error = " ",
-					warn = " ",
-					info = " ",
+					error = "󰅙 ",
+					warn = "󰀦 ",
+					info = "󰋼 ",
 				},
 				colored = true,
 				update_in_insert = false,
@@ -182,7 +182,6 @@ lualine.setup {
 					error = "󰅚 ",
 					warn = "󰀪 ",
 					info = "󰋽 ",
-					hint = "󰌶 ",
 				},
 				colored = true,
 				update_in_insert = false,
@@ -231,9 +230,9 @@ lualine.setup {
 				sources = { "nvim_workspace_diagnostic" },
 				sections = { "error", "warn", "info", "hint" },
 				symbols = {
-					error = " ",
-					warn = " ",
-					info = " ",
+					error = "󰅙 ",
+					warn = "󰀦 ",
+					info = "󰋼 ",
 					hint = "󰌵 "
 				},
 				colored = true,
@@ -258,10 +257,10 @@ lualine.setup {
 			-- 	path = 0
 			-- },
 		},
-		lualine_b = {
+		lualine_b = {},
+		lualine_c = {
 			{"navic"},
 		},
-		lualine_c = {},
 		lualine_x = {
 			{"diagnostics",
 				sources = { "nvim_workspace_diagnostic" },
