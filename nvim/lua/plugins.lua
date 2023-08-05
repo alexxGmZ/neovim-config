@@ -89,11 +89,13 @@ return {
 		cmd = { "LspLensOn", "LspLensToggle" }
 
 	},
+
 	{
 		"barrett-ruth/live-server.nvim",
 		config = true,
 		cmd = {"LiveServerStart"}
 	},
+
 	{
 		"stevearc/oil.nvim",
 		cmd = "Oil",
@@ -109,6 +111,7 @@ return {
 		end,
 		cmd = "MarpStart"
 	},
+
 	{
 		"ibhagwan/fzf-lua",
 		cmd = "FzfLua",
@@ -213,21 +216,25 @@ return {
 		cmd = {"GitBlameToggle", "GitBlameEnable"},
 		cond = if_git_dir
 	},
+
 	{
-		'lewis6991/gitsigns.nvim',
+		"lewis6991/gitsigns.nvim",
 		config = function()
-			require('gitsigns').setup()
+			require("gitsigns").setup()
 		end,
 		cond = if_git_dir
 	},
+
 	{
 		"idanarye/vim-merginal",
 		cond = if_git_dir,
-		cmd = {'Merginal', 'MerginalToggle', 'Git'}
+		cmd = {"Merginal", "MerginalToggle", "Git"}
 	},
+
 	{
 		"tpope/vim-fugitive",
 		cond = if_git_dir,
+		cmd = {"Merginal", "MerginalToggle", "Git"}
 	},
 	-- #### LOAD IN GIT DIRECTORY #### --
 
@@ -306,6 +313,7 @@ return {
 			"SmiteshP/nvim-navic",
 		}
 	},
+
 	{
 		"chrisgrieser/nvim-dr-lsp",
 		event = "LspAttach"

@@ -8,6 +8,7 @@ end
 
 navic.setup{
 	highlight = true,
+	click = true,
 }
 
 -- rename mode names to shorter ones
@@ -120,7 +121,7 @@ lualine.setup {
 		},
 		lualine_c = {
 			{"diagnostics",
-				sources = { "nvim_diagnostic", "coc", "ale", "nvim_lsp" },
+				sources = { "nvim_diagnostic"},
 				sections = { "error", "warn", "info", },
 				symbols = {
 					error = " ",
@@ -175,12 +176,13 @@ lualine.setup {
 		},
 		lualine_b = {
 			{"diagnostics",
-				sources = { "nvim_diagnostic", "coc", "ale", "nvim_lsp" },
+				sources = { "nvim_diagnostic" },
 				sections = { "error", "warn", "info", },
 				symbols = {
-					error = " ",
-					warn = " ",
-					info = " ",
+					error = "󰅚 ",
+					warn = "󰀪 ",
+					info = "󰋽 ",
+					hint = "󰌶 ",
 				},
 				colored = true,
 				update_in_insert = false,
@@ -209,41 +211,72 @@ lualine.setup {
 
 	winbar = {
 		lualine_a = {
-			{"filename",
-				separator = {
-					right = ""
-				},
+			-- {"filename",
+			-- 	separator = {
+			-- 		right = ""
+			-- 	},
+			-- 	symbols = {
+			-- 		modified = "●",
+			-- 		readonly = "[RO]"
+			-- 	},
+			-- 	path = 0
+			-- },
+		},
+		lualine_b = {},
+		lualine_c = {
+			{ "navic" }
+		},
+		lualine_x = {
+			{"diagnostics",
+				sources = { "nvim_workspace_diagnostic" },
+				sections = { "error", "warn", "info", "hint" },
 				symbols = {
-					modified = "●",
-					readonly = "[RO]"
+					error = " ",
+					warn = " ",
+					info = " ",
+					hint = "󰌵 "
 				},
-				path = 0
-			},
+				colored = true,
+				update_in_insert = false,
+				always_visible = true,
+			}
 		},
-		lualine_b = {
-			{"navic"},
-		},
-		lualine_c = {},
-		lualine_x = {},
 		lualine_y = {},
 		lualine_z = {}
 	},
 
 	inactive_winbar = {
 		lualine_a = {
-			{"filename",
-				separator = {
-					right = ""
-				},
-				symbols = {
-					modified = "●",
-					readonly = "[RO]"
-				},
-				path = 0
-			},
+			-- {"filename",
+			-- 	separator = {
+			-- 		right = ""
+			-- 	},
+			-- 	symbols = {
+			-- 		modified = "●",
+			-- 		readonly = "[RO]"
+			-- 	},
+			-- 	path = 0
+			-- },
 		},
-		lualine_b = {},
+		lualine_b = {
+			{"navic"},
+		},
 		lualine_c = {},
+		lualine_x = {
+			{"diagnostics",
+				sources = { "nvim_workspace_diagnostic" },
+				sections = { "error", "warn", "info", "hint" },
+				symbols = {
+					error = "󰅚 ",
+					warn = "󰀪 ",
+					info = "󰋽 ",
+					hint = "󰌶 ",
+				},
+				colored = true,
+				update_in_insert = false,
+				always_visible = true,
+			}
+		},
 	},
 
 	extensions = {}

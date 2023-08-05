@@ -10,7 +10,7 @@ require("diagflow").setup({
 
 	gap_size = 1,
 	scope = "line", -- 'cursor', 'line'
-	padding_top = 5,
+	padding_top = 4,
 	placement = "top",
 	update_event = { "DiagnosticChanged", "BufReadPost", "BufEnter", "CursorMoved" },
 	toggle_event = { "InsertEnter", "BufEnter" },

@@ -5,5 +5,10 @@ ccc.setup({
 	highlighter = {
 		auto_enable = true,
 		lsp = true
+	},
+	inputs = {
+		ccc.input.rgb,
+		ccc.input.hsl,
+		ccc.input.cmyk,
 	}
 })
