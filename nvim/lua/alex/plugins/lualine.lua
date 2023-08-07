@@ -209,18 +209,7 @@ lualine.setup {
 	},
 
 	winbar = {
-		lualine_a = {
-			-- {"filename",
-			-- 	separator = {
-			-- 		right = ""
-			-- 	},
-			-- 	symbols = {
-			-- 		modified = "●",
-			-- 		readonly = "[RO]"
-			-- 	},
-			-- 	path = 0
-			-- },
-		},
+		lualine_a = {},
 		lualine_b = {},
 		lualine_c = {
 			{ "navic" }
@@ -245,18 +234,7 @@ lualine.setup {
 	},
 
 	inactive_winbar = {
-		lualine_a = {
-			-- {"filename",
-			-- 	separator = {
-			-- 		right = ""
-			-- 	},
-			-- 	symbols = {
-			-- 		modified = "●",
-			-- 		readonly = "[RO]"
-			-- 	},
-			-- 	path = 0
-			-- },
-		},
+		lualine_a = {},
 		lualine_b = {},
 		lualine_c = {
 			{"navic"},
