@@ -41,7 +41,8 @@ vim.cmd [[
 	set wildmode=longest:list,full
 	set laststatus=2
 	set showmatch
-	set mouse=a
+	" set mouse=a
+	set mouse=
 	set showcmd
 	set nobackup
 	set writebackup
