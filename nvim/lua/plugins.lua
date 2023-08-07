@@ -23,8 +23,9 @@ return {
 	{
 		"bluz71/vim-moonfly-colors",
 		name = "moonfly",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.moonfly")
 		end
@@ -33,8 +34,9 @@ return {
 	-- tokyonight
 	{
 		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.tokyonight")
 		end
@@ -43,8 +45,9 @@ return {
 	-- github
 	{
 		"projekt0n/github-nvim-theme",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.github-theme")
 		end,
@@ -54,8 +57,9 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.rose-pine")
 		end,
@@ -64,8 +68,9 @@ return {
 	-- newpaper
 	{
 		"yorik1984/newpaper.nvim",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
+		event = "VeryLazy",
 	},
 	-- #### COLORSCHEME #### --
 
@@ -321,7 +326,8 @@ return {
 
 	{
 		"akinsho/bufferline.nvim",
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+		event = "TabNew",
 		config = function()
 			require("alex.plugins.bufferline")
 		end
@@ -338,9 +344,6 @@ return {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		event = "VeryLazy",
-		config = function()
-			-- require("alex.plugins.indent-blankline")
-		end,
 	},
 
 	{
@@ -353,7 +356,8 @@ return {
 
 	{
 		"chrisgrieser/nvim-early-retirement",
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+		event = "BufAdd",
 		config = function ()
 			require("alex.plugins.early-retirement")
 		end,
