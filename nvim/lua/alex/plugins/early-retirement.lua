@@ -13,7 +13,7 @@ require("early-retirement").setup({
 	ignoreUnsavedChangesBufs = true,
 
 	-- ignore non-empty buftypes, e.g. terminal buffers
-	ignoreSpecialBuftypes = true,
+	ignoreSpecialBuftypes = false,
 
 	-- uses vim.notify for plugins like nvim-notify
 	notificationOnAutoClose = true,
