@@ -1,15 +1,4 @@
-local lualine_setup, lualine = pcall(require, "lualine")
-local nvim_navic_setup, navic = pcall(require, "nvim-navic")
-
-if not nvim_navic_setup or
-	not lualine_setup then
-	return
-end
-
-navic.setup{
-	highlight = true,
-	click = true,
-}
+local lualine = require("lualine")
 
 -- rename mode names to shorter ones
 local mode_map = {
@@ -44,7 +33,8 @@ lualine.setup {
 				"merginal",
 				"packer",
 				"Outline",
-				"oil"
+				"oil",
+				"Trouble"
 			},
 			winbar = {
 				"NvimTree",
@@ -60,7 +50,8 @@ lualine.setup {
 				"Jaq",
 				"qf",
 				"Trouble",
-				"oil"
+				"oil",
+				"man"
 			},
 		},
 		ignore_focus = {},
@@ -99,9 +90,12 @@ lualine.setup {
 			{"diff",
 				colored = true,
 				symbols = {
-					added = "+",
-					modified = "~",
-					removed = "-",
+					-- added = "+",
+					-- modified = "~",
+					-- removed = "-",
+					added = "󰐖 ", -- nf-md-plus_box
+					modified = "󱗜 ", -- nf-md-circle_box
+					removed = "󰍵 ", -- nf-md-minus_box
 				},
 				separator = {
 					right = ""
@@ -164,9 +158,12 @@ lualine.setup {
 			{"diff",
 				colored = true,
 				symbols = {
-					added = "+",
-					modified = "~",
-					removed = "-",
+					-- added = "+",
+					-- modified = "~",
+					-- removed = "-",
+					added = "󰜄 ", -- nf-md-plus_box_outline
+					modified = "󱗝 ", -- nf-md-circle_box_outline
+					removed = "󰛲 ", -- nf-md-minus_box_outline
 				},
 				separator = {
 					right = ""
