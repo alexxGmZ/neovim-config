@@ -1,4 +1,3 @@
-local navic = require("nvim-navic")
 local cmp_nvim_lsp = require("cmp_nvim_lsp")
 local lspconfig = require("lspconfig")
 local mason_lspconfig = require("mason-lspconfig")
@@ -23,15 +22,6 @@ local LSP_LIST = {
 	"lemminx",
 	"quick_lint_js",
 	"tsserver"
-}
-
---
--- nvim navic lsp setup
---
-navic.setup{
-	lsp = {
-		auto_attach = true
-	}
 }
 
 --
