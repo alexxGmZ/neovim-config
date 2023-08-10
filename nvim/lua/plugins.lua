@@ -23,8 +23,9 @@ return {
 	{
 		"bluz71/vim-moonfly-colors",
 		name = "moonfly",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.moonfly")
 		end
@@ -33,8 +34,9 @@ return {
 	-- tokyonight
 	{
 		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.tokyonight")
 		end
@@ -43,8 +45,9 @@ return {
 	-- github
 	{
 		"projekt0n/github-nvim-theme",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.github-theme")
 		end,
@@ -54,8 +57,9 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.rose-pine")
 		end,
@@ -64,8 +68,9 @@ return {
 	-- newpaper
 	{
 		"yorik1984/newpaper.nvim",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
+		event = "VeryLazy",
 	},
 	-- #### COLORSCHEME #### --
 
@@ -245,15 +250,15 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		-- event = "VeryLazy",
+		event = "ModeChanged",
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			"SmiteshP/nvim-navic",
-			-- "ray-x/lsp_signature.nvim"
 		},
 		config = function()
 			require("alex.plugins.lsp.mason")
 			require("alex.plugins.lsp.lspconfig")
+			vim.cmd("LspStart")
 		end
 	},
 
@@ -284,7 +289,7 @@ return {
 
 	{
 		"hrsh7th/nvim-cmp",
-		event = "VeryLazy",
+		event = "ModeChanged",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
@@ -309,9 +314,6 @@ return {
 		config = function()
 			require("alex.plugins.lualine")
 		end,
-		dependencies = {
-			"SmiteshP/nvim-navic",
-		}
 	},
 
 	{
@@ -321,7 +323,11 @@ return {
 
 	{
 		"akinsho/bufferline.nvim",
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+		event = {
+			"TabNew",
+			"TabEnter"
+		},
 		config = function()
 			require("alex.plugins.bufferline")
 		end
@@ -330,6 +336,8 @@ return {
 	{
 		"RRethy/vim-illuminate",
 		event = "VeryLazy",
+		-- event = "FocusGained",
+		-- event = "CursorMoved",
 		config = function()
 			require("alex.plugins.vim-illuminate")
 		end
@@ -338,9 +346,6 @@ return {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		event = "VeryLazy",
-		config = function()
-			-- require("alex.plugins.indent-blankline")
-		end,
 	},
 
 	{
@@ -353,7 +358,8 @@ return {
 
 	{
 		"chrisgrieser/nvim-early-retirement",
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+		event = "BufAdd",
 		config = function ()
 			require("alex.plugins.early-retirement")
 		end,
@@ -398,6 +404,7 @@ return {
 		config = function()
 			require("alex.plugins.treesitter")
 			require("alex.plugins.treesitter-context")
+			-- vim.cmd("TSDisable highlight")
 		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-context"
@@ -410,4 +417,37 @@ return {
 			require("guess-indent").setup{}
 		end,
 	},
+
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		event = "VeryLazy",
+		opts = {
+			keywords = {
+				FIX = {
+					icon = " ", -- icon used for the sign, and in search results
+					color = "error", -- can be a hex color, or a named color (see below)
+					alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
+					-- signs = false, -- configure signs for some keywords individually
+				},
+				TODO = { icon = " ", color = "info" },
+				HACK = { icon = " ", color = "warning" },
+				WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+				PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+				NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+				TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+			},
+			highlight = {
+				multiline = true
+			}
+		}
+	},
+
+	{
+		"SmiteshP/nvim-navic",
+		event = "LspAttach",
+		config = function ()
+			require("alex.plugins.nvim-navic")
+		end
+	}
 }

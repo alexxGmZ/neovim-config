@@ -4,11 +4,11 @@ notify.setup({
 	background_colour = "NotifyBackground",
 	fps = 10,
 	icons = {
-		DEBUG = "",
-		ERROR = "",
-		INFO = "",
-		TRACE = "✎",
-		WARN = ""
+		DEBUG = " ",
+		ERROR = "󰅙 ",
+		INFO = "󰋼 ",
+		TRACE = "✎ ",
+		WARN = "󰀦 "
 	},
 	-- level = 0,
 	level = vim.log.levels.INFO,

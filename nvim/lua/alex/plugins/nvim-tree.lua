@@ -28,10 +28,10 @@ require("nvim-tree").setup{
 		show_on_dirs = false,
 		debounce_delay = 50,
 		icons = {
-			hint = "",
-			info = "",
-			warning = "",
-			error = "",
+			error = "󰅙 ",
+			warning = "󰀦 ",
+			info = "󰋼 ",
+			hint = "󰌵 "
 		},
 	},
 	filters = {
