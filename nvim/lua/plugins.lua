@@ -7,7 +7,7 @@ return {
 	--
 	-- #### COLORSCHEME #### --
 	--
-	-- catppuccin
+	-- catppuccin (main colorscheme)
 	{
 		"catppuccin/nvim",
 		lazy = false,
@@ -25,7 +25,8 @@ return {
 		name = "moonfly",
 		-- lazy = false,
 		-- priority = 1000,
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+		event = "CmdlineEnter",
 		config = function()
 			require("alex.plugins.moonfly")
 		end
@@ -36,7 +37,8 @@ return {
 		"folke/tokyonight.nvim",
 		-- lazy = false,
 		-- priority = 1000,
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+		event = "CmdlineEnter",
 		config = function()
 			require("alex.plugins.tokyonight")
 		end
@@ -47,7 +49,8 @@ return {
 		"projekt0n/github-nvim-theme",
 		-- lazy = false,
 		-- priority = 1000,
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+		event = "CmdlineEnter",
 		config = function()
 			require("alex.plugins.github-theme")
 		end,
@@ -59,7 +62,8 @@ return {
 		name = "rose-pine",
 		-- lazy = false,
 		-- priority = 1000,
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+		event = "CmdlineEnter",
 		config = function()
 			require("alex.plugins.rose-pine")
 		end,
@@ -70,7 +74,8 @@ return {
 		"yorik1984/newpaper.nvim",
 		-- lazy = false,
 		-- priority = 1000,
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+		event = "CmdlineEnter",
 	},
 	-- #### COLORSCHEME #### --
 
@@ -250,7 +255,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		-- event = "VeryLazy",
-		event = "ModeChanged",
+		-- event = "ModeChanged",
+		event = "InsertEnter",
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
@@ -289,7 +295,8 @@ return {
 
 	{
 		"hrsh7th/nvim-cmp",
-		event = "ModeChanged",
+		-- event = "ModeChanged",
+		event = { "CmdlineEnter", "InsertEnter"},
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
