@@ -93,10 +93,12 @@ return {
 
 	{
 		"VidocqH/lsp-lens.nvim",
+		event = "LspAttach",
 		config = function ()
 			require'lsp-lens'.setup({})
+			vim.cmd("LspLensOff")
 		end,
-		cmd = { "LspLensOn", "LspLensToggle" }
+		-- cmd = { "LspLensOn", "LspLensToggle" }
 
 	},
 
@@ -141,10 +143,11 @@ return {
 
 	{
 		"folke/trouble.nvim",
+		event = "LspAttach",
+		-- cmd = {"Trouble", "TroubleToggle"},
 		config = function ()
 			require("alex.plugins.trouble")
 		end,
-		cmd = {"Trouble", "TroubleToggle"},
 	},
 
 	{
@@ -162,10 +165,10 @@ return {
 
 	{
 		"simrat39/symbols-outline.nvim",
+		event = "LspAttach",
 		config = function()
 			require("alex.plugins.symbols-outline")
 		end,
-		cmd = {'SymbolsOutline', 'SymbolsOutlineOpen'},
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		}
@@ -220,11 +223,11 @@ return {
 	--
 	{
 		"f-person/git-blame.nvim",
+		cond = if_git_dir,
 		config = function()
 			require("alex.plugins.git-blame")
 		end,
-		cmd = {"GitBlameToggle", "GitBlameEnable"},
-		cond = if_git_dir
+		cmd = {"GitBlameToggle", "GitBlameEnable"}
 	},
 
 	{
@@ -254,9 +257,12 @@ return {
 	--
 	{
 		"neovim/nvim-lspconfig",
-		-- event = "VeryLazy",
-		-- event = "ModeChanged",
-		event = "InsertEnter",
+		event = {
+			-- "InsertEnter",
+			"InsertCharPre",
+			"TabNew",
+			"TabEnter",
+		},
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
@@ -265,7 +271,7 @@ return {
 			require("alex.plugins.lsp.mason")
 			require("alex.plugins.lsp.lspconfig")
 			vim.cmd("LspStart")
-		end
+		end,
 	},
 
 	{
@@ -287,7 +293,7 @@ return {
 
 	{
 		"m4xshen/autoclose.nvim",
-		event = "VeryLazy",
+		event = "InsertEnter",
 		config = function()
 			require("alex.plugins.autoclose")
 		end,
@@ -295,8 +301,10 @@ return {
 
 	{
 		"hrsh7th/nvim-cmp",
-		-- event = "ModeChanged",
-		event = { "CmdlineEnter", "InsertEnter"},
+		event = {
+			"CmdlineEnter",
+			"InsertEnter"
+		},
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
@@ -456,5 +464,14 @@ return {
 		config = function ()
 			require("alex.plugins.nvim-navic")
 		end
+	},
+
+	{
+		"nyngwang/NeoZoom.lua",
+		cmd = "NeoZoomToggle",
+		config = function ()
+			require("alex.plugins.neozoom")
+		end
 	}
+
 }
