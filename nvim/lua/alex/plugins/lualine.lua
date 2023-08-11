@@ -55,7 +55,7 @@ lualine.setup {
 			},
 		},
 		ignore_focus = {},
-		always_divide_middle = true,
+		always_divide_middle = false,
 		globalstatus = false,
 		refresh = {
 			statusline = 1000,
