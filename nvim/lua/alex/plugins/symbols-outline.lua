@@ -5,3 +5,6 @@ require("symbols-outline").setup({
 	width = 30,
 	show_guides = true,
 })
+
+vim.keymap.set("n", "<F8>", function() vim.cmd("SymbolsOutline") end, { silent = true })
+vim.keymap.set("n", "<leader>tt", function() vim.cmd("SymbolsOutline") end, { silent = true })
