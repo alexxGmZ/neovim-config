@@ -6,5 +6,22 @@ require("symbols-outline").setup({
 	show_guides = true,
 })
 
-vim.keymap.set("n", "<F8>", function() vim.cmd("SymbolsOutline") end, { silent = true })
-vim.keymap.set("n", "<leader>tt", function() vim.cmd("SymbolsOutline") end, { silent = true })
+vim.keymap.set("n", "<F8>",
+	function()
+		vim.cmd("SymbolsOutline")
+	end,
+	{
+		silent = true,
+		desc = "SymbolsOutline: Toggle symbols outline"
+	}
+)
+
+vim.keymap.set("n", "<leader>tt",
+	function()
+		vim.cmd("SymbolsOutline")
+	end,
+	{
+		silent = true,
+		desc = "SymbolsOutline: Toggle symbols outline"
+	}
+)
