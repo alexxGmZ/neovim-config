@@ -85,7 +85,7 @@ return {
 	--
 	{
 		"f3fora/cmp-spell",
-		config = function ()
+		config = function()
 			require("alex.plugins.lsp.cmp-spell")
 		end,
 		cmd = { "Spell", "SpellToggle" }
@@ -94,8 +94,8 @@ return {
 	{
 		"VidocqH/lsp-lens.nvim",
 		event = "LspAttach",
-		config = function ()
-			require'lsp-lens'.setup({})
+		config = function()
+			require("lsp-lens").setup({})
 			vim.cmd("LspLensOff")
 		end,
 		-- cmd = { "LspLensOn", "LspLensToggle" }
@@ -105,20 +105,20 @@ return {
 	{
 		"barrett-ruth/live-server.nvim",
 		config = true,
-		cmd = {"LiveServerStart"}
+		cmd = { "LiveServerStart" }
 	},
 
 	{
 		"stevearc/oil.nvim",
 		cmd = "Oil",
-		config = function ()
+		config = function()
 			require("alex.plugins.oil")
 		end
 	},
 
 	{
 		"aca/marp.nvim",
-		config = function ()
+		config = function()
 			require("alex.plugins.marp")
 		end,
 		cmd = "MarpStart"
@@ -138,29 +138,32 @@ return {
 			context = 11,
 			treesitter = false,
 		},
-		cmd = {"Twilight", "TwilightEnable"}
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		cmd = { "Twilight", "TwilightEnable" }
 	},
 
 	{
 		"folke/trouble.nvim",
 		event = "LspAttach",
-		-- cmd = {"Trouble", "TroubleToggle"},
-		config = function ()
+		cmd = { "Trouble", "TroubleToggle" },
+		config = function()
 			require("alex.plugins.trouble")
 		end,
 	},
 
 	{
 		"is0n/jaq-nvim",
-		config = function ()
+		config = function()
 			require("alex.plugins.jaq-nvim")
 		end,
-		cmd = {"Jaq"}
+		cmd = { "Jaq" }
 	},
 
 	{
 		"nullchilly/fsread.nvim",
-		cmd = {'FSRead', 'FSToggle'}
+		cmd = { "FSRead", "FSToggle" }
 	},
 
 	{
@@ -179,7 +182,7 @@ return {
 		config = function()
 			require("alex.plugins.codewindow")
 		end,
-		cmd = {'CWToggle', 'CWOpen'}
+		cmd = { 'CWToggle', 'CWOpen' }
 	},
 
 	-- #### LOAD BY COMMAND #### --
@@ -208,7 +211,7 @@ return {
 
 	{
 		"windwp/nvim-ts-autotag",
-		ft = {'markdown', 'html', 'php', 'xml', 'javascript'},
+		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
 		dependencies = {
 			"AndrewRadev/tagalong.vim",
 			"gregsexton/MatchTag",
@@ -227,27 +230,24 @@ return {
 		config = function()
 			require("alex.plugins.git-blame")
 		end,
-		cmd = {"GitBlameToggle", "GitBlameEnable"}
+		cmd = { "GitBlameToggle", "GitBlameEnable" }
 	},
 
 	{
 		"lewis6991/gitsigns.nvim",
+		cond = if_git_dir,
 		config = function()
 			require("gitsigns").setup()
-		end,
-		cond = if_git_dir
+		end
 	},
 
 	{
 		"idanarye/vim-merginal",
 		cond = if_git_dir,
-		cmd = {"Merginal", "MerginalToggle", "Git"}
-	},
-
-	{
-		"tpope/vim-fugitive",
-		cond = if_git_dir,
-		cmd = {"Merginal", "MerginalToggle", "Git"}
+		cmd = { "Merginal", "MerginalToggle", "Git" },
+		dependencies = {
+			"tpope/vim-fugitive",
+		}
 	},
 	-- #### LOAD IN GIT DIRECTORY #### --
 
@@ -258,14 +258,20 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		event = {
-			-- "InsertEnter",
 			"InsertCharPre",
 			"TabNew",
 			"TabEnter",
 		},
+		cmd = {
+			"LspStart",
+			"Trouble",
+		},
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
+			"folke/trouble.nvim",
+			"ibhagwan/fzf-lua",
+			"simrat39/symbols-outline.nvim",
 		},
 		config = function()
 			require("alex.plugins.lsp.mason")
@@ -284,7 +290,7 @@ return {
 
 	{
 		"kylechui/nvim-surround",
-		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		version = "*",
 		event = "VeryLazy",
 		config = function()
 			require("nvim-surround").setup({})
@@ -318,7 +324,7 @@ return {
 			"onsails/lspkind.nvim",
 			"rafamadriz/friendly-snippets"
 		},
-		config = function ()
+		config = function()
 			require("alex.plugins.lsp.nvim-cmp")
 		end
 	},
@@ -365,8 +371,11 @@ return {
 
 	{
 		"numToStr/Comment.nvim",
-		event = "VeryLazy",
-		config = function ()
+		keys = {
+			{ "gb", desc = "Comment: Block comment" },
+			{ "gc", desc = "Comment: Line comment" },
+		},
+		config = function()
 			require("Comment").setup()
 		end
 	},
@@ -375,7 +384,7 @@ return {
 		"chrisgrieser/nvim-early-retirement",
 		-- event = "VeryLazy",
 		event = "BufAdd",
-		config = function ()
+		config = function()
 			require("alex.plugins.early-retirement")
 		end,
 	},
@@ -397,7 +406,7 @@ return {
 	{
 		"rcarriga/nvim-notify",
 		priority = 999,
-		config = function ()
+		config = function()
 			require("alex.plugins.notify")
 		end
 	},
@@ -428,8 +437,8 @@ return {
 
 	{
 		"NMAC427/guess-indent.nvim",
-		config = function ()
-			require("guess-indent").setup{}
+		config = function()
+			require("guess-indent").setup {}
 		end,
 	},
 
@@ -461,7 +470,7 @@ return {
 	{
 		"SmiteshP/nvim-navic",
 		event = "LspAttach",
-		config = function ()
+		config = function()
 			require("alex.plugins.nvim-navic")
 		end
 	},
@@ -469,9 +478,8 @@ return {
 	{
 		"nyngwang/NeoZoom.lua",
 		cmd = "NeoZoomToggle",
-		config = function ()
+		config = function()
 			require("alex.plugins.neozoom")
 		end
-	}
-
+	},
 }
