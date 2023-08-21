@@ -10,7 +10,6 @@ require("illuminate").configure({
 		"help",
 		"text",
 		"man",
-		"markdown",
 		"checkhealth",
 		"NvimTree"
 	},

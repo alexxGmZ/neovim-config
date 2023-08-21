@@ -8,196 +8,51 @@ return {
 	-- #### COLORSCHEME #### --
 	--
 	-- catppuccin (main colorscheme)
-	{
-		"catppuccin/nvim",
-		lazy = false,
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			require("alex.plugins.catppuccin")
-			vim.cmd.colorscheme "catppuccin"
-		end
-	},
+	require("alex.plugins.catppuccin"),
 
 	-- moonfly
-	{
-		"bluz71/vim-moonfly-colors",
-		name = "moonfly",
-		-- lazy = false,
-		-- priority = 1000,
-		-- event = "VeryLazy",
-		event = "CmdlineEnter",
-		config = function()
-			require("alex.plugins.moonfly")
-		end
-	},
+	require("alex.plugins.moonfly"),
 
 	-- tokyonight
-	{
-		"folke/tokyonight.nvim",
-		-- lazy = false,
-		-- priority = 1000,
-		-- event = "VeryLazy",
-		event = "CmdlineEnter",
-		config = function()
-			require("alex.plugins.tokyonight")
-		end
-	},
+	require("alex.plugins.tokyonight"),
 
 	-- github
-	{
-		"projekt0n/github-nvim-theme",
-		-- lazy = false,
-		-- priority = 1000,
-		-- event = "VeryLazy",
-		event = "CmdlineEnter",
-		config = function()
-			require("alex.plugins.github-theme")
-		end,
-	},
+	require("alex.plugins.github-theme"),
 
 	-- rose pine
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		-- lazy = false,
-		-- priority = 1000,
-		-- event = "VeryLazy",
-		event = "CmdlineEnter",
-		config = function()
-			require("alex.plugins.rose-pine")
-		end,
-	},
+	require("alex.plugins.rose-pine"),
 
 	-- newpaper
-	{
-		"yorik1984/newpaper.nvim",
-		-- lazy = false,
-		-- priority = 1000,
-		-- event = "VeryLazy",
-		event = "CmdlineEnter",
-	},
+	require("alex.plugins.newpaper"),
 	-- #### COLORSCHEME #### --
 
+	require("alex.plugins.lsp.cmp-spell"),
+	require("alex.plugins.lsp.lsp-lens"),
 
-	--
-	-- #### LOAD BY COMMAND #### --
-	--
-	{
-		"f3fora/cmp-spell",
-		config = function()
-			require("alex.plugins.lsp.cmp-spell")
-		end,
-		cmd = { "Spell", "SpellToggle" }
-	},
+	require("alex.plugins.live-server"),
 
-	{
-		"VidocqH/lsp-lens.nvim",
-		event = "LspAttach",
-		config = function()
-			require("lsp-lens").setup({})
-			vim.cmd("LspLensOff")
-		end,
-		-- cmd = { "LspLensOn", "LspLensToggle" }
+	require("alex.plugins.oil"),
 
-	},
+	require("alex.plugins.marp"),
 
-	{
-		"barrett-ruth/live-server.nvim",
-		config = true,
-		cmd = { "LiveServerStart" }
-	},
+	require("alex.plugins.fzf-lua"),
 
-	{
-		"stevearc/oil.nvim",
-		cmd = "Oil",
-		config = function()
-			require("alex.plugins.oil")
-		end
-	},
+	require("alex.plugins.twilight"),
 
-	{
-		"aca/marp.nvim",
-		config = function()
-			require("alex.plugins.marp")
-		end,
-		cmd = "MarpStart"
-	},
+	require("alex.plugins.trouble"),
 
-	{
-		"ibhagwan/fzf-lua",
-		cmd = "FzfLua",
-		dependencies = {
-			"junegunn/fzf"
-		}
-	},
-
-	{
-		"folke/twilight.nvim",
-		opts = {
-			context = 11,
-			treesitter = false,
-		},
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-		cmd = { "Twilight", "TwilightEnable" }
-	},
-
-	{
-		"folke/trouble.nvim",
-		event = "LspAttach",
-		cmd = { "Trouble", "TroubleToggle" },
-		config = function()
-			require("alex.plugins.trouble")
-		end,
-	},
-
-	{
-		"is0n/jaq-nvim",
-		config = function()
-			require("alex.plugins.jaq-nvim")
-		end,
-		cmd = { "Jaq" }
-	},
+	require("alex.plugins.jaq-nvim"),
 
 	{
 		"nullchilly/fsread.nvim",
 		cmd = { "FSRead", "FSToggle" }
 	},
 
-	{
-		"simrat39/symbols-outline.nvim",
-		event = "LspAttach",
-		config = function()
-			require("alex.plugins.symbols-outline")
-		end,
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		}
-	},
+	require("alex.plugins.symbols-outline"),
 
-	{
-		"gorbit99/codewindow.nvim",
-		config = function()
-			require("alex.plugins.codewindow")
-		end,
-		cmd = { 'CWToggle', 'CWOpen' }
-	},
+	require("alex.plugins.codewindow"),
 
-	-- #### LOAD BY COMMAND #### --
-
-
-	--
-	-- #### LOAD BY FILETYPE #### --
-	--
-	{
-		"uga-rosa/ccc.nvim",
-		config = function()
-			require("alex.plugins.ccc")
-		end,
-		ft = { "markdown", "html", "php", "javascript", "css" }
-	},
+	require("alex.plugins.ccc"),
 
 	{
 		"davidgranstrom/nvim-markdown-preview",
@@ -218,12 +73,7 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 		}
 	},
-	-- #### LOAD BY FILETYPE #### --
 
-
-	--
-	-- #### LOAD IN GIT DIRECTORY #### --
-	--
 	{
 		"f-person/git-blame.nvim",
 		cond = if_git_dir,
@@ -237,7 +87,7 @@ return {
 		"lewis6991/gitsigns.nvim",
 		cond = if_git_dir,
 		config = function()
-			require("gitsigns").setup()
+			require("alex.plugins.gitsigns")
 		end
 	},
 
@@ -249,12 +99,7 @@ return {
 			"tpope/vim-fugitive",
 		}
 	},
-	-- #### LOAD IN GIT DIRECTORY #### --
 
-
-	--
-	-- #### LOAD IN VeryLazy EVENT #### --
-	--
 	{
 		"neovim/nvim-lspconfig",
 		event = {
@@ -265,13 +110,14 @@ return {
 		cmd = {
 			"LspStart",
 			"Trouble",
+			"FzfLua"
 		},
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"folke/trouble.nvim",
-			"ibhagwan/fzf-lua",
 			"simrat39/symbols-outline.nvim",
+			"ibhagwan/fzf-lua",
 		},
 		config = function()
 			require("alex.plugins.lsp.mason")
@@ -344,7 +190,6 @@ return {
 
 	{
 		"akinsho/bufferline.nvim",
-		-- event = "VeryLazy",
 		event = {
 			"TabNew",
 			"TabEnter"
@@ -357,8 +202,6 @@ return {
 	{
 		"RRethy/vim-illuminate",
 		event = "VeryLazy",
-		-- event = "FocusGained",
-		-- event = "CursorMoved",
 		config = function()
 			require("alex.plugins.vim-illuminate")
 		end
@@ -366,7 +209,11 @@ return {
 
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+		cmd = "IndentBlanklineEnable",
+		-- config = function ()
+		-- 	require("alex.plugins.indent-blankline")
+		-- end
 	},
 
 	{
@@ -374,6 +221,8 @@ return {
 		keys = {
 			{ "gb", desc = "Comment: Block comment" },
 			{ "gc", desc = "Comment: Line comment" },
+			{ "V" },
+			{ "v" },
 		},
 		config = function()
 			require("Comment").setup()
@@ -382,7 +231,6 @@ return {
 
 	{
 		"chrisgrieser/nvim-early-retirement",
-		-- event = "VeryLazy",
 		event = "BufAdd",
 		config = function()
 			require("alex.plugins.early-retirement")
@@ -401,7 +249,6 @@ return {
 			require("alex.plugins.nvim-tmux-navigation")
 		end
 	},
-	-- #### LOAD IN VeryLazy EVENT #### --
 
 	{
 		"rcarriga/nvim-notify",
@@ -427,11 +274,18 @@ return {
 		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.treesitter")
-			require("alex.plugins.treesitter-context")
 			-- vim.cmd("TSDisable highlight")
 		end,
+	},
+
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		event = "VeryLazy",
+		config = function()
+			require("alex.plugins.treesitter-context")
+		end,
 		dependencies = {
-			"nvim-treesitter/nvim-treesitter-context"
+			"nvim-treesitter/nvim-treesitter",
 		},
 	},
 
@@ -444,6 +298,7 @@ return {
 
 	{
 		"folke/todo-comments.nvim",
+		-- enable = false,
 		dependencies = { "nvim-lua/plenary.nvim" },
 		event = "VeryLazy",
 		opts = {

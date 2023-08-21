@@ -4,6 +4,7 @@ vim.g.loaded_netrwPlugin = 1
 require("alex.core.autocmds")
 require("alex.core.keymaps")
 require("alex.core.options")
+-- require("alex.core.usercmds")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
