@@ -10,8 +10,21 @@ require("illuminate").configure({
 		"help",
 		"text",
 		"man",
-		"markdown",
 		"checkhealth",
 		"NvimTree"
 	},
 })
+
+vim.keymap.set("n", "<M-n>",
+	function()
+		require("illuminate").goto_next_reference()
+	end,
+	{ desc = "Illuminate: goto next reference" }
+)
+
+vim.keymap.set("n", "<M-p>",
+	function()
+		require("illuminate").goto_prev_reference()
+	end,
+	{ desc = "Illuminate: goto previous reference" }
+)

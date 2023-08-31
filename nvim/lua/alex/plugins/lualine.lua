@@ -55,7 +55,7 @@ lualine.setup {
 			},
 		},
 		ignore_focus = {},
-		always_divide_middle = true,
+		always_divide_middle = false,
 		globalstatus = false,
 		refresh = {
 			statusline = 1000,
@@ -66,7 +66,8 @@ lualine.setup {
 
 	sections = {
 		lualine_a = {
-			{"mode",
+			{
+				"mode",
 				icons_enabled = true,
 				separator = {
 					right = ""
@@ -77,7 +78,8 @@ lualine.setup {
 			},
 		},
 		lualine_b = {
-			{"branch",
+			{
+				"branch",
 				color = {
 					bg = "#66d9ef",
 					fg = "#1a1b26"
@@ -87,7 +89,8 @@ lualine.setup {
 					right = ""
 				},
 			},
-			{"diff",
+			{
+				"diff",
 				colored = true,
 				symbols = {
 					-- added = "+",
@@ -102,7 +105,8 @@ lualine.setup {
 				},
 				source = nil,
 			},
-			{"filename",
+			{
+				"filename",
 				path = 0,
 				separator = {
 					right = ''
@@ -114,8 +118,9 @@ lualine.setup {
 			},
 		},
 		lualine_c = {
-			{"diagnostics",
-				sources = { "nvim_diagnostic"},
+			{
+				"diagnostics",
+				sources = { "nvim_diagnostic" },
 				sections = { "error", "warn", "info", },
 				symbols = {
 					error = "󰅙 ",
@@ -133,9 +138,10 @@ lualine.setup {
 			{ require("dr-lsp").lspProgress },
 		},
 		lualine_x = {},
-		lualine_y = {"encoding", "filetype", "progress"},
+		lualine_y = { "encoding", "filetype", "progress" },
 		lualine_z = {
-			{"location",
+			{
+				"location",
 				separator = {
 					left = "",
 				}
@@ -145,7 +151,8 @@ lualine.setup {
 
 	inactive_sections = {
 		lualine_a = {
-			{"filename",
+			{
+				"filename",
 				path = 0,
 				separator = {
 					right = ''
@@ -155,7 +162,8 @@ lualine.setup {
 					readonly = "[RO]"
 				}
 			},
-			{"diff",
+			{
+				"diff",
 				colored = true,
 				symbols = {
 					-- added = "+",
@@ -172,7 +180,8 @@ lualine.setup {
 			},
 		},
 		lualine_b = {
-			{"diagnostics",
+			{
+				"diagnostics",
 				sources = { "nvim_diagnostic" },
 				sections = { "error", "warn", "info", },
 				symbols = {
@@ -197,7 +206,8 @@ lualine.setup {
 			{ "filetype", }
 		},
 		lualine_z = {
-			{"location",
+			{
+				"location",
 				separator = {
 					left = "",
 				},
@@ -212,7 +222,8 @@ lualine.setup {
 			{ "navic" }
 		},
 		lualine_x = {
-			{"diagnostics",
+			{
+				"diagnostics",
 				sources = { "nvim_workspace_diagnostic" },
 				sections = { "error", "warn", "info", "hint" },
 				symbols = {
@@ -234,10 +245,11 @@ lualine.setup {
 		lualine_a = {},
 		lualine_b = {},
 		lualine_c = {
-			{"navic"},
+			{ "navic" },
 		},
 		lualine_x = {
-			{"diagnostics",
+			{
+				"diagnostics",
 				sources = { "nvim_workspace_diagnostic" },
 				sections = { "error", "warn", "info", "hint" },
 				symbols = {

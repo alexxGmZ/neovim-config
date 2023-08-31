@@ -34,15 +34,13 @@ vim.cmd [[
 	set autoread
 	set colorcolumn=90
 	set complete-=t " disable tags
-	set nocompatible
 	set splitbelow splitright
-	set ttyfast
-	set wildmenu
-	set wildmode=longest:list,full
-	set laststatus=2
+	" set wildmenu
+	" set wildmode=longest:list,full
+	" set laststatus=2
 	set showmatch
-	" set mouse=a
-	set mouse=
+	set mouse=a
+	" set mouse=
 	set showcmd
 	set nobackup
 	set writebackup

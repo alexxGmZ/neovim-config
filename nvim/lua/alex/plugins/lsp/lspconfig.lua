@@ -21,7 +21,8 @@ local LSP_LIST = {
 	"bashls",
 	"lemminx",
 	"quick_lint_js",
-	"tsserver"
+	"tsserver",
+	"jsonls"
 }
 
 --
