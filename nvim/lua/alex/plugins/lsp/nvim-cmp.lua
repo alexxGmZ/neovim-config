@@ -13,7 +13,7 @@ cmp.setup({
 			mode = 'symbol_text',
 			maxwidth = 50,
 			ellipsis_char = '...',
-			before = function (entry, vim_item)
+			before = function(entry, vim_item)
 				return vim_item
 			end
 		})
@@ -25,7 +25,7 @@ cmp.setup({
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
-		  vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
 		end,
 	},
 
@@ -114,4 +114,3 @@ cmp.setup.cmdline(':', {
 		{ name = 'cmdline' }
 	})
 })
-

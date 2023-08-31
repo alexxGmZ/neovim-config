@@ -5,7 +5,7 @@ end
 
 return {
 	--
-	-- #### COLORSCHEME #### --
+	-- COLORSCHEME --
 	--
 	-- catppuccin (main colorscheme)
 	require("alex.plugins.catppuccin"),
@@ -74,31 +74,14 @@ return {
 		}
 	},
 
-	{
-		"f-person/git-blame.nvim",
-		cond = if_git_dir,
-		config = function()
-			require("alex.plugins.git-blame")
-		end,
-		cmd = { "GitBlameToggle", "GitBlameEnable" }
-	},
-
-	{
-		"lewis6991/gitsigns.nvim",
-		cond = if_git_dir,
-		config = function()
-			require("alex.plugins.gitsigns")
-		end
-	},
-
-	{
-		"idanarye/vim-merginal",
-		cond = if_git_dir,
-		cmd = { "Merginal", "MerginalToggle", "Git" },
-		dependencies = {
-			"tpope/vim-fugitive",
-		}
-	},
+	--
+	-- Git Integration --
+	--
+	require("alex.plugins.git-blame"),
+	require("alex.plugins.gitsigns"),
+	require("alex.plugins.merginal"),
+	require("alex.plugins.git-conflict"),
+	-- Git Integration --
 
 	{
 		"neovim/nvim-lspconfig",
@@ -216,18 +199,7 @@ return {
 		-- end
 	},
 
-	{
-		"numToStr/Comment.nvim",
-		keys = {
-			{ "gb", desc = "Comment: Block comment" },
-			{ "gc", desc = "Comment: Line comment" },
-			{ "V" },
-			{ "v" },
-		},
-		config = function()
-			require("Comment").setup()
-		end
-	},
+	require("alex.plugins.comment"),
 
 	{
 		"chrisgrieser/nvim-early-retirement",
@@ -278,16 +250,7 @@ return {
 		end,
 	},
 
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		event = "VeryLazy",
-		config = function()
-			require("alex.plugins.treesitter-context")
-		end,
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-	},
+	require("alex.plugins.treesitter-context"),
 
 	{
 		"NMAC427/guess-indent.nvim",
@@ -337,4 +300,5 @@ return {
 			require("alex.plugins.neozoom")
 		end
 	},
+
 }

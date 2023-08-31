@@ -15,7 +15,8 @@ return {
 					go       = "go run %",
 					sh       = "sh %",
 					lua      = "lua %",
-					c        = "clang % && ./a.out"
+					c        = "clang % && ./a.out",
+					java     = "java %"
 				}
 			},
 
