@@ -9,70 +9,17 @@ return {
 	--
 	-- catppuccin (main colorscheme)
 	require("alex.plugins.catppuccin"),
-
 	-- moonfly
 	require("alex.plugins.moonfly"),
-
 	-- tokyonight
 	require("alex.plugins.tokyonight"),
-
 	-- github
 	require("alex.plugins.github-theme"),
-
 	-- rose pine
 	require("alex.plugins.rose-pine"),
-
 	-- newpaper
 	require("alex.plugins.newpaper"),
-	-- #### COLORSCHEME #### --
 
-	require("alex.plugins.lsp.cmp-spell"),
-	require("alex.plugins.lsp.lsp-lens"),
-
-	require("alex.plugins.live-server"),
-
-	require("alex.plugins.oil"),
-
-	require("alex.plugins.marp"),
-
-	require("alex.plugins.fzf-lua"),
-
-	require("alex.plugins.twilight"),
-
-	require("alex.plugins.trouble"),
-
-	require("alex.plugins.jaq-nvim"),
-
-	{
-		"nullchilly/fsread.nvim",
-		cmd = { "FSRead", "FSToggle" }
-	},
-
-	require("alex.plugins.symbols-outline"),
-
-	require("alex.plugins.codewindow"),
-
-	require("alex.plugins.ccc"),
-
-	{
-		"davidgranstrom/nvim-markdown-preview",
-		ft = "markdown",
-	},
-
-	{
-		"mtdl9/vim-log-highlighting",
-		ft = "log"
-	},
-
-	{
-		"windwp/nvim-ts-autotag",
-		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
-		dependencies = {
-			"AndrewRadev/tagalong.vim",
-			"gregsexton/MatchTag",
-			"nvim-treesitter/nvim-treesitter",
-		}
-	},
 
 	--
 	-- Git Integration --
@@ -81,8 +28,10 @@ return {
 	require("alex.plugins.gitsigns"),
 	require("alex.plugins.merginal"),
 	require("alex.plugins.git-conflict"),
-	-- Git Integration --
 
+	--
+	-- Language Server Protocol (LSP)
+	--
 	{
 		"neovim/nvim-lspconfig",
 		event = {
@@ -92,6 +41,7 @@ return {
 		},
 		cmd = {
 			"LspStart",
+			"LspInfo",
 			"Trouble",
 			"FzfLua"
 		},
@@ -110,30 +60,17 @@ return {
 	},
 
 	{
-		"dgagn/diagflow.nvim",
-		event = "LspAttach",
-		config = function()
-			require("alex.plugins.diagflow")
-		end
+		"chrisgrieser/nvim-dr-lsp",
+		event = "LspAttach"
 	},
 
-	{
-		"kylechui/nvim-surround",
-		version = "*",
-		event = "VeryLazy",
-		config = function()
-			require("nvim-surround").setup({})
-		end
-	},
+	require("alex.plugins.diagflow"),
+	require("alex.plugins.symbols-outline"),
+	require("alex.plugins.lsp.lsp-lens"),
 
-	{
-		"m4xshen/autoclose.nvim",
-		event = "InsertEnter",
-		config = function()
-			require("alex.plugins.autoclose")
-		end,
-	},
-
+	--
+	-- Auto completion
+	--
 	{
 		"hrsh7th/nvim-cmp",
 		event = {
@@ -158,17 +95,15 @@ return {
 		end
 	},
 
+	--
+	-- User Interface
+	--
 	{
 		"nvim-lualine/lualine.nvim",
 		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.lualine")
 		end,
-	},
-
-	{
-		"chrisgrieser/nvim-dr-lsp",
-		event = "LspAttach"
 	},
 
 	{
@@ -199,20 +134,20 @@ return {
 		-- end
 	},
 
-	require("alex.plugins.comment"),
-
-	{
-		"chrisgrieser/nvim-early-retirement",
-		event = "BufAdd",
-		config = function()
-			require("alex.plugins.early-retirement")
-		end,
-	},
-
 	{
 		"sitiom/nvim-numbertoggle",
 		event = "VeryLazy",
 	},
+
+	require("alex.plugins.nvim-navic"),
+	require("alex.plugins.neozoom"),
+	require("alex.plugins.codewindow"),
+
+	--
+	-- Uncategorized
+	--
+	require("alex.plugins.comment"),
+	require("alex.plugins.early-retirement"),
 
 	{
 		"alexghergh/nvim-tmux-navigation",
@@ -222,34 +157,10 @@ return {
 		end
 	},
 
-	{
-		"rcarriga/nvim-notify",
-		priority = 999,
-		config = function()
-			require("alex.plugins.notify")
-		end
-	},
+	require("alex.plugins.notify"),
+	require("alex.plugins.nvim-tree"),
 
-	{
-		"nvim-tree/nvim-tree.lua",
-		config = function()
-			require("alex.plugins.nvim-tree")
-		end,
-		dependencies = {
-			"nvim-tree/nvim-web-devicons"
-		}
-	},
-
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		event = "VeryLazy",
-		config = function()
-			require("alex.plugins.treesitter")
-			-- vim.cmd("TSDisable highlight")
-		end,
-	},
-
+	require("alex.plugins.treesitter"),
 	require("alex.plugins.treesitter-context"),
 
 	{
@@ -259,46 +170,66 @@ return {
 		end,
 	},
 
+	require("alex.plugins.todo-comments"),
+
 	{
-		"folke/todo-comments.nvim",
-		-- enable = false,
-		dependencies = { "nvim-lua/plenary.nvim" },
+		"kylechui/nvim-surround",
+		version = "*",
 		event = "VeryLazy",
-		opts = {
-			keywords = {
-				FIX = {
-					icon = " ", -- icon used for the sign, and in search results
-					color = "error", -- can be a hex color, or a named color (see below)
-					alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
-					-- signs = false, -- configure signs for some keywords individually
-				},
-				TODO = { icon = " ", color = "info" },
-				HACK = { icon = " ", color = "warning" },
-				WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-				PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-				NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
-				TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-			},
-			highlight = {
-				multiline = true
-			}
+		config = function()
+			require("nvim-surround").setup({})
+		end
+	},
+
+	{
+		"m4xshen/autoclose.nvim",
+		event = "InsertEnter",
+		config = function()
+			require("alex.plugins.autoclose")
+		end,
+	},
+
+	require("alex.plugins.lsp.cmp-spell"),
+
+	require("alex.plugins.live-server"),
+
+	require("alex.plugins.oil"),
+
+	require("alex.plugins.marp"),
+
+	require("alex.plugins.fzf-lua"),
+
+	require("alex.plugins.twilight"),
+
+	require("alex.plugins.trouble"),
+
+	require("alex.plugins.jaq-nvim"),
+
+	{
+		"nullchilly/fsread.nvim",
+		cmd = { "FSRead", "FSToggle" }
+	},
+
+	require("alex.plugins.ccc"),
+
+	{
+		"davidgranstrom/nvim-markdown-preview",
+		ft = "markdown",
+	},
+
+	{
+		"mtdl9/vim-log-highlighting",
+		ft = "log"
+	},
+
+	{
+		"windwp/nvim-ts-autotag",
+		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
+		dependencies = {
+			"AndrewRadev/tagalong.vim",
+			"gregsexton/MatchTag",
+			"nvim-treesitter/nvim-treesitter",
 		}
-	},
-
-	{
-		"SmiteshP/nvim-navic",
-		event = "LspAttach",
-		config = function()
-			require("alex.plugins.nvim-navic")
-		end
-	},
-
-	{
-		"nyngwang/NeoZoom.lua",
-		cmd = "NeoZoomToggle",
-		config = function()
-			require("alex.plugins.neozoom")
-		end
 	},
 
 }
