@@ -23,7 +23,7 @@ With TMUX
 * [Plugins](#plugins)
    + [Navigation](#navigation)
    + [Syntax Highlighting](#syntax-highlighting)
-   + [LSP or Auto-Completion](#lsp-or-auto-completion)
+   + [LSP and Auto-Completion](#lsp-and-auto-completion)
    + [Aesthetic or Interface](#aesthetic-or-interface)
    + [Colorscheme](#colorscheme)
    + [Git Integration](#git-integration)
@@ -87,7 +87,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 * [mtdl9/vim-log-highlighting     ](https://github.com/MTDL9/vim-log-highlighting)
 
-#### LSP or Auto-Completion
+#### LSP and Auto-Completion
 
 * [gregsexton/MatchTag               ](https://github.com/gregsexton/MatchTag)
 * [AndrewRadev/tagalong.vim.git      ](https://github.com/AndrewRadev/tagalong.vim)
@@ -105,6 +105,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [m4xshen/autoclose.nvim            ](https://github.com/m4xshen/autoclose.nvim)
 * [lukas-reineke/cmp-under-comparator](https://github.com/lukas-reineke/cmp-under-comparator)
 * [rafamadriz/friendly-snippets      ](https://github.com/rafamadriz/friendly-snippets)
+* [VidocqH/lsp-lens.nvim             ](https://github.com/VidocqH/lsp-lens.nvim)
 
 #### Aesthetic or Interface
 
@@ -119,6 +120,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 * [folke/twilight.nvim                    ](https://github.com/folke/twilight.nvim)
 * [onsails/lspkind.nvim                   ](https://github.com/onsails/lspkind.nvim)
+* [folke/todo-comments.nvim               ](https://github.com/folke/todo-comments.nvim)
 
 #### Colorscheme
 
@@ -131,10 +133,11 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Git Integration
 
-* [tpope/vim-fugitive     ](https://github.com/tpope/vim-fugitive)
-* [idanarye/vim-merginal  ](https://github.com/idanarye/vim-merginal)
-* [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-* [f-person/git-blame.nvim](https://github.com/f-person/git-blame.nvim)
+* [tpope/vim-fugitive       ](https://github.com/tpope/vim-fugitive)
+* [idanarye/vim-merginal    ](https://github.com/idanarye/vim-merginal)
+* [lewis6991/gitsigns.nvim  ](https://github.com/lewis6991/gitsigns.nvim)
+* [f-person/git-blame.nvim  ](https://github.com/f-person/git-blame.nvim)
+* [akinsho/git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)
 
 #### Quality of Life
 
@@ -150,6 +153,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [aca/marp.nvim                       ](https://github.com/aca/marp.nvim)
 * [f3fora/cmp-spell                    ](https://github.com/f3fora/cmp-spell)
 * [dgagn/diagflow.nvim                 ](https://github.com/dgagn/diagflow.nvim)
+* [nyngwang/NeoZoom.lua                ](https://github.com/nyngwang/NeoZoom.lua/)
 
 <br>
 
