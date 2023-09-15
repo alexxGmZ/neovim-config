@@ -6,6 +6,7 @@ end
 return {
 	"lewis6991/gitsigns.nvim",
 	cond = if_git_dir,
+	event = "VeryLazy",
 	config = function()
 		require("gitsigns").setup {
 			current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`

@@ -3,5 +3,5 @@ return {
 	-- lazy = false,
 	-- priority = 1000,
 	-- event = "VeryLazy",
-	event = "CmdlineEnter",
+	event = "CmdlineChanged",
 }

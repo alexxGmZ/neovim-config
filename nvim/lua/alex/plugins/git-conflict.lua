@@ -4,8 +4,9 @@ local function if_git_dir()
 end
 
 return {
-	"https://github.com/akinsho/git-conflict.nvim",
+	"akinsho/git-conflict.nvim",
 	cond = if_git_dir,
+	event = "VeryLazy",
 	version = "*",
 	config = function()
 		require("git-conflict").setup()

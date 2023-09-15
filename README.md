@@ -23,7 +23,7 @@ With TMUX
 * [Plugins](#plugins)
    + [Navigation](#navigation)
    + [Syntax Highlighting](#syntax-highlighting)
-   + [LSP or Auto-Completion](#lsp-or-auto-completion)
+   + [LSP and Auto-Completion](#lsp-and-auto-completion)
    + [Aesthetic or Interface](#aesthetic-or-interface)
    + [Colorscheme](#colorscheme)
    + [Git Integration](#git-integration)
@@ -87,7 +87,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 * [mtdl9/vim-log-highlighting     ](https://github.com/MTDL9/vim-log-highlighting)
 
-#### LSP or Auto-Completion
+#### LSP and Auto-Completion
 
 * [gregsexton/MatchTag               ](https://github.com/gregsexton/MatchTag)
 * [AndrewRadev/tagalong.vim.git      ](https://github.com/AndrewRadev/tagalong.vim)
@@ -105,6 +105,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [m4xshen/autoclose.nvim            ](https://github.com/m4xshen/autoclose.nvim)
 * [lukas-reineke/cmp-under-comparator](https://github.com/lukas-reineke/cmp-under-comparator)
 * [rafamadriz/friendly-snippets      ](https://github.com/rafamadriz/friendly-snippets)
+* [VidocqH/lsp-lens.nvim             ](https://github.com/VidocqH/lsp-lens.nvim)
 
 #### Aesthetic or Interface
 
@@ -119,6 +120,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 * [folke/twilight.nvim                    ](https://github.com/folke/twilight.nvim)
 * [onsails/lspkind.nvim                   ](https://github.com/onsails/lspkind.nvim)
+* [folke/todo-comments.nvim               ](https://github.com/folke/todo-comments.nvim)
 
 #### Colorscheme
 
@@ -128,13 +130,16 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [projekt0n/github-nvim-theme](https://github.com/projekt0n/github-nvim-theme)
 * [rose-pine/neovim           ](https://github.com/rose-pine/neovim)
 * [yorik1984/newpaper.nvim    ](https://github.com/yorik1984/newpaper.nvim)
+* [rebelot/kanagawa.nvim      ](https://github.com/rebelot/kanagawa.nvim)
+* [neanias/everforest-nvim    ](https://github.com/neanias/everforest-nvim)
 
 #### Git Integration
 
-* [tpope/vim-fugitive     ](https://github.com/tpope/vim-fugitive)
-* [idanarye/vim-merginal  ](https://github.com/idanarye/vim-merginal)
-* [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-* [f-person/git-blame.nvim](https://github.com/f-person/git-blame.nvim)
+* [tpope/vim-fugitive       ](https://github.com/tpope/vim-fugitive)
+* [idanarye/vim-merginal    ](https://github.com/idanarye/vim-merginal)
+* [lewis6991/gitsigns.nvim  ](https://github.com/lewis6991/gitsigns.nvim)
+* [f-person/git-blame.nvim  ](https://github.com/f-person/git-blame.nvim)
+* [akinsho/git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)
 
 #### Quality of Life
 
@@ -150,6 +155,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [aca/marp.nvim                       ](https://github.com/aca/marp.nvim)
 * [f3fora/cmp-spell                    ](https://github.com/f3fora/cmp-spell)
 * [dgagn/diagflow.nvim                 ](https://github.com/dgagn/diagflow.nvim)
+* [nyngwang/NeoZoom.lua                ](https://github.com/nyngwang/NeoZoom.lua/)
 
 <br>
 
@@ -176,6 +182,10 @@ You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/bl
 * [tailwindcss](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss) (tailwind, etc.)
 * [bashls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls) (zsh, bash, sh)
 * [lemminx](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lemminx) (xml, xsd, xsl, xslt, svg)
+* quick_lint_js
+* tsserver
+* jsonls
+* sqlls
 
 #### How to Install LSPs and Do a Basic Configuration
 
@@ -201,6 +211,8 @@ local LSP_LIST = {
    "lemminx",
 	"quick_lint_js",
 	"tsserver",
+   "jsonls",
+   "sqlls"
    "<add lsp name here>"
 }
 
