@@ -130,6 +130,8 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [projekt0n/github-nvim-theme](https://github.com/projekt0n/github-nvim-theme)
 * [rose-pine/neovim           ](https://github.com/rose-pine/neovim)
 * [yorik1984/newpaper.nvim    ](https://github.com/yorik1984/newpaper.nvim)
+* [rebelot/kanagawa.nvim      ](https://github.com/rebelot/kanagawa.nvim)
+* [neanias/everforest-nvim    ](https://github.com/neanias/everforest-nvim)
 
 #### Git Integration
 
@@ -180,6 +182,10 @@ You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/bl
 * [tailwindcss](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss) (tailwind, etc.)
 * [bashls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls) (zsh, bash, sh)
 * [lemminx](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lemminx) (xml, xsd, xsl, xslt, svg)
+* quick_lint_js
+* tsserver
+* jsonls
+* sqlls
 
 #### How to Install LSPs and Do a Basic Configuration
 
@@ -205,6 +211,8 @@ local LSP_LIST = {
    "lemminx",
 	"quick_lint_js",
 	"tsserver",
+   "jsonls",
+   "sqlls"
    "<add lsp name here>"
 }
 
