@@ -22,7 +22,8 @@ local LSP_LIST = {
 	"lemminx",
 	"quick_lint_js",
 	"tsserver",
-	"jsonls"
+	"jsonls",
+	"sqlls"
 }
 
 --

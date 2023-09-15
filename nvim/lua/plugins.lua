@@ -8,17 +8,27 @@ return {
 	-- COLORSCHEME --
 	--
 	-- catppuccin (main colorscheme)
-	require("alex.plugins.catppuccin"),
+	-- require("alex.plugins.catppuccin"),
+	require("alex.plugins.colorscheme.catppuccin"),
 	-- moonfly
-	require("alex.plugins.moonfly"),
+	-- require("alex.plugins.moonfly"),
+	require("alex.plugins.colorscheme.moonfly"),
 	-- tokyonight
-	require("alex.plugins.tokyonight"),
+	-- require("alex.plugins.tokyonight"),
+	require("alex.plugins.colorscheme.tokyonight"),
 	-- github
-	require("alex.plugins.github-theme"),
+	-- require("alex.plugins.github-theme"),
+	require("alex.plugins.colorscheme.github-theme"),
 	-- rose pine
-	require("alex.plugins.rose-pine"),
+	-- require("alex.plugins.rose-pine"),
+	require("alex.plugins.colorscheme.rose-pine"),
 	-- newpaper
-	require("alex.plugins.newpaper"),
+	-- require("alex.plugins.newpaper"),
+	require("alex.plugins.colorscheme.newpaper"),
+	-- kanagawa
+	require("alex.plugins.colorscheme.kanagawa"),
+	-- everforest
+	require("alex.plugins.colorscheme.everforest"),
 
 
 	--
@@ -28,6 +38,7 @@ return {
 	require("alex.plugins.gitsigns"),
 	require("alex.plugins.merginal"),
 	require("alex.plugins.git-conflict"),
+	require("alex.plugins.neogit"),
 
 	--
 	-- Language Server Protocol (LSP)
@@ -43,7 +54,8 @@ return {
 			"LspStart",
 			"LspInfo",
 			"Trouble",
-			"FzfLua"
+			"FzfLua",
+			"Mason"
 		},
 		dependencies = {
 			"williamboman/mason.nvim",
@@ -148,18 +160,10 @@ return {
 	--
 	require("alex.plugins.comment"),
 	require("alex.plugins.early-retirement"),
-
-	{
-		"alexghergh/nvim-tmux-navigation",
-		event = "VeryLazy",
-		config = function()
-			require("alex.plugins.nvim-tmux-navigation")
-		end
-	},
-
+	require("alex.plugins.nvim-tmux-navigation"),
 	require("alex.plugins.notify"),
 	require("alex.plugins.nvim-tree"),
-
+	require("alex.plugins.todo-comments"),
 	require("alex.plugins.treesitter"),
 	require("alex.plugins.treesitter-context"),
 
@@ -170,7 +174,6 @@ return {
 		end,
 	},
 
-	require("alex.plugins.todo-comments"),
 
 	{
 		"kylechui/nvim-surround",
@@ -181,36 +184,22 @@ return {
 		end
 	},
 
-	{
-		"m4xshen/autoclose.nvim",
-		event = "InsertEnter",
-		config = function()
-			require("alex.plugins.autoclose")
-		end,
-	},
-
+	require("alex.plugins.autoclose"),
 	require("alex.plugins.lsp.cmp-spell"),
-
 	require("alex.plugins.live-server"),
-
 	require("alex.plugins.oil"),
-
 	require("alex.plugins.marp"),
-
 	require("alex.plugins.fzf-lua"),
-
 	require("alex.plugins.twilight"),
-
 	require("alex.plugins.trouble"),
-
 	require("alex.plugins.jaq-nvim"),
+	require("alex.plugins.ccc"),
 
 	{
 		"nullchilly/fsread.nvim",
 		cmd = { "FSRead", "FSToggle" }
 	},
 
-	require("alex.plugins.ccc"),
 
 	{
 		"davidgranstrom/nvim-markdown-preview",
@@ -231,5 +220,4 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 		}
 	},
-
 }
