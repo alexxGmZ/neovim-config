@@ -1,6 +1,7 @@
 return {
 	"rebelot/kanagawa.nvim",
-	event = "CmdlineChanged",
+	priority = 1000,
+	-- event = "CmdlineChanged",
 	config = function()
 		-- Default options:
 		require("kanagawa").setup({
@@ -29,6 +30,6 @@ return {
 		})
 
 		-- setup must be called before loading
-		-- vim.cmd("colorscheme kanagawa")
+		vim.cmd("colorscheme kanagawa-wave")
 	end
 }

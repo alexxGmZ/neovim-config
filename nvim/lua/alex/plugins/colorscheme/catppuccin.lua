@@ -1,8 +1,8 @@
 return {
 	"catppuccin/nvim",
-	lazy = false,
 	name = "catppuccin",
-	priority = 1000,
+	-- priority = 1000,
+	event = "CmdlineChanged",
 	config = function()
 		require("catppuccin").setup({
 			flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -55,7 +55,7 @@ return {
 				treesitter_context = true,
 			},
 		})
-		vim.cmd.colorscheme "catppuccin"
+		-- vim.cmd.colorscheme "catppuccin"
 	end,
 	opts = {
 	}
