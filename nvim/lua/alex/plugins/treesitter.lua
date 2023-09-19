@@ -21,7 +21,8 @@ return {
 				"cpp",
 				"json",
 				"markdown",
-				"markdown_inline"
+				"markdown_inline",
+				"sql"
 			},
 			sync_install = false,
 			auto_install = true,
