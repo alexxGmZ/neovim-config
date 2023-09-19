@@ -196,13 +196,10 @@ lualine.setup {
 					right = ""
 				}
 			},
-			{ require("dr-lsp").lspCount },
-			{ require("dr-lsp").lspProgress },
 		},
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = {
-			{ "encoding", },
 			{ "filetype", }
 		},
 		lualine_z = {
