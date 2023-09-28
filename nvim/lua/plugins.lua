@@ -38,7 +38,7 @@ return {
 	require("alex.plugins.gitsigns"),
 	require("alex.plugins.merginal"),
 	require("alex.plugins.git-conflict"),
-	require("alex.plugins.neogit"),
+	-- require("alex.plugins.neogit"),
 
 	--
 	-- Language Server Protocol (LSP)
