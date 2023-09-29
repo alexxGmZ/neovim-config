@@ -137,14 +137,7 @@ return {
 		end
 	},
 
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		-- event = "VeryLazy",
-		cmd = "IndentBlanklineEnable",
-		-- config = function ()
-		-- 	require("alex.plugins.indent-blankline")
-		-- end
-	},
+	require("alex.plugins.indent-blankline"),
 
 	{
 		"sitiom/nvim-numbertoggle",
