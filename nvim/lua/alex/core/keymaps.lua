@@ -60,4 +60,3 @@ map.set("n", "<C-w>m", function() vim.cmd("NeoZoomToggle") end,
 
 -- codewindow
 map.set("n", "<leader>mm", function() vim.cmd("CWToggle") end, { desc = "codewindow: toggle codewindow" })
-

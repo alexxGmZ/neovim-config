@@ -30,7 +30,6 @@ return {
 	-- everforest
 	require("alex.plugins.colorscheme.everforest"),
 
-
 	--
 	-- Git Integration --
 	--
@@ -55,9 +54,11 @@ return {
 			"LspInfo",
 			"Trouble",
 			"FzfLua",
-			"Mason"
+			"Mason",
+			"ConformInfo"
 		},
 		dependencies = {
+			"stevearc/conform.nvim",
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"folke/trouble.nvim",
@@ -106,6 +107,8 @@ return {
 			require("alex.plugins.lsp.nvim-cmp")
 		end
 	},
+
+	require("alex.plugins.conform"),
 
 	--
 	-- User Interface
