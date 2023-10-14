@@ -1,8 +1,8 @@
 return {
 	"catppuccin/nvim",
 	name = "catppuccin",
-	-- priority = 1000,
-	event = "CmdlineChanged",
+	priority = 1000,
+	-- event = "CmdlineChanged",
 	config = function()
 		require("catppuccin").setup({
 			flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -10,10 +10,10 @@ return {
 				light = "latte",
 				dark = "mocha",
 			},
-			transparent_background = false,
+			transparent_background = true,
 			term_colors = true,
 			dim_inactive = {
-				enabled = true,
+				enabled = false,
 				shade = "dark",
 				percentage = 0.15,
 			},
@@ -31,7 +31,7 @@ return {
 				booleans = {},
 				properties = {},
 				types = {},
-				operators = {},
+				operators = { "bold" },
 			},
 			color_overrides = {},
 			custom_highlights = {},
@@ -49,13 +49,13 @@ return {
 				navic = {
 					enabled = true,
 				},
-				illuminate = true,
+				illuminate = false,
 				mason = true,
 				symbols_outline = true,
 				treesitter_context = true,
 			},
 		})
-		-- vim.cmd.colorscheme "catppuccin"
+		vim.cmd.colorscheme "catppuccin-latte"
 	end,
 	opts = {
 	}
