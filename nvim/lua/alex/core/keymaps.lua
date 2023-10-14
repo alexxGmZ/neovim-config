@@ -21,11 +21,17 @@ map.set("n", "<leader>F", function() vim.cmd("NvimTreeToggle") end, { desc = "Nv
 map.set("n", "<F6>", function() vim.cmd("NvimTreeToggle") end, { desc = "NvimTreeToggle: NvimTree File Explorer" })
 
 -- write and quit
-map.set("n", "<leader>ww", ":w<CR>", { desc = "Write or Save file" })
-map.set("n", "<leader>wq", ":wq<CR>", { desc = "Write and Quit file" })
-map.set("n", "<leader>wa", ":wa<CR>", { desc = "Write all file" })
-map.set("n", "<leader>qq", ":q<CR>", { desc = "Quit file" })
-map.set("n", "<leader>qa", ":qa<CR>", { desc = "Quit all file" })
+-- map.set("n", "<leader>ww", ":w<CR>", { desc = "Write or Save file" })
+-- map.set("n", "<leader>wq", ":wq<CR>", { desc = "Write and Quit file" })
+-- map.set("n", "<leader>wa", ":wa<CR>", { desc = "Write all file" })
+-- map.set("n", "<leader>qq", ":q<CR>", { desc = "Quit file" })
+-- map.set("n", "<leader>qa", ":qa<CR>", { desc = "Quit all file" })
+
+map.set("n", "<leader>ww", function() vim.cmd("w") end, { desc = "Write or Save file" })
+map.set("n", "<leader>wq", function() vim.cmd("wq") end, { desc = "Write and Quit file" })
+map.set("n", "<leader>wa", function() vim.cmd("wa") end, { desc = "Write all file" })
+map.set("n", "<leader>qq", function() vim.cmd("q") end, { desc = "Quit file" })
+map.set("n", "<leader>qa", function() vim.cmd("qa") end, { desc = "Quit all file" })
 
 -- nohlsearch
 map.set("n", "<Esc>", function() vim.cmd("noh") end, { desc = "nohlsearch" })
@@ -54,4 +60,3 @@ map.set("n", "<C-w>m", function() vim.cmd("NeoZoomToggle") end,
 
 -- codewindow
 map.set("n", "<leader>mm", function() vim.cmd("CWToggle") end, { desc = "codewindow: toggle codewindow" })
-

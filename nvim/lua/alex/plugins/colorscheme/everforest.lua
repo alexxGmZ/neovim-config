@@ -19,7 +19,7 @@ return {
 			sign_column_background = "none",
 			---The contrast of line numbers, indent lines, etc. Options are `"high"` or
 			---`"low"` (default).
-			ui_contrast = "low",
+			ui_contrast = "high",
 			---Dim inactive windows. Only works in Neovim. Can look a bit weird with Telescope.
 			---
 			---When this option is used in conjunction with show_eob set to `false`, the

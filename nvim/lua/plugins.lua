@@ -30,7 +30,6 @@ return {
 	-- everforest
 	require("alex.plugins.colorscheme.everforest"),
 
-
 	--
 	-- Git Integration --
 	--
@@ -38,7 +37,7 @@ return {
 	require("alex.plugins.gitsigns"),
 	require("alex.plugins.merginal"),
 	require("alex.plugins.git-conflict"),
-	require("alex.plugins.neogit"),
+	-- require("alex.plugins.neogit"),
 
 	--
 	-- Language Server Protocol (LSP)
@@ -55,9 +54,11 @@ return {
 			"LspInfo",
 			"Trouble",
 			"FzfLua",
-			"Mason"
+			"Mason",
+			"ConformInfo"
 		},
 		dependencies = {
+			"stevearc/conform.nvim",
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"folke/trouble.nvim",
@@ -107,6 +108,8 @@ return {
 		end
 	},
 
+	require("alex.plugins.conform"),
+
 	--
 	-- User Interface
 	--
@@ -137,14 +140,7 @@ return {
 		end
 	},
 
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		-- event = "VeryLazy",
-		cmd = "IndentBlanklineEnable",
-		-- config = function ()
-		-- 	require("alex.plugins.indent-blankline")
-		-- end
-	},
+	require("alex.plugins.indent-blankline"),
 
 	{
 		"sitiom/nvim-numbertoggle",
