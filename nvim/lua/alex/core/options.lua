@@ -11,6 +11,10 @@ vim.cmd [[
 	set shiftwidth=3
 	set smartindent
 
+	"set foldenable
+	"set foldlevel=99
+	"set foldmethod=expr
+
 	" filetype
 	filetype on
 	filetype plugin on
@@ -49,3 +53,7 @@ vim.cmd [[
 	set encoding=UTF-8
 	set fileencodings=utf8,cp1251,koi8-r,koi8-u
 ]]
+
+vim.opt.foldenable = true
+vim.opt.foldlevel = 99
+vim.opt.foldmethod = "expr"

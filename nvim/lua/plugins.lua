@@ -58,6 +58,7 @@ return {
 			"ConformInfo"
 		},
 		dependencies = {
+			-- "hinell/lsp-timeout.nvim",
 			"stevearc/conform.nvim",
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
@@ -80,6 +81,7 @@ return {
 	require("alex.plugins.diagflow"),
 	require("alex.plugins.symbols-outline"),
 	require("alex.plugins.lsp.lsp-lens"),
+	-- require("alex.plugins.lsp.lsp-timeout"),
 
 	--
 	-- Auto completion
@@ -209,6 +211,7 @@ return {
 
 	{
 		"windwp/nvim-ts-autotag",
+		event = "VeryLazy",
 		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
 		dependencies = {
 			"AndrewRadev/tagalong.vim",
@@ -216,4 +219,6 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 		}
 	},
+
+	require("alex.plugins.foldsign");
 }

@@ -6,8 +6,11 @@ return {
 			highlight_hovered_item = true,
 			autofold_depth = 1,
 			auto_unfold_hover = false,
-			width = 30,
+			width = 15,
 			show_guides = true,
+			lsp_blacklist = {
+				"html",
+			}
 		})
 
 		vim.keymap.set("n", "<F8>",
