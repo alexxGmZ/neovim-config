@@ -220,5 +220,5 @@ return {
 		}
 	},
 
-	require("alex.plugins.foldsign");
+	-- require("alex.plugins.foldsign")
 }

@@ -15,6 +15,8 @@ vim.cmd [[
 	"set foldlevel=99
 	"set foldmethod=expr
 
+	set guicursor=a:blinkon100,i-ci:ver150
+
 	" filetype
 	filetype on
 	filetype plugin on
@@ -55,5 +57,7 @@ vim.cmd [[
 ]]
 
 vim.opt.foldenable = true
-vim.opt.foldlevel = 99
-vim.opt.foldmethod = "expr"
+vim.opt.foldcolumn = "auto"
+vim.opt.foldlevel = 1
+-- vim.opt.foldmethod = "expr"
+vim.opt.foldmethod = "manual"
