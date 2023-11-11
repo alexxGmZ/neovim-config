@@ -1,63 +1,73 @@
+local opt = vim.opt
+
 vim.cmd [[
-	set clipboard+=unnamedplus
 	set termguicolors
 	set completeopt=menu,menuone,noselect
-
-	" indention
-	set autoindent
-	set noexpandtab
-	set tabstop=3
-	set softtabstop=3
-	set shiftwidth=3
-	set smartindent
-
-	"set foldenable
-	"set foldlevel=99
-	"set foldmethod=expr
-
-	set guicursor=a:blinkon100,i-ci:ver150
 
 	" filetype
 	filetype on
 	filetype plugin on
 	filetype indent on
 
-	" line number
-	set relativenumber
-	set number
-	set cursorline
-	set scrolloff=8
-	set sidescrolloff=8
-	set signcolumn=yes
-
-	" search
-	set hlsearch
-	set incsearch
-	set ignorecase
-	set smartcase
-
 	" set autochdir
 	set autoread
-	set colorcolumn=90
-	set complete-=t " disable tags
-	set splitbelow splitright
+	" set colorcolumn=90
+	" set splitbelow splitright
 	" set wildmenu
 	" set wildmode=longest:list,full
 	" set laststatus=2
 	set showmatch
 	set mouse=a
-	" set mouse=
 	set showcmd
 	set nobackup
 	set writebackup
-	set nowrap
+	" set nowrap
 	set noshowmode
 	set encoding=UTF-8
 	set fileencodings=utf8,cp1251,koi8-r,koi8-u
 ]]
 
-vim.opt.foldenable = true
-vim.opt.foldcolumn = "auto"
-vim.opt.foldlevel = 1
--- vim.opt.foldmethod = "expr"
-vim.opt.foldmethod = "manual"
+-- column
+opt.foldcolumn = "0"
+opt.signcolumn = "yes"
+opt.colorcolumn = "90"
+
+-- fold
+opt.foldenable = true
+opt.foldlevel = 99
+opt.foldmethod = "indent"
+
+-- indention
+opt.autoindent = true
+opt.expandtab = false
+opt.tabstop = 3
+opt.softtabstop = 3
+opt.shiftwidth = 3
+opt.smartindent = true
+
+-- linenumber
+opt.number = true
+opt.relativenumber = true
+
+-- cursor
+opt.cursorline = true
+opt.scrolloff = 8
+opt.sidescrolloff = 8
+opt.guicursor = "a:blinkon100,i-ci:ver150"
+
+-- clipboard
+opt.clipboard = "unnamedplus"
+
+-- search
+opt.hlsearch = true
+opt.incsearch = true
+opt.ignorecase = true
+opt.smartcase = true
+
+-- split
+opt.splitbelow = true
+opt.splitright = true
+
+-- linewrap
+opt.wrap = false
+opt.breakindent = true
