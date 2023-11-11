@@ -2,7 +2,15 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	event = "VeryLazy",
+	dependencies = {
+		-- "JoosepAlviste/nvim-ts-context-commentstring"
+	},
 	config = function()
+		local vim = vim
+		local opt = vim.opt
+
+		opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 		local treesitter = require('nvim-treesitter.configs')
 
 		treesitter.setup {
@@ -29,8 +37,14 @@ return {
 			ignore_install = { "javascript" },
 			highlight = {
 				enable = true,
-				additional_vim_regex_highlighting = true,
+				disable = { "html" },
+				additional_vim_regex_highlighting = false,
 			},
+
+			-- for nvim-ts-context-commentstring
+			-- context_commentstring = {
+			-- 	enable = true,
+			-- },
 
 			-- for nvim-ts-autotag
 			autotag = {

@@ -1,6 +1,7 @@
 return {
 	"numToStr/Comment.nvim",
-	event = "VeryLazy",
+	-- event = "VeryLazy",
+	lazy = false,
 	-- keys = {
 	-- 	{ "gb", desc = "Comment: Block comment" },
 	-- 	{ "gc", desc = "Comment: Line comment" },
@@ -8,6 +9,8 @@ return {
 	-- 	-- { "v" },
 	-- },
 	config = function()
-		require("Comment").setup()
+		require("Comment").setup({
+			-- pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook()
+		})
 	end
 }

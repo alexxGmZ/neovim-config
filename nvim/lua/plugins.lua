@@ -45,7 +45,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		event = {
-			"InsertCharPre",
+			-- "InsertCharPre",
 			"TabNew",
 			"TabEnter",
 		},
@@ -58,6 +58,7 @@ return {
 			"ConformInfo"
 		},
 		dependencies = {
+			-- "hinell/lsp-timeout.nvim",
 			"stevearc/conform.nvim",
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
@@ -80,6 +81,7 @@ return {
 	require("alex.plugins.diagflow"),
 	require("alex.plugins.symbols-outline"),
 	require("alex.plugins.lsp.lsp-lens"),
+	-- require("alex.plugins.lsp.lsp-timeout"),
 
 	--
 	-- Auto completion
@@ -101,7 +103,8 @@ return {
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 			"lukas-reineke/cmp-under-comparator",
 			"onsails/lspkind.nvim",
-			"rafamadriz/friendly-snippets"
+			"rafamadriz/friendly-snippets",
+			'quangnguyen30192/cmp-nvim-tags'
 		},
 		config = function()
 			require("alex.plugins.lsp.nvim-cmp")
@@ -150,6 +153,7 @@ return {
 	require("alex.plugins.nvim-navic"),
 	require("alex.plugins.neozoom"),
 	require("alex.plugins.codewindow"),
+	require("alex.plugins.tagbar"),
 
 	--
 	-- Uncategorized
@@ -209,6 +213,7 @@ return {
 
 	{
 		"windwp/nvim-ts-autotag",
+		event = "VeryLazy",
 		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
 		dependencies = {
 			"AndrewRadev/tagalong.vim",
@@ -216,4 +221,6 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 		}
 	},
+
+	-- require("alex.plugins.foldsign")
 }

@@ -71,14 +71,28 @@ cmp.setup({
 				end
 			}
 		},
-		{ name = "bootstrap" }
+		{
+			name = 'tags',
+			option = {
+				-- this is the default options, change them if you want.
+				-- Delayed time after user input, in milliseconds.
+				complete_defer = 100,
+				-- Max items when searching `taglist`.
+				max_items = 10,
+				-- Use exact word match when searching `taglist`, for better searching
+				-- performance.
+				exact_match = false,
+				-- Prioritize searching result for current buffer.
+				current_buffer_only = false,
+			},
+		},
 	}),
 
 	sorting = {
 		comparators = {
-			cmp.config.compare.exact,
 			cmp.config.compare.offset,
 			cmp.config.compare.score,
+			cmp.config.compare.exact,
 			require "cmp-under-comparator".under,
 			cmp.config.compare.kind,
 			cmp.config.compare.sort_text,
