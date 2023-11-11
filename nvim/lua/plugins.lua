@@ -45,7 +45,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		event = {
-			"InsertCharPre",
+			-- "InsertCharPre",
 			"TabNew",
 			"TabEnter",
 		},
@@ -103,7 +103,8 @@ return {
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 			"lukas-reineke/cmp-under-comparator",
 			"onsails/lspkind.nvim",
-			"rafamadriz/friendly-snippets"
+			"rafamadriz/friendly-snippets",
+			'quangnguyen30192/cmp-nvim-tags'
 		},
 		config = function()
 			require("alex.plugins.lsp.nvim-cmp")
@@ -152,6 +153,7 @@ return {
 	require("alex.plugins.nvim-navic"),
 	require("alex.plugins.neozoom"),
 	require("alex.plugins.codewindow"),
+	require("alex.plugins.tagbar"),
 
 	--
 	-- Uncategorized
