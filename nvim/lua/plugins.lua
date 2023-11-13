@@ -63,7 +63,7 @@ return {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"folke/trouble.nvim",
-			"simrat39/symbols-outline.nvim",
+			"hedyhli/outline.nvim",
 			"ibhagwan/fzf-lua",
 		},
 		config = function()
@@ -79,8 +79,8 @@ return {
 	},
 
 	require("alex.plugins.diagflow"),
-	require("alex.plugins.symbols-outline"),
 	require("alex.plugins.lsp.lsp-lens"),
+	require("alex.plugins.outline"),
 	-- require("alex.plugins.lsp.lsp-timeout"),
 
 	--
