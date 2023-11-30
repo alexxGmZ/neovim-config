@@ -104,7 +104,6 @@ return {
 			"lukas-reineke/cmp-under-comparator",
 			"onsails/lspkind.nvim",
 			"rafamadriz/friendly-snippets",
-			'quangnguyen30192/cmp-nvim-tags'
 		},
 		config = function()
 			require("alex.plugins.lsp.nvim-cmp")
@@ -147,6 +146,7 @@ return {
 
 	{
 		"sitiom/nvim-numbertoggle",
+		enabled = true,
 		event = "VeryLazy",
 	},
 
@@ -212,15 +212,22 @@ return {
 	},
 
 	{
-		"windwp/nvim-ts-autotag",
+		"gregsexton/MatchTag",
 		event = "VeryLazy",
 		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
-		dependencies = {
-			"AndrewRadev/tagalong.vim",
-			"gregsexton/MatchTag",
-			"nvim-treesitter/nvim-treesitter",
-		}
 	},
+
+	-- {
+	-- 	"windwp/nvim-ts-autotag",
+	-- 	event = "VeryLazy",
+	-- 	ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 	},
+	-- 	config = function()
+	-- 		require("nvim-ts-autotag").setup()
+	-- 	end
+	-- },
 
 	-- require("alex.plugins.foldsign")
 }
