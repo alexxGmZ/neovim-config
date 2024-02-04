@@ -1,8 +1,3 @@
-local function if_git_dir()
-	local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
-	return git_dir ~= ""
-end
-
 return {
 	--
 	-- COLORSCHEME --
@@ -53,7 +48,7 @@ return {
 			"LspStart",
 			"LspInfo",
 			"Trouble",
-			"FzfLua",
+			-- "FzfLua",
 			"Mason",
 			"ConformInfo"
 		},
@@ -75,7 +70,8 @@ return {
 
 	{
 		"chrisgrieser/nvim-dr-lsp",
-		event = "LspAttach"
+		event = "LspAttach",
+		enable = false
 	},
 
 	require("alex.plugins.diagflow"),
@@ -146,11 +142,11 @@ return {
 
 	{
 		"sitiom/nvim-numbertoggle",
-		enabled = true,
+		enabled = false,
 		event = "VeryLazy",
 	},
 
-	require("alex.plugins.nvim-navic"),
+	-- require("alex.plugins.nvim-navic"),
 	require("alex.plugins.neozoom"),
 	require("alex.plugins.codewindow"),
 	require("alex.plugins.tagbar"),
