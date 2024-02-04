@@ -17,8 +17,8 @@ map.set("n", "<C-i>", "<C-i>zz")
 
 -- nvim-tree
 -- map.set("n", "<leader>F", ":NvimTreeToggle<CR>")
-map.set("n", "<leader>F", function() vim.cmd("NvimTreeToggle") end, { desc = "NvimTreeToggle: NvimTree File Explorer" })
-map.set("n", "<F6>", function() vim.cmd("NvimTreeToggle") end, { desc = "NvimTreeToggle: NvimTree File Explorer" })
+-- map.set("n", "<leader>F", function() vim.cmd("NvimTreeToggle") end, { desc = "NvimTreeToggle: NvimTree File Explorer" })
+-- map.set("n", "<F6>", function() vim.cmd("NvimTreeToggle") end, { desc = "NvimTreeToggle: NvimTree File Explorer" })
 
 -- write and quit
 -- map.set("n", "<leader>ww", ":w<CR>", { desc = "Write or Save file" })

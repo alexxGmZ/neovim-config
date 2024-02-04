@@ -3,6 +3,11 @@ return {
 	config = function()
 		vim.opt.termguicolors = true
 
+		vim.keymap.set("n", "<leader>F", function() vim.cmd("NvimTreeToggle") end,
+			{ desc = "NvimTreeToggle: NvimTree File Explorer" })
+		vim.keymap.set("n", "<F6>", function() vim.cmd("NvimTreeToggle") end,
+			{ desc = "NvimTreeToggle: NvimTree File Explorer" })
+
 		-- empty setup using defaults
 		require("nvim-tree").setup {
 			sort_by = "name",
