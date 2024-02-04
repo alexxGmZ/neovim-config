@@ -3,7 +3,6 @@ return {
 	build = ":TSUpdate",
 	event = "VeryLazy",
 	dependencies = {
-		-- "JoosepAlviste/nvim-ts-context-commentstring"
 	},
 	config = function()
 		local vim = vim
@@ -34,7 +33,7 @@ return {
 			},
 			sync_install = false,
 			auto_install = true,
-			ignore_install = { "javascript" },
+			ignore_install = { "javascript", "csv" },
 			highlight = {
 				enable = true,
 				disable = { "html" },
