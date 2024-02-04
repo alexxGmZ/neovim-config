@@ -3,6 +3,6 @@ return {
 	cmd = "FzfLua",
 	dependencies = {
 		"junegunn/fzf",
-		"neovim/nvim-lspconfig",
-	}
+		-- "neovim/nvim-lspconfig",
+	},
 }
