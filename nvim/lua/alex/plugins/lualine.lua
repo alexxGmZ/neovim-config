@@ -2,17 +2,17 @@ local lualine = require("lualine")
 
 -- rename mode names to shorter ones
 local mode_map = {
-	n = "NOR",
-	nt = "NOR",
-	i = "INS",
-	R = "REP",
-	v = "VIS",
-	V = "VLI",
+	n = "N",
+	nt = "N",
+	i = "I",
+	R = "R",
+	v = "V",
+	V = "VL",
 	no = "CHA",
-	["\22"] = "VBL",
-	t = "TER",
+	["\22"] = "VB",
+	t = "T",
 	['!'] = "SH",
-	c = "COM",
+	c = "C",
 	s = "SUB"
 }
 
@@ -216,23 +216,23 @@ lualine.setup {
 		lualine_a = {},
 		lualine_b = {},
 		lualine_c = {
-			{ "navic" }
+			-- { "navic" }
 		},
 		lualine_x = {
-			{
-				"diagnostics",
-				sources = { "nvim_workspace_diagnostic" },
-				sections = { "error", "warn", "info", "hint" },
-				symbols = {
-					error = "󰅙 ",
-					warn = "󰀦 ",
-					info = "󰋼 ",
-					hint = "󰌵 "
-				},
-				colored = true,
-				update_in_insert = false,
-				always_visible = true,
-			}
+			-- {
+			-- 	"diagnostics",
+			-- 	sources = { "nvim_workspace_diagnostic" },
+			-- 	sections = { "error", "warn", "info", "hint" },
+			-- 	symbols = {
+			-- 		error = "󰅙 ",
+			-- 		warn = "󰀦 ",
+			-- 		info = "󰋼 ",
+			-- 		hint = "󰌵 "
+			-- 	},
+			-- 	colored = true,
+			-- 	update_in_insert = false,
+			-- 	always_visible = true,
+			-- }
 		},
 		lualine_y = {},
 		lualine_z = {}
@@ -242,23 +242,23 @@ lualine.setup {
 		lualine_a = {},
 		lualine_b = {},
 		lualine_c = {
-			{ "navic" },
+			-- { "navic" },
 		},
 		lualine_x = {
-			{
-				"diagnostics",
-				sources = { "nvim_workspace_diagnostic" },
-				sections = { "error", "warn", "info", "hint" },
-				symbols = {
-					error = "󰅚 ",
-					warn = "󰀪 ",
-					info = "󰋽 ",
-					hint = "󰌶 ",
-				},
-				colored = true,
-				update_in_insert = false,
-				always_visible = true,
-			}
+			-- {
+			-- 	"diagnostics",
+			-- 	sources = { "nvim_workspace_diagnostic" },
+			-- 	sections = { "error", "warn", "info", "hint" },
+			-- 	symbols = {
+			-- 		error = "󰅚 ",
+			-- 		warn = "󰀪 ",
+			-- 		info = "󰋽 ",
+			-- 		hint = "󰌶 ",
+			-- 	},
+			-- 	colored = true,
+			-- 	update_in_insert = false,
+			-- 	always_visible = true,
+			-- }
 		},
 	},
 
