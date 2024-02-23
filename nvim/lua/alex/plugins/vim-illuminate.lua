@@ -8,7 +8,8 @@ require("illuminate").configure({
 		"text",
 		"man",
 		"checkhealth",
-		"NvimTree"
+		"NvimTree",
+		"Outline"
 	},
 })
 

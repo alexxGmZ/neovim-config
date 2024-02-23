@@ -30,3 +30,9 @@ require("lazy").setup(
 
 	}
 )
+
+-- neovide config
+if vim.g.neovide then
+	vim.o.guifont = "Fira Code:h9"
+	vim.opt.linespace = 0
+end

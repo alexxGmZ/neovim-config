@@ -1,8 +1,3 @@
-local function if_git_dir()
-	local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
-	return git_dir ~= ""
-end
-
 return {
 	--
 	-- COLORSCHEME --
@@ -46,14 +41,14 @@ return {
 		"neovim/nvim-lspconfig",
 		event = {
 			-- "InsertCharPre",
-			"TabNew",
-			"TabEnter",
+			-- "TabNew",
+			-- "TabEnter",
 		},
 		cmd = {
 			"LspStart",
 			"LspInfo",
 			"Trouble",
-			"FzfLua",
+			-- "FzfLua",
 			"Mason",
 			"ConformInfo"
 		},
@@ -63,8 +58,8 @@ return {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"folke/trouble.nvim",
-			"simrat39/symbols-outline.nvim",
-			"ibhagwan/fzf-lua",
+			"hedyhli/outline.nvim",
+			-- "ibhagwan/fzf-lua",
 		},
 		config = function()
 			require("alex.plugins.lsp.mason")
@@ -75,12 +70,13 @@ return {
 
 	{
 		"chrisgrieser/nvim-dr-lsp",
-		event = "LspAttach"
+		event = "LspAttach",
+		enable = false
 	},
 
 	require("alex.plugins.diagflow"),
-	require("alex.plugins.symbols-outline"),
 	require("alex.plugins.lsp.lsp-lens"),
+	require("alex.plugins.outline"),
 	-- require("alex.plugins.lsp.lsp-timeout"),
 
 	--
@@ -104,13 +100,13 @@ return {
 			"lukas-reineke/cmp-under-comparator",
 			"onsails/lspkind.nvim",
 			"rafamadriz/friendly-snippets",
-			'quangnguyen30192/cmp-nvim-tags'
 		},
 		config = function()
 			require("alex.plugins.lsp.nvim-cmp")
 		end
 	},
 
+	-- require("alex.plugins.lsp.nvim-html-css"),
 	require("alex.plugins.conform"),
 
 	--
@@ -147,10 +143,11 @@ return {
 
 	{
 		"sitiom/nvim-numbertoggle",
+		enabled = false,
 		event = "VeryLazy",
 	},
 
-	require("alex.plugins.nvim-navic"),
+	-- require("alex.plugins.nvim-navic"),
 	require("alex.plugins.neozoom"),
 	require("alex.plugins.codewindow"),
 	require("alex.plugins.tagbar"),
@@ -173,7 +170,6 @@ return {
 			require("guess-indent").setup {}
 		end,
 	},
-
 
 	{
 		"kylechui/nvim-surround",
@@ -212,15 +208,22 @@ return {
 	},
 
 	{
-		"windwp/nvim-ts-autotag",
+		"gregsexton/MatchTag",
 		event = "VeryLazy",
 		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
-		dependencies = {
-			"AndrewRadev/tagalong.vim",
-			"gregsexton/MatchTag",
-			"nvim-treesitter/nvim-treesitter",
-		}
 	},
+
+	-- {
+	-- 	"windwp/nvim-ts-autotag",
+	-- 	event = "VeryLazy",
+	-- 	ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 	},
+	-- 	config = function()
+	-- 		require("nvim-ts-autotag").setup()
+	-- 	end
+	-- },
 
 	-- require("alex.plugins.foldsign")
 }
