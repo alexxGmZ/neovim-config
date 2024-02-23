@@ -31,7 +31,7 @@ return {
 					-- top = 0,
 					-- left = 0.17,
 					width = 0.90,
-					height = 0.80,
+					height = 0.90,
 				},
 				-- NOTE: check :help nvim_open_win() for possible border values.
 				border = 'thicc', -- this is a preset, try it :)

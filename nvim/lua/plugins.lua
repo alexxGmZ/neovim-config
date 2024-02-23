@@ -41,8 +41,8 @@ return {
 		"neovim/nvim-lspconfig",
 		event = {
 			-- "InsertCharPre",
-			"TabNew",
-			"TabEnter",
+			-- "TabNew",
+			-- "TabEnter",
 		},
 		cmd = {
 			"LspStart",
@@ -59,7 +59,7 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"folke/trouble.nvim",
 			"hedyhli/outline.nvim",
-			"ibhagwan/fzf-lua",
+			-- "ibhagwan/fzf-lua",
 		},
 		config = function()
 			require("alex.plugins.lsp.mason")
@@ -106,6 +106,7 @@ return {
 		end
 	},
 
+	-- require("alex.plugins.lsp.nvim-html-css"),
 	require("alex.plugins.conform"),
 
 	--
@@ -169,7 +170,6 @@ return {
 			require("guess-indent").setup {}
 		end,
 	},
-
 
 	{
 		"kylechui/nvim-surround",
