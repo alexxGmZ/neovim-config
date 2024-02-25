@@ -213,6 +213,8 @@ return {
 		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
 	},
 
+	require("alex.plugins.rest-nvim")
+
 	-- {
 	-- 	"windwp/nvim-ts-autotag",
 	-- 	event = "VeryLazy",
