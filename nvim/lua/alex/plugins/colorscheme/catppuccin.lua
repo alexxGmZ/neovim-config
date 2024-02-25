@@ -55,8 +55,14 @@ return {
 				treesitter_context = true,
 			},
 		})
-		-- vim.cmd.colorscheme "catppuccin-latte"
-		vim.cmd.colorscheme "catppuccin-mocha"
+
+		-- switch to dark mode when it's 6:00PM
+		local current_hour = tonumber(os.date("%H"))
+		if (current_hour >= 17 or current_hour < 6) then
+			vim.cmd.colorscheme "catppuccin-mocha"
+		else
+			vim.cmd.colorscheme "catppuccin-latte"
+		end
 	end,
 	opts = {
 	}
