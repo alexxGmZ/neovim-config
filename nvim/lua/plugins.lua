@@ -143,7 +143,7 @@ return {
 
 	{
 		"sitiom/nvim-numbertoggle",
-		enabled = false,
+		enabled = true,
 		event = "VeryLazy",
 	},
 
@@ -213,19 +213,7 @@ return {
 		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
 	},
 
-	require("alex.plugins.rest-nvim")
+	require("alex.plugins.vim-rest-console")
 
-	-- {
-	-- 	"windwp/nvim-ts-autotag",
-	-- 	event = "VeryLazy",
-	-- 	ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
-	-- 	dependencies = {
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 	},
-	-- 	config = function()
-	-- 		require("nvim-ts-autotag").setup()
-	-- 	end
-	-- },
-
-	-- require("alex.plugins.foldsign")
+	-- require("alex.plugins.rest-nvim"),
 }

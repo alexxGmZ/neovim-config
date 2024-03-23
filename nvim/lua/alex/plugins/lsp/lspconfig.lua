@@ -17,7 +17,7 @@ local LSP_LIST = {
 	"cssls",
 	"marksman",
 	"texlab",
-	"tailwindcss",
+	-- "tailwindcss",
 	"bashls",
 	"lemminx",
 	"quick_lint_js",
@@ -76,7 +76,7 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 for _, lsp_server in pairs(LSP_LIST) do
 	-- basic configuration for installed lsp servers
 	lspconfig[lsp_server].setup{
-		autostart = false,
+		autostart = true,
 		capabilities = capabilities,
 		-- on_attach = on_attach,
 		-- on_attach = require("virtualtypes").on_attach
