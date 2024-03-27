@@ -34,7 +34,8 @@ lualine.setup {
 				"packer",
 				"Outline",
 				"oil",
-				"Trouble"
+				"Trouble",
+				"dbui"
 			},
 			winbar = {
 				"NvimTree",

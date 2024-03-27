@@ -213,7 +213,8 @@ return {
 		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
 	},
 
-	require("alex.plugins.vim-rest-console")
+	require("alex.plugins.vim-rest-console"),
+	require("alex.plugins.dadbod-ui")
 
 	-- require("alex.plugins.rest-nvim"),
 }

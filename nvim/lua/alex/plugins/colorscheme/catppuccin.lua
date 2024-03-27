@@ -57,12 +57,13 @@ return {
 		})
 
 		-- switch to dark mode when it's 6:00PM
-		local current_hour = tonumber(os.date("%H"))
-		if (current_hour >= 17 or current_hour < 6) then
-			vim.cmd.colorscheme "catppuccin-mocha"
-		else
-			vim.cmd.colorscheme "catppuccin-latte"
-		end
+		-- local current_hour = tonumber(os.date("%H"))
+		-- if (current_hour >= 17 or current_hour < 6) then
+		-- 	vim.cmd.colorscheme "catppuccin-mocha"
+		-- else
+		-- 	vim.cmd.colorscheme "catppuccin-latte"
+		-- end
+		vim.cmd.colorscheme "catppuccin-mocha"
 	end,
 	opts = {
 	}

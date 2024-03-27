@@ -62,6 +62,12 @@ require("bufferline").setup {
 				highlight = "Directory",
 				separator = true
 			},
+			{
+				filetype = "dbui",
+				text = "Database",
+				highlight = "Directory",
+				separator = true
+			},
 		}
 	},
 }
