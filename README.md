@@ -79,7 +79,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [alexghergh/nvim-tmux-navigation](https://github.com/alexghergh/nvim-tmux-navigation)
 * [sitiom/nvim-numbertoggle       ](https://github.com/sitiom/nvim-numbertoggle)
 * [nvim-tree/nvim-tree.lua        ](https://github.com/nvim-tree/nvim-tree.lua)
-* [simrat39/symbols-outline.nvim  ](https://github.com/simrat39/symbols-outline.nvim)
+* [hedyhli/outline.nvim           ](https://github.com/hedyhli/outline.nvim)
 * [folke/trouble.nvim             ](https://github.com/folke/trouble.nvim)
 
 #### Syntax Highlighting
@@ -89,23 +89,23 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### LSP and Auto-Completion
 
-* [gregsexton/MatchTag               ](https://github.com/gregsexton/MatchTag)
-* [AndrewRadev/tagalong.vim.git      ](https://github.com/AndrewRadev/tagalong.vim)
-* [windwp/nvim-ts-autotag            ](https://github.com/windwp/nvim-ts-autotag)
-* [williamboman/mason.nvim           ](https://github.com/williamboman/mason.nvim)
-* [williamboman/mason-lspconfig.nvim ](https://github.com/williamboman/mason-lspconfig.nvim)
-* [neovim/nvim-lspconfig             ](https://github.com/neovim/nvim-lspconfig)
-* [hrsh7th/cmp-nvim-lsp              ](https://github.com/hrsh7th/cmp-nvim-lsp)
-* [hrsh7th/cmp-buffer                ](https://github.com/hrsh7th/cmp-buffer)
-* [hrsh7th/cmp-path                  ](https://github.com/hrsh7th/cmp-path)
-* [hrsh7th/cmp-cmdline               ](https://github.com/hrsh7th/cmp-cmdline)
-* [hrsh7th/nvim-cmp                  ](https://github.com/hrsh7th/nvim-cmp)
-* [hrsh7th/cmp-vsnip                 ](https://github.com/hrsh7th/cmp-vsnip)
-* [hrsh7th/vim-vsnip                 ](https://github.com/hrsh7th/vim-vsnip)
-* [m4xshen/autoclose.nvim            ](https://github.com/m4xshen/autoclose.nvim)
-* [lukas-reineke/cmp-under-comparator](https://github.com/lukas-reineke/cmp-under-comparator)
-* [rafamadriz/friendly-snippets      ](https://github.com/rafamadriz/friendly-snippets)
-* [VidocqH/lsp-lens.nvim             ](https://github.com/VidocqH/lsp-lens.nvim)
+* [gregsexton/MatchTag                ](https://github.com/gregsexton/MatchTag)
+* [williamboman/mason.nvim            ](https://github.com/williamboman/mason.nvim)
+* [williamboman/mason-lspconfig.nvim  ](https://github.com/williamboman/mason-lspconfig.nvim)
+* [neovim/nvim-lspconfig              ](https://github.com/neovim/nvim-lspconfig)
+* [hrsh7th/cmp-nvim-lsp               ](https://github.com/hrsh7th/cmp-nvim-lsp)
+* [hrsh7th/cmp-buffer                 ](https://github.com/hrsh7th/cmp-buffer)
+* [hrsh7th/cmp-path                   ](https://github.com/hrsh7th/cmp-path)
+* [hrsh7th/cmp-cmdline                ](https://github.com/hrsh7th/cmp-cmdline)
+* [hrsh7th/nvim-cmp                   ](https://github.com/hrsh7th/nvim-cmp)
+* [hrsh7th/cmp-vsnip                  ](https://github.com/hrsh7th/cmp-vsnip)
+* [hrsh7th/vim-vsnip                  ](https://github.com/hrsh7th/vim-vsnip)
+* [m4xshen/autoclose.nvim             ](https://github.com/m4xshen/autoclose.nvim)
+* [lukas-reineke/cmp-under-comparator ](https://github.com/lukas-reineke/cmp-under-comparator)
+* [hrsh7th/cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help)
+* [rafamadriz/friendly-snippets       ](https://github.com/rafamadriz/friendly-snippets)
+* [VidocqH/lsp-lens.nvim              ](https://github.com/VidocqH/lsp-lens.nvim)
+* [stevearc/conform.nvim              ](https://github.com/stevearc/conform.nvim)
 
 #### Aesthetic or Interface
 
@@ -121,6 +121,9 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [folke/twilight.nvim                    ](https://github.com/folke/twilight.nvim)
 * [onsails/lspkind.nvim                   ](https://github.com/onsails/lspkind.nvim)
 * [folke/todo-comments.nvim               ](https://github.com/folke/todo-comments.nvim)
+* [preservim/tagbar                       ](https://github.com/preservim/tagbar)
+* [mistricky/codesnap.nvim                ](https://github.com/mistricky/codesnap.nvim)
+* [sudoerwx/vim-ray-so-beautiful          ](https://github.com/sudoerwx/vim-ray-so-beautiful)
 
 #### Colorscheme
 
@@ -156,6 +159,8 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [f3fora/cmp-spell                    ](https://github.com/f3fora/cmp-spell)
 * [dgagn/diagflow.nvim                 ](https://github.com/dgagn/diagflow.nvim)
 * [nyngwang/NeoZoom.lua                ](https://github.com/nyngwang/NeoZoom.lua/)
+* [diepm/vim-rest-console              ](https://github.com/diepm/vim-rest-console)
+* [kristijanhusak/vim-dadbod-ui        ](https://github.com/kristijanhusak/vim-dadbod-ui)
 
 <br>
 
