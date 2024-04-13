@@ -23,7 +23,7 @@ local LSP_LIST = {
 	"quick_lint_js",
 	"tsserver",
 	"jsonls",
-	"sqlls"
+	-- "sqlls"
 }
 
 --
