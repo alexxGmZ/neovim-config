@@ -114,7 +114,7 @@ return {
 	--
 	{
 		"nvim-lualine/lualine.nvim",
-		event = "VeryLazy",
+		-- event = "VeryLazy",
 		config = function()
 			require("alex.plugins.lualine")
 		end,
@@ -143,7 +143,7 @@ return {
 
 	{
 		"sitiom/nvim-numbertoggle",
-		enabled = false,
+		enabled = true,
 		event = "VeryLazy",
 	},
 
@@ -213,17 +213,8 @@ return {
 		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
 	},
 
-	-- {
-	-- 	"windwp/nvim-ts-autotag",
-	-- 	event = "VeryLazy",
-	-- 	ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
-	-- 	dependencies = {
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 	},
-	-- 	config = function()
-	-- 		require("nvim-ts-autotag").setup()
-	-- 	end
-	-- },
-
-	-- require("alex.plugins.foldsign")
+	require("alex.plugins.vim-rest-console"),
+	require("alex.plugins.dadbod-ui"),
+	require("alex.plugins.codesnap"),
+	require("alex.plugins.rayso")
 }

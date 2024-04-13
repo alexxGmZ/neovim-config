@@ -19,8 +19,6 @@ local mode_map = {
 lualine.setup {
 	options = {
 		icons_enabled = true,
-		-- theme = 'molokai',
-		-- theme = 'horizon',
 		theme = "auto",
 		component_separators = "",
 		section_separators = {
@@ -34,7 +32,8 @@ lualine.setup {
 				"packer",
 				"Outline",
 				"oil",
-				"Trouble"
+				"Trouble",
+				"dbui"
 			},
 			winbar = {
 				"NvimTree",

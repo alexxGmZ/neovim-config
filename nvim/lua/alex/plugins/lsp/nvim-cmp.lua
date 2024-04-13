@@ -17,12 +17,6 @@ cmp.setup({
 				return vim_item
 			end
 		})
-		-- format = function(entry, vim_item)
-		-- 	if entry.source.name == "html-css" then
-		-- 		vim_item.menu = entry.completion_item.menu
-		-- 	end
-		-- 	return vim_item
-		-- end
 	},
 	experimental = {
 		ghost_text = false
@@ -63,27 +57,17 @@ cmp.setup({
 	}),
 
 	sources = cmp.config.sources({
-		{ name = "nvim_lsp" },
+		{
+			name = "nvim_lsp",
+			max_item_count = 10
+		},
 		{ name = "vsnip" }, -- For vsnip users.
 		{ name = "buffer" },
-		{ name = "path" },
+		{
+			name = "path",
+			max_item_count = 10
+		},
 		{ name = "nvim_lsp_signature_help" },
-		-- {
-		-- 	name = "html-css",
-		-- 	option = {
-		-- 		max_count = {}, -- not ready yet
-		-- 		enable_on = {
-		-- 			"html"
-		-- 		},                                   -- set the file types you want the plugin to work on
-		-- 		file_extensions = { "css", "sass", "less" }, -- set the local filetypes from which you want to derive classes
-		-- 		style_sheets = {
-		-- 			-- example of remote styles, only css no js for now
-		-- 			"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css",
-		-- 			"https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css",
-		-- 			"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-		-- 		}
-		-- 	}
-		-- },
 		{
 			name = "spell",
 			option = {
@@ -91,8 +75,9 @@ cmp.setup({
 				enable_in_context = function()
 					return true
 				end
-			}
-		},
+			},
+			max_item_count = 10
+		}
 	}),
 
 	sorting = {
@@ -107,6 +92,17 @@ cmp.setup({
 			cmp.config.compare.order,
 		},
 	},
+
+	performance = {
+		-- max_view_entries = 20
+		trigger_debounce_time = 500,
+		throttle = 550,
+		fetching_timeout = 80,
+	},
+
+	-- completion = {
+	-- 	keyword_length = 2
+	-- }
 })
 
 -- Set configuration for specific filetype.
@@ -130,8 +126,25 @@ cmp.setup.cmdline({ '/', '?' }, {
 cmp.setup.cmdline(':', {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = cmp.config.sources({
-		{ name = 'path' }
-	}, {
-		{ name = 'cmdline' }
+		{
+			name = 'path',
+			max_item_count = 20
+		},
+		{
+			name = 'cmdline',
+			max_item_count = 20
+		}
+	}),
+	completion = {
+		keyword_length = 2
+	}
+})
+
+cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
+	sources = cmp.config.sources({
+		{
+			name = "vim-dadbod-completion",
+			max_item_count = 10
+		}
 	})
 })

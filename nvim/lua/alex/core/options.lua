@@ -2,26 +2,19 @@ local opt = vim.opt
 
 vim.cmd [[
 	set termguicolors
-	set completeopt=menu,menuone,noselect
+	" set completeopt=menu,menuone,noselect
 
 	" filetype
 	filetype on
 	filetype plugin on
 	filetype indent on
 
-	" set autochdir
 	set autoread
-	" set colorcolumn=90
-	" set splitbelow splitright
-	" set wildmenu
-	" set wildmode=longest:list,full
-	" set laststatus=2
 	set showmatch
 	set mouse=a
 	set showcmd
 	set nobackup
 	set writebackup
-	" set nowrap
 	set noshowmode
 	set encoding=UTF-8
 	set fileencodings=utf8,cp1251,koi8-r,koi8-u
