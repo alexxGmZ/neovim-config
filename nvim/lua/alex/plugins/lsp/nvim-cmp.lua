@@ -17,12 +17,6 @@ cmp.setup({
 				return vim_item
 			end
 		})
-		-- format = function(entry, vim_item)
-		-- 	if entry.source.name == "html-css" then
-		-- 		vim_item.menu = entry.completion_item.menu
-		-- 	end
-		-- 	return vim_item
-		-- end
 	},
 	experimental = {
 		ghost_text = false
@@ -106,9 +100,9 @@ cmp.setup({
 		fetching_timeout = 80,
 	},
 
-	completion = {
-		keyword_length = 2
-	}
+	-- completion = {
+	-- 	keyword_length = 2
+	-- }
 })
 
 -- Set configuration for specific filetype.
@@ -140,7 +134,10 @@ cmp.setup.cmdline(':', {
 			name = 'cmdline',
 			max_item_count = 20
 		}
-	})
+	}),
+	completion = {
+		keyword_length = 2
+	}
 })
 
 cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
