@@ -27,45 +27,21 @@ return {
 	end,
 	config = function()
 		local map = vim.keymap
-		map.set("n", "<CR>", "<Plug>(DBUI_SelectLine)", { desc = "DBUI: Select line" })
-		map.set("n", "K", "<Plug>(DBUI_ToggleDetails)", { desc = "DBUI: ToggleDetails" })
-		-- map.set("n", "<leader>q", "<Plug>(DBUI_Quit)", { desc = "DBUI: Quit" })
 
-		-- vim.api.nvim_create_user_command("DBUIRefresh",
-		-- 	function()
-		-- 		vim.cmd [[ execute "normal \<Plug>(DBUI_Redraw)"]]
-		-- 	end, {}
-		-- )
-		-- vim.api.nvim_create_user_command("DBUIRenameLine",
-		-- 	function()
-		-- 		vim.cmd [[ execute "normal \<Plug>(DBUI_RenameLine)"]]
-		-- 	end, {}
-		-- )
-		-- vim.api.nvim_create_user_command("DBUIDeleteLine",
-		-- 	function()
-		-- 		vim.cmd [[ execute "normal \<Plug>(DBUI_DeleteLine)"]]
-		-- 	end, {}
-		-- )
-		-- vim.api.nvim_create_user_command("DBUISaveQuery",
-		-- 	function()
-		-- 		vim.cmd [[ execute "normal \<Plug>(DBUI_SaveQuery)"]]
-		-- 	end, {}
-		-- )
-
-		-- vim.cmd [[
-		-- 	autocmd FileType dbui nmap <buffer> R <Plug>(DBUI_Redraw)
-		-- 	autocmd FileType dbui nmap <buffer> r <Plug>(DBUI_Redraw)
-		-- ]]
+		vim.api.nvim_create_user_command("DBUISaveQuery", function()
+			vim.cmd [[execute "normal \<Plug>(DBUI_SaveQuery)"]]
+		end, {})
 
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = { "dbui" },
 			callback = function(ev)
-				local opts = { buffer = ev.buf }
-				map.set("n", "R", "<Plug>(DBUI_Redraw)", opts)
-				map.set("n", "D", "<Plug>(DBUI_DeleteLine)", opts)
-				map.set("n", "r", "<Plug>(DBUI_RenameLine)", opts)
-				map.set("n", "q", "<Plug>(DBUI_Quit)", opts)
-				map.set("n", "W", "<Plug>(DBUI_SaveQuery)", opts)
+				map.set("n", "<CR>", "<Plug>(DBUI_SelectLine)", { desc = "DBUI: Select Line", buffer = ev.buf })
+				map.set("n", "K", "<Plug>(DBUI_ToggleDetails)", { desc = "DBUI: Toggle Details", buffer = ev.buf })
+				map.set("n", "R", "<Plug>(DBUI_Redraw)", { desc = "DBUI: Refresh", buffer = ev.buf })
+				map.set("n", "D", "<Plug>(DBUI_DeleteLine)", { desc = "DBUI: Delete Line", buffer = ev.buf })
+				map.set("n", "r", "<Plug>(DBUI_RenameLine)", { desc = "DBUI: Rename Line", buffer = ev.buf })
+				map.set("n", "q", "<Plug>(DBUI_Quit)", { desc = "DBUI: Quit", buffer = ev.buf })
+				map.set("n", "W", "<Plug>(DBUI_SaveQuery)", { desc = "DBUI: Save Query", buffer = ev.buf })
 			end
 		})
 	end
