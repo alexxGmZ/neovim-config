@@ -114,7 +114,7 @@ return {
 	--
 	{
 		"nvim-lualine/lualine.nvim",
-		event = "VeryLazy",
+		-- event = "VeryLazy",
 		config = function()
 			require("alex.plugins.lualine")
 		end,
@@ -214,7 +214,7 @@ return {
 	},
 
 	require("alex.plugins.vim-rest-console"),
-	require("alex.plugins.dadbod-ui")
-
-	-- require("alex.plugins.rest-nvim"),
+	require("alex.plugins.dadbod-ui"),
+	require("alex.plugins.codesnap"),
+	require("alex.plugins.rayso")
 }
