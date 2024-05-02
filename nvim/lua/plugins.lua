@@ -3,22 +3,16 @@ return {
 	-- COLORSCHEME --
 	--
 	-- catppuccin (main colorscheme)
-	-- require("alex.plugins.catppuccin"),
 	require("alex.plugins.colorscheme.catppuccin"),
 	-- moonfly
-	-- require("alex.plugins.moonfly"),
 	require("alex.plugins.colorscheme.moonfly"),
 	-- tokyonight
-	-- require("alex.plugins.tokyonight"),
 	require("alex.plugins.colorscheme.tokyonight"),
 	-- github
-	-- require("alex.plugins.github-theme"),
 	require("alex.plugins.colorscheme.github-theme"),
 	-- rose pine
-	-- require("alex.plugins.rose-pine"),
 	require("alex.plugins.colorscheme.rose-pine"),
 	-- newpaper
-	-- require("alex.plugins.newpaper"),
 	require("alex.plugins.colorscheme.newpaper"),
 	-- kanagawa
 	require("alex.plugins.colorscheme.kanagawa"),

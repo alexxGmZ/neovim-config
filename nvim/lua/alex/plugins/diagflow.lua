@@ -19,7 +19,7 @@ return {
 			-- update_event = { "DiagnosticChanged", "BufReadPost", "BufEnter", "CursorMoved" },
 			update_event = { "DiagnosticChanged", "BufReadPost", "BufEnter" },
 			toggle_event = {},
-			show_sign = false, -- set to true if you want to render the diagnostic sign before the diagnostic message
+			show_sign = true, -- set to true if you want to render the diagnostic sign before the diagnostic message
 			render_event = { "DiagnosticChanged", "CursorMoved" },
 			border_chars = {
 				top_left = "┌",
@@ -29,7 +29,7 @@ return {
 				horizontal = "─",
 				vertical = "│"
 			},
-			show_borders = true,
+			show_borders = false,
 		})
 	end
 }
