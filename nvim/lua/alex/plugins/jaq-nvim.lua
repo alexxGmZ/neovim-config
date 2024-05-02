@@ -16,7 +16,8 @@ return {
 					sh       = "sh %",
 					lua      = "lua %",
 					c        = "clang % && ./a.out",
-					java     = "java %"
+					java     = "java %",
+					js       = "node %"
 				}
 			},
 
