@@ -64,3 +64,6 @@ opt.splitright = true
 -- linewrap
 opt.wrap = false
 opt.breakindent = true
+
+-- colorscheme
+opt.background = "dark"
