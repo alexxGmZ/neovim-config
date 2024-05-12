@@ -1,6 +1,7 @@
 return {
 	"neanias/everforest-nvim",
-	event = "CmdlineChanged",
+	-- event = "CmdlineChanged",
+	priority = 1000,
 	config = function()
 		require("everforest").setup({
 			background = "medium",
@@ -9,7 +10,7 @@ return {
 			disable_italic_comments = false,
 			sign_column_background = "none",
 			ui_contrast = "high",
-			dim_inactive_windows = true,
+			dim_inactive_windows = false,
 			diagnostic_text_highlight = false,
 			diagnostic_virtual_text = "coloured",
 			diagnostic_line_highlight = false,
@@ -21,5 +22,6 @@ return {
 			---@param palette Palette
 			colours_override = function(palette) end,
 		})
+		vim.cmd.colorscheme "everforest"
 	end
 }
