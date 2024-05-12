@@ -32,18 +32,3 @@ map.set("n", "<leader>-", "<C-w>3-", { desc = "Pane: Decrease current pane heigh
 map.set("n", "<leader>=", "<C-w>3+", { desc = "Pane: Increate current pane height" })
 map.set("n", "<leader>.", "<C-w>3>", { desc = "Pane: Increase current pane width" })
 map.set("n", "<leader>,", "<C-w>3<", { desc = "Pane: Decrease current pane width" })
-
--- jaq
-map.set("n", "<leader>rr", function() vim.cmd("Jaq") end, { desc = "Jaq: run code" })
-
--- NeoZoom
-map.set("n", "<C-w>m", function() vim.cmd("NeoZoomToggle") end,
-	{
-		silent = true,
-		nowait = true,
-		desc = "NeoZoomToggle: Toggle pane zoom"
-	}
-)
-
--- codewindow
-map.set("n", "<leader>mm", function() vim.cmd("CWToggle") end, { desc = "codewindow: toggle codewindow" })

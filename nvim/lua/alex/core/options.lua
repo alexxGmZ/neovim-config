@@ -22,7 +22,7 @@ vim.cmd [[
 
 -- column
 opt.foldcolumn = "0"
-opt.signcolumn = "yes"
+opt.signcolumn = "auto"
 opt.colorcolumn = "90"
 
 -- fold

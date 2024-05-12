@@ -114,7 +114,6 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [akinsho/bufferline.nvim                ](https://github.com/akinsho/bufferline.nvim)
 * [SmiteshP/nvim-navic                    ](https://github.com/SmiteshP/nvim-navic)
 * [nvim-tree/nvim-web-devicons            ](https://github.com/nvim-tree/nvim-web-devicons)
-* [gorbit99/codewindow.nvim               ](https://github.com/gorbit99/codewindow.nvim)
 * [rcarriga/nvim-notify                   ](https://github.com/rcarriga/nvim-notify)
 * [NMAC427/guess-indent.nvim              ](https://github.com/NMAC427/guess-indent.nvim)
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
@@ -128,7 +127,6 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 #### Colorscheme
 
 * [catppuccin/nvim            ](https://github.com/catppuccin/nvim)
-* [bluz71/vim-moonfly-colors  ](https://github.com/bluz71/vim-moonfly-colors)
 * [folke/tokyonight.nvim      ](https://github.com/folke/tokyonight.nvim)
 * [projekt0n/github-nvim-theme](https://github.com/projekt0n/github-nvim-theme)
 * [rose-pine/neovim           ](https://github.com/rose-pine/neovim)
@@ -141,7 +139,6 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [tpope/vim-fugitive       ](https://github.com/tpope/vim-fugitive)
 * [idanarye/vim-merginal    ](https://github.com/idanarye/vim-merginal)
 * [lewis6991/gitsigns.nvim  ](https://github.com/lewis6991/gitsigns.nvim)
-* [f-person/git-blame.nvim  ](https://github.com/f-person/git-blame.nvim)
 * [akinsho/git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)
 
 #### Quality of Life

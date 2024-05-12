@@ -4,8 +4,6 @@ return {
 	--
 	-- catppuccin (main colorscheme)
 	require("alex.plugins.colorscheme.catppuccin"),
-	-- moonfly
-	require("alex.plugins.colorscheme.moonfly"),
 	-- tokyonight
 	require("alex.plugins.colorscheme.tokyonight"),
 	-- github
@@ -22,11 +20,9 @@ return {
 	--
 	-- Git Integration --
 	--
-	require("alex.plugins.git-blame"),
 	require("alex.plugins.gitsigns"),
 	require("alex.plugins.merginal"),
 	require("alex.plugins.git-conflict"),
-	-- require("alex.plugins.neogit"),
 
 	--
 	-- Language Server Protocol (LSP)
@@ -135,7 +131,6 @@ return {
 
 	-- require("alex.plugins.nvim-navic"),
 	require("alex.plugins.neozoom"),
-	require("alex.plugins.codewindow"),
 	require("alex.plugins.tagbar"),
 
 	--
