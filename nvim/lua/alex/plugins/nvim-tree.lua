@@ -13,13 +13,17 @@ return {
 
 		-- empty setup using defaults
 		require("nvim-tree").setup {
-			sort_by = "name",
+			sort = {
+				sorter = "name"
+			},
 			view = {
 				adaptive_size = false,
 				number = false,
 				relativenumber = false,
+				cursorline = true,
+				signcolumn = "auto",
 				float = {
-					enable = true,
+					enable = false,
 					open_win_config = function()
 						local screen_w = vim.opt.columns:get()
 						local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
@@ -40,9 +44,10 @@ return {
 						}
 					end
 				},
-				width = function()
-					return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
-				end,
+				-- width = function()
+				-- 	return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
+				-- end,
+				width = 30
 			},
 			renderer = {
 				add_trailing = true,
@@ -77,24 +82,30 @@ return {
 				custom = {},
 				exclude = {},
 			},
+			tab = {
+				sync = {
+					open = true,
+					close = true
+				}
+			}
 		}
 
-		local function open_nvim_tree(data)
-			-- buffer is a directory
-			local directory = vim.fn.isdirectory(data.file) == 1
-
-			if not directory then
-				return
-			end
-
-			-- change to the directory
-			vim.cmd.cd(data.file)
-
-			-- open the tree
-			require("nvim-tree.api").tree.open()
-		end
-
-		vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+		-- local function open_nvim_tree(data)
+		-- 	-- buffer is a directory
+		-- 	local directory = vim.fn.isdirectory(data.file) == 1
+		--
+		-- 	if not directory then
+		-- 		return
+		-- 	end
+		--
+		-- 	-- change to the directory
+		-- 	vim.cmd.cd(data.file)
+		--
+		-- 	-- open the tree
+		-- 	require("nvim-tree.api").tree.open()
+		-- end
+		--
+		-- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 	end,
 	dependencies = {
 		"nvim-tree/nvim-web-devicons"
