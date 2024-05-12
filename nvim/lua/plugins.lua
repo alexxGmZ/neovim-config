@@ -47,25 +47,17 @@ return {
 			"ConformInfo"
 		},
 		dependencies = {
-			-- "hinell/lsp-timeout.nvim",
 			"stevearc/conform.nvim",
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"folke/trouble.nvim",
 			"hedyhli/outline.nvim",
-			-- "ibhagwan/fzf-lua",
 		},
 		config = function()
 			require("alex.plugins.lsp.mason")
 			require("alex.plugins.lsp.lspconfig")
 			vim.cmd("LspStart")
 		end,
-	},
-
-	{
-		"chrisgrieser/nvim-dr-lsp",
-		event = "LspAttach",
-		enable = false
 	},
 
 	require("alex.plugins.diagflow"),
