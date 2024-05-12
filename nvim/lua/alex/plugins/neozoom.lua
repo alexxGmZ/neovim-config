@@ -1,6 +1,9 @@
 return {
 	"nyngwang/NeoZoom.lua",
-	cmd = "NeoZoomToggle",
+	-- cmd = "NeoZoomToggle",
+	keys = {
+		{ "<C-w>m", function() vim.cmd("NeoZoomToggle") end }
+	},
 	config = function()
 		require('neo-zoom').setup {
 			popup = { enabled = true }, -- this is the default.

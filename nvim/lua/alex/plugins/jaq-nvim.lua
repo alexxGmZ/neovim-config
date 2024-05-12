@@ -57,25 +57,23 @@ return {
 				terminal = {
 					-- Window position
 					position = "bot",
-
 					-- Window size
 					size     = 15,
-
 					-- Disable line numbers
 					line_no  = false
 				},
-
 				quickfix = {
 					-- Window position
 					position = "bot",
-
 					-- Window size
 					size     = 10
 				}
 			}
 		}
 	end,
-	cmd = { "Jaq" },
+	keys = {
+		{ "<leader>rr", function() vim.cmd("Jaq") end, { desc = "Jaq: run code" } }
+	},
 	opts = {
 
 	}
