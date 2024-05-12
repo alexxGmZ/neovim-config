@@ -10,12 +10,13 @@ return {
 			disable_italic_comments = false,
 			sign_column_background = "none",
 			ui_contrast = "high",
-			dim_inactive_windows = false,
+			dim_inactive_windows = true,
 			diagnostic_text_highlight = false,
 			diagnostic_virtual_text = "coloured",
 			diagnostic_line_highlight = false,
 			spell_foreground = false,
 			show_eob = true,
+			float_style = "dim",
 			---@param highlight_groups Highlights
 			---@param palette Palette
 			on_highlights = function(highlight_groups, palette) end,
