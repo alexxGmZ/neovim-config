@@ -13,9 +13,4 @@ vim.cmd([[
 		autocmd TermOpen * setlocal nonumber norelativenumber
 
 	augroup END
-
-	" augroup cdpwd
-	" 	autocmd!
-	" 	autocmd VimEnter * cd $PWD
-	" augroup END
 ]])
