@@ -3,6 +3,8 @@ return {
 	-- event = "CmdlineChanged",
 	priority = 1000,
 	config = function()
+		vim.cmd("hi @markup.italic gui=italic")
+
 		require("everforest").setup({
 			background = "medium",
 			transparent_background_level = 0,
@@ -34,6 +36,8 @@ return {
 				hl.CurrentWord = { fg = palette.none, underline = true }
 				hl.String = { fg = palette.aqua, bold = true }
 				hl.Keyword = { fg = palette.red, italic = true }
+				hl.MatchParen = { fg = palette.orange, bold = true, underline = true }
+				hl.Constant = { fg = palette.orange, bold = true }
 			end,
 			---@param palette Palette
 			colours_override = function(palette) end,
