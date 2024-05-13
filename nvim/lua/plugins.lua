@@ -59,7 +59,6 @@ return {
 	require("alex.plugins.diagflow"),
 	require("alex.plugins.lsp.lsp-lens"),
 	require("alex.plugins.outline"),
-	-- require("alex.plugins.lsp.lsp-timeout"),
 
 	--
 	-- Auto completion
@@ -88,7 +87,6 @@ return {
 		end
 	},
 
-	-- require("alex.plugins.lsp.nvim-html-css"),
 	require("alex.plugins.conform"),
 
 	--
@@ -129,7 +127,6 @@ return {
 		event = "VeryLazy",
 	},
 
-	-- require("alex.plugins.nvim-navic"),
 	require("alex.plugins.neozoom"),
 	require("alex.plugins.tagbar"),
 
