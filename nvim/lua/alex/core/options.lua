@@ -1,3 +1,8 @@
+local function if_git_dir()
+	local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
+	return git_dir ~= ""
+end
+
 local opt = vim.opt
 
 vim.cmd [[
@@ -22,7 +27,10 @@ vim.cmd [[
 
 -- column
 opt.foldcolumn = "0"
-opt.signcolumn = "auto"
+opt.signcolumn = "no"
+if if_git_dir() then
+	vim.opt.signcolumn = "yes"
+end
 opt.colorcolumn = "90"
 
 -- fold

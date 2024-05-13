@@ -23,7 +23,7 @@ return {
 				cursorline = true,
 				signcolumn = "auto",
 				float = {
-					enable = false,
+					enable = true,
 					open_win_config = function()
 						local screen_w = vim.opt.columns:get()
 						local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
@@ -89,23 +89,6 @@ return {
 				}
 			}
 		}
-
-		-- local function open_nvim_tree(data)
-		-- 	-- buffer is a directory
-		-- 	local directory = vim.fn.isdirectory(data.file) == 1
-		--
-		-- 	if not directory then
-		-- 		return
-		-- 	end
-		--
-		-- 	-- change to the directory
-		-- 	vim.cmd.cd(data.file)
-		--
-		-- 	-- open the tree
-		-- 	require("nvim-tree.api").tree.open()
-		-- end
-		--
-		-- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 	end,
 	dependencies = {
 		"nvim-tree/nvim-web-devicons"

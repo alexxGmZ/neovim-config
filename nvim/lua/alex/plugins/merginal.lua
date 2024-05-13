@@ -6,8 +6,8 @@ end
 return {
 	"idanarye/vim-merginal",
 	cond = if_git_dir,
-	cmd = { "Merginal", "MerginalToggle", "Git" },
+	cmd = { "Merginal", "MerginalToggle", "Git", "G" },
 	dependencies = {
 		"tpope/vim-fugitive",
-	}
+	},
 }
