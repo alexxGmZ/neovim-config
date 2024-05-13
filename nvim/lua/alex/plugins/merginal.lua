@@ -9,5 +9,5 @@ return {
 	cmd = { "Merginal", "MerginalToggle", "Git", "G" },
 	dependencies = {
 		"tpope/vim-fugitive",
-	}
+	},
 }
