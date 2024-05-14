@@ -41,7 +41,6 @@ return {
 
 				hl.BufferlineSeparator = { fg = palette.bg0 }
 				hl.BufferlineSeparatorSelected = { fg = palette.bg0 }
-				-- hl.BufferlineTab = { fg = palette.bg_dim }
 			end,
 			---@param palette Palette
 			colours_override = function(palette) end,
