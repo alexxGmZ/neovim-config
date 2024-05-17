@@ -26,7 +26,17 @@ return {
 		vim.g.db_ui_show_help = 0
 	end,
 	config = function()
-		local map = vim.keymap
+		local cmp_setup, cmp = pcall(require, "cmp")
+		if cmp_setup then
+			cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
+				sources = cmp.config.sources({
+					{
+						name = "vim-dadbod-completion",
+						max_item_count = 10
+					}
+				})
+			})
+		end
 
 		vim.api.nvim_create_user_command("DBUISaveQuery", function()
 			vim.cmd [[execute "normal \<Plug>(DBUI_SaveQuery)"]]
@@ -35,6 +45,7 @@ return {
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = { "dbui" },
 			callback = function(ev)
+				local map = vim.keymap
 				map.set("n", "<CR>", "<Plug>(DBUI_SelectLine)", { desc = "DBUI: Select Line", buffer = ev.buf })
 				map.set("n", "K", "<Plug>(DBUI_ToggleDetails)", { desc = "DBUI: Toggle Details", buffer = ev.buf })
 				map.set("n", "R", "<Plug>(DBUI_Redraw)", { desc = "DBUI: Refresh", buffer = ev.buf })
