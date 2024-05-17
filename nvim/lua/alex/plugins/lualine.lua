@@ -33,7 +33,8 @@ lualine.setup {
 				"Outline",
 				"oil",
 				"Trouble",
-				"dbui"
+				"dbui",
+				"fugitive"
 			},
 			winbar = {
 				"NvimTree",
@@ -119,7 +120,7 @@ lualine.setup {
 		lualine_c = {
 			{
 				"diagnostics",
-				sources = { "nvim_diagnostic" },
+				sources = { "nvim_diagnostic", "nvim_lsp" },
 				sections = { "error", "warn", "info", },
 				symbols = {
 					error = "󰅙 ",
@@ -135,7 +136,7 @@ lualine.setup {
 			},
 		},
 		lualine_x = {},
-		lualine_y = { "encoding", "filetype", "progress" },
+		lualine_y = { "encoding", "filetype" },
 		lualine_z = {
 			{
 				"location",
