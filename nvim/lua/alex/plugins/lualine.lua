@@ -16,13 +16,31 @@ local mode_map = {
 	s = "SUB"
 }
 
+local function lsp_client()
+	local bufnr = vim.api.nvim_get_current_buf()
+
+	local clients = vim.lsp.buf_get_clients(bufnr)
+	if next(clients) == nil then
+		return ''
+	end
+
+	local c = {}
+	for _, client in pairs(clients) do
+		table.insert(c, client.name)
+	end
+	-- return '\u{f085} ' .. table.concat(c, ' | ')
+	return table.concat(c, ' ')
+end
+
 lualine.setup {
 	options = {
 		icons_enabled = true,
 		theme = "auto",
 		component_separators = "",
 		section_separators = {
-			right = ""
+			right = "",
+			left = ""
+			-- right = ""
 		},
 		disabled_filetypes = {
 			statusline = {
@@ -70,7 +88,9 @@ lualine.setup {
 				"mode",
 				icons_enabled = true,
 				separator = {
-					right = ""
+					left = "",
+					right = ""
+					-- right = ""
 				},
 				fmt = function()
 					return mode_map[vim.api.nvim_get_mode().mode] or vim.api.nvim_get_mode().mode
@@ -85,23 +105,18 @@ lualine.setup {
 					fg = "#1a1b26"
 				},
 				icons_enabled = true,
-				separator = {
-					right = ""
-				},
+				separator = { right = "" },
 			},
 			{
 				"diff",
 				colored = true,
 				symbols = {
-					-- added = "+",
-					-- modified = "~",
-					-- removed = "-",
 					added = "󰐖 ", -- nf-md-plus_box
 					modified = "󱗜 ", -- nf-md-circle_box
 					removed = "󰍵 ", -- nf-md-minus_box
 				},
 				separator = {
-					right = ""
+					right = ""
 				},
 				source = nil,
 			},
@@ -109,7 +124,7 @@ lualine.setup {
 				"filename",
 				path = 0,
 				separator = {
-					right = ''
+					right = ""
 				},
 				symbols = {
 					modified = "●",
@@ -130,18 +145,17 @@ lualine.setup {
 				colored = true,
 				update_in_insert = false,
 				always_visible = false,
-				separator = {
-					right = ''
-				}
+				separator = { right = "" }
 			},
 		},
 		lualine_x = {},
-		lualine_y = { "encoding", "filetype" },
+		lualine_y = { lsp_client, "encoding", "filetype" },
 		lualine_z = {
 			{
 				"location",
 				separator = {
-					left = "",
+					left = "",
+					right = ""
 				}
 			}
 		}
@@ -152,9 +166,7 @@ lualine.setup {
 			{
 				"filename",
 				path = 0,
-				separator = {
-					right = ''
-				},
+				separator = { right = '' },
 				symbols = {
 					modified = "●",
 					readonly = "[RO]"
@@ -171,9 +183,7 @@ lualine.setup {
 					modified = "󱗝 ", -- nf-md-circle_box_outline
 					removed = "󰛲 ", -- nf-md-minus_box_outline
 				},
-				separator = {
-					right = ""
-				},
+				separator = { right = "" },
 				source = nil,
 			},
 		},
@@ -190,16 +200,12 @@ lualine.setup {
 				colored = true,
 				update_in_insert = false,
 				always_visible = false,
-				separator = {
-					right = ""
-				}
+				separator = { right = "" }
 			},
 		},
 		lualine_c = {},
 		lualine_x = {},
-		lualine_y = {
-			{ "filetype", }
-		},
+		lualine_y = { { "filetype" } },
 		lualine_z = {
 			{
 				"location",
@@ -213,9 +219,7 @@ lualine.setup {
 	winbar = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = {
-			-- { "navic" }
-		},
+		lualine_c = {},
 		lualine_x = {
 			-- {
 			-- 	"diagnostics",
@@ -239,9 +243,7 @@ lualine.setup {
 	inactive_winbar = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = {
-			-- { "navic" },
-		},
+		lualine_c = {},
 		lualine_x = {
 			-- {
 			-- 	"diagnostics",
