@@ -37,7 +37,7 @@ With TMUX
 ### Dependencies
 
 * [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and other utf-8 characters)
-* neovim v0.9.+
+* neovim v0.10.+
 * [lazy](https://github.com/folke/lazy.nvim) as the plugin manager
 * [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
    and [Victor Mono Font](https://github.com/rubjo/victor-mono) for sweet cursive italics
