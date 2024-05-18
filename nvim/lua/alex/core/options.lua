@@ -27,10 +27,7 @@ vim.cmd [[
 
 -- column
 opt.foldcolumn = "0"
-opt.signcolumn = "no"
-if if_git_dir() then
-	vim.opt.signcolumn = "auto"
-end
+opt.signcolumn = "yes"
 opt.colorcolumn = "90"
 
 -- fold
