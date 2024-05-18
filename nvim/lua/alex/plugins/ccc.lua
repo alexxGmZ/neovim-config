@@ -16,5 +16,6 @@ return {
 			}
 		})
 	end,
-	ft = { "markdown", "html", "php", "javascript", "css" }
+	-- ft = { "markdown", "html", "php", "javascript", "css" }
+	cmd = { "CccHighlighterToggle", "CccHighlighterEnable", "CccPick" }
 }
