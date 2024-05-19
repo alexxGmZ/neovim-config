@@ -17,11 +17,11 @@ return {
 				split_command = nil,
 
 				-- Percentage or integer of columns
-				width = 15,
+				width = 30,
 				-- Whether width is relative to the total width of nvim
 				-- When relative_width = true, this means take 25% of the total
 				-- screen width for outline window.
-				relative_width = true,
+				relative_width = false,
 
 				-- Behaviour changed in this fork:
 				-- Auto close the outline window if goto_location is triggered and not for
@@ -53,7 +53,7 @@ return {
 				-- Whether to focus on the outline window when it is opened.
 				-- Set to false to remain focus on your previous buffer when opening
 				-- outline.
-				focus_on_open = true,
+				focus_on_open = false,
 				-- Only in this fork:
 				-- Winhighlight option for outline window.
 				-- See :help 'winhl'
@@ -65,14 +65,14 @@ return {
 
 			outline_items = {
 				-- Whether to highlight the currently hovered symbol (high cpu usage)
-				highlight_hovered_item = true,
+				highlight_hovered_item = false,
 				-- Show extra details with the symbols (lsp dependent)
 				show_symbol_details = true,
 				-- Only in this fork.
 				-- Show line numbers of each symbol next to them.
 				-- Why? See this comment:
 				-- https://github.com/simrat39/symbols-outline.nvim/issues/212#issuecomment-1793503563
-				show_symbol_lineno = false,
+				show_symbol_lineno = true,
 				-- Whether to automatically set cursor location in outline to match
 				-- location in code when focus is in code. If disabled you can use
 				-- `:OutlineFollow[!]` from any window or `<C-g>` from outline window to
