@@ -36,8 +36,9 @@ return {
 				hl.CurrentWord = { fg = palette.none, underline = true }
 				hl.String = { fg = palette.green, bold = true }
 				hl.Keyword = { fg = palette.red, italic = true }
-				hl.MatchParen = { fg = palette.orange, bold = true, underline = true }
+				-- hl.MatchParen = { fg = palette.orange, bold = true, underline = true }
 				hl.Constant = { fg = palette.orange, bold = true }
+				hl.Function = { fg = palette.orange, bold = true }
 
 				hl.BufferlineSeparator = { fg = palette.bg0 }
 				hl.BufferlineSeparatorSelected = { fg = palette.bg0 }
