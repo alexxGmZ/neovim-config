@@ -1,8 +1,6 @@
--- vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
-
 return {
 	"stevearc/oil.nvim",
-	cmd = "Oil",
+	cmd = { "Oil", "OilToggleFloat" },
 	config = function()
 		require("oil").setup({
 			columns = {
@@ -25,7 +23,15 @@ return {
 			},
 			view_options = {
 				show_hidden = true
-			}
+			},
+			float = {
+				padding = 4,
+				max_width = 80
+			},
 		})
+
+		vim.api.nvim_create_user_command("OilToggleFloat", function()
+			require("oil").toggle_float()
+		end, {})
 	end,
 }
