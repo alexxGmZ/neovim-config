@@ -111,13 +111,7 @@ return {
 		end
 	},
 
-	-- {
-	-- 	"RRethy/vim-illuminate",
-	-- 	event = "VeryLazy",
-	-- 	config = function()
-	-- 		require("alex.plugins.vim-illuminate")
-	-- 	end
-	-- },
+	require("alex.plugins.vim-illuminate"),
 
 	require("alex.plugins.indent-blankline"),
 
