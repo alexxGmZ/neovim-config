@@ -39,7 +39,7 @@ lualine.setup {
 		component_separators = "",
 		section_separators = {
 			right = "",
-			left = ""
+			-- left = ""
 			-- right = ""
 		},
 		disabled_filetypes = {
@@ -145,7 +145,7 @@ lualine.setup {
 				colored = true,
 				update_in_insert = false,
 				always_visible = false,
-				separator = { right = "" }
+				-- separator = { right = "" }
 			},
 		},
 		lualine_x = {},
