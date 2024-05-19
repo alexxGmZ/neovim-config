@@ -141,3 +141,11 @@ cmp.setup.cmdline(':', {
 	}
 })
 
+cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
+	sources = cmp.config.sources({
+		{
+			name = "vim-dadbod-completion",
+			max_item_count = 10
+		}
+	})
+})

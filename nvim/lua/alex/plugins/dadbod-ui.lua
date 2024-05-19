@@ -26,18 +26,6 @@ return {
 		vim.g.db_ui_show_help = 0
 	end,
 	config = function()
-		local cmp_setup, cmp = pcall(require, "cmp")
-		if cmp_setup then
-			cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
-				sources = cmp.config.sources({
-					{
-						name = "vim-dadbod-completion",
-						max_item_count = 10
-					}
-				})
-			})
-		end
-
 		vim.api.nvim_create_user_command("DBUISaveQuery", function()
 			vim.cmd [[execute "normal \<Plug>(DBUI_SaveQuery)"]]
 		end, {})
