@@ -1,7 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	event = "VeryLazy",
+	-- event = "VeryLazy",
 	dependencies = {
 	},
 	config = function()
@@ -13,6 +13,7 @@ return {
 		local treesitter = require('nvim-treesitter.configs')
 
 		treesitter.setup {
+			parser_install_dir = "/home/alex/.local/share/nvim/lazy/nvim-treesitter",
 			ensure_installed = {
 				"c",
 				"lua",
