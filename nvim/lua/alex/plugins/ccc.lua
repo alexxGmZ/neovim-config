@@ -1,5 +1,8 @@
 return {
 	"uga-rosa/ccc.nvim",
+	keys = {
+		{ "<leader>cp", "<cmd>CccPick<CR>", desc = "Ccc: Color Picker" }
+	},
 	config = function()
 		local ccc = require("ccc")
 		local mapping = ccc.mapping
