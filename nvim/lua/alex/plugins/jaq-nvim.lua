@@ -10,14 +10,14 @@ return {
 
 				-- Uses shell commands
 				external = {
-					markdown = "glow %",
-					python   = "python3 %",
-					go       = "go run %",
-					sh       = "sh %",
-					lua      = "lua %",
-					c        = "clang % && ./a.out",
-					java     = "java %",
-					js       = "node %"
+					markdown   = "glow %",
+					python     = "python3 %",
+					go         = "go run %",
+					sh         = "sh %",
+					lua        = "lua %",
+					c          = "clang % && ./a.out",
+					java       = "java %",
+					javascript = "node %"
 				}
 			},
 
@@ -72,7 +72,8 @@ return {
 		}
 	end,
 	keys = {
-		{ "<leader>rr", function() vim.cmd("Jaq") end, { desc = "Jaq: run code" } }
+		-- { "<leader>rr", function() vim.cmd("Jaq") end, { desc = "Jaq: run code" } }
+		{ "<leader>rr", "<cmd>Jaq<CR>", desc = "Jaq: run code" }
 	},
 	opts = {
 
