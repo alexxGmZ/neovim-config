@@ -2,7 +2,8 @@ return {
 	"nyngwang/NeoZoom.lua",
 	-- cmd = "NeoZoomToggle",
 	keys = {
-		{ "<C-w>m", function() vim.cmd("NeoZoomToggle") end }
+		-- { "<C-w>m", function() vim.cmd("NeoZoomToggle") end }
+		{ "<C-w>m", "<cmd>NeoZoomToggle<CR>", desc = "NeoZoom: Toggle" }
 	},
 	config = function()
 		require('neo-zoom').setup {

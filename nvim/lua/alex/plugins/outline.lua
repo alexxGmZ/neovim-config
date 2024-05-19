@@ -148,24 +148,27 @@ return {
 			},
 		}
 
-		vim.keymap.set("n", "<F8>",
-			function()
-				vim.cmd("Outline")
-			end,
-			{
-				silent = true,
-				desc = "Outline: Toggle LSP code symbols outline"
-			}
-		)
-
-		vim.keymap.set("n", "<leader>tt",
-			function()
-				vim.cmd("Outline")
-			end,
-			{
-				silent = true,
-				desc = "Outline: Toggle LSP code symbols outline"
-			}
-		)
+		-- vim.keymap.set("n", "<F8>",
+		-- 	function()
+		-- 		vim.cmd("Outline")
+		-- 	end,
+		-- 	{
+		-- 		silent = true,
+		-- 		desc = "Outline: Toggle LSP code symbols outline"
+		-- 	}
+		-- )
+		--
+		-- vim.keymap.set("n", "<leader>tt",
+		-- 	function()
+		-- 		vim.cmd("Outline")
+		-- 	end,
+		-- 	{
+		-- 		silent = true,
+		-- 		desc = "Outline: Toggle LSP code symbols outline"
+		-- 	}
+		-- )
+		vim.keymap.set("n", "<leader>tt", "<cmd>Outline<CR>", {
+			desc = "Outline: Toggle LSP code symbols outline"
+		})
 	end,
 }
