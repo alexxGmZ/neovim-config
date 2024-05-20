@@ -112,7 +112,6 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [lukas-reineke/indent-blankline.nvim    ](https://github.com/lukas-reineke/indent-blankline.nvim)
 * [nvim-lualine/lualine.nvim              ](https://github.com/nvim-lualine/lualine.nvim)
 * [akinsho/bufferline.nvim                ](https://github.com/akinsho/bufferline.nvim)
-* [SmiteshP/nvim-navic                    ](https://github.com/SmiteshP/nvim-navic)
 * [nvim-tree/nvim-web-devicons            ](https://github.com/nvim-tree/nvim-web-devicons)
 * [rcarriga/nvim-notify                   ](https://github.com/rcarriga/nvim-notify)
 * [NMAC427/guess-indent.nvim              ](https://github.com/NMAC427/guess-indent.nvim)
