@@ -1,9 +1,10 @@
 return {
 	"VidocqH/lsp-lens.nvim",
-	event = "LspAttach",
+	dependencies = {
+		"neovim/nvim-lspconfig",
+	},
 	config = function()
 		require("lsp-lens").setup({})
-		vim.cmd("LspLensOff")
 	end,
-	-- cmd = { "LspLensOn", "LspLensToggle" }
+	cmd = { "LspLensOn", "LspLensToggle" }
 }
