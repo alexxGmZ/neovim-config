@@ -148,7 +148,7 @@ lualine.setup {
 				-- separator = { right = "" }
 			},
 		},
-		lualine_x = {},
+		lualine_x = { "searchcount" },
 		lualine_y = { lsp_client, "encoding", "filetype" },
 		lualine_z = {
 			{
