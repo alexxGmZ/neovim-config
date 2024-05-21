@@ -32,6 +32,12 @@ local function lsp_client()
 	return table.concat(c, ' ')
 end
 
+local function macro_recording()
+	local reg = vim.fn.reg_recording()
+	if reg == "" then return "" end -- not recording
+	return "recording @" .. reg
+end
+
 lualine.setup {
 	options = {
 		icons_enabled = true,
@@ -148,7 +154,7 @@ lualine.setup {
 				-- separator = { right = "" }
 			},
 		},
-		lualine_x = { "searchcount" },
+		lualine_x = { macro_recording, "searchcount" },
 		lualine_y = { lsp_client, "encoding", "filetype" },
 		lualine_z = {
 			{
