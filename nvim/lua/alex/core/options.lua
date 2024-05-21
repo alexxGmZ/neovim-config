@@ -1,8 +1,3 @@
-local function if_git_dir()
-	local git_dir = vim.fn.system("git rev-parse --git-dir 2> /dev/null")
-	return git_dir ~= ""
-end
-
 local opt = vim.opt
 
 vim.cmd [[
