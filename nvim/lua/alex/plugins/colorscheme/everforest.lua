@@ -3,7 +3,9 @@ return {
 	-- event = "CmdlineChanged",
 	priority = 1000,
 	config = function()
-		vim.cmd("hi @markup.italic gui=italic")
+		vim.cmd [[
+			hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e
+		]]
 
 		require("everforest").setup({
 			background = "hard",
@@ -19,8 +21,6 @@ return {
 			spell_foreground = false,
 			show_eob = true,
 			float_style = "dim",
-			---@param hl
-			---@param palette
 			on_highlights = function(hl, palette)
 				hl.TSBoolean = { fg = palette.purple, bold = true }
 				hl.TSFloat = { fg = palette.purple, bold = true }
@@ -36,14 +36,18 @@ return {
 				hl.CurrentWord = { fg = palette.none, underline = true }
 				hl.String = { fg = palette.green, bold = true }
 				hl.Keyword = { fg = palette.red, italic = true }
-				-- hl.MatchParen = { fg = palette.orange, bold = true, underline = true }
 				hl.Constant = { fg = palette.orange, bold = true }
 				hl.Function = { fg = palette.orange, bold = true }
+				hl.IlluminatedWordRead = { bg = "#4e4e4e" }
+				hl.IlluminatedWordText = { bg = "#4e4e4e" }
+				hl.IlluminatedWordWrite = { bg = "#4e4e4e" }
+				hl.NormalFloat = { bg = palette.bgdim }
+				hl.FloatBorder = { bg = palette.bgdim }
+				hl.FloatTitle = { bg = palette.bgdim }
 
 				hl.BufferlineSeparator = { fg = palette.bg0 }
 				hl.BufferlineSeparatorSelected = { fg = palette.bg0 }
 			end,
-			---@param palette Palette
 			colours_override = function(palette) end,
 		})
 		vim.cmd.colorscheme "everforest"
