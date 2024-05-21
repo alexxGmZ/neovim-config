@@ -1,16 +1,37 @@
-vim.cmd([[
-	fun! TrimWhitespace()
-		let l:save = winsaveview()
-		keeppatterns %s/\s\+$//e
-		call winrestview(l:save)
-	endfun
+local user_augroup = vim.api.nvim_create_augroup("HANDSOME", {})
 
-	augroup HANDSOME
-		autocmd!
-		autocmd BufWritePre * :call TrimWhitespace()
+-- trim trailing whitespaces
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*",
+	group = user_augroup,
+	callback = function()
+		vim.cmd([[%s/\s\+$//e]])
+	end
+})
 
-		" Terminal
-		autocmd TermOpen * setlocal nonumber norelativenumber
+-- hide linenumber in terminal buffertype
+vim.api.nvim_create_autocmd("TermOpen", {
+	pattern = "*",
+	group = user_augroup,
+	callback = function()
+		vim.cmd([[setlocal nonumber norelativenumber]])
+	end
+})
 
-	augroup END
-]])
+-- show cmdline
+vim.api.nvim_create_autocmd("CmdlineEnter", {
+	pattern = "*",
+	group = user_augroup,
+	callback = function()
+		vim.opt.cmdheight = 1
+	end
+})
+
+-- hide cmdline
+vim.api.nvim_create_autocmd({ "CmdlineLeave", "UIEnter" }, {
+	pattern = "*",
+	group = user_augroup,
+	callback = function()
+		vim.opt.cmdheight = 0
+	end
+})
