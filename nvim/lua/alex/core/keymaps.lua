@@ -15,11 +15,11 @@ map.set("n", "N", "Nzzzv")
 map.set("n", "<C-o>", "<C-o>zz")
 map.set("n", "<C-i>", "<C-i>zz")
 
-map.set("n", "<leader>ww", function() vim.cmd("w") end, { desc = "Write or Save file" })
-map.set("n", "<leader>wq", function() vim.cmd("wq") end, { desc = "Write and Quit file" })
-map.set("n", "<leader>wa", function() vim.cmd("wa") end, { desc = "Write all file" })
-map.set("n", "<leader>qq", function() vim.cmd("q") end, { desc = "Quit file" })
-map.set("n", "<leader>qa", function() vim.cmd("qa") end, { desc = "Quit all file" })
+map.set("n", "<leader>ww", "<cmd>w<CR>", { desc = "Write or Save file" })
+map.set("n", "<leader>wq", "<cmd>wq<CR>", { desc = "Write and Quit file" })
+map.set("n", "<leader>wa", "<cmd>wa<CR>", { desc = "Write all file" })
+map.set("n", "<leader>qq", "<cmd>q<CR>", { desc = "Quit file" })
+map.set("n", "<leader>qa", "<cmd>qa<CR>", { desc = "Quit all file" })
 
 -- nohlsearch
 map.set("n", "<Esc>", function() vim.cmd("noh") end, { desc = "nohlsearch" })
