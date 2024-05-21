@@ -1,6 +1,5 @@
 return {
   "folke/trouble.nvim",
-  event = "LspAttach",
   cmd = { "Trouble", "TroubleToggle" },
   dependencies = {
     "neovim/nvim-lspconfig",

@@ -1,7 +1,12 @@
 return {
 	"hedyhli/outline.nvim",
-	event = "LspAttach",
-	-- cmd = { "Outline", "OutlineOpen" },
+	cmd = { "Outline", "OutlineOpen" },
+	dependencies = {
+		"neovim/nvim-lspconfig",
+	},
+	keys = {
+		{ "<leader>tt", "<cmd>Outline<CR>", desc = "Outline: Toggle LSP code symbols outline"}
+	},
 	config = function()
 		require("outline").setup {
 			outline_window = {
@@ -167,8 +172,8 @@ return {
 		-- 		desc = "Outline: Toggle LSP code symbols outline"
 		-- 	}
 		-- )
-		vim.keymap.set("n", "<leader>tt", "<cmd>Outline<CR>", {
-			desc = "Outline: Toggle LSP code symbols outline"
-		})
-	end,
+		-- vim.keymap.set("n", "<leader>tt", "<cmd>Outline<CR>", {
+		-- 	desc = "Outline: Toggle LSP code symbols outline"
+		-- })
+	end
 }

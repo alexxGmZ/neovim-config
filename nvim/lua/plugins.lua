@@ -46,14 +46,12 @@ return {
 			"stevearc/conform.nvim",
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			"folke/trouble.nvim",
-			"hedyhli/outline.nvim",
 		},
 		config = function()
 			require("alex.plugins.lsp.mason")
 			require("alex.plugins.lsp.lspconfig")
 			vim.cmd("LspStart")
-		end,
+		end
 	},
 
 	require("alex.plugins.diagflow"),
@@ -94,7 +92,7 @@ return {
 	--
 	{
 		"nvim-lualine/lualine.nvim",
-		-- event = "VeryLazy",
+		event = "VeryLazy",
 		config = function()
 			require("alex.plugins.lualine")
 		end,
@@ -171,7 +169,7 @@ return {
 
 	{
 		"davidgranstrom/nvim-markdown-preview",
-		ft = "markdown",
+		ft = "markdown"
 	},
 
 	{
