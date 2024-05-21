@@ -29,7 +29,7 @@ local LSP_LIST = {
 --
 -- mason setup
 --
-mason_lspconfig.setup{
+mason_lspconfig.setup {
 	ensure_installed = LSP_LIST
 }
 
@@ -75,21 +75,17 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 --
 for _, lsp_server in pairs(LSP_LIST) do
 	-- basic configuration for installed lsp servers
-	lspconfig[lsp_server].setup{
+	lspconfig[lsp_server].setup {
 		autostart = false,
 		capabilities = capabilities,
-		-- on_attach = on_attach,
-		-- on_attach = require("virtualtypes").on_attach
 	}
 
 	-- custom lsp configuration below
 
 	if lsp_server == "bashls" then
-		lspconfig[lsp_server].setup{
+		lspconfig[lsp_server].setup {
 			capabilities = capabilities,
-			-- on_attach = on_attach,
-			-- on_attach = require("virtualtypes").on_attach,
-			filetypes = {'zsh', 'bash', 'sh'}
+			filetypes = { 'zsh', 'bash', 'sh' },
 		}
 	end
 end
@@ -119,14 +115,14 @@ vim.diagnostic.config({
 -- borders
 --
 local border = {
-	{"╭", "FloatBorder"},
-	{"─", "FloatBorder"},
-	{"╮", "FloatBorder"},
-	{"│", "FloatBorder"},
-	{"╯", "FloatBorder"},
-	{"─", "FloatBorder"},
-	{"╰", "FloatBorder"},
-	{"│", "FloatBorder"},
+	{ "╭", "FloatBorder" },
+	{ "─", "FloatBorder" },
+	{ "╮", "FloatBorder" },
+	{ "│", "FloatBorder" },
+	{ "╯", "FloatBorder" },
+	{ "─", "FloatBorder" },
+	{ "╰", "FloatBorder" },
+	{ "│", "FloatBorder" },
 }
 
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
@@ -135,4 +131,3 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
 	opts.border = opts.border or border
 	return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
-
