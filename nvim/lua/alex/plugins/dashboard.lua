@@ -5,39 +5,52 @@ local function plugin_config()
 		shortcut_type = "number",
 		config = {
 			week_header = {
-				enable = true
+				enable = true,
+				append = {}
 			},
 			shortcut = {
 				{
-					desc = "󰉋 File explorer", group = 'RainbowdelimiterBlue', key = 'F',
+					icon = "󰉋 ",
+					desc = "Files", group = 'RainbowdelimiterBlue', key = 'F',
 					action = function()
 						vim.cmd("NvimTreeToggle")
 					end
 				},
 				{
-					desc = " Fuzzy find files", group = 'RainbowDelimiterOrange', key = 'fz',
+					icon = " ",
+					desc = "Fuzzy find", group = 'RainbowDelimiterOrange', key = 'fz',
 					action = function()
 						vim.cmd("FzfLua files")
 					end
 				},
 				{
-					desc = "󰈞 Live grep files", group = 'RainbowDelimiterOrange', key = 'fg',
+					icon = "󰈞 ",
+					desc = "Live grep", group = 'RainbowDelimiterOrange', key = 'fg',
 					action = function()
 						vim.cmd("FzfLua live_grep")
 					end
 				},
 				{
-					desc = "󰚰 Check for updates", group = 'RainbowDelimiterYellow', key = 'cu',
+					icon = "󰚰 ",
+					desc = "Check updates", group = 'RainbowDelimiterYellow', key = 'cu',
 					action = function()
 						vim.cmd("Lazy check")
 					end
 				},
 				{
-					desc = "󰓅 Benchmark", group = 'RainbowDelimiterYellow', key = 'cb',
+					icon = "󰓅 ",
+					desc = "Benchmark", group = 'RainbowDelimiterYellow', key = 'B',
 					action = function()
 						vim.cmd("Lazy profile")
 					end
 				},
+				-- {
+				-- 	icon = "󰈹 ",
+				-- 	desc = "FireFox", group = 'RainbowDelimiterRed', key = 'fr',
+				-- 	action = function()
+				-- 		vim.cmd("!firefox")
+				-- 	end
+				-- },
 			},
 			project = { enable = false },
 			mru = {
@@ -48,7 +61,6 @@ local function plugin_config()
 			footer = function()
 				return require("fortune").get_fortune()
 			end
-
 		},
 		hide = {
 			statusline = true, -- hide statusline default is true
@@ -60,7 +72,7 @@ end
 
 return {
 	'nvimdev/dashboard-nvim',
-	event = 'UIEnter',
+	event = 'VimEnter',
 	-- cond = function()
 	-- 	if next(vim.fn.argv()) == nil then
 	-- 		return true
