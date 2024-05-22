@@ -122,6 +122,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [preservim/tagbar                       ](https://github.com/preservim/tagbar)
 * [mistricky/codesnap.nvim                ](https://github.com/mistricky/codesnap.nvim)
 * [sudoerwx/vim-ray-so-beautiful          ](https://github.com/sudoerwx/vim-ray-so-beautiful)
+* [nvimdev/dashboard-nvim                 ](https://github.com/nvimdev/dashboard-nvim)
 
 #### Colorscheme
 
