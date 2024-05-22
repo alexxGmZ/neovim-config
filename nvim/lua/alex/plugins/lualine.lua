@@ -58,7 +58,8 @@ lualine.setup {
 				"oil",
 				"Trouble",
 				"dbui",
-				"fugitive"
+				"fugitive",
+				"dashboard"
 			},
 			winbar = {
 				"NvimTree",

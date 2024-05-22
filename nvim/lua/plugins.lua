@@ -186,5 +186,6 @@ return {
 	require("alex.plugins.vim-rest-console"),
 	require("alex.plugins.dadbod-ui"),
 	require("alex.plugins.codesnap"),
-	require("alex.plugins.rayso")
+	require("alex.plugins.rayso"),
+	require("alex.plugins.dashboard"),
 }
