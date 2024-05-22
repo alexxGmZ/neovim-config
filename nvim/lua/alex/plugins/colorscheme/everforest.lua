@@ -1,7 +1,7 @@
 local function setup_config()
 	vim.cmd [[
-			hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e
-		]]
+		hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e
+	]]
 
 	require("everforest").setup({
 		background = "hard",
