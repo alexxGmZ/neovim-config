@@ -30,6 +30,7 @@ local function setup_config()
 			hl.TSVariable = { fg = palette.none, bold = true }
 			hl.TSMethod = { link = "Function" }
 			hl.TSMethodCall = { link = "Function" }
+			hl.TreesitterContextBottom = { underline = true }
 
 			hl.CurrentWord = { fg = palette.none, underline = true }
 			hl.String = { fg = palette.green, bold = true }
