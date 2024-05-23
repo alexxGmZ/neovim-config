@@ -32,18 +32,11 @@ My neovim setup and development workflow
 
 ### Dependencies
 
-* [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and other utf-8 characters)
+* [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and
+other utf-8 characters)
 * neovim v0.10.+
 * [lazy](https://github.com/folke/lazy.nvim) as the plugin manager
-* [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
-   and [Victor Mono Font](https://github.com/rubjo/victor-mono) for sweet cursive italics
-   (configured in Kitty's ```kitty.conf```)
-   ```
-      font_family Fira Code Regular
-      bold_font Fira Code Bold
-      italic_font Victor Mono SemiBold Italic
-      bold_italic_font Victor Mono Bold Italic
-   ```
+* [Code New Roman Nerd Font](https://www.nerdfonts.com/font-downloads)
 * live-server (for nvim-markdown-preview, install by ```npm i -g live-server```)
 
 <br>
