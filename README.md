@@ -7,14 +7,10 @@ My neovim setup and development workflow
 
 ### Screenshots
 
-I don't own this "GET SHIT DONE" wallpaper and it's not part of the config. It's in my
-```kitty.conf``` to avoid copyright stuff, I will not include the image
 ![image1](./assets/images/img1.png)
 ![image2](./assets/images/img2.png)
 ![image3](./assets/images/img3.png)
 ![image4](./assets/images/img4.png)
-With TMUX
-![image5](./assets/images/img5.png)
 
 ## Table of Contents
 
@@ -161,86 +157,3 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 <br>
 
-
-### Configured LSPs
-
-You can follow the full guide [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md).
-```npm``` is a hard dependency. If you already installed ```npm``` then just do a ```:MasonInstall <lsp>```.
-
-* [pyright](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright) (python)
-   + ```python3``` and is required.
-* [jdtls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jdtls) (java)
-   + ```java-devel``` is required.
-* [html](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html) (html)
-* [clangd](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd) (c/c++, objc, objcpp, cuda, proto)
-   + ```clang``` is required.
-* [lua_ls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua) (lua)
-   + ```lua``` is required.
-* [intelephense](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#intelephense) (php)
-* [vimls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls) (vimscript)
-* [cssls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls) (css, scss, less)
-* [marksman](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman) (markdown)
-* [texlab](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html) (LaTeX)
-* [tailwindcss](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss) (tailwind, etc.)
-* [bashls](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls) (zsh, bash, sh)
-* [lemminx](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lemminx) (xml, xsd, xsl, xslt, svg)
-* quick_lint_js
-* tsserver
-* jsonls
-* sqlls
-
-#### How to Install LSPs and Do a Basic Configuration
-
-Using the [```mason.nvim```](https://github.com/williamboman/mason.nvim) plugin and acts
-as the lsp mananger, type ```:MasonInstall <lsp-name or the programming language name>```
-inside Neovim. Then, open the ```nvim/lua/alex/plugins/lsp/lspconfig.lua``` and add the lsp
-client inside the ```LSP_LIST``` table.
-
-```lua
-local LSP_LIST = {
-   "pyright",
-   "jdtls",
-   "html",
-   "clangd",
-   "lua_ls",
-   "intelephense",
-   "vimls",
-   "cssls",
-   "marksman",
-   "texlab",
-   "tailwindcss",
-   "bashls",
-   "lemminx",
-	"quick_lint_js",
-	"tsserver",
-   "jsonls",
-   "sqlls"
-   "<add lsp name here>"
-}
-
-```
-
-The lsp clients will be looped to do a basic configuration.
-
-```lua
--- loop all the avaibale lsp inside LSP_LIST
-for _, lsp_server in pairs(LSP_LIST) do
-   -- basic configuration for installed lsp servers
-   lspconfig[lsp_server].setup{
-      capabilities = cmp_capabilities,
-      on_attach = on_attach,
-   }
-
-   -- custom lsp configuration below
-
-   if lsp_server == "bashls" then
-      lspconfig[lsp_server].setup{
-         capabilities = cmp_capabilities,
-         on_attach = on_attach,
-         filetypes = {'zsh', 'bash', 'sh'}
-      }
-   end
-end
-```
-
-<br>
