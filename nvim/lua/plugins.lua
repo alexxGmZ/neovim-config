@@ -156,7 +156,6 @@ return {
 	require("alex.plugins.oil"),
 	require("alex.plugins.marp"),
 	require("alex.plugins.fzf-lua"),
-	require("alex.plugins.twilight"),
 	require("alex.plugins.trouble"),
 	require("alex.plugins.jaq-nvim"),
 	require("alex.plugins.ccc"),
@@ -188,4 +187,5 @@ return {
 	require("alex.plugins.codesnap"),
 	require("alex.plugins.rayso"),
 	require("alex.plugins.dashboard"),
+	require("alex.plugins.treesj")
 }
