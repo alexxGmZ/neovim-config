@@ -147,6 +147,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nyngwang/NeoZoom.lua                ](https://github.com/nyngwang/NeoZoom.lua/)
 * [diepm/vim-rest-console              ](https://github.com/diepm/vim-rest-console)
 * [kristijanhusak/vim-dadbod-ui        ](https://github.com/kristijanhusak/vim-dadbod-ui)
+* [Wansmer/treesj                      ](https://github.com/Wansmer/treesj)
 
 <br>
 
