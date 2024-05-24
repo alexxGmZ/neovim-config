@@ -49,8 +49,8 @@ local function setup_config()
 			hl.vimFunction = { link = "Function" }
 			hl.vimUserFunc = { link = "Function" }
 
-			hl.BufferlineSeparator = { fg = palette.bg0 }
-			hl.BufferlineSeparatorSelected = { fg = palette.bg0 }
+			hl.BufferLineSeparator = { fg = palette.bg0 }
+			hl.BufferLineSeparatorSelected = { fg = palette.bg0 }
 		end,
 		colours_override = function(palette) end,
 	})
