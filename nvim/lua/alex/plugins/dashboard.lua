@@ -6,7 +6,10 @@ local function plugin_config()
 		config = {
 			week_header = {
 				enable = true,
-				append = {}
+				append = {
+					" ",
+					"Al's Personal Development Environment"
+				}
 			},
 			shortcut = {
 				{
@@ -42,6 +45,16 @@ local function plugin_config()
 					desc = "Benchmark", group = 'RainbowDelimiterYellow', key = 'B',
 					action = function()
 						vim.cmd("Lazy profile")
+					end
+				},
+				{
+					icon = "󰆼 ",
+					desc = "Database", group = 'RainbowDelimiterCyan', key = 'db',
+					action = function()
+						vim.cmd[[
+							bdelete
+							DBUI
+						]]
 					end
 				},
 				-- {
