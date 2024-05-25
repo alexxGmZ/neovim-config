@@ -46,7 +46,7 @@ opt.relativenumber = false
 opt.cursorline = true
 opt.scrolloff = 8
 opt.sidescrolloff = 8
-opt.guicursor = "a:blinkon100,i-ci:ver150"
+opt.guicursor = "a:block100-blinkwait900-blinkon200-blinkoff500,i-ci:ver30"
 
 -- clipboard
 opt.clipboard = "unnamedplus"

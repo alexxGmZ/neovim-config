@@ -22,17 +22,18 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
 	-- ./lua/plugins.lua file
 	require("plugins"),
-
 	{
 		ui = {
 			border = "rounded",
 		},
-
 	}
 )
 
--- neovide config
 if vim.g.neovide then
-	vim.o.guifont = "Fira Code:h9"
-	vim.opt.linespace = 0
+	vim.g.neovide_transparency = 1
+	vim.g.neovide_cursor_animation_length = 0.05
+	vim.g.neovide_cursor_trail_size = 0.4
+	vim.g.neovide_cursor_antialiasing = false
+	vim.g.neovide_cursor_animate_in_insert_mode = false
+	vim.g.neovide_cursor_smooth_blink = true
 end
