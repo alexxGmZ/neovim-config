@@ -5,7 +5,7 @@ local function setup_config()
 
 	require("everforest").setup({
 		background = "hard",
-		transparent_background_level = 1,
+		transparent_background_level = 0,
 		italics = true,
 		disable_italic_comments = false,
 		sign_column_background = "none",
@@ -49,8 +49,8 @@ local function setup_config()
 			hl.vimFunction = { link = "Function" }
 			hl.vimUserFunc = { link = "Function" }
 
-			hl.BufferLineSeparator = { fg = palette.bg0 }
-			hl.BufferLineSeparatorSelected = { fg = palette.bg0 }
+			-- hl.BufferLineSeparator = { fg = palette.bg0 }
+			-- hl.BufferLineSeparatorSelected = { fg = palette.bg0 }
 		end,
 		colours_override = function(palette) end,
 	})
