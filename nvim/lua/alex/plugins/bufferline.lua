@@ -10,7 +10,7 @@ require("bufferline").setup {
 		indicator = {
 			style = "none"
 		},
-		separator_style = "thick",
+		separator_style = "slant",
 		diagnostics = "nvim_lsp",
 		offsets = {
 			{
