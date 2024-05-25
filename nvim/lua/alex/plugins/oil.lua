@@ -1,6 +1,9 @@
 return {
 	"stevearc/oil.nvim",
 	cmd = { "Oil", "OilToggleFloat" },
+	keys = {
+		{ "<leader>F", "<cmd>OilToggleFloat<cr>", desc = "Oil: Toggle float" }
+	},
 	config = function()
 		require("oil").setup({
 			columns = {

@@ -7,7 +7,7 @@ return {
 		-- 	{ desc = "NvimTreeToggle: NvimTree File Explorer" })
 		-- vim.keymap.set("n", "<F6>", function() vim.cmd("NvimTreeToggle") end,
 		-- 	{ desc = "NvimTreeToggle: NvimTree File Explorer" })
-		vim.keymap.set("n", "<leader>F", "<cmd>NvimTreeToggle<CR>", { desc = "NvimTree: Toggle" })
+		-- vim.keymap.set("n", "<leader>F", "<cmd>NvimTreeToggle<CR>", { desc = "NvimTree: Toggle" })
 
 		local HEIGHT_RATIO = 0.8 -- You can change this
 		local WIDTH_RATIO = 0.5 -- You can change this too

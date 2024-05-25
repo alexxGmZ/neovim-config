@@ -16,7 +16,7 @@ local function plugin_config()
 					icon = "󰉋 ",
 					desc = "Files", group = 'RainbowdelimiterBlue', key = 'F',
 					action = function()
-						vim.cmd("NvimTreeToggle")
+						vim.cmd("OilToggleFloat")
 					end
 				},
 				{
