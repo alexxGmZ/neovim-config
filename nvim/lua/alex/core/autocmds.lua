@@ -19,19 +19,19 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 -- show cmdline
-vim.api.nvim_create_autocmd("CmdlineEnter", {
-	pattern = "*",
-	group = user_augroup,
-	callback = function()
-		vim.opt.cmdheight = 1
-	end
-})
+-- vim.api.nvim_create_autocmd("CmdlineEnter", {
+-- 	pattern = "*",
+-- 	group = user_augroup,
+-- 	callback = function()
+-- 		vim.opt.cmdheight = 1
+-- 	end
+-- })
 
 -- hide cmdline
-vim.api.nvim_create_autocmd({ "CmdlineLeave", "UIEnter" }, {
-	pattern = "*",
-	group = user_augroup,
-	callback = function()
-		vim.opt.cmdheight = 0
-	end
-})
+-- vim.api.nvim_create_autocmd({ "CmdlineLeave", "UIEnter" }, {
+-- 	pattern = "*",
+-- 	group = user_augroup,
+-- 	callback = function()
+-- 		vim.opt.cmdheight = 0
+-- 	end
+-- })
