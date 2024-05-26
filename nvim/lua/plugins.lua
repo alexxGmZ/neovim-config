@@ -1,4 +1,5 @@
 return {
+	-- require("alex.plugins.local-treesitter"),
 	--
 	-- COLORSCHEME --
 	--
