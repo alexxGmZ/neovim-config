@@ -1,7 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	-- event = "VeryLazy",
 	dependencies = {
 	},
 	config = function()
@@ -38,7 +37,7 @@ return {
 			highlight = {
 				enable = true,
 				disable = { "html" },
-				additional_vim_regex_highlighting = false,
+				additional_vim_regex_highlighting = true,
 			},
 
 			-- for nvim-ts-context-commentstring
