@@ -22,10 +22,12 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
 	-- ./lua/plugins.lua file
 	require("plugins"),
+
 	{
 		ui = {
 			border = "rounded",
 		},
+
 	}
 )
 
@@ -35,5 +37,5 @@ if vim.g.neovide then
 	vim.g.neovide_cursor_trail_size = 0.4
 	vim.g.neovide_cursor_antialiasing = false
 	vim.g.neovide_cursor_animate_in_insert_mode = false
-	vim.g.neovide_cursor_smooth_blink = true
+	vim.g.neovide_cursor_smooth_blink = false
 end
