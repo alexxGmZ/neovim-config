@@ -5,7 +5,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
 	group = user_augroup,
 	callback = function()
+		local curr_pos = vim.fn.winsaveview()
 		vim.cmd([[%s/\s\+$//e]])
+		vim.fn.winrestview(curr_pos)
 	end
 })
 
