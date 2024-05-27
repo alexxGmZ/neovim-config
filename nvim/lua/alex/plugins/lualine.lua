@@ -45,6 +45,16 @@ local function word_cnt()
 		"text"
 	}
 	local word_count = vim.fn.wordcount().words
+	local visual_word_count = vim.fn.wordcount().visual_words
+	local curr_mode = vim.api.nvim_get_mode().mode
+
+	if curr_mode == "v" or curr_mode == "V" then
+		for _, filetype in ipairs(include_filetypes) do
+			if filetype == buf_filetype then
+				return "Words: " .. word_count .. "(" .. visual_word_count .. ")"
+			end
+		end
+	end
 
 	for _, filetype in ipairs(include_filetypes) do
 		if filetype == buf_filetype then
