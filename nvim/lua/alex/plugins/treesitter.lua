@@ -1,21 +1,14 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	dependencies = {
-	},
+	event = "VeryLazy",
 	config = function()
-		local vim = vim
-		local opt = vim.opt
-
-		opt.foldexpr = "nvim_treesitter#foldexpr()"
-
 		local treesitter = require('nvim-treesitter.configs')
-
 		treesitter.setup {
 			-- parser_install_dir = "/home/alex/.local/share/nvim/lazy/nvim-treesitter",
 			ensure_installed = {
 				"c",
-				"lua",
+				-- "lua",
 				"rust",
 				"html",
 				"css",
@@ -36,23 +29,11 @@ return {
 			ignore_install = { "javascript", "csv" },
 			highlight = {
 				enable = true,
-				disable = { "html" },
+				disable = { "html", "lua", "javascript" },
 				additional_vim_regex_highlighting = true,
 			},
-
-			-- for nvim-ts-context-commentstring
-			-- context_commentstring = {
-			-- 	enable = true,
-			-- },
-
-			-- for nvim-ts-autotag
-			-- autotag = {
-			-- 	enable = true,
-			-- 	enable_rename = true,
-			-- 	enable_close = true,
-			-- 	enable_close_on_slash = true,
-			-- }
+			incremental_selection = { enable = false },
+			indent = { enable = false }
 		}
-		-- vim.cmd("TSDisable highlight")
 	end,
 }
