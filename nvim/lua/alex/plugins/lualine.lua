@@ -38,6 +38,23 @@ local function macro_recording()
 	return "recording @" .. reg
 end
 
+local function word_cnt()
+	local buf_filetype = vim.bo.filetype
+	local include_filetypes = {
+		"markdown",
+		"text"
+	}
+	local word_count = vim.fn.wordcount().words
+
+	for _, filetype in ipairs(include_filetypes) do
+		if filetype == buf_filetype then
+			return "Words: " .. word_count
+		end
+	end
+
+	return ""
+end
+
 lualine.setup {
 	options = {
 		icons_enabled = true,
@@ -59,7 +76,7 @@ lualine.setup {
 				"Trouble",
 				"dbui",
 				"fugitive",
-				"dashboard"
+				"dashboard",
 			},
 			winbar = {
 				"NvimTree",
@@ -82,11 +99,7 @@ lualine.setup {
 		ignore_focus = {},
 		always_divide_middle = false,
 		globalstatus = false,
-		refresh = {
-			statusline = 1000,
-			tabline = 1000,
-			winbar = 1000,
-		},
+		refresh = { statusline = 1000, tabline = 1000, winbar = 1000 },
 	},
 
 	sections = {
@@ -107,10 +120,7 @@ lualine.setup {
 		lualine_b = {
 			{
 				"branch",
-				color = {
-					bg = "#66d9ef",
-					fg = "#1a1b26"
-				},
+				color = { bg = "#66d9ef", fg = "#1a1b26" },
 				icons_enabled = true,
 				separator = { right = "" },
 			},
@@ -122,21 +132,14 @@ lualine.setup {
 					modified = "󱗜 ", -- nf-md-circle_box
 					removed = "󰍵 ", -- nf-md-minus_box
 				},
-				separator = {
-					right = ""
-				},
+				separator = { right = "" },
 				source = nil,
 			},
 			{
 				"filename",
 				path = 0,
-				separator = {
-					right = ""
-				},
-				symbols = {
-					modified = "●",
-					readonly = "[RO]"
-				}
+				separator = { right = "" },
+				symbols = { modified = "●", readonly = "[RO]" }
 			},
 		},
 		lualine_c = {
@@ -144,26 +147,19 @@ lualine.setup {
 				"diagnostics",
 				sources = { "nvim_diagnostic", "nvim_lsp" },
 				sections = { "error", "warn", "info", },
-				symbols = {
-					error = "󰅙 ",
-					warn = "󰀦 ",
-					info = "󰋼 ",
-				},
+				symbols = { error = "󰅙 ", warn = "󰀦 ", info = "󰋼 " },
 				colored = true,
 				update_in_insert = false,
 				always_visible = false,
 				-- separator = { right = "" }
 			},
 		},
-		lualine_x = { macro_recording, "searchcount" },
+		lualine_x = { word_cnt, macro_recording, "searchcount" },
 		lualine_y = { lsp_client, "encoding", "filetype" },
 		lualine_z = {
 			{
 				"location",
-				separator = {
-					left = "",
-					right = ""
-				}
+				separator = { left = "", right = "" },
 			}
 		}
 	},
@@ -174,18 +170,12 @@ lualine.setup {
 				"filename",
 				path = 0,
 				separator = { right = '' },
-				symbols = {
-					modified = "●",
-					readonly = "[RO]"
-				}
+				symbols = { modified = "●", readonly = "[RO]" }
 			},
 			{
 				"diff",
 				colored = true,
 				symbols = {
-					-- added = "+",
-					-- modified = "~",
-					-- removed = "-",
 					added = "󰜄 ", -- nf-md-plus_box_outline
 					modified = "󱗝 ", -- nf-md-circle_box_outline
 					removed = "󰛲 ", -- nf-md-minus_box_outline
@@ -199,11 +189,7 @@ lualine.setup {
 				"diagnostics",
 				sources = { "nvim_diagnostic" },
 				sections = { "error", "warn", "info", },
-				symbols = {
-					error = "󰅚 ",
-					warn = "󰀪 ",
-					info = "󰋽 ",
-				},
+				symbols = { error = "󰅚 ", warn = "󰀪 ", info = "󰋽 " },
 				colored = true,
 				update_in_insert = false,
 				always_visible = false,
@@ -216,9 +202,7 @@ lualine.setup {
 		lualine_z = {
 			{
 				"location",
-				separator = {
-					left = "",
-				},
+				separator = { left = "" },
 			}
 		}
 	},
