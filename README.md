@@ -112,6 +112,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [mistricky/codesnap.nvim                ](https://github.com/mistricky/codesnap.nvim)
 * [sudoerwx/vim-ray-so-beautiful          ](https://github.com/sudoerwx/vim-ray-so-beautiful)
 * [nvimdev/dashboard-nvim                 ](https://github.com/nvimdev/dashboard-nvim)
+* [xiyaowong/transparent.nvim             ](https://github.com/xiyaowong/transparent.nvim)
 
 #### Colorscheme
 
@@ -122,6 +123,7 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [yorik1984/newpaper.nvim    ](https://github.com/yorik1984/newpaper.nvim)
 * [rebelot/kanagawa.nvim      ](https://github.com/rebelot/kanagawa.nvim)
 * [neanias/everforest-nvim    ](https://github.com/neanias/everforest-nvim)
+* [mcchrish/zenbones.nvim     ](https://github.com/mcchrish/zenbones.nvim)
 
 #### Git Integration
 
