@@ -93,6 +93,8 @@ return {
 	},
 
 	require("alex.plugins.conform"),
+	require("alex.plugins.autoclose"),
+	require("alex.plugins.lsp.cmp-spell"),
 
 	--
 	-- User Interface
@@ -117,7 +119,6 @@ return {
 	},
 
 	require("alex.plugins.vim-illuminate"),
-
 	require("alex.plugins.indent-blankline"),
 
 	{
@@ -128,6 +129,7 @@ return {
 
 	require("alex.plugins.neozoom"),
 	require("alex.plugins.tagbar"),
+	require("alex.plugins.dashboard"),
 
 	--
 	-- Uncategorized
@@ -157,8 +159,6 @@ return {
 		end
 	},
 
-	require("alex.plugins.autoclose"),
-	require("alex.plugins.lsp.cmp-spell"),
 	require("alex.plugins.live-server"),
 	require("alex.plugins.oil"),
 	require("alex.plugins.marp"),
@@ -193,6 +193,5 @@ return {
 	require("alex.plugins.dadbod-ui"),
 	require("alex.plugins.codesnap"),
 	require("alex.plugins.rayso"),
-	require("alex.plugins.dashboard"),
 	require("alex.plugins.treesj")
 }
