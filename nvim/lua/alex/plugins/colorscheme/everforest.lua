@@ -18,12 +18,12 @@ local function setup_config()
 		show_eob = true,
 		float_style = "dim",
 		on_highlights = function(hl, palette)
-			hl.TSBoolean = { fg = palette.purple, bold = true }
-			hl.TSFloat = { fg = palette.purple, bold = true }
-			hl.TSNumber = { fg = palette.purple, bold = true }
+			hl.TSBoolean = { link = "Boolean" }
+			hl.TSFloat = { link = "Float" }
+			hl.TSNumber = { link = "Number" }
 			hl.TSFunction = { link = "Function" }
 			hl.TSFunctionCall = { link = "Function" }
-			hl.TSKeyword = { fg = palette.red, italic = true }
+			hl.TSKeyword = { link = "Keyword" }
 			hl.TSParameter = { fg = palette.red, bold = true }
 			hl.TSString = { fg = palette.green, bold = true }
 			hl.TSConditional = { fg = palette.red, italic = true }
@@ -37,6 +37,9 @@ local function setup_config()
 			hl.Keyword = { fg = palette.red, italic = true }
 			hl.Constant = { fg = palette.orange, bold = true }
 			hl.Function = { fg = palette.orange, bold = true }
+			hl.Boolean = { fg = palette.purple, bold = true }
+			hl.Float = { fg = palette.purple, bold = true }
+			hl.Number = { fg = palette.purple, bold = true }
 			hl.IlluminatedWordRead = { bg = "#4e4e4e" }
 			hl.IlluminatedWordText = { bg = "#4e4e4e" }
 			hl.IlluminatedWordWrite = { bg = "#4e4e4e" }
