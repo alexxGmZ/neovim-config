@@ -17,6 +17,12 @@ return {
 	require("alex.plugins.colorscheme.kanagawa"),
 	-- everforest
 	require("alex.plugins.colorscheme.everforest"),
+	-- zenbones
+	require("alex.plugins.colorscheme.zenbones"),
+
+	-- full transparency
+	require("alex.plugins.transparent"),
+
 
 	--
 	-- Git Integration --
