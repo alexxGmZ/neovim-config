@@ -207,7 +207,7 @@ lualine.setup {
 			},
 		},
 		lualine_c = {},
-		lualine_x = {},
+		lualine_x = { word_cnt },
 		lualine_y = { { "filetype" } },
 		lualine_z = {
 			{
