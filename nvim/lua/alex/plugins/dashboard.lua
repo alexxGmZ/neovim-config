@@ -27,13 +27,6 @@ local function plugin_config()
 					end
 				},
 				{
-					icon = "󰈞 ",
-					desc = "Live grep", group = 'RainbowDelimiterOrange', key = 'fg',
-					action = function()
-						vim.cmd("FzfLua live_grep")
-					end
-				},
-				{
 					icon = "󰚰 ",
 					desc = "Check updates", group = 'RainbowDelimiterYellow', key = 'cu',
 					action = function()
@@ -55,6 +48,13 @@ local function plugin_config()
 							bdelete
 							DBUI
 						]]
+					end
+				},
+				{
+					icon = "󰘬 ",
+					desc = "Git", group = 'RainbowDelimiterRed', key = 'gi',
+					action = function()
+						vim.cmd("Git")
 					end
 				},
 				-- {
