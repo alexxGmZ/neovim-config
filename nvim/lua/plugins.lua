@@ -142,13 +142,7 @@ return {
 	require("alex.plugins.todo-comments"),
 	require("alex.plugins.treesitter"),
 	require("alex.plugins.treesitter-context"),
-
-	{
-		"NMAC427/guess-indent.nvim",
-		config = function()
-			require("guess-indent").setup {}
-		end,
-	},
+	require("alex.plugins.guess-indent"),
 
 	{
 		"kylechui/nvim-surround",
