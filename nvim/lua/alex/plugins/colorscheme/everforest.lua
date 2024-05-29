@@ -1,8 +1,4 @@
 local function setup_config()
-	vim.cmd [[
-		hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e
-	]]
-
 	require("everforest").setup({
 		background = "hard",
 		transparent_background_level = 0,
@@ -40,9 +36,6 @@ local function setup_config()
 			hl.Boolean = { fg = palette.purple, bold = true }
 			hl.Float = { fg = palette.purple, bold = true }
 			hl.Number = { fg = palette.purple, bold = true }
-			hl.IlluminatedWordRead = { bg = "#4e4e4e" }
-			hl.IlluminatedWordText = { bg = "#4e4e4e" }
-			hl.IlluminatedWordWrite = { bg = "#4e4e4e" }
 			hl.NormalFloat = { bg = palette.bgdim }
 			hl.FloatBorder = { bg = palette.bgdim }
 			hl.FloatTitle = { bg = palette.bgdim }
@@ -51,9 +44,6 @@ local function setup_config()
 			hl.vimFuncName = { link = "Function" }
 			hl.vimFunction = { link = "Function" }
 			hl.vimUserFunc = { link = "Function" }
-
-			-- hl.BufferLineSeparator = { fg = palette.bg0 }
-			-- hl.BufferLineSeparatorSelected = { fg = palette.bg0 }
 		end,
 		colours_override = function(palette) end,
 	})
