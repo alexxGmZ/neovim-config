@@ -12,14 +12,8 @@ return {
 	event = "VeryLazy",
 	config = function()
 		require("illuminate").configure({
-			providers = {
-				'lsp',
-				'treesitter',
-				'regex',
-			},
-			modes_allowlist = {
-				"n",
-			},
+			providers = { 'lsp', 'treesitter', 'regex' },
+			modes_allowlist = { "n" },
 			filetypes_denylist = {
 				"help",
 				"text",

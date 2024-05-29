@@ -179,7 +179,7 @@ lualine.setup {
 			{
 				"filename",
 				path = 0,
-				separator = { right = '' },
+				separator = {},
 				symbols = { modified = "●", readonly = "[RO]" }
 			},
 			{
@@ -190,7 +190,7 @@ lualine.setup {
 					modified = "󱗝 ", -- nf-md-circle_box_outline
 					removed = "󰛲 ", -- nf-md-minus_box_outline
 				},
-				separator = { right = "" },
+				separator = {},
 				source = nil,
 			},
 		},
@@ -203,7 +203,7 @@ lualine.setup {
 				colored = true,
 				update_in_insert = false,
 				always_visible = false,
-				separator = { right = "" }
+				separator = {}
 			},
 		},
 		lualine_c = {},
@@ -212,7 +212,7 @@ lualine.setup {
 		lualine_z = {
 			{
 				"location",
-				separator = { left = "" },
+				separator = {},
 			}
 		}
 	},
