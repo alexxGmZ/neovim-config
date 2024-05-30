@@ -28,7 +28,7 @@ return {
 			auto_install = true,
 			ignore_install = { "javascript", "csv" },
 			highlight = {
-				enable = true,
+				enable = false,
 				disable = { "html", "lua", "javascript" },
 				additional_vim_regex_highlighting = true,
 			},

@@ -4,15 +4,20 @@ return {
 	dependencies = {
 		"junegunn/fzf",
 	},
-	opts = {
-		previewers = {
-			builtin = {
-				extensions = {
-					["svg"] = "chafa",
-					["png"] = "chafa",
-					["jpg"] = "chafa",
+	config = function()
+		require("fzf-lua").setup {
+			winopts = {},
+			previewers = {
+				builtin = {
+					syntax = false,
+					treesitter = { enable = false },
+					extensions = {
+						["svg"] = "chafa",
+						["png"] = "chafa",
+						["jpg"] = "chafa",
+					}
 				}
 			}
 		}
-	}
+	end
 }
