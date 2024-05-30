@@ -7,11 +7,12 @@ return {
   config = function()
     local trouble = require("trouble")
 
-    trouble.setup {
-      position = "right",
+    trouble.setup({
       auto_preview = false,
-      width = 40,
-      use_diagnostic_signs = true
-    }
+      indent_guides = true,
+      keys = {
+        ["<tab>"] = "preview"
+      }
+    })
   end,
 }

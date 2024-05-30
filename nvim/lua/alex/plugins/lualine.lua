@@ -83,7 +83,7 @@ lualine.setup {
 				"packer",
 				"Outline",
 				"oil",
-				"Trouble",
+				"trouble",
 				"dbui",
 				"fugitive",
 				"dashboard",

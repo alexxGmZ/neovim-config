@@ -44,7 +44,7 @@ require("bufferline").setup {
 				separator = true
 			},
 			{
-				filetype = "Trouble",
+				filetype = "trouble",
 				text = "Diagnostics",
 				highlight = "Directory",
 				separator = true
