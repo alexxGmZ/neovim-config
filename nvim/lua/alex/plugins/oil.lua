@@ -39,7 +39,8 @@ return {
 			local filetype_exclude = {
 				"fugitive",
 				"git",
-				"gitcommit"
+				"gitcommit",
+				"help"
 			}
 
 			for _, filetype in ipairs(filetype_exclude) do
