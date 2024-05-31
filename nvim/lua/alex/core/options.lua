@@ -3,7 +3,7 @@ local opt = vim.opt
 vim.cmd [[
 	set termguicolors
 	" set completeopt=menu,menuone,noselect
-	syntax off
+	syntax on
 
 	" filetype
 	filetype on
@@ -24,7 +24,6 @@ vim.cmd [[
 -- column
 opt.foldcolumn = "0"
 opt.signcolumn = "yes"
-opt.colorcolumn = "90"
 
 -- fold
 opt.foldenable = true
