@@ -38,10 +38,15 @@ vim.api.nvim_create_autocmd({ "CmdlineLeave", "UIEnter" }, {
 	end
 })
 
--- enforce ColorColumn highlight every time the colorscheme changes
+-- enforce custom highlights every time the colorscheme changes
 vim.opt.colorcolumn = "90"
 vim.api.nvim_create_autocmd("ColorScheme", {
 	pattern = "*",
 	group = user_augroup,
-	command = "hi ColorColumn guibg=#4e4e4e"
+	callback = function()
+		vim.cmd [[
+			hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e
+			hi ColorColumn guibg=#3c3c3c
+		]]
+	end
 })
