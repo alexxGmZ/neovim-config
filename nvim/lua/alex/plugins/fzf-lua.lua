@@ -9,7 +9,7 @@ return {
 			winopts = {},
 			previewers = {
 				builtin = {
-					syntax = false,
+					syntax = true,
 					treesitter = { enable = false },
 					extensions = {
 						["svg"] = "chafa",

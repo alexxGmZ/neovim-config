@@ -1,6 +1,5 @@
 local function illuminate_highlights()
 	vim.cmd [[
-		hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e
 		hi IlluminatedWordText guibg=#4e4e4e gui=NONE
 		hi IlluminatedWordRead guibg=#4e4e4e gui=NONE
 		hi IlluminatedWordWrite guibg=#4e4e4e gui=NONE
