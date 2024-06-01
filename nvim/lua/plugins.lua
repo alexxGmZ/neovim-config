@@ -19,6 +19,8 @@ return {
 	require("alex.plugins.colorscheme.everforest"),
 	-- zenbones
 	require("alex.plugins.colorscheme.zenbones"),
+	-- bluloco
+	require("alex.plugins.colorscheme.bluloco"),
 
 	-- full transparency
 	require("alex.plugins.transparent"),
