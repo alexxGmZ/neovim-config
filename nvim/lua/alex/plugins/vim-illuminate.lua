@@ -28,6 +28,7 @@ return {
 
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			pattern = "*",
+			group = "HANDSOME",
 			callback = illuminate_highlights,
 		})
 	end
