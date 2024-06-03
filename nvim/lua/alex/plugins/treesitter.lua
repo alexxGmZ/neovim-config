@@ -12,7 +12,7 @@ return {
 				"rust",
 				"html",
 				"css",
-				-- "javascript",
+				"javascript",
 				"php",
 				"latex",
 				"python",
@@ -26,7 +26,7 @@ return {
 			},
 			sync_install = false,
 			auto_install = true,
-			ignore_install = { "javascript", "csv" },
+			ignore_install = {},
 			highlight = {
 				enable = false,
 				disable = { "html", "lua", "javascript" },
@@ -35,5 +35,28 @@ return {
 			incremental_selection = { enable = false },
 			indent = { enable = false }
 		}
+
+		-- since treesitter syntax highlighting is disabled by default,
+		-- this autocmd enables it for some specific buffer filetypes only
+		vim.api.nvim_create_autocmd("BufEnter", {
+			pattern = "*",
+			group = "HANDSOME",
+			callback = function()
+				local enable_highlight_filetypes = {
+					"markdown",
+					"git",
+					"gitcommit",
+					"fugitive"
+				}
+				local buf_filetype = vim.bo.filetype
+
+				for _, filetype in ipairs(enable_highlight_filetypes) do
+					if filetype == buf_filetype then
+						vim.cmd("TSBufEnable highlight")
+					end
+				end
+			end
+		})
+
 	end,
 }
