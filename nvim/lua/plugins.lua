@@ -167,10 +167,11 @@ return {
 	},
 
 
-	{
-		"davidgranstrom/nvim-markdown-preview",
-		ft = "markdown"
-	},
+	-- {
+	-- 	"davidgranstrom/nvim-markdown-preview",
+	-- 	ft = "markdown"
+	-- },
+	require("alex.plugins.markdown-preview"),
 
 	{
 		"mtdl9/vim-log-highlighting",
