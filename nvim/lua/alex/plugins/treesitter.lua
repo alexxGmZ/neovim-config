@@ -1,7 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	event = "VeryLazy",
 	config = function()
 		local treesitter = require('nvim-treesitter.configs')
 		treesitter.setup {
@@ -38,7 +37,7 @@ return {
 
 		-- since treesitter syntax highlighting is disabled by default,
 		-- this autocmd enables it for some specific buffer filetypes only
-		vim.api.nvim_create_autocmd("BufEnter", {
+		vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 			pattern = "*",
 			group = "HANDSOME",
 			callback = function()
@@ -46,7 +45,8 @@ return {
 					"markdown",
 					"git",
 					"gitcommit",
-					"fugitive"
+					"fugitive",
+					"json"
 				}
 				local buf_filetype = vim.bo.filetype
 
@@ -57,6 +57,5 @@ return {
 				end
 			end
 		})
-
 	end,
 }
