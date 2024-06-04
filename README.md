@@ -4,7 +4,6 @@ My neovim setup and development workflow
 
 <br>
 
-
 ### Screenshots
 
 ![image1](./assets/images/img1.png)
@@ -134,22 +133,22 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Quality of Life
 
-* [uga-rosa/ccc.nvim                   ](https://github.com/uga-rosa/ccc.nvim)
-* [numToStr/Comment.nvim               ](https://github.com/numToStr/Comment.nvim)
-* [nullchilly/fsread.nvim              ](https://github.com/nullchilly/fsread.nvim)
-* [davidgranstrom/nvim-markdown-preview](https://github.com/davidgranstrom/nvim-markdown-preview)
-* [RRethy/vim-illuminate               ](https://github.com/RRethy/vim-illuminate)
-* [chrisgrieser/nvim-early-retirement  ](https://github.com/chrisgrieser/nvim-early-retirement)
-* [is0n/jaq-nvim                       ](https://github.com/is0n/jaq-nvim)
-* [kylechui/nvim-surround              ](https://github.com/kylechui/nvim-surround)
-* [stevearc/oil.nvim                   ](https://github.com/stevearc/oil.nvim)
-* [aca/marp.nvim                       ](https://github.com/aca/marp.nvim)
-* [f3fora/cmp-spell                    ](https://github.com/f3fora/cmp-spell)
-* [dgagn/diagflow.nvim                 ](https://github.com/dgagn/diagflow.nvim)
-* [nyngwang/NeoZoom.lua                ](https://github.com/nyngwang/NeoZoom.lua/)
-* [diepm/vim-rest-console              ](https://github.com/diepm/vim-rest-console)
-* [kristijanhusak/vim-dadbod-ui        ](https://github.com/kristijanhusak/vim-dadbod-ui)
-* [Wansmer/treesj                      ](https://github.com/Wansmer/treesj)
+* [uga-rosa/ccc.nvim                 ](https://github.com/uga-rosa/ccc.nvim)
+* [numToStr/Comment.nvim             ](https://github.com/numToStr/Comment.nvim)
+* [nullchilly/fsread.nvim            ](https://github.com/nullchilly/fsread.nvim)
+* [RRethy/vim-illuminate             ](https://github.com/RRethy/vim-illuminate)
+* [chrisgrieser/nvim-early-retirement](https://github.com/chrisgrieser/nvim-early-retirement)
+* [is0n/jaq-nvim                     ](https://github.com/is0n/jaq-nvim)
+* [kylechui/nvim-surround            ](https://github.com/kylechui/nvim-surround)
+* [stevearc/oil.nvim                 ](https://github.com/stevearc/oil.nvim)
+* [aca/marp.nvim                     ](https://github.com/aca/marp.nvim)
+* [f3fora/cmp-spell                  ](https://github.com/f3fora/cmp-spell)
+* [dgagn/diagflow.nvim               ](https://github.com/dgagn/diagflow.nvim)
+* [nyngwang/NeoZoom.lua              ](https://github.com/nyngwang/NeoZoom.lua/)
+* [diepm/vim-rest-console            ](https://github.com/diepm/vim-rest-console)
+* [kristijanhusak/vim-dadbod-ui      ](https://github.com/kristijanhusak/vim-dadbod-ui)
+* [Wansmer/treesj                    ](https://github.com/Wansmer/treesj)
+* [iamcco/markdown-preview.nvim      ](https://github.com/iamcco/markdown-preview.nvim)
 
 <br>
 
