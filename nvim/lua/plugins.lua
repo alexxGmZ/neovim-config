@@ -128,7 +128,6 @@ return {
 	},
 
 	require("alex.plugins.neozoom"),
-	require("alex.plugins.tagbar"),
 	require("alex.plugins.dashboard"),
 
 	--
