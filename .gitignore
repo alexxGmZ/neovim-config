@@ -2,3 +2,4 @@ nvim/plugin/packer_compiled.lua
 nvim/lazy-lock.json
 nvim/spell/
 nvim/lua/.luarc.json
+nvim/.luarc.json
