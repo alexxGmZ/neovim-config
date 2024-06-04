@@ -7,5 +7,8 @@ return {
 	},
 	config = function()
 		-- vim.cmd.colorscheme "forestbones"
+		vim.g.forestbones = {
+			transparent_background = true
+		}
 	end
 }
