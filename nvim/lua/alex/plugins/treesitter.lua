@@ -6,7 +6,6 @@ return {
 		treesitter.setup {
 			-- parser_install_dir = "/home/alex/.local/share/nvim/lazy/nvim-treesitter",
 			ensure_installed = {
-				"c",
 				-- "lua",
 				"rust",
 				"html",
@@ -19,13 +18,21 @@ return {
 				"bash",
 				"cpp",
 				"json",
-				"markdown",
-				"markdown_inline",
 				"sql"
 			},
 			sync_install = false,
 			auto_install = true,
-			ignore_install = {},
+			ignore_install = {
+				"bash",
+				"c",
+				"lua",
+				"markdown",
+				"markdown_inline",
+				"python",
+				"query",
+				"vim",
+				"vimdoc"
+			},
 			highlight = {
 				enable = false,
 				disable = { "html", "lua", "javascript" },
