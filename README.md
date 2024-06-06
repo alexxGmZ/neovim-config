@@ -36,7 +36,7 @@ other utf-8 characters)
 * neovim v0.10.+
 * [lazy](https://github.com/folke/lazy.nvim) as the plugin manager
 * [Code New Roman Nerd Font](https://www.nerdfonts.com/font-downloads)
-* live-server (for nvim-markdown-preview, install by ```npm i -g live-server```)
+* live-server
 
 <br>
 
@@ -58,7 +58,7 @@ cp -vr nvim ~/.config/
 
 ### Plugins
 
-I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
+I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Navigation
 
@@ -104,7 +104,6 @@ I use [```lazy```](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [rcarriga/nvim-notify                   ](https://github.com/rcarriga/nvim-notify)
 * [NMAC427/guess-indent.nvim              ](https://github.com/NMAC427/guess-indent.nvim)
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
-* [folke/twilight.nvim                    ](https://github.com/folke/twilight.nvim)
 * [onsails/lspkind.nvim                   ](https://github.com/onsails/lspkind.nvim)
 * [folke/todo-comments.nvim               ](https://github.com/folke/todo-comments.nvim)
 * [preservim/tagbar                       ](https://github.com/preservim/tagbar)
