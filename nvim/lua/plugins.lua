@@ -125,8 +125,9 @@ return {
 		event = "VeryLazy",
 	},
 
-	require("alex.plugins.neozoom"),
+	-- require("alex.plugins.neozoom"),
 	require("alex.plugins.dashboard"),
+	require("alex.plugins.zen-mode"),
 
 	--
 	-- Uncategorized
