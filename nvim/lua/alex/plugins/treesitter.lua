@@ -6,16 +6,12 @@ return {
 		treesitter.setup {
 			-- parser_install_dir = "/home/alex/.local/share/nvim/lazy/nvim-treesitter",
 			ensure_installed = {
-				-- "lua",
-				"rust",
 				"html",
 				"css",
 				"javascript",
 				"php",
-				"latex",
 				"python",
 				"java",
-				"bash",
 				"cpp",
 				"json",
 				"sql"
@@ -42,7 +38,7 @@ return {
 			indent = { enable = false }
 		}
 
-		-- since treesitter syntax highlighting is disabled by default,
+		-- since I disabled treesitter syntax highlighting by default,
 		-- this autocmd enables it for some specific buffer filetypes only
 		vim.api.nvim_create_autocmd({ "FileType" }, {
 			pattern = {
