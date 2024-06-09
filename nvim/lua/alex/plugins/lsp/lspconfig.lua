@@ -23,7 +23,6 @@ local LSP_LIST = {
 	"quick_lint_js",
 	"tsserver",
 	"jsonls",
-	-- "sqlls"
 }
 
 --
@@ -78,6 +77,7 @@ for _, lsp_server in pairs(LSP_LIST) do
 	lspconfig[lsp_server].setup {
 		autostart = false,
 		capabilities = capabilities,
+		single_file_support = true,
 		-- on_attach = function(client)
 		-- 	client.server_capabilities.semanticTokensProvider = nil
 		-- end
@@ -87,12 +87,7 @@ for _, lsp_server in pairs(LSP_LIST) do
 
 	if lsp_server == "bashls" then
 		lspconfig[lsp_server].setup {
-			autostart = false,
-			capabilities = capabilities,
 			filetypes = { 'zsh', 'bash', 'sh' },
-			-- on_attach = function(client)
-			-- 	client.server_capabilities.semanticTokensProvider = nil
-			-- end
 		}
 	end
 end
