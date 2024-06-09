@@ -46,7 +46,8 @@ return {
 				"git",
 				"gitcommit",
 				"fugitive",
-				"json"
+				"json",
+				"sql"
 			},
 			group = "HANDSOME",
 			command = "TSBufEnable highlight"
