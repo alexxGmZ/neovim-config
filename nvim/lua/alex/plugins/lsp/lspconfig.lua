@@ -78,9 +78,9 @@ for _, lsp_server in pairs(LSP_LIST) do
 	lspconfig[lsp_server].setup {
 		autostart = false,
 		capabilities = capabilities,
-		on_attach = function(client)
-			client.server_capabilities.semanticTokensProvider = nil
-		end
+		-- on_attach = function(client)
+		-- 	client.server_capabilities.semanticTokensProvider = nil
+		-- end
 	}
 
 	-- custom lsp configuration below
@@ -90,9 +90,9 @@ for _, lsp_server in pairs(LSP_LIST) do
 			autostart = false,
 			capabilities = capabilities,
 			filetypes = { 'zsh', 'bash', 'sh' },
-			on_attach = function(client)
-				client.server_capabilities.semanticTokensProvider = nil
-			end
+			-- on_attach = function(client)
+			-- 	client.server_capabilities.semanticTokensProvider = nil
+			-- end
 		}
 	end
 end
