@@ -31,7 +31,7 @@ return {
 			},
 			highlight = {
 				enable = false,
-				disable = { "html", "lua", "javascript" },
+				disable = {},
 				additional_vim_regex_highlighting = true,
 			},
 			incremental_selection = { enable = false },
@@ -49,9 +49,7 @@ return {
 				"json"
 			},
 			group = "HANDSOME",
-			callback = function()
-				vim.cmd("TSBufEnable highlight")
-			end
+			command = "TSBufEnable highlight"
 		})
 	end,
 }
