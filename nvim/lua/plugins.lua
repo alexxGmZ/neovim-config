@@ -34,16 +34,10 @@ return {
 	--
 	{
 		"neovim/nvim-lspconfig",
-		event = {
-			-- "InsertCharPre",
-			-- "TabNew",
-			-- "TabEnter",
-		},
 		cmd = {
 			"LspStart",
 			"LspInfo",
 			"Trouble",
-			-- "FzfLua",
 			"Mason",
 			"ConformInfo"
 		},
@@ -68,10 +62,7 @@ return {
 	--
 	{
 		"hrsh7th/nvim-cmp",
-		event = {
-			"CmdlineEnter",
-			"InsertEnter"
-		},
+		event = { "CmdlineEnter", "InsertEnter" },
 		dependencies = {
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
@@ -125,51 +116,17 @@ return {
 		event = "VeryLazy",
 	},
 
-	-- require("alex.plugins.neozoom"),
 	require("alex.plugins.dashboard"),
 	require("alex.plugins.zen-mode"),
-
-	--
-	-- Uncategorized
-	--
-	require("alex.plugins.comment"),
-	require("alex.plugins.early-retirement"),
-	require("alex.plugins.nvim-tmux-navigation"),
 	require("alex.plugins.notify"),
 	require("alex.plugins.nvim-tree"),
+	require("alex.plugins.oil"),
+	require("alex.plugins.fzf-lua"),
+	require("alex.plugins.trouble"),
+	require("alex.plugins.dadbod-ui"),
 	require("alex.plugins.todo-comments"),
 	require("alex.plugins.treesitter"),
 	require("alex.plugins.treesitter-context"),
-	require("alex.plugins.guess-indent"),
-
-	{
-		"kylechui/nvim-surround",
-		version = "*",
-		event = "VeryLazy",
-		config = function()
-			require("nvim-surround").setup({})
-		end
-	},
-
-	require("alex.plugins.live-server"),
-	require("alex.plugins.oil"),
-	require("alex.plugins.marp"),
-	require("alex.plugins.fzf-lua"),
-	require("alex.plugins.trouble"),
-	require("alex.plugins.jaq-nvim"),
-	require("alex.plugins.ccc"),
-
-	{
-		"nullchilly/fsread.nvim",
-		cmd = { "FSRead", "FSToggle" }
-	},
-
-
-	-- {
-	-- 	"davidgranstrom/nvim-markdown-preview",
-	-- 	ft = "markdown"
-	-- },
-	require("alex.plugins.markdown-preview"),
 
 	{
 		"mtdl9/vim-log-highlighting",
@@ -182,8 +139,36 @@ return {
 		ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
 	},
 
+
+	--
+	-- Uncategorized
+	--
+	require("alex.plugins.comment"),
+	require("alex.plugins.early-retirement"),
+	require("alex.plugins.nvim-tmux-navigation"),
+	require("alex.plugins.guess-indent"),
+
+	{
+		"kylechui/nvim-surround",
+		version = "*",
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({})
+		end
+	},
+
+	require("alex.plugins.live-server"),
+	require("alex.plugins.marp"),
+	require("alex.plugins.jaq-nvim"),
+	require("alex.plugins.ccc"),
+
+	{
+		"nullchilly/fsread.nvim",
+		cmd = { "FSRead", "FSToggle" }
+	},
+
+	require("alex.plugins.markdown-preview"),
 	require("alex.plugins.vim-rest-console"),
-	require("alex.plugins.dadbod-ui"),
 	require("alex.plugins.codesnap"),
 	require("alex.plugins.rayso"),
 	require("alex.plugins.treesj")
