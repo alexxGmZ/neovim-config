@@ -6,7 +6,7 @@ end
 return {
 	"akinsho/git-conflict.nvim",
 	cond = if_git_dir,
-	event = "VeryLazy",
+	cmd = "GitConflictListQf",
 	version = "*",
 	config = function()
 		require("git-conflict").setup()
