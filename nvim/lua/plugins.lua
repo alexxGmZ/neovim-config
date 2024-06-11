@@ -17,6 +17,8 @@ return {
 	require("alex.plugins.colorscheme.zenbones"),
 	-- bluloco
 	require("alex.plugins.colorscheme.bluloco"),
+	-- patana (not ready yet)
+	-- require("alex.plugins.colorscheme.patana"),
 
 	-- full transparency
 	require("alex.plugins.transparent"),
