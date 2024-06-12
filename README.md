@@ -23,8 +23,6 @@ My neovim setup and development workflow
    + [Colorscheme](#colorscheme)
    + [Git Integration](#git-integration)
    + [Quality of Life](#quality-of-life)
-* [Configured LSPs](#configured-lsps)
-   + [How to Install LSPs and Do a Basic Configuration](#how-to-install-lsps-and-do-a-basic-configuration)
 
 <br>
 
