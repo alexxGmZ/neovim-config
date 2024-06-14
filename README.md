@@ -67,6 +67,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-tree/nvim-tree.lua        ](https://github.com/nvim-tree/nvim-tree.lua)
 * [hedyhli/outline.nvim           ](https://github.com/hedyhli/outline.nvim)
 * [folke/trouble.nvim             ](https://github.com/folke/trouble.nvim)
+* [tris203/precognition.nvim      ](https://github.com/tris203/precognition.nvim)
 
 #### Syntax Highlighting
 
@@ -109,6 +110,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [sudoerwx/vim-ray-so-beautiful          ](https://github.com/sudoerwx/vim-ray-so-beautiful)
 * [nvimdev/dashboard-nvim                 ](https://github.com/nvimdev/dashboard-nvim)
 * [xiyaowong/transparent.nvim             ](https://github.com/xiyaowong/transparent.nvim)
+* [NStefan002/screenkey.nvim              ](https://github.com/NStefan002/screenkey.nvim)
 
 #### Colorscheme
 
