@@ -6,10 +6,7 @@ return {
 	},
 	config = function()
 		require("oil").setup({
-			columns = {
-				"icon",
-				"permissions"
-			},
+			columns = { "icon", "permissions" },
 			default_file_explorer = false,
 			use_default_keymaps = false,
 			keymaps = {
@@ -24,13 +21,10 @@ return {
 				["-"] = "actions.parent",
 				["g."] = "actions.toggle_hidden",
 			},
-			view_options = {
-				show_hidden = true
-			},
-			float = {
-				padding = 4,
-				max_width = 80
-			},
+			view_options = { show_hidden = true },
+			float = { padding = 4, max_width = 80 },
+			skip_confirm_for_simple_edits = false,
+			delete_to_trash = true,
 		})
 
 		vim.api.nvim_create_user_command("OilToggleFloat", function()
