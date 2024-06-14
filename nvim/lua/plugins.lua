@@ -21,6 +21,8 @@ return {
 	-- require("alex.plugins.colorscheme.patana"),
 	-- monochrome
 	require("alex.plugins.colorscheme.monochrome"),
+	-- gruvbox-material
+	require("alex.plugins.colorscheme.gruvbox-material"),
 
 	-- full transparency
 	require("alex.plugins.transparent"),
