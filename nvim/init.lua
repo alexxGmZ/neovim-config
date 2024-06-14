@@ -39,3 +39,7 @@ if vim.g.neovide then
 	vim.g.neovide_cursor_animate_in_insert_mode = false
 	vim.g.neovide_cursor_smooth_blink = false
 end
+
+if vim.g.vscode then
+	require("plugins-vscode")
+end
