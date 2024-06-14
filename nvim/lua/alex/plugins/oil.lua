@@ -23,7 +23,7 @@ return {
 			},
 			view_options = { show_hidden = true },
 			float = { padding = 4, max_width = 80 },
-			skip_confirm_for_simple_edits = false,
+			skip_confirm_for_simple_edits = true,
 			delete_to_trash = true,
 		})
 
