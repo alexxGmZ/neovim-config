@@ -173,5 +173,6 @@ return {
 	require("alex.plugins.vim-rest-console"),
 	require("alex.plugins.codesnap"),
 	require("alex.plugins.rayso"),
-	require("alex.plugins.treesj")
+	require("alex.plugins.treesj"),
+	require("alex.plugins.precognition"),
 }
