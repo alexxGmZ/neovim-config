@@ -32,6 +32,7 @@ return {
 
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = { "dbui" },
+			group = "HANDSOME",
 			callback = function(ev)
 				local map = vim.keymap
 				map.set("n", "<CR>", "<Plug>(DBUI_SelectLine)", { desc = "DBUI: Select Line", buffer = ev.buf })
