@@ -7,9 +7,7 @@ require("bufferline").setup {
 			return buf.name
 		end,
 		numbers = "ordinal",
-		indicator = {
-			style = "none"
-		},
+		indicator = { style = "none" },
 		separator_style = "thick",
 		diagnostics = "nvim_lsp",
 		offsets = {

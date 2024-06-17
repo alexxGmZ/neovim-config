@@ -78,10 +78,7 @@ return {
 				exclude = {},
 			},
 			tab = {
-				sync = {
-					open = true,
-					close = true
-				}
+				sync = { open = true, close = true }
 			}
 		}
 	end,

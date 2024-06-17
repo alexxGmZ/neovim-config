@@ -24,10 +24,7 @@ return {
 		},
 	},
 	-- Everything in opts will be passed to setup()
-	opts = {
-		formatters_by_ft = {
-		},
-	},
+	opts = { formatters_by_ft = {} },
 	config = function ()
 	end
 }

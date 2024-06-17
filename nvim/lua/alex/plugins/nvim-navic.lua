@@ -3,9 +3,7 @@ return {
 	event = "LspAttach",
 	config = function()
 		require("nvim-navic").setup({
-			lsp = {
-				auto_attach = true
-			},
+			lsp = {auto_attach = true},
 			highlight = true,
 			click = true,
 		})

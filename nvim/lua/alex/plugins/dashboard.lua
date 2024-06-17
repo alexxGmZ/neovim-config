@@ -15,30 +15,22 @@ local function plugin_config()
 				{
 					icon = "󰉋 ",
 					desc = "Files", group = 'RainbowdelimiterBlue', key = 'F',
-					action = function()
-						vim.cmd("OilToggleFloat")
-					end
+					action = function() vim.cmd("OilToggleFloat") end
 				},
 				{
 					icon = " ",
 					desc = "Fuzzy find", group = 'RainbowDelimiterOrange', key = 'fz',
-					action = function()
-						vim.cmd("FzfLua files")
-					end
+					action = function() vim.cmd("FzfLua files") end
 				},
 				{
 					icon = "󰚰 ",
 					desc = "Check updates", group = 'RainbowDelimiterYellow', key = 'cu',
-					action = function()
-						vim.cmd("Lazy check")
-					end
+					action = function() vim.cmd("Lazy check") end
 				},
 				{
 					icon = "󰓅 ",
 					desc = "Benchmark", group = 'RainbowDelimiterYellow', key = 'B',
-					action = function()
-						vim.cmd("Lazy profile")
-					end
+					action = function() vim.cmd("Lazy profile") end
 				},
 				{
 					icon = "󰆼 ",
@@ -53,9 +45,7 @@ local function plugin_config()
 				{
 					icon = "󰘬 ",
 					desc = "Git", group = 'RainbowDelimiterRed', key = 'gi',
-					action = function()
-						vim.cmd("Git")
-					end
+					action = function() vim.cmd("Git") end
 				},
 				-- {
 				-- 	icon = "󰈹 ",

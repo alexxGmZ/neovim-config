@@ -18,8 +18,6 @@ return {
 			NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
 			TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 		},
-		highlight = {
-			multiline = true
-		}
+		highlight = { multiline = true }
 	}
 }
