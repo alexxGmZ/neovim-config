@@ -46,7 +46,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		vim.cmd [[
 			hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e
-			hi ColorColumn guibg=#3c3c3c
 		]]
 	end
 })
