@@ -1,5 +1,6 @@
 return {
 	"nvim-tree/nvim-tree.lua",
+	cmd = "NvimTreeOpen",
 	config = function()
 		vim.opt.termguicolors = true
 

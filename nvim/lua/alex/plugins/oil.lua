@@ -1,13 +1,10 @@
 return {
 	"stevearc/oil.nvim",
-	cmd = { "Oil", "OilToggleFloat" },
-	keys = {
-		{ "<leader>F", "<cmd>OilToggleFloat<cr>", desc = "Oil: Toggle float" }
-	},
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		require("oil").setup({
 			columns = { "icon", "permissions" },
-			default_file_explorer = false,
+			default_file_explorer = true,
 			use_default_keymaps = false,
 			keymaps = {
 				["g?"] = "actions.show_help",
@@ -46,5 +43,7 @@ return {
 
 			return oil.toggle_float()
 		end, { desc = "Oil: Toggle float" })
+
+		vim.keymap.set("n", "<leader>F", "<cmd>OilToggleFloat<cr>", { desc = "Oil: Toggle Float" })
 	end,
 }
