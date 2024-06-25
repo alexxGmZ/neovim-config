@@ -24,12 +24,12 @@ return {
 			min_count_to_highlight = 2,
 		})
 
-		illuminate_highlights()
-
-		vim.api.nvim_create_autocmd("ColorScheme", {
-			pattern = "*",
-			group = "HANDSOME",
-			callback = illuminate_highlights,
-		})
+		-- illuminate_highlights()
+		--
+		-- vim.api.nvim_create_autocmd("ColorScheme", {
+		-- 	pattern = "*",
+		-- 	group = "HANDSOME",
+		-- 	callback = illuminate_highlights,
+		-- })
 	end
 }
