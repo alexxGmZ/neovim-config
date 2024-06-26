@@ -179,5 +179,6 @@ return {
 	require("alex.plugins.rayso"),
 	require("alex.plugins.treesj"),
 	require("alex.plugins.precognition"),
-	require("alex.plugins.screenkey")
+	require("alex.plugins.screenkey"),
+	require("alex.plugins.markdown-nvim")
 }

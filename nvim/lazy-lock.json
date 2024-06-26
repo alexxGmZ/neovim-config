@@ -59,6 +59,7 @@
   "patana.nvim": { "branch": "main", "commit": "d45f05c9b85f4e40aeebabc3287574d55f45405a" },
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
   "precognition.nvim": { "branch": "main", "commit": "02dcc8f8db677fe02d2dd68da6155177283fe711" },
+  "render-markdown": { "branch": "main", "commit": "78ef39530266b3a0736c48b46c3f5d1ab022c7db" },
   "rose-pine": { "branch": "main", "commit": "8c4660cfe697621bcc61d37b3651ffed94fe7fed" },
   "screenkey.nvim": { "branch": "main", "commit": "e7a7a97ce64f0c5f06272abc57d8ee4e25ac7228" },
   "todo-comments.nvim": { "branch": "main", "commit": "51e10f838e84b4756c16311d0b1ef0972c6482d2" },
