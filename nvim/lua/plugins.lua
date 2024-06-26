@@ -23,6 +23,8 @@ return {
 	require("alex.plugins.colorscheme.monochrome"),
 	-- gruvbox-material
 	require("alex.plugins.colorscheme.gruvbox-material"),
+	-- oxocarbon
+	require("alex.plugins.colorscheme.oxocarbon"),
 
 	-- full transparency
 	require("alex.plugins.transparent"),
