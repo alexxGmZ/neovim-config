@@ -2,19 +2,34 @@ local lualine = require("lualine")
 
 -- rename mode names to shorter ones
 local mode_map = {
-	n = "N",
-	nt = "N",
-	i = "I",
-	R = "R",
-	v = "V",
-	V = "VL",
-	no = "CHA",
-	["\22"] = "VB",
-	t = "T",
-	['!'] = "SH",
-	c = "C",
+	n = "(ᴗ_ ᴗ。)",
+	nt = "(ᴗ_ ᴗ。)",
+	i = "(•̀ - •́ )",
+	R = "( •̯́ ₃ •̯̀)",
+	v = "(⊙ _ ⊙ )",
+	V = "(⊙ _ ⊙ )",
+	no = "Σ(°△°ꪱꪱꪱ)",
+	["\22"] = "(⊙ _ ⊙ )",
+	t = "(⌐■_■)",
+	['!'] = "Σ(°△°ꪱꪱꪱ)",
+	c = "Σ(°△°ꪱꪱꪱ)",
 	s = "SUB"
 }
+
+-- local mode_map = {
+-- 	n = "N",
+-- 	nt = "N",
+-- 	i = "I",
+-- 	R = "R",
+-- 	v = "V",
+-- 	V = "VL",
+-- 	no = "CHA",
+-- 	["\22"] = "VB",
+-- 	t = "T",
+-- 	['!'] = "SH",
+-- 	c = "C",
+-- 	s = "SUB"
+-- }
 
 local function lsp_client()
 	local bufnr = vim.api.nvim_get_current_buf()
