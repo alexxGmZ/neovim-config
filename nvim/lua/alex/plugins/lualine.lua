@@ -1,6 +1,6 @@
 local lualine = require("lualine")
 
--- rename mode names to shorter ones
+-- use emotes for mode names
 local mode_map = {
 	n = "(ᴗ_ ᴗ。)",
 	nt = "(ᴗ_ ᴗ。)",
@@ -16,6 +16,7 @@ local mode_map = {
 	s = "SUB"
 }
 
+-- rename mode names to shorter ones
 -- local mode_map = {
 -- 	n = "N",
 -- 	nt = "N",
