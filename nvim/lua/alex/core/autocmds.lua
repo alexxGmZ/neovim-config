@@ -1,7 +1,8 @@
 local user_augroup = vim.api.nvim_create_augroup("HANDSOME", {})
+local create_autocmd = vim.api.nvim_create_autocmd
 
 -- trim trailing whitespaces
-vim.api.nvim_create_autocmd("BufWritePre", {
+create_autocmd("BufWritePre", {
 	pattern = "*",
 	group = user_augroup,
 	callback = function()
@@ -12,7 +13,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 -- hide linenumber in terminal buffertype
-vim.api.nvim_create_autocmd("TermOpen", {
+create_autocmd("TermOpen", {
 	pattern = "*",
 	group = user_augroup,
 	callback = function()
@@ -21,7 +22,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 -- show cmdline
-vim.api.nvim_create_autocmd("CmdlineEnter", {
+create_autocmd("CmdlineEnter", {
 	pattern = "*",
 	group = user_augroup,
 	callback = function()
@@ -30,7 +31,7 @@ vim.api.nvim_create_autocmd("CmdlineEnter", {
 })
 
 -- hide cmdline
-vim.api.nvim_create_autocmd({ "CmdlineLeave", "UIEnter" }, {
+create_autocmd({ "CmdlineLeave", "UIEnter" }, {
 	pattern = "*",
 	group = user_augroup,
 	callback = function()
@@ -40,7 +41,7 @@ vim.api.nvim_create_autocmd({ "CmdlineLeave", "UIEnter" }, {
 
 -- enforce custom highlights every time the colorscheme changes
 vim.opt.colorcolumn = "90"
-vim.api.nvim_create_autocmd("ColorScheme", {
+create_autocmd("ColorScheme", {
 	pattern = "*",
 	group = user_augroup,
 	callback = function()
