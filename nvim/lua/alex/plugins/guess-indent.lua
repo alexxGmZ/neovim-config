@@ -2,7 +2,7 @@ return {
    "NMAC427/guess-indent.nvim",
    config = function()
       require("guess-indent").setup {
-         auto_cmd = true,
+         auto_cmd = false,
          filetype_exclude = { -- A list of filetypes for which the auto command gets disabled
             "netrw",
             "tutor",
