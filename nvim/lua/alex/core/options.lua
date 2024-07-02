@@ -1,24 +1,24 @@
 local opt = vim.opt
 
 vim.cmd [[
-	set termguicolors
-	" set completeopt=menu,menuone,noselect
-	syntax on
+   set termguicolors
+   " set completeopt=menu,menuone,noselect
+   syntax on
 
-	" filetype
-	filetype on
-	filetype plugin on
-	filetype indent on
+   " filetype
+   filetype on
+   filetype plugin on
+   filetype indent on
 
-	set autoread
-	set showmatch
-	set mouse=a
-	set showcmd
-	set nobackup
-	set writebackup
-	set noshowmode
-	set encoding=UTF-8
-	set fileencodings=utf8,cp1251,koi8-r,koi8-u
+   set autoread
+   set showmatch
+   set mouse=a
+   set showcmd
+   set nobackup
+   set writebackup
+   set noshowmode
+   set encoding=UTF-8
+   set fileencodings=utf8,cp1251,koi8-r,koi8-u
 ]]
 
 -- column
@@ -32,7 +32,7 @@ opt.foldmethod = "indent"
 
 -- indention
 opt.autoindent = true
-opt.expandtab = false
+opt.expandtab = true
 opt.tabstop = 3
 opt.softtabstop = 3
 opt.shiftwidth = 3

@@ -79,9 +79,9 @@ for _, lsp_server in pairs(LSP_LIST) do
 		autostart = false,
 		capabilities = capabilities,
 		single_file_support = true,
-		-- on_attach = function(client)
-		-- 	client.server_capabilities.semanticTokensProvider = nil
-		-- end
+		on_attach = function(client)
+			client.server_capabilities.semanticTokensProvider = nil
+		end
 	}
 
 	-- custom lsp configuration below

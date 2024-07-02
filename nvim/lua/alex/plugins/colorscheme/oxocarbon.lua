@@ -1,4 +1,4 @@
 return {
-	"nyoom-engineering/oxocarbon.nvim",
-	event = "CmdlineChanged",
+   "nyoom-engineering/oxocarbon.nvim",
+   event = "CmdlineChanged",
 }

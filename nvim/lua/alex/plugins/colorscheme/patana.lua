@@ -1,6 +1,6 @@
 return {
-	"cvigilv/patana.nvim",
-	event = "CmdlineChanged",
-	config = function ()
-	end
+   "cvigilv/patana.nvim",
+   event = "CmdlineChanged",
+   config = function()
+   end
 }
