@@ -26,9 +26,6 @@ return {
    -- oxocarbon
    require("alex.plugins.colorscheme.oxocarbon"),
 
-   -- full transparency
-   require("alex.plugins.transparent"),
-
 
    --
    -- Git Integration --
@@ -36,6 +33,7 @@ return {
    require("alex.plugins.gitsigns"),
    require("alex.plugins.merginal"),
    require("alex.plugins.git-conflict"),
+
 
    --
    -- Language Server Protocol (LSP)
@@ -64,6 +62,7 @@ return {
    require("alex.plugins.lsp.lsp-lens"),
    require("alex.plugins.outline"),
 
+
    --
    -- Auto completion
    --
@@ -91,6 +90,7 @@ return {
    require("alex.plugins.conform"),
    require("alex.plugins.autoclose"),
    require("alex.plugins.lsp.cmp-spell"),
+
 
    --
    -- User Interface
@@ -136,11 +136,6 @@ return {
    require("alex.plugins.treesitter-context"),
 
    {
-      "mtdl9/vim-log-highlighting",
-      ft = "log"
-   },
-
-   {
       "gregsexton/MatchTag",
       event = "VeryLazy",
       ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
@@ -164,8 +159,6 @@ return {
       end
    },
 
-   require("alex.plugins.live-server"),
-   require("alex.plugins.marp"),
    require("alex.plugins.jaq-nvim"),
    require("alex.plugins.ccc"),
 
@@ -179,7 +172,6 @@ return {
    require("alex.plugins.codesnap"),
    require("alex.plugins.rayso"),
    require("alex.plugins.treesj"),
-   require("alex.plugins.precognition"),
    require("alex.plugins.screenkey"),
    require("alex.plugins.markdown-nvim")
 }
