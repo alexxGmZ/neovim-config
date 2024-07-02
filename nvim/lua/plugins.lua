@@ -57,7 +57,6 @@ return {
 		config = function()
 			require("alex.plugins.lsp.mason")
 			require("alex.plugins.lsp.lspconfig")
-			vim.cmd("LspStart")
 		end
 	},
 
