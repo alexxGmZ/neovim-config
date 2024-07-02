@@ -34,7 +34,6 @@ other utf-8 characters)
 * neovim v0.10.+
 * [lazy](https://github.com/folke/lazy.nvim) as the plugin manager
 * [Code New Roman Nerd Font](https://www.nerdfonts.com/font-downloads)
-* live-server
 
 <br>
 
@@ -67,7 +66,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-tree/nvim-tree.lua        ](https://github.com/nvim-tree/nvim-tree.lua)
 * [hedyhli/outline.nvim           ](https://github.com/hedyhli/outline.nvim)
 * [folke/trouble.nvim             ](https://github.com/folke/trouble.nvim)
-* [tris203/precognition.nvim      ](https://github.com/tris203/precognition.nvim)
 
 #### Syntax Highlighting
 
@@ -109,7 +107,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [mistricky/codesnap.nvim                ](https://github.com/mistricky/codesnap.nvim)
 * [sudoerwx/vim-ray-so-beautiful          ](https://github.com/sudoerwx/vim-ray-so-beautiful)
 * [nvimdev/dashboard-nvim                 ](https://github.com/nvimdev/dashboard-nvim)
-* [xiyaowong/transparent.nvim             ](https://github.com/xiyaowong/transparent.nvim)
 * [NStefan002/screenkey.nvim              ](https://github.com/NStefan002/screenkey.nvim)
 
 #### Colorscheme
@@ -140,7 +137,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [is0n/jaq-nvim                     ](https://github.com/is0n/jaq-nvim)
 * [kylechui/nvim-surround            ](https://github.com/kylechui/nvim-surround)
 * [stevearc/oil.nvim                 ](https://github.com/stevearc/oil.nvim)
-* [aca/marp.nvim                     ](https://github.com/aca/marp.nvim)
 * [f3fora/cmp-spell                  ](https://github.com/f3fora/cmp-spell)
 * [dgagn/diagflow.nvim               ](https://github.com/dgagn/diagflow.nvim)
 * [nyngwang/NeoZoom.lua              ](https://github.com/nyngwang/NeoZoom.lua/)
