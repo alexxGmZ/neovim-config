@@ -10,7 +10,7 @@ return {
          previewers = {
             builtin = {
                syntax = true,
-               treesitter = { enable = false },
+               treesitter = { enable = true },
                extensions = {
                   ["svg"] = "chafa",
                   ["png"] = "chafa",

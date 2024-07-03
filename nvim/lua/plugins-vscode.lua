@@ -9,5 +9,5 @@ return {
          require("nvim-surround").setup({})
       end
    },
-   require("alex.plugins.autoclose"),
+   require("lua.plugins.autoclose"),
 }

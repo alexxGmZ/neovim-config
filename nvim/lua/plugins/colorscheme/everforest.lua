@@ -44,6 +44,10 @@ local function setup_config()
          hl.vimFuncName = { link = "Function" }
          hl.vimFunction = { link = "Function" }
          hl.vimUserFunc = { link = "Function" }
+
+         hl.IlluminateWordText = { bg = "#4e4e4e"}
+         hl.IlluminateWordRead = { bg = "#4e4e4e"}
+         hl.IlluminateWordWrite = { bg = "#4e4e4e"}
       end,
       colours_override = function(palette) end,
    })

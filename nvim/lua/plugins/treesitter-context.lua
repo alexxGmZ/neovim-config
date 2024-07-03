@@ -1,6 +1,6 @@
 return {
    "nvim-treesitter/nvim-treesitter-context",
-   event = "VeryLazy",
+   dependencies = { "nvim-treesitter/nvim-treesitter" },
    config = function()
       vim.cmd [[
 			hi TreesitterContextBottom gui=underline
@@ -17,6 +17,5 @@ return {
          zindex = 20,
          on_attach = nil,
       }
-   end,
-   dependencies = { "nvim-treesitter/nvim-treesitter" },
+   end
 }
