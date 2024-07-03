@@ -1,7 +1,6 @@
 return {
    "mcchrish/zenbones.nvim",
-   -- priority = 999,
-   event = "CmdlineChanged",
+   lazy = true,
    dependencies = {
       "rktjmp/lush.nvim"
    },

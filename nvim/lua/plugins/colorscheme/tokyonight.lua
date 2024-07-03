@@ -1,8 +1,6 @@
 return {
    "folke/tokyonight.nvim",
-   -- lazy = false,
-   -- priority = 1000,
-   event = "CmdlineChanged",
+   lazy = true,
    config = function()
    end,
    opts = {

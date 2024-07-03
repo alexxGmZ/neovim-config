@@ -1,6 +1,6 @@
 return {
    "uloco/bluloco.nvim",
-   event = "CmdlineChanged",
+   lazy = true,
    config = function()
       require("bluloco").setup({
          italics = false
