@@ -4,6 +4,9 @@ return {
    dependencies = {
       "junegunn/fzf",
    },
+   keys = {
+      { "<C-p>", "<cmd>FzfLua files<CR>", desc = "FzfLua: FzfLua files" }
+   },
    config = function()
       require("fzf-lua").setup {
          winopts = {},

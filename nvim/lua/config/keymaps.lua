@@ -24,9 +24,6 @@ map.set("n", "<leader>qa", "<cmd>qa<CR>", { desc = "Quit all file" })
 -- nohlsearch
 map.set("n", "<Esc>", function() vim.cmd("noh") end, { desc = "nohlsearch" })
 
--- fzf
-map.set("n", "<C-p>", function() vim.cmd("FzfLua files") end, { desc = "FzfLua: FzfLua files" })
-
 -- split resizing
 map.set("n", "<leader>-", "<C-w>3-", { desc = "Pane: Decrease current pane height" })
 map.set("n", "<leader>=", "<C-w>3+", { desc = "Pane: Increate current pane height" })
