@@ -3,9 +3,9 @@ local map = vim.keymap
 
 -- terminal
 map.set("t", "<Esc>", "<C-\\><C-n>")
-map.set("n", "<leader>vst", function() vim.cmd("vsplit term://$SHELL") end, { desc = "Vertical Terminal Split" })
-map.set("n", "<leader>spt", function() vim.cmd("split term://$SHELL") end, { desc = "Horizontal Terminal Split" })
-map.set("n", "<leader>tnt", function() vim.cmd("tabnew term://$SHELL") end, { desc = "New Tab Terminal" })
+map.set("n", "<leader>vst", "<cmd>vsplit term://$SHELL<CR>", { desc = "Vertical Terminal Split" })
+map.set("n", "<leader>spt", "<cmd>split term://$SHELL<CR>", { desc = "Horizontal Terminal Split" })
+map.set("n", "<leader>tnt", "<cmd>tabnew term://$SHELL<CR>", { desc = "New Tab Terminal" })
 
 -- motions
 map.set("n", "<C-d>", "<C-d>zz")
