@@ -1,5 +1,6 @@
 return {
    "NMAC427/guess-indent.nvim",
+   cmd = "GuessIndent",
    config = function()
       require("guess-indent").setup {
          auto_cmd = false,
