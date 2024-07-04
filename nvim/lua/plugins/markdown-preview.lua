@@ -5,7 +5,7 @@ return {
       "MarkdownPreview",
       "MarkdownPreviewStop",
    },
-   -- ft = { "markdown" },
+   ft = { "markdown" },
    build = function() vim.fn["mkdp#util#install"]() end,
    config = function()
       local g = vim.g
