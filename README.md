@@ -48,7 +48,8 @@ mkdir -v ~/.config/nvim
 cp -vr nvim ~/.config/
 ```
 
-**Note:** This config doesn't fully work in Windows
+> [!WARNING]
+> Note:** This config doesn't fully work in Windows
 
 <br>
 
@@ -70,7 +71,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 #### Syntax Highlighting
 
 * [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-* [mtdl9/vim-log-highlighting     ](https://github.com/MTDL9/vim-log-highlighting)
 
 #### LSP and Auto-Completion
 
@@ -103,22 +103,30 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 * [onsails/lspkind.nvim                   ](https://github.com/onsails/lspkind.nvim)
 * [folke/todo-comments.nvim               ](https://github.com/folke/todo-comments.nvim)
-* [preservim/tagbar                       ](https://github.com/preservim/tagbar)
 * [mistricky/codesnap.nvim                ](https://github.com/mistricky/codesnap.nvim)
 * [sudoerwx/vim-ray-so-beautiful          ](https://github.com/sudoerwx/vim-ray-so-beautiful)
 * [nvimdev/dashboard-nvim                 ](https://github.com/nvimdev/dashboard-nvim)
 * [NStefan002/screenkey.nvim              ](https://github.com/NStefan002/screenkey.nvim)
+* [RRethy/vim-illuminate                  ](https://github.com/RRethy/vim-illuminate)
+* [folke/zen-mode.nvim                    ](https://github.com/folke/zen-mode.nvim)
+* [dgagn/diagflow.nvim                    ](https://github.com/dgagn/diagflow.nvim)
+* [uga-rosa/ccc.nvim                      ](https://github.com/uga-rosa/ccc.nvim)
+* [MeanderingProgrammer/markdown.nvim     ](https://github.com/MeanderingProgrammer/markdown.nvim)
 
 #### Colorscheme
 
-* [catppuccin/nvim            ](https://github.com/catppuccin/nvim)
-* [folke/tokyonight.nvim      ](https://github.com/folke/tokyonight.nvim)
-* [projekt0n/github-nvim-theme](https://github.com/projekt0n/github-nvim-theme)
-* [rose-pine/neovim           ](https://github.com/rose-pine/neovim)
-* [yorik1984/newpaper.nvim    ](https://github.com/yorik1984/newpaper.nvim)
-* [rebelot/kanagawa.nvim      ](https://github.com/rebelot/kanagawa.nvim)
-* [neanias/everforest-nvim    ](https://github.com/neanias/everforest-nvim)
-* [mcchrish/zenbones.nvim     ](https://github.com/mcchrish/zenbones.nvim)
+* [catppuccin/nvim                 ](https://github.com/catppuccin/nvim)
+* [folke/tokyonight.nvim           ](https://github.com/folke/tokyonight.nvim)
+* [projekt0n/github-nvim-theme     ](https://github.com/projekt0n/github-nvim-theme)
+* [rose-pine/neovim                ](https://github.com/rose-pine/neovim)
+* [yorik1984/newpaper.nvim         ](https://github.com/yorik1984/newpaper.nvim)
+* [rebelot/kanagawa.nvim           ](https://github.com/rebelot/kanagawa.nvim)
+* [neanias/everforest-nvim         ](https://github.com/neanias/everforest-nvim)
+* [mcchrish/zenbones.nvim          ](https://github.com/mcchrish/zenbones.nvim)
+* [sainnhe/gruvbox-material        ](https://github.com/sainnhe/gruvbox-material)
+* [kdheepak/monochrome.nvim        ](https://github.com/kdheepak/monochrome.nvim)
+* [nyoom-engineering/oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim)
+* [cvigilv/patana.nvim             ](https://github.com/cvigilv/patana.nvim)
 
 #### Git Integration
 
@@ -129,17 +137,13 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Quality of Life
 
-* [uga-rosa/ccc.nvim                 ](https://github.com/uga-rosa/ccc.nvim)
 * [numToStr/Comment.nvim             ](https://github.com/numToStr/Comment.nvim)
 * [nullchilly/fsread.nvim            ](https://github.com/nullchilly/fsread.nvim)
-* [RRethy/vim-illuminate             ](https://github.com/RRethy/vim-illuminate)
 * [chrisgrieser/nvim-early-retirement](https://github.com/chrisgrieser/nvim-early-retirement)
 * [is0n/jaq-nvim                     ](https://github.com/is0n/jaq-nvim)
 * [kylechui/nvim-surround            ](https://github.com/kylechui/nvim-surround)
 * [stevearc/oil.nvim                 ](https://github.com/stevearc/oil.nvim)
 * [f3fora/cmp-spell                  ](https://github.com/f3fora/cmp-spell)
-* [dgagn/diagflow.nvim               ](https://github.com/dgagn/diagflow.nvim)
-* [nyngwang/NeoZoom.lua              ](https://github.com/nyngwang/NeoZoom.lua/)
 * [diepm/vim-rest-console            ](https://github.com/diepm/vim-rest-console)
 * [kristijanhusak/vim-dadbod-ui      ](https://github.com/kristijanhusak/vim-dadbod-ui)
 * [Wansmer/treesj                    ](https://github.com/Wansmer/treesj)
