@@ -23,7 +23,6 @@ require("lazy").setup({
    spec = {
       { import = "plugins" },
       { import = "plugins.colorscheme" },
-      { import = "plugins.git" },
       { import = "plugins.lsp" },
    },
    ui = { border = "rounded" }
