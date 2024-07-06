@@ -199,9 +199,11 @@ return {
                {
                   "filename",
                   path = 0,
-                  separator = {},
+                  separator = { left = "", right = "" },
                   symbols = { modified = "●", readonly = "[RO]" }
-               },
+               }
+            },
+            lualine_b = {
                {
                   "diff",
                   colored = true,
@@ -213,8 +215,6 @@ return {
                   separator = {},
                   source = nil,
                },
-            },
-            lualine_b = {
                {
                   "diagnostics",
                   sources = { "nvim_diagnostic" },
@@ -232,7 +232,7 @@ return {
             lualine_z = {
                {
                   "location",
-                  separator = {},
+                  separator = { left = "", right = "" },
                }
             }
          },
