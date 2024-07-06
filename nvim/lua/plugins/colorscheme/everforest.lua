@@ -21,7 +21,7 @@ local function setup_config()
          hl.TSFunctionCall = { link = "Function" }
          hl.TSKeyword = { link = "Keyword" }
          hl.TSParameter = { fg = palette.red, bold = true }
-         hl.TSString = { fg = palette.green, bold = true }
+         hl.TSString = { link = "String" }
          hl.TSConditional = { fg = palette.red, italic = true }
          hl.TSVariable = { fg = palette.none, bold = true }
          hl.TSMethod = { link = "Function" }
@@ -30,7 +30,8 @@ local function setup_config()
 
          hl.CurrentWord = { fg = palette.none, underline = true }
          hl.String = { fg = palette.green, bold = true }
-         hl.Keyword = { fg = palette.red, italic = true }
+         -- hl.String = { fg = "#e0bc7c", bold = true }
+         hl.Keyword = { fg = palette.orange, italic = true }
          hl.Constant = { fg = palette.orange, bold = true }
          hl.Function = { fg = palette.orange, bold = true }
          hl.Boolean = { fg = palette.purple, bold = true }
@@ -45,20 +46,23 @@ local function setup_config()
          hl.vimFunction = { link = "Function" }
          hl.vimUserFunc = { link = "Function" }
 
-         hl.IlluminateWordText = { bg = "#4e4e4e"}
-         hl.IlluminateWordRead = { bg = "#4e4e4e"}
-         hl.IlluminateWordWrite = { bg = "#4e4e4e"}
+         hl.IlluminateWordText = { bg = "#4e4e4e" }
+         hl.IlluminateWordRead = { bg = "#4e4e4e" }
+         hl.IlluminateWordWrite = { bg = "#4e4e4e" }
       end,
-      colours_override = function(palette) end,
+      colours_override = function(palette)
+         -- palette.bg0 = "#402914"
+         -- palette.yellow = "#e1d56a"
+         -- palette.orange = "#ffaf65"
+         -- palette.purple = "#de7398"
+      end,
    })
    vim.cmd.colorscheme "everforest"
 end
 
 return {
    "neanias/everforest-nvim",
-   -- event = "CmdlineChanged",
-   priority = 1000,
-   config = function()
-      setup_config()
-   end
+   -- priority = 1000,
+   lazy = true,
+   config = setup_config
 }
