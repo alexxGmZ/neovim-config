@@ -47,6 +47,11 @@ local function highlight_overrides()
    set_hl(0, "DashboardHeader", { fg = palette.orange, bold = true })
    set_hl(0, "DashboardFooter", { fg = palette.yellow, bold = true })
    set_hl(0, "DashboardShortcut", { fg = palette.green, bold = true })
+   set_hl(0, "LazyReasonCmd", { fg = palette.yellow, bold = true })
+   set_hl(0, "LazyReasonEvent", { fg = palette.orange, bold = true })
+   set_hl(0, "LazyReasonKeys", { fg = palette.red, bold = true })
+   set_hl(0, "LazyReasonPlugin", { fg = palette.green, bold = true })
+   set_hl(0, "LazyReasonFt", { fg = palette.blue, bold = true })
 end
 
 return {
