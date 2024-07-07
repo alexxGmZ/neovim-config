@@ -195,15 +195,14 @@ return {
          },
 
          inactive_sections = {
-            lualine_a = {
+            lualine_a = {},
+            lualine_b = {
                {
                   "filename",
                   path = 0,
                   separator = { left = "", right = "" },
                   symbols = { modified = "●", readonly = "[RO]" }
-               }
-            },
-            lualine_b = {
+               },
                {
                   "diff",
                   colored = true,
