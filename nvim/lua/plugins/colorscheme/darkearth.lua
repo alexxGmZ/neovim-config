@@ -39,6 +39,9 @@ local function highlight_overrides()
    set_hl(0, "@markup.heading.4.markdown", { fg = palette.green, bold = true })
    set_hl(0, "@markup.heading.5.markdown", { fg = palette.blue, bold = true })
    set_hl(0, "@markup.heading.6.markdown", { fg = palette.brown, bold = true })
+   set_hl(0, "gitHash", { fg = palette.green, bold = true })
+   set_hl(0, "DiffAdded", { fg = palette.green, bold = true })
+   set_hl(0, "DiffRemoved", { fg = palette.red, bold = true })
 end
 
 return {
