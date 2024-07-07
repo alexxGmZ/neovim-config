@@ -28,9 +28,11 @@ local function highlight_overrides()
    set_hl(0, "Field", { fg = palette.orange, bold = true })
    set_hl(0, "Operator", { fg = palette.orange, bold = true })
    set_hl(0, "ColorColumn", { link = "CursorLine" })
+
    set_hl(0, "LuaLineDiffAdd", { fg = palette.blue, bold = true })
    set_hl(0, "LuaLineDiffChange", { fg = palette.yellow, bold = true })
    set_hl(0, "LuaLineDiffDelete", { fg = palette.red, bold = true })
+
    set_hl(0, "@markup.link.url", { fg = palette.yellow, bold = false })
    set_hl(0, "@markup.link.label", { fg = palette.fg, bold = true })
    set_hl(0, "@markup.heading.1.markdown", { fg = palette.red, bold = true })
@@ -39,14 +41,18 @@ local function highlight_overrides()
    set_hl(0, "@markup.heading.4.markdown", { fg = palette.green, bold = true })
    set_hl(0, "@markup.heading.5.markdown", { fg = palette.blue, bold = true })
    set_hl(0, "@markup.heading.6.markdown", { fg = palette.brown, bold = true })
+
    set_hl(0, "gitHash", { fg = palette.green, bold = true })
    set_hl(0, "DiffAdded", { fg = palette.green, bold = true })
    set_hl(0, "DiffRemoved", { fg = palette.red, bold = true })
+
    set_hl(0, "htmlTagName", { fg = palette.red, italic = true })
    set_hl(0, "htmlArg", { fg = palette.green })
+
    set_hl(0, "DashboardHeader", { fg = palette.orange, bold = true })
    set_hl(0, "DashboardFooter", { fg = palette.yellow, bold = true })
    set_hl(0, "DashboardShortcut", { fg = palette.green, bold = true })
+
    set_hl(0, "LazyReasonCmd", { fg = palette.yellow, bold = true })
    set_hl(0, "LazyReasonEvent", { fg = palette.orange, bold = true })
    set_hl(0, "LazyReasonKeys", { fg = palette.red, bold = true })
