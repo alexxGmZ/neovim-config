@@ -42,6 +42,8 @@ local function highlight_overrides()
    set_hl(0, "gitHash", { fg = palette.green, bold = true })
    set_hl(0, "DiffAdded", { fg = palette.green, bold = true })
    set_hl(0, "DiffRemoved", { fg = palette.red, bold = true })
+   set_hl(0, "htmlTagName", { fg = palette.red, italic = true })
+   set_hl(0, "htmlArg", { fg = palette.green })
 end
 
 return {
