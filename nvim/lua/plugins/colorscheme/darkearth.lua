@@ -28,6 +28,9 @@ local function highlight_overrides()
    set_hl(0, "Field", { fg = palette.orange, bold = true })
    set_hl(0, "Operator", { fg = palette.orange, bold = true })
    set_hl(0, "ColorColumn", { link = "CursorLine" })
+   set_hl(0, "LuaLineDiffAdd", { fg = palette.blue, bold = true })
+   set_hl(0, "LuaLineDiffChange", { fg = palette.yellow, bold = true })
+   set_hl(0, "LuaLineDiffDelete", { fg = palette.red, bold = true })
 end
 
 return {
