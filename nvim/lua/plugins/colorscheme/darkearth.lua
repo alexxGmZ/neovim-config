@@ -31,6 +31,14 @@ local function highlight_overrides()
    set_hl(0, "LuaLineDiffAdd", { fg = palette.blue, bold = true })
    set_hl(0, "LuaLineDiffChange", { fg = palette.yellow, bold = true })
    set_hl(0, "LuaLineDiffDelete", { fg = palette.red, bold = true })
+   set_hl(0, "@markup.link.url", { fg = palette.yellow, bold = false })
+   set_hl(0, "@markup.link.label", { fg = palette.fg, bold = true })
+   set_hl(0, "@markup.heading.1.markdown", { fg = palette.red, bold = true })
+   set_hl(0, "@markup.heading.2.markdown", { fg = palette.orange, bold = true })
+   set_hl(0, "@markup.heading.3.markdown", { fg = palette.yellow, bold = true })
+   set_hl(0, "@markup.heading.4.markdown", { fg = palette.green, bold = true })
+   set_hl(0, "@markup.heading.5.markdown", { fg = palette.blue, bold = true })
+   set_hl(0, "@markup.heading.6.markdown", { fg = palette.brown, bold = true })
 end
 
 return {
