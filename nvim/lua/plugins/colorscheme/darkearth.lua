@@ -44,6 +44,9 @@ local function highlight_overrides()
    set_hl(0, "DiffRemoved", { fg = palette.red, bold = true })
    set_hl(0, "htmlTagName", { fg = palette.red, italic = true })
    set_hl(0, "htmlArg", { fg = palette.green })
+   set_hl(0, "DashboardHeader", { fg = palette.orange, bold = true })
+   set_hl(0, "DashboardFooter", { fg = palette.yellow, bold = true })
+   set_hl(0, "DashboardShortcut", { fg = palette.green, bold = true })
 end
 
 return {
