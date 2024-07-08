@@ -47,6 +47,7 @@
   "neofusion.nvim": { "branch": "main", "commit": "4d3399f7247ebb7749d60af154aed91ece28f5aa" },
   "nvim-cmp": { "branch": "main", "commit": "a110e12d0b58eefcf5b771f533fc2cf3050680ac" },
   "nvim-early-retirement": { "branch": "main", "commit": "13d10a2c63e04113474a4742b3b490fa4e234502" },
+  "nvim-highlight-colors": { "branch": "main", "commit": "a8f6952cb1ff7bde864a34c502f1a42c360a6662" },
   "nvim-lspconfig": { "branch": "master", "commit": "cf97d2485fc3f6d4df1b79a3ea183e24c272215e" },
   "nvim-notify": { "branch": "master", "commit": "d333b6f167900f6d9d42a59005d82919830626bf" },
   "nvim-numbertoggle": { "branch": "main", "commit": "c5827153f8a955886f1b38eaea6998c067d2992f" },
