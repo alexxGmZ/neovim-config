@@ -13,8 +13,8 @@ return {
             'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
             'EndOfBuffer',
          },
-         extra_groups = { "NormalFloat" },   -- table: additional groups that should be cleared
-         exclude_groups = {}, -- table: groups you don't want to clear
+         extra_groups = { "NormalFloat" }, -- table: additional groups that should be cleared
+         exclude_groups = { "CursorLine", "CursorLineNr" }, -- table: groups you don't want to clear
       })
    end
 }
