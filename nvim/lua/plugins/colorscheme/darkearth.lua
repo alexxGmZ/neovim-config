@@ -30,6 +30,7 @@ local function highlight_overrides()
    set_hl(0, "Operator", { fg = palette.orange, bold = true })
    set_hl(0, "ColorColumn", { link = "CursorLine" })
    set_hl(0, "SpellBad", { sp = palette.red, undercurl = true })
+   set_hl(0, "Directory", { fg = palette.green })
 
    set_hl(0, "CursorLineNr", { fg = palette.yellow, bg = palette.bg, bold = true })
    set_hl(0, "LineNr", { fg = palette.grey })
