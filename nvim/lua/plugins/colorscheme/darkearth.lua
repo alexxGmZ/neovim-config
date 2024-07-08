@@ -7,7 +7,8 @@ local function highlight_overrides()
       yellow = "#C9A654",
       green = "#77824A",
       blue = "#5F865F",
-      brown = "#B36B42"
+      brown = "#B36B42",
+      grey = "#6e665e"
    }
    local set_hl = vim.api.nvim_set_hl
 
@@ -29,6 +30,9 @@ local function highlight_overrides()
    set_hl(0, "Operator", { fg = palette.orange, bold = true })
    set_hl(0, "ColorColumn", { link = "CursorLine" })
    set_hl(0, "SpellBad", { sp = palette.red, undercurl = true })
+   set_hl(0, "CursorLineNr", { fg = palette.yellow, bg = palette.bg, bold = true })
+   set_hl(0, "LineNrAbove", { fg = palette.grey, bold = true })
+   set_hl(0, "LineNrBelow", { link = "LineNrAbove" })
 
    set_hl(0, "LuaLineDiffAdd", { fg = palette.blue, bold = true })
    set_hl(0, "LuaLineDiffChange", { fg = palette.yellow, bold = true })
@@ -48,8 +52,8 @@ local function highlight_overrides()
    set_hl(0, "DiffRemoved", { fg = palette.red, bold = true })
    set_hl(0, "DiffAdd", { fg = palette.bg, bg = palette.green, bold = true, })
    set_hl(0, "DiffText", { fg = palette.bg, bg = palette.yellow, bold = true })
-   set_hl(0, "DiffChange", { fg = palette.bg, bg = palette.blue , bold = true })
-   set_hl(0, "DiffDelete", { fg = palette.bg, bg = palette.red , bold = true })
+   set_hl(0, "DiffChange", { fg = palette.bg, bg = palette.blue, bold = true })
+   set_hl(0, "DiffDelete", { fg = palette.bg, bg = palette.red, bold = true })
 
    set_hl(0, "htmlTagName", { fg = palette.red, italic = true })
    set_hl(0, "htmlArg", { fg = palette.green })
@@ -63,6 +67,8 @@ local function highlight_overrides()
    set_hl(0, "LazyReasonKeys", { fg = palette.red, bold = true })
    set_hl(0, "LazyReasonPlugin", { fg = palette.green, bold = true })
    set_hl(0, "LazyReasonFt", { fg = palette.blue, bold = true })
+
+   set_hl(0, "NotifyBackground", { bg = palette.bg })
 end
 
 return {
