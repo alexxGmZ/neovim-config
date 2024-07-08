@@ -1,11 +1,11 @@
 return {
    'nvimdev/dashboard-nvim',
-   event = 'VimEnter',
-   -- cond = function()
-   -- 	if next(vim.fn.argv()) == nil then
-   -- 		return true
-   -- 	end
-   -- end,
+   -- event = 'VimEnter',
+   cond = function()
+   	if next(vim.fn.argv()) == nil then
+   		return true
+   	end
+   end,
    dependencies = {
       'nvim-tree/nvim-web-devicons',
       {
