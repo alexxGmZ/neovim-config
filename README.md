@@ -49,7 +49,7 @@ cp -vr nvim ~/.config/
 ```
 
 > [!WARNING]
-> Note:** This config doesn't fully work in Windows
+> This config doesn't fully work in Windows
 
 <br>
 
