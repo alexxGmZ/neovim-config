@@ -4,6 +4,10 @@ return {
    ft = "markdown",
    dependencies = { "nvim-treesitter/nvim-treesitter" },
    config = function()
-      require("render-markdown").setup({})
+      require("render-markdown").setup({
+         heading = {
+            icons = { "󰬺 ", "󰬻 ", "󰬼 ", "󰬽 ", "󰬾 ", "󰬿 " },
+         },
+      })
    end,
 }
