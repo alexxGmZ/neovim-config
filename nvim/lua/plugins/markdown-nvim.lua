@@ -7,6 +7,7 @@ return {
       require("render-markdown").setup({
          heading = {
             icons = { "󰬺 ", "󰬻 ", "󰬼 ", "󰬽 ", "󰬾 ", "󰬿 " },
+            signs = { "" },
          },
       })
    end,
