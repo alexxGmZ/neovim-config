@@ -17,6 +17,14 @@ return {
                "@markup.heading.6.markdown"
             }
          },
+         checkbox = {
+            unchecked = {
+               highlight = "DiagnosticError"
+            },
+            checked = {
+               highlight = "DiagnosticOk"
+            }
+         }
       })
    end,
 }
