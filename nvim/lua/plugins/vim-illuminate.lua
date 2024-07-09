@@ -1,6 +1,6 @@
 return {
    "RRethy/vim-illuminate",
-   event = "VeryLazy",
+   cmd = { "IlluminateToggle", "IlluminateToggleBuf" },
    config = function()
       require("illuminate").configure({
          providers = { 'lsp', 'treesitter', 'regex' },
