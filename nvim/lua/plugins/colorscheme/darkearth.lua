@@ -13,7 +13,8 @@ local function highlight_overrides()
       -- custom palette
       forest_green = "#1F2D0E",
       dark_charcoal = "#2B3136",
-      deep_terracotta = "#5C2F1E"
+      deep_terracotta = "#5C2F1E",
+      deep_goldenrod = "#A78C3E"
    }
    local set_hl = vim.api.nvim_set_hl
 
@@ -64,7 +65,7 @@ local function highlight_overrides()
    set_hl(0, "DiffAdded", { fg = palette.green, bold = true })
    set_hl(0, "DiffRemoved", { fg = palette.red, bold = true })
    set_hl(0, "DiffAdd", { bg = palette.forest_green, bold = true, })
-   set_hl(0, "DiffText", { fg = palette.bg, bg = "#D2B55B", bold = true })
+   set_hl(0, "DiffText", { fg = palette.bg, bg = palette.deep_goldenrod, bold = true })
    set_hl(0, "DiffChange", { bg = palette.dark_charcoal, bold = true })
    set_hl(0, "DiffDelete", { bg = palette.deep_terracotta, bold = true })
 
