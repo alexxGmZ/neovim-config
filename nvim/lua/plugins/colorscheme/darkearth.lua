@@ -94,7 +94,6 @@ return {
       vim.cmd.colorscheme "darkearth"
 
       highlight_overrides()
-
       vim.api.nvim_create_autocmd("ColorScheme", {
          pattern = "*",
          group = "HANDSOME",
