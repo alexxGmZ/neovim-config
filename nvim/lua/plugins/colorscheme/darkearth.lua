@@ -33,7 +33,7 @@ local function highlight_overrides()
    set_hl(0, "Type", { fg = palette.orange, bold = false, italic = true })
    set_hl(0, "Constant", { fg = palette.yellow, bold = true })
    set_hl(0, "Field", { fg = palette.orange, bold = true })
-   set_hl(0, "Operator", { fg = palette.orange, bold = true })
+   set_hl(0, "Operator", { fg = palette.brown, bold = true })
    set_hl(0, "CursorLine", { bg = "#221f1c" })
    set_hl(0, "ColorColumn", { link = "CursorLine" })
    set_hl(0, "SpellBad", { sp = palette.red, undercurl = true })
@@ -91,6 +91,10 @@ local function highlight_overrides()
    set_hl(0, "LazyReasonFt", { fg = palette.blue, bold = true })
 
    set_hl(0, "NotifyBackground", { bg = palette.bg })
+
+   set_hl(0, "@parameter", { fg = palette.green, bold = true })
+   set_hl(0, "TSParameter", { link = "@parameter" })
+   set_hl(0, "@variable.parameter", { link = "@parameter" })
 end
 
 return {
