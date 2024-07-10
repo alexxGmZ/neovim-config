@@ -50,6 +50,8 @@ local function highlight_overrides()
    set_hl(0, "DiagnosticSignInfo", { fg = palette.green })
    set_hl(0, "DiagnosticSignWarn", { fg = palette.yellow })
    set_hl(0, "DiagnosticSignError", { fg = palette.red })
+   set_hl(0, "VertSplit", { fg = palette.grey })
+   set_hl(0, "EndOfBuffer", { fg = palette.grey })
 
    set_hl(0, "CursorLineNr", { fg = palette.yellow, bg = palette.bg, bold = true })
    set_hl(0, "LineNr", { fg = palette.grey })
