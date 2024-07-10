@@ -23,6 +23,8 @@ local function highlight_overrides()
    set_hl(0, "RainbowDelimiterCyan", { fg = palette.green })
    set_hl(0, "RainbowDelimiterBlue", { fg = palette.blue })
    set_hl(0, "RainbowDelimiterOrange", { fg = palette.orange })
+
+   -- global syntax
    set_hl(0, "Function", { fg = palette.orange, bold = true })
    set_hl(0, "String", { fg = palette.yellow, bold = true })
    set_hl(0, "Statement", { italic = true, bold = false })
@@ -34,7 +36,13 @@ local function highlight_overrides()
    set_hl(0, "Constant", { fg = palette.yellow, bold = true })
    set_hl(0, "Field", { fg = palette.orange, bold = true })
    set_hl(0, "Operator", { fg = palette.brown, bold = true })
-   set_hl(0, "CursorLine", { bg = "#221f1c" })
+   set_hl(0, "@parameter", { fg = palette.green, bold = true })
+   set_hl(0, "TSParameter", { link = "@parameter" })
+   set_hl(0, "@variable.parameter", { link = "@parameter" })
+
+   -- UI
+   set_hl(0, "VertSplit", { fg = palette.grey })
+   set_hl(0, "EndOfBuffer", { fg = palette.grey })
    set_hl(0, "ColorColumn", { link = "CursorLine" })
    set_hl(0, "SpellBad", { sp = palette.red, undercurl = true })
    set_hl(0, "SpellCap", { sp = palette.green, undercurl = true })
@@ -42,6 +50,13 @@ local function highlight_overrides()
    set_hl(0, "Visual", { fg = palette.bg, bg = palette.green, bold = true })
    set_hl(0, "Search", { fg = palette.bg, bg = palette.grey, bold = true })
    set_hl(0, "CurSearch", { fg = palette.bg, bg = palette.blue, bold = true })
+   set_hl(0, "CursorLine", { bg = "#221f1c" })
+   set_hl(0, "CursorLineNr", { fg = palette.yellow, bg = palette.bg, bold = true })
+   set_hl(0, "LineNr", { fg = palette.grey })
+   set_hl(0, "LineNrAbove", { link = "LineNr" })
+   set_hl(0, "LineNrBelow", { link = "LineNr" })
+
+   -- diagnostics
    set_hl(0, "DiagnosticHint", { fg = palette.blue })
    set_hl(0, "DiagnosticInfo", { fg = palette.green })
    set_hl(0, "DiagnosticWarn", { fg = palette.yellow })
@@ -50,18 +65,13 @@ local function highlight_overrides()
    set_hl(0, "DiagnosticSignInfo", { fg = palette.green })
    set_hl(0, "DiagnosticSignWarn", { fg = palette.yellow })
    set_hl(0, "DiagnosticSignError", { fg = palette.red })
-   set_hl(0, "VertSplit", { fg = palette.grey })
-   set_hl(0, "EndOfBuffer", { fg = palette.grey })
 
-   set_hl(0, "CursorLineNr", { fg = palette.yellow, bg = palette.bg, bold = true })
-   set_hl(0, "LineNr", { fg = palette.grey })
-   set_hl(0, "LineNrAbove", { link = "LineNr" })
-   set_hl(0, "LineNrBelow", { link = "LineNr" })
-
+   -- lualine
    set_hl(0, "LuaLineDiffAdd", { fg = palette.blue, bold = true })
    set_hl(0, "LuaLineDiffChange", { fg = palette.yellow, bold = true })
    set_hl(0, "LuaLineDiffDelete", { fg = palette.red, bold = true })
 
+   -- markdown
    set_hl(0, "@markup.link.url", { fg = palette.yellow, bold = false })
    set_hl(0, "@markup.link.label", { fg = palette.fg, bold = true })
    set_hl(0, "@markup.heading.1.markdown", { fg = palette.red, bold = true })
@@ -77,6 +87,7 @@ local function highlight_overrides()
    set_hl(0, "markdownH5", { link = "@markup.heading.5.markdown" })
    set_hl(0, "markdownH6", { link = "@markup.heading.6.markdown" })
 
+   -- git
    set_hl(0, "gitHash", { fg = palette.green, bold = true })
    set_hl(0, "DiffAdded", { fg = palette.green, bold = true })
    set_hl(0, "DiffRemoved", { fg = palette.red, bold = true })
@@ -85,24 +96,24 @@ local function highlight_overrides()
    set_hl(0, "DiffChange", { bg = palette.dark_charcoal, bold = true })
    set_hl(0, "DiffDelete", { bg = palette.deep_terracotta, bold = true })
 
+   -- html
    set_hl(0, "htmlTagName", { fg = palette.red, italic = true })
    set_hl(0, "htmlArg", { fg = palette.green })
 
+   -- dashboard
    set_hl(0, "DashboardHeader", { fg = palette.orange, bold = true })
    set_hl(0, "DashboardFooter", { fg = palette.yellow, bold = true })
    set_hl(0, "DashboardShortcut", { fg = palette.green, bold = true })
 
+   -- lazy
    set_hl(0, "LazyReasonCmd", { fg = palette.yellow, bold = true })
    set_hl(0, "LazyReasonEvent", { fg = palette.orange, bold = true })
    set_hl(0, "LazyReasonKeys", { fg = palette.red, bold = true })
    set_hl(0, "LazyReasonPlugin", { fg = palette.green, bold = true })
    set_hl(0, "LazyReasonFt", { fg = palette.blue, bold = true })
 
+   -- notify
    set_hl(0, "NotifyBackground", { bg = palette.bg })
-
-   set_hl(0, "@parameter", { fg = palette.green, bold = true })
-   set_hl(0, "TSParameter", { link = "@parameter" })
-   set_hl(0, "@variable.parameter", { link = "@parameter" })
 end
 
 return {
