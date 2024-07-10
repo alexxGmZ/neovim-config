@@ -8,6 +8,7 @@ return {
          heading = {
             icons = { "󰬺 ", "󰬻 ", "󰬼 ", "󰬽 ", "󰬾 ", "󰬿 " },
             signs = { "" },
+            backgrounds = { 'DiffAdd', 'DiffChange', 'DiffDelete', 'DiffText' },
             foregrounds = {
                "@markup.heading.1.markdown",
                "@markup.heading.2.markdown",
