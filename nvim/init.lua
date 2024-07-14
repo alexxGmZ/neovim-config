@@ -25,7 +25,8 @@ require("lazy").setup({
       { import = "plugins.colorscheme" },
       { import = "plugins.lsp" },
    },
-   ui = { border = "rounded" }
+   ui = { border = "rounded" },
+   change_detection = { enabled = false }
 })
 
 if vim.g.neovide then
