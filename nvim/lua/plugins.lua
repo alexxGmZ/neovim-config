@@ -7,7 +7,6 @@ return {
 
    {
       "gregsexton/MatchTag",
-      event = "VeryLazy",
       ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
    },
 
