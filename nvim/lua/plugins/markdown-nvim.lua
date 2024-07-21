@@ -18,6 +18,7 @@ return {
                "@markup.heading.6.markdown"
             }
          },
+         code = { sign = false },
          checkbox = {
             unchecked = {
                highlight = "DiagnosticError"
