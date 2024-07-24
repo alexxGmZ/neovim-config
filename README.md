@@ -33,7 +33,6 @@ My neovim setup and development workflow
 other utf-8 characters)
 * neovim v0.10.+
 * [lazy](https://github.com/folke/lazy.nvim) as the plugin manager
-* [Code New Roman Nerd Font](https://www.nerdfonts.com/font-downloads)
 
 <br>
 
