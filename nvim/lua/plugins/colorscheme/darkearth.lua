@@ -114,6 +114,9 @@ local function highlight_overrides()
 
    -- notify
    set_hl(0, "NotifyBackground", { bg = palette.bg })
+
+   -- treesitter-context
+   set_hl(0, "TreesitterContextBottom", { underline = true })
 end
 
 return {

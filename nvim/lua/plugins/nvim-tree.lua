@@ -3,7 +3,7 @@ return {
    cmd = "NvimTreeOpen",
    config = function()
       local HEIGHT_RATIO = 0.8 -- You can change this
-      local WIDTH_RATIO = 0.5 -- You can change this too
+      local WIDTH_RATIO = 0.5  -- You can change this too
 
       -- empty setup using defaults
       require("nvim-tree").setup {
@@ -56,6 +56,14 @@ return {
                   bottom = "─",
                   none = " ",
                },
+            },
+            icons = {
+               glyphs = {
+                  git = {
+                     unstaged = "󰄱",
+                     staged = "󰱒",
+                  }
+               }
             }
          },
          diagnostics = {

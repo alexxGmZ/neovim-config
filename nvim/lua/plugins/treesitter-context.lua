@@ -3,9 +3,6 @@ return {
    event = "VeryLazy",
    dependencies = { "nvim-treesitter/nvim-treesitter" },
    config = function()
-      vim.cmd [[
-			hi TreesitterContextBottom gui=underline
-		]]
       require 'treesitter-context'.setup {
          enable = true,
          max_lines = 0,
