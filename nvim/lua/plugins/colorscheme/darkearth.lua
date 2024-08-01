@@ -39,6 +39,7 @@ local function highlight_overrides()
    set_hl(0, "@parameter", { fg = palette.green, bold = true })
    set_hl(0, "TSParameter", { link = "@parameter" })
    set_hl(0, "@variable.parameter", { link = "@parameter" })
+   set_hl(0, "Boolean", { fg = palette.green, bold = true })
 
    -- UI
    set_hl(0, "VertSplit", { fg = palette.grey })
