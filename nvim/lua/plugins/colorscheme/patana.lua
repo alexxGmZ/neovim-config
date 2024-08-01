@@ -1,4 +1,7 @@
 return {
    "cvigilv/patana.nvim",
-   lazy = true
+   lazy = true,
+   config = function ()
+      vim.opt.background = "light"
+   end
 }
