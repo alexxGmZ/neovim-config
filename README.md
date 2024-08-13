@@ -114,23 +114,10 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Colorscheme
 
-* [catppuccin/nvim                 ](https://github.com/catppuccin/nvim)
-* [folke/tokyonight.nvim           ](https://github.com/folke/tokyonight.nvim)
-* [projekt0n/github-nvim-theme     ](https://github.com/projekt0n/github-nvim-theme)
-* [rose-pine/neovim                ](https://github.com/rose-pine/neovim)
-* [yorik1984/newpaper.nvim         ](https://github.com/yorik1984/newpaper.nvim)
-* [rebelot/kanagawa.nvim           ](https://github.com/rebelot/kanagawa.nvim)
 * [neanias/everforest-nvim         ](https://github.com/neanias/everforest-nvim)
-* [mcchrish/zenbones.nvim          ](https://github.com/mcchrish/zenbones.nvim)
 * [sainnhe/gruvbox-material        ](https://github.com/sainnhe/gruvbox-material)
-* [kdheepak/monochrome.nvim        ](https://github.com/kdheepak/monochrome.nvim)
-* [nyoom-engineering/oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim)
 * [cvigilv/patana.nvim             ](https://github.com/cvigilv/patana.nvim)
-* [uloco/bluloco.nvim              ](https://github.com/uloco/bluloco.nvim)
 * [ptdewey/darkearth-nvim          ](https://github.com/ptdewey/darkearth-nvim)
-* [akinsho/horizon.nvim            ](https://github.com/akinsho/horizon.nvim)
-* [savq/melange-nvim               ](https://github.com/savq/melange-nvim)
-* [diegoulloao/neofusion.nvim      ](https://github.com/diegoulloao/neofusion.nvim)
 
 #### Git Integration
 
