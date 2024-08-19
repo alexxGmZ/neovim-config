@@ -66,22 +66,6 @@ local function configuration()
       s = "SUB"
    }
 
-   -- rename mode names to shorter ones
-   -- local mode_map = {
-   -- 	n = "N",
-   -- 	nt = "N",
-   -- 	i = "I",
-   -- 	R = "R",
-   -- 	v = "V",
-   -- 	V = "VL",
-   -- 	no = "CHA",
-   -- 	["\22"] = "VB",
-   -- 	t = "T",
-   -- 	['!'] = "SH",
-   -- 	c = "C",
-   -- 	s = "SUB"
-   -- }
-
    lualine.setup {
       options = {
          icons_enabled = true,
