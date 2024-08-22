@@ -49,6 +49,8 @@ local function setup_config()
          hl.IlluminateWordText = { bg = "#4e4e4e" }
          hl.IlluminateWordRead = { bg = "#4e4e4e" }
          hl.IlluminateWordWrite = { bg = "#4e4e4e" }
+
+         hl.CursorLineNr = { fg = palette.green, bold = true }
       end,
       colours_override = function(palette)
          -- palette.bg0 = "#402914"
