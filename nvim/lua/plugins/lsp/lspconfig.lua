@@ -52,7 +52,7 @@ return {
          "bashls",
          "lemminx",
          "quick_lint_js",
-         "tsserver",
+         "ts_ls",
          "jsonls",
          "gopls"
       }
