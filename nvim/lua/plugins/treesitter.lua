@@ -32,7 +32,7 @@ return {
          highlight = {
             enable = true,
             disable = { "html", "csv" },
-            additional_vim_regex_highlighting = true,
+            additional_vim_regex_highlighting = false,
          },
          incremental_selection = { enable = false },
          indent = { enable = false }
