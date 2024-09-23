@@ -3,7 +3,7 @@ local function lsp_client()
 
    local clients = vim.lsp.buf_get_clients(bufnr)
    if next(clients) == nil then
-      return ''
+      return ""
    end
 
    local c = {}
@@ -11,7 +11,7 @@ local function lsp_client()
       table.insert(c, client.name)
    end
    -- return '\u{f085} ' .. table.concat(c, ' | ')
-   return table.concat(c, ' ')
+   return table.concat(c, " ")
 end
 
 local function macro_recording()

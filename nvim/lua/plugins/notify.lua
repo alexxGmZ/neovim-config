@@ -33,7 +33,7 @@ return {
          for i = 1, #_ do
             table.insert(print_safe_args, tostring(_[i]))
          end
-         vim.notify(table.concat(print_safe_args, ' '), "info")
+         vim.notify(table.concat(print_safe_args, " "), "info")
       end
    end
 }
