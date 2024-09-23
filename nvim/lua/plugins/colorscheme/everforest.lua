@@ -29,7 +29,7 @@ local function setup_config()
          hl.TreesitterContextBottom = { underline = true }
 
          hl.CurrentWord = { fg = palette.none, underline = true }
-         hl.String = { fg = palette.green, bold = true }
+         hl.String = { fg = palette.green }
          -- hl.String = { fg = "#e0bc7c", bold = true }
          hl.Keyword = { fg = palette.orange, italic = true }
          hl.Constant = { fg = palette.orange, bold = true }
