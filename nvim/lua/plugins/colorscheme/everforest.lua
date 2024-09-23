@@ -23,13 +23,13 @@ local function setup_config()
          hl.TSParameter = { fg = palette.red, bold = true }
          hl.TSString = { link = "String" }
          hl.TSConditional = { fg = palette.red, italic = true }
-         hl.TSVariable = { fg = palette.none, bold = true }
+         hl.TSVariable = { fg = palette.none }
          hl.TSMethod = { link = "Function" }
          hl.TSMethodCall = { link = "Function" }
          hl.TreesitterContextBottom = { underline = true }
 
          hl.CurrentWord = { fg = palette.none, underline = true }
-         hl.String = { fg = palette.green }
+         hl.String = { fg = palette.green, bold = true }
          -- hl.String = { fg = "#e0bc7c", bold = true }
          hl.Keyword = { fg = palette.orange, italic = true }
          hl.Constant = { fg = palette.orange, bold = true }
