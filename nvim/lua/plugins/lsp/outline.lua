@@ -31,14 +31,14 @@ return {
             show_symbol_lineno = true,
             auto_set_cursor = false,
             auto_update_events = {
-               follow = { 'CursorHold' },
+               follow = { "CursorHold" },
                items = {
-                  'InsertLeave',
-                  'WinEnter',
-                  'BufEnter',
-                  'BufWinEnter',
-                  'TabEnter',
-                  'BufWritePost',
+                  "InsertLeave",
+                  "WinEnter",
+                  "BufEnter",
+                  "BufWinEnter",
+                  "TabEnter",
+                  "BufWritePost",
                },
             },
          },
@@ -48,17 +48,17 @@ return {
          guides = {
             enabled = true,
             markers = {
-               bottom = '└',
-               middle = '├',
-               vertical = '│',
-               horizontal = '─',
+               bottom = "└",
+               middle = "├",
+               vertical = "│",
+               horizontal = "─",
             },
          },
 
          symbol_folding = {
             autofold_depth = 1,
             auto_unfold_hover = true,
-            markers = { '', '' },
+            markers = { "", "" },
          },
 
          preview_window = {
@@ -67,8 +67,8 @@ return {
             width = 50,
             min_width = 50,
             relative_width = true,
-            border = 'single',
-            winhl = '',
+            border = "single",
+            winhl = "",
             winblend = 0
          },
 

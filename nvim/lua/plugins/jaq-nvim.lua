@@ -1,7 +1,7 @@
 return {
    "is0n/jaq-nvim",
    config = function()
-      require('jaq-nvim').setup {
+      require("jaq-nvim").setup {
          cmds = {
             -- Uses vim commands
             internal = {

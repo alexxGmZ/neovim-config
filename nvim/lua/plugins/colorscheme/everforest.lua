@@ -23,7 +23,7 @@ local function setup_config()
          hl.TSParameter = { fg = palette.red, bold = true }
          hl.TSString = { link = "String" }
          hl.TSConditional = { fg = palette.red, italic = true }
-         hl.TSVariable = { fg = palette.none, bold = true }
+         hl.TSVariable = { fg = palette.none }
          hl.TSMethod = { link = "Function" }
          hl.TSMethodCall = { link = "Function" }
          hl.TreesitterContextBottom = { underline = true }
