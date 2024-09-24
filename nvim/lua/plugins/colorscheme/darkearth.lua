@@ -41,7 +41,8 @@ local function highlight_overrides()
    set_hl(0, "@variable.parameter", { link = "@parameter" })
    set_hl(0, "Boolean", { fg = palette.green, bold = true })
    set_hl(0, "@variable.member.javascript", { bold = true })
-   set_hl(0, "@punctuation.delimiter.javascript", { link = "@variable" })
+   set_hl(0, "Delimiter", { link = "@variable" })
+   set_hl(0, "@punctuation.delimiter.javascript", { link = "Delimiter" })
 
    -- UI
    set_hl(0, "VertSplit", { fg = palette.grey })
@@ -98,6 +99,10 @@ local function highlight_overrides()
    set_hl(0, "DiffText", { fg = palette.bg, bg = palette.deep_goldenrod, bold = true })
    set_hl(0, "DiffChange", { bg = palette.dark_charcoal, bold = true })
    set_hl(0, "DiffDelete", { bg = palette.deep_terracotta, bold = true })
+   set_hl(0, "fugitiveHeader", { bold = true })
+   set_hl(0, "gitIdentityHeader", { fg = palette.fg })
+   set_hl(0, "gitDateHeader", { link = "gitIdentityHeader" })
+   set_hl(0, "@keyword.gitcommit", { fg = palette.yellow, bold = true })
 
    -- html
    set_hl(0, "htmlTagName", { fg = palette.red, italic = true })
