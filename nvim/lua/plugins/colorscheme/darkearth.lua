@@ -43,6 +43,7 @@ local function highlight_overrides()
    set_hl(0, "@variable.member.javascript", { bold = true })
    set_hl(0, "Delimiter", { link = "@variable" })
    set_hl(0, "@punctuation.delimiter.javascript", { link = "Delimiter" })
+   set_hl(0, "@punctuation.delimiter.jsdoc", { link = "Comment" })
 
    -- UI
    set_hl(0, "VertSplit", { fg = palette.grey })
@@ -69,6 +70,7 @@ local function highlight_overrides()
    set_hl(0, "DiagnosticSignInfo", { fg = palette.green })
    set_hl(0, "DiagnosticSignWarn", { fg = palette.yellow })
    set_hl(0, "DiagnosticSignError", { fg = palette.red })
+   set_hl(0, "DiagnosticUnderlineError", { fg = palette.red, undercurl = true })
 
    -- lualine
    set_hl(0, "LuaLineDiffAdd", { fg = palette.blue, bold = true })
@@ -77,7 +79,7 @@ local function highlight_overrides()
 
    -- markdown
    set_hl(0, "@markup.link.url", { fg = palette.yellow, bold = false })
-   set_hl(0, "@markup.link.label", { fg = palette.fg, bold = true })
+   set_hl(0, "@markup.link.label", { fg = palette.fg })
    set_hl(0, "@markup.heading.1.markdown", { fg = palette.red, bold = true })
    set_hl(0, "@markup.heading.2.markdown", { fg = palette.orange, bold = true })
    set_hl(0, "@markup.heading.3.markdown", { fg = palette.yellow, bold = true })
@@ -114,11 +116,11 @@ local function highlight_overrides()
    set_hl(0, "DashboardShortcut", { fg = palette.green, bold = true })
 
    -- lazy
-   set_hl(0, "LazyReasonCmd", { fg = palette.yellow, bold = true })
-   set_hl(0, "LazyReasonEvent", { fg = palette.orange, bold = true })
-   set_hl(0, "LazyReasonKeys", { fg = palette.red, bold = true })
-   set_hl(0, "LazyReasonPlugin", { fg = palette.green, bold = true })
-   set_hl(0, "LazyReasonFt", { fg = palette.blue, bold = true })
+   set_hl(0, "LazyReasonCmd", { fg = palette.yellow })
+   set_hl(0, "LazyReasonEvent", { fg = palette.orange })
+   set_hl(0, "LazyReasonKeys", { fg = palette.red })
+   set_hl(0, "LazyReasonPlugin", { fg = palette.green })
+   set_hl(0, "LazyReasonFt", { fg = palette.blue })
 
    -- notify
    set_hl(0, "NotifyBackground", { bg = palette.bg })
