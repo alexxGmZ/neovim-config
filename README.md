@@ -89,7 +89,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [hrsh7th/cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help)
 * [rafamadriz/friendly-snippets       ](https://github.com/rafamadriz/friendly-snippets)
 * [VidocqH/lsp-lens.nvim              ](https://github.com/VidocqH/lsp-lens.nvim)
-* [stevearc/conform.nvim              ](https://github.com/stevearc/conform.nvim)
 
 #### Aesthetic or Interface
 
@@ -114,10 +113,11 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Colorscheme
 
-* [neanias/everforest-nvim         ](https://github.com/neanias/everforest-nvim)
-* [sainnhe/gruvbox-material        ](https://github.com/sainnhe/gruvbox-material)
-* [cvigilv/patana.nvim             ](https://github.com/cvigilv/patana.nvim)
-* [ptdewey/darkearth-nvim          ](https://github.com/ptdewey/darkearth-nvim)
+* [neanias/everforest-nvim ](https://github.com/neanias/everforest-nvim)
+* [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material)
+* [cvigilv/patana.nvim     ](https://github.com/cvigilv/patana.nvim)
+* [ptdewey/darkearth-nvim  ](https://github.com/ptdewey/darkearth-nvim)
+* [myagko/nymph            ](https://github.com/myagko/nymph)
 
 #### Git Integration
 
