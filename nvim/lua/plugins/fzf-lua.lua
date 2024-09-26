@@ -5,7 +5,8 @@ return {
       "junegunn/fzf",
    },
    keys = {
-      { "<C-p>", "<cmd>FzfLua files<CR>", desc = "FzfLua: FzfLua files" }
+      { "<C-p>", "<cmd>FzfLua files<CR>", desc = "FzfLua: FzfLua files" },
+      { "<leader>lg", "<cmd>FzfLua live_grep<CR>", desc = "FzfLua: FzfLua live grep" }
    },
    config = function()
       require("fzf-lua").setup {
