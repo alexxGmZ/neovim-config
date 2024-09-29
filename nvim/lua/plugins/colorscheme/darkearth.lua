@@ -122,6 +122,8 @@ local function highlight_overrides()
    set_hl(0, "LazyReasonKeys", { fg = palette.red })
    set_hl(0, "LazyReasonPlugin", { fg = palette.green })
    set_hl(0, "LazyReasonFt", { fg = palette.blue })
+   set_hl(0, "LazyReasonSource", { fg = palette.yellow, bold = false })
+   set_hl(0, "LazyReasonImport", { fg = palette.red, bold = false })
 
    -- notify
    set_hl(0, "NotifyBackground", { bg = palette.bg })
