@@ -44,6 +44,7 @@ local function highlight_overrides()
    set_hl(0, "Delimiter", { link = "@variable" })
    set_hl(0, "@punctuation.delimiter.javascript", { link = "Delimiter" })
    set_hl(0, "@punctuation.delimiter.jsdoc", { link = "Comment" })
+   set_hl(0, "@constructor.lua", { link = "@variable" })
 
    -- UI
    set_hl(0, "VertSplit", { fg = palette.grey })
