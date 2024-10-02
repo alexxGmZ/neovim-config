@@ -5,10 +5,11 @@ return {
       "junegunn/fzf",
    },
    keys = {
-      { "<C-p>", "<cmd>FzfLua files<CR>", desc = "FzfLua: FzfLua files" },
+      { "<C-p>",      "<cmd>FzfLua files<CR>",     desc = "FzfLua: FzfLua files" },
       { "<leader>lg", "<cmd>FzfLua live_grep<CR>", desc = "FzfLua: FzfLua live grep" }
    },
    config = function()
+      local actions = require("fzf-lua.actions")
       require("fzf-lua").setup {
          winopts = {},
          previewers = {
@@ -20,6 +21,16 @@ return {
                   ["png"] = "chafa",
                   ["jpg"] = "chafa",
                }
+            }
+         },
+         keymap = {
+            fzf = {
+               ["ctrl-a"] = "toggle-all",
+            }
+         },
+         actions = {
+            files = {
+               ["ctrl-q"] = actions.file_sel_to_qf,
             }
          }
       }
