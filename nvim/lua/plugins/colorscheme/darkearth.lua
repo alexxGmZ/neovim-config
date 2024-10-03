@@ -26,11 +26,11 @@ local function highlight_overrides()
 
    -- global syntax
    set_hl(0, "Function", { fg = palette.orange, bold = true })
-   set_hl(0, "String", { fg = palette.yellow, bold = true })
+   set_hl(0, "String", { fg = palette.yellow })
    set_hl(0, "Statement", { italic = true, bold = false })
    set_hl(0, "Keyword", { fg = palette.blue, italic = true })
    set_hl(0, "Identifier", { fg = palette.red, bold = true })
-   set_hl(0, "@variable", { fg = palette.fg, bold = false })
+   set_hl(0, "@variable", { fg = palette.fg, bold = true })
    set_hl(0, "Number", { fg = palette.orange, bold = true })
    set_hl(0, "Type", { fg = palette.orange, bold = false, italic = true })
    set_hl(0, "Constant", { fg = palette.yellow, bold = true })
@@ -40,10 +40,10 @@ local function highlight_overrides()
    set_hl(0, "TSParameter", { link = "@parameter" })
    set_hl(0, "@variable.parameter", { link = "@parameter" })
    set_hl(0, "Boolean", { fg = palette.green, bold = true })
-   set_hl(0, "@variable.member.javascript", { bold = true })
-   set_hl(0, "Delimiter", { link = "@variable" })
-   set_hl(0, "@punctuation.delimiter.javascript", { link = "Delimiter" })
+   set_hl(0, "Delimiter", { fg = palette.fg })
+   set_hl(0, "@punctuation.special", { fg = palette.green, bold = true })
    set_hl(0, "@punctuation.delimiter.jsdoc", { link = "Comment" })
+   set_hl(0, "@constructor.lua", { link = "@variable" })
 
    -- UI
    set_hl(0, "VertSplit", { fg = palette.grey })
@@ -121,12 +121,24 @@ local function highlight_overrides()
    set_hl(0, "LazyReasonKeys", { fg = palette.red })
    set_hl(0, "LazyReasonPlugin", { fg = palette.green })
    set_hl(0, "LazyReasonFt", { fg = palette.blue })
+   set_hl(0, "LazyReasonSource", { fg = palette.yellow, bold = false })
+   set_hl(0, "LazyReasonImport", { fg = palette.red, bold = false })
 
    -- notify
    set_hl(0, "NotifyBackground", { bg = palette.bg })
 
    -- treesitter-context
    set_hl(0, "TreesitterContextBottom", { underline = true })
+
+   -- javascript
+   set_hl(0, "@variable.member.javascript", { fg = palette.fg })
+   set_hl(0, "@variable.builtin.javascript", { fg = palette.fg, italic = true })
+   set_hl(0, "@punctuation.delimiter.javascript", { link = "Delimiter" })
+   set_hl(0, "@punctuation.bracket.javascript", { fg = palette.fg, bold = true })
+
+   -- lua
+   set_hl(0, "@variable.member.lua", { fg = palette.fg, italic = true })
+   set_hl(0, "@constructor.lua", { link = "@variable" })
 end
 
 return {
