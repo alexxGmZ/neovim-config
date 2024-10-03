@@ -25,11 +25,13 @@ return {
          },
          keymap = {
             fzf = {
+               true,
                ["ctrl-a"] = "toggle-all",
             }
          },
          actions = {
             files = {
+               true,
                ["ctrl-q"] = actions.file_sel_to_qf,
             }
          }
