@@ -12,36 +12,46 @@ create_user_command("DiffOrig", function()
    vim.cmd.diffthis()       -- current buffer
 end, {})
 
+local player_args = {
+   "next",
+   "previous",
+   "pause",
+   "play",
+   "play-pause",
+}
 create_user_command("Player", function(args)
    local system = vim.fn.system
    local notify = vim.notify
    local tool = "playerctl "
-   local arg = args["args"]
+   local user_command_arg = args["args"]
 
-   local function notify_new_track()
+   local function notify_player()
+      local status = string.gsub(system(tool .. "status"), "\n", "");
+      if status == "No players found" or status == "Stopped" then
+         return notify(status, "WARN")
+      end
+
+      local status_icons = {
+         Playing = "󰐊 ",
+         Paused = "󰏤 ",
+      }
+      local status_icon = status_icons[status]
+      local player_name = string.gsub(system(tool .. "metadata --format '{{ playerName }}'"), "\n", "")
       local song = system(tool .. "metadata --format '{{ artist }} - {{ title }}' | tr -d '\n'")
-      notify("󰐊 " .. song)
+
+      return notify(status .. " " .. "(" .. player_name .. ")\n" .. status_icon .. song)
    end
 
-   if arg == "status" then
-      local status = system(tool .. "status | tr -d '\n'");
-      notify(status)
-   elseif arg == "next" then
-      system(tool .. "next")
-      notify_new_track()
-   elseif arg == "previous" then
-      system(tool .. "previous")
-      notify_new_track()
-   elseif arg == "pause" then
-      system(tool .. "pause")
-   elseif arg == "play" then
-      system(tool .. "play")
-   elseif arg == "play-pause" then
-      system(tool .. "play-pause")
-   else
-      local player_name = system(tool .. "metadata --format '{{ playerName }}'")
-      local song = system(tool .. "metadata --format '{{ artist }} - {{ title }}' | tr -d '\n'")
-      notify(player_name .. "󰐊 " .. song)
+   for _, player_command in ipairs(player_args) do
+      if player_command == user_command_arg then
+         system(tool .. player_command)
+      end
    end
-end, {nargs = "*"});
 
+   notify_player()
+end, {
+   nargs = "*",
+   complete = function()
+      return player_args
+   end
+});
