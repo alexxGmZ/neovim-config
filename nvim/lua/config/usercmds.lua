@@ -41,6 +41,7 @@ create_user_command("Player", function(args)
       Playing = "󰐊 ",
       Paused = "󰏤 ",
    }
+   status = string.gsub(system(tool .. "status"), "\n", "");
    local player_name = string.gsub(system(tool .. "metadata --format '{{ playerName }}'"), "\n", "")
    local song = system(tool .. "metadata --format '{{ artist }} - {{ title }}' | tr -d '\n'")
    local notify_table_data = {
