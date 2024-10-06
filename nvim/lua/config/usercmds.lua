@@ -25,30 +25,30 @@ create_user_command("Player", function(args)
    local tool = "playerctl "
    local user_command_arg = args["args"]
 
-   local function notify_player()
-      local status = string.gsub(system(tool .. "status"), "\n", "");
-      if status == "No players found" or status == "Stopped" then
-         return notify(status, "WARN")
-      end
-
-      local status_icons = {
-         Playing = "󰐊 ",
-         Paused = "󰏤 ",
-      }
-      local status_icon = status_icons[status]
-      local player_name = string.gsub(system(tool .. "metadata --format '{{ playerName }}'"), "\n", "")
-      local song = system(tool .. "metadata --format '{{ artist }} - {{ title }}' | tr -d '\n'")
-
-      return notify(status .. " " .. "(" .. player_name .. ")\n" .. status_icon .. song)
-   end
-
    for _, player_command in ipairs(player_args) do
       if player_command == user_command_arg then
          system(tool .. player_command)
       end
    end
 
-   notify_player()
+   local status = string.gsub(system(tool .. "status"), "\n", "");
+
+   if status == "No players found" or status == "Stopped" then
+      return notify(status, "WARN")
+   end
+
+   local status_icons = {
+      Playing = "󰐊 ",
+      Paused = "󰏤 ",
+   }
+   local player_name = string.gsub(system(tool .. "metadata --format '{{ playerName }}'"), "\n", "")
+   local song = system(tool .. "metadata --format '{{ artist }} - {{ title }}' | tr -d '\n'")
+   local notify_table_data = {
+      status, " (", player_name, ")\n",
+      status_icons[status], song
+   }
+
+   return notify(table.concat(notify_table_data))
 end, {
    nargs = "*",
    complete = function()
