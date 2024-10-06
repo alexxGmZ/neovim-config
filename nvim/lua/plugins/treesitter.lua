@@ -31,7 +31,7 @@ return {
          },
          highlight = {
             enable = true,
-            disable = { "html", "csv" },
+            disable = { "html", "csv", "tmux" },
             additional_vim_regex_highlighting = false,
          },
          incremental_selection = { enable = false },

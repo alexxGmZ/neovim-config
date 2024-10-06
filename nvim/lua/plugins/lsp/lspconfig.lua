@@ -49,7 +49,7 @@ return {
          -- "tailwindcss",
          "bashls",
          "lemminx",
-         "quick_lint_js",
+         -- "quick_lint_js",
          "ts_ls",
          "jsonls",
          "gopls"
