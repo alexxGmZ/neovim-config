@@ -16,6 +16,7 @@ local player_args = {
    "cmus",
    "spotify",
    "firefox",
+   "mpv",
    "next",
    "previous",
    "pause",
@@ -30,7 +31,8 @@ create_user_command("Player", function(opts)
    local supported_players = {
       "cmus",
       "spotify",
-      "firefox"
+      "firefox",
+      "mpv"
    }
    local playback_commands = {
       "next",
