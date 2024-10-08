@@ -59,12 +59,12 @@ local function setup_config()
          -- palette.purple = "#de7398"
       end,
    })
-   -- vim.cmd.colorscheme "everforest"
+   vim.cmd.colorscheme "everforest"
 end
 
 return {
    "neanias/everforest-nvim",
-   -- priority = 1000,
-   lazy = true,
+   priority = 1000,
+   -- lazy = true,
    config = setup_config
 }
