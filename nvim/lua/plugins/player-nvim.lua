@@ -1,5 +1,6 @@
 return {
-   "alexxGmZ/player.nvim",
+   -- "alexxGmZ/player.nvim",
+   dir = "$HOME/Git/player.nvim",
    branch = "beta",
    config = function()
       require("player").setup({
