@@ -23,4 +23,11 @@ return {
       "nullchilly/fsread.nvim",
       cmd = { "FSRead", "FSToggle" }
    },
+
+   {
+      "alexxGmZ/player.nvim",
+      config = function()
+         require("player").setup({})
+      end
+   }
 }
