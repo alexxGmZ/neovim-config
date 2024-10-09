@@ -23,4 +23,5 @@ return {
       "nullchilly/fsread.nvim",
       cmd = { "FSRead", "FSToggle" }
    },
+
 }
