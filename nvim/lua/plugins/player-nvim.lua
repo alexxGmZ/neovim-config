@@ -1,7 +1,8 @@
 return {
    -- "alexxGmZ/player.nvim",
+   -- branch = "beta",
    dir = "$HOME/Git/player.nvim",
-   branch = "beta",
+   cmd = "Player",
    config = function()
       require("player").setup({
          supported_players = {
