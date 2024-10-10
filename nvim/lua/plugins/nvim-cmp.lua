@@ -153,9 +153,6 @@ return {
                max_item_count = 20
             }
          }),
-         completion = {
-            keyword_length = 2
-         }
       })
 
       cmp.setup.filetype({ "sql", "mysql", "plsql" }, {

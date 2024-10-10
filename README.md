@@ -66,6 +66,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-tree/nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 * [hedyhli/outline.nvim](https://github.com/hedyhli/outline.nvim)
 * [folke/trouble.nvim](https://github.com/folke/trouble.nvim)
+* [jinh0/eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim)
 
 #### Syntax Highlighting
 
@@ -101,7 +102,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 * [onsails/lspkind.nvim](https://github.com/onsails/lspkind.nvim)
 * [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
-* [mistricky/codesnap.nvim](https://github.com/mistricky/codesnap.nvim)
 * [sudoerwx/vim-ray-so-beautiful](https://github.com/sudoerwx/vim-ray-so-beautiful)
 * [nvimdev/dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
 * [NStefan002/screenkey.nvim](https://github.com/NStefan002/screenkey.nvim)
@@ -118,6 +118,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [cvigilv/patana.nvim](https://github.com/cvigilv/patana.nvim)
 * [ptdewey/darkearth-nvim](https://github.com/ptdewey/darkearth-nvim)
 * [myagko/nymph](https://github.com/myagko/nymph)
+* [catppuccin/nvim](https://github.com/catppuccin/nvim)
 
 #### Git Integration
 
@@ -139,6 +140,8 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [kristijanhusak/vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui)
 * [Wansmer/treesj](https://github.com/Wansmer/treesj)
 * [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
+* [alexxGmZ/player.nvim](https://github.com/alexxGmZ/player.nvim)
+* [hat0uma/csvview.nvim](https://github.com/hat0uma/csvview.nvim)
 
 <br>
 
