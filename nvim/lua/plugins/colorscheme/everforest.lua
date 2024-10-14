@@ -54,7 +54,7 @@ local function setup_config()
          hl["@keyword.return.lua"] = { fg = palette.orange, italic = true}
          hl["@keyword.repeat.lua"] = { fg = palette.red, italic = true}
          hl["@keyword.function.lua"] = { fg = palette.red, italic = true}
-         hl["@punctuation.bracket.lua"] = { bold = true}
+         hl["@punctuation.bracket"] = { bold = true}
       end,
       colours_override = function(palette)
          -- palette.bg0 = "#402914"
