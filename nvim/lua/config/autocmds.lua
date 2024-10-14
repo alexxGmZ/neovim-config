@@ -46,7 +46,7 @@ create_autocmd("ColorScheme", {
    group = user_augroup,
    callback = function()
       vim.cmd [[
-      hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e
+         hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e
       ]]
    end
 })
