@@ -40,7 +40,7 @@ create_autocmd({ "CmdlineLeave", "UIEnter" }, {
 })
 
 -- enforce custom highlights every time the colorscheme changes
-vim.opt.colorcolumn = "90"
+vim.opt.colorcolumn = "80,90"
 create_autocmd("ColorScheme", {
    pattern = "*",
    group = user_augroup,
