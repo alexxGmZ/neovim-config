@@ -30,7 +30,6 @@ local function setup_config()
 
          hl.CurrentWord = { fg = palette.none, underline = true }
          hl.String = { fg = palette.green, bold = false }
-         -- hl.String = { fg = "#e0bc7c", bold = true }
          hl.Keyword = { fg = palette.orange, italic = true }
          hl.Constant = { fg = palette.orange, bold = true }
          hl.Function = { fg = palette.orange, bold = true }
@@ -51,10 +50,15 @@ local function setup_config()
          hl.IlluminateWordWrite = { bg = "#4e4e4e" }
 
          hl.CursorLineNr = { fg = palette.green, bold = true }
-         hl["@keyword.return.lua"] = { fg = palette.orange, italic = true}
-         hl["@keyword.repeat.lua"] = { fg = palette.red, italic = true}
-         hl["@keyword.function.lua"] = { fg = palette.red, italic = true}
-         hl["@punctuation.bracket.lua"] = { bold = true}
+         hl["@variable.builtin"] = { fg = palette.yellow, bold = true }
+         hl["@module.builtin"] = { link = "@variable.builtin" }
+         hl["@keyword.return"] = { fg = palette.orange, italic = true }
+         hl["@keyword.repeat"] = { fg = palette.red, italic = true }
+         hl["@keyword.function"] = { fg = palette.red, italic = true }
+         hl["@punctuation.bracket"] = { bold = true }
+         hl["@punctuation.delimiter"] = { bold = true }
+         hl["@constant.builtin"] = { fg = palette.purple, italic = true }
+         hl.LazyReasonKeys = { fg = palette.red }
       end,
       colours_override = function(palette)
          -- palette.bg0 = "#402914"
