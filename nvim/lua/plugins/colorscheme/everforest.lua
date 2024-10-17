@@ -58,6 +58,7 @@ local function setup_config()
          hl["@punctuation.bracket"] = { bold = true }
          hl["@punctuation.delimiter"] = { bold = true }
          hl["@constant.builtin"] = { fg = palette.purple, italic = true }
+         hl.LazyReasonKeys = { fg = palette.red }
       end,
       colours_override = function(palette)
          -- palette.bg0 = "#402914"
