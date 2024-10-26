@@ -1,7 +1,7 @@
 return {
-   -- "alexxGmZ/player.nvim",
-   -- branch = "beta",
-   dir = "$HOME/Git/player.nvim",
+   "alexxGmZ/player.nvim",
+   branch = "beta",
+   -- dir = "$HOME/Git/player.nvim",
    -- cmd = "Player",
    event = "VeryLazy",
    config = function()
