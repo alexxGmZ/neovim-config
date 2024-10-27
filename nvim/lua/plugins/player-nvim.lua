@@ -13,7 +13,7 @@ return {
             "mpv",
             "vlc"
          },
-         notify_now_playing = false
+         notify_now_playing = true
       })
    end
 }
