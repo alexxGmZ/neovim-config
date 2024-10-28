@@ -1,6 +1,6 @@
 return {
    "nvim-treesitter/nvim-treesitter-context",
-   event = "VeryLazy",
+   cmd = { "TSContextEnable", "TSContextToggle" },
    dependencies = { "nvim-treesitter/nvim-treesitter" },
    config = function()
       require "treesitter-context".setup {

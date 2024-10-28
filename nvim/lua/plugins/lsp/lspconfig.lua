@@ -52,7 +52,7 @@ return {
          -- "quick_lint_js",
          "ts_ls",
          "jsonls",
-         "gopls"
+         -- "gopls"
       }
 
       --
