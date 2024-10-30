@@ -17,9 +17,9 @@ return {
                syntax = false,
                treesitter = { enable = false },
                extensions = {
-                  ["svg"] = {"viu", "-b"},
-                  ["png"] = {"viu", "-b"},
-                  ["jpg"] = {"viu", "-b"},
+                  ["svg"] = { "viu", "-b" },
+                  ["png"] = { "viu", "-b" },
+                  ["jpg"] = { "viu", "-b" },
                }
             }
          },
