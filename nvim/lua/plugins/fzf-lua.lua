@@ -17,9 +17,9 @@ return {
                syntax = false,
                treesitter = { enable = false },
                extensions = {
-                  ["svg"] = "chafa",
-                  ["png"] = "chafa",
-                  ["jpg"] = "chafa",
+                  ["svg"] = { "viu", "-b" },
+                  ["png"] = { "viu", "-b" },
+                  ["jpg"] = { "viu", "-b" },
                }
             }
          },
