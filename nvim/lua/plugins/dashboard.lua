@@ -32,7 +32,7 @@ return {
             },
             shortcut = {
                {
-                  icon = "󰉋 ",
+                  icon = " ",
                   desc = "Files", group = "RainbowdelimiterBlue", key = "F",
                   action = function() vim.cmd("OilToggleFloat") end
                },
@@ -42,17 +42,17 @@ return {
                   action = function() vim.cmd("FzfLua files") end
                },
                {
-                  icon = "󰚰 ",
+                  icon = " ",
                   desc = "Check updates", group = "RainbowDelimiterYellow", key = "cu",
                   action = function() vim.cmd("Lazy check") end
                },
                {
-                  icon = "󰓅 ",
+                  icon = " ",
                   desc = "Benchmark", group = "RainbowDelimiterYellow", key = "B",
                   action = function() vim.cmd("Lazy profile") end
                },
                {
-                  icon = "󰆼 ",
+                  icon = " ",
                   desc = "Database", group = "RainbowDelimiterCyan", key = "db",
                   action = function()
                      vim.cmd [[
