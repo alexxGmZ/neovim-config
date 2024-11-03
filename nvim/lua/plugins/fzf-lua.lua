@@ -5,15 +5,13 @@ return {
       "junegunn/fzf",
    },
    keys = {
-      { "<C-p>",      "<cmd>FzfLua files resume=true<CR>", desc = "FzfLua: FzfLua files" },
-      { "<leader>lg", "<cmd>FzfLua live_grep<CR>",         desc = "FzfLua: FzfLua live grep" }
+      { "<C-p>",      "<cmd>FzfLua files<CR>",     desc = "FzfLua: FzfLua files" },
+      { "<leader>lg", "<cmd>FzfLua live_grep<CR>", desc = "FzfLua: FzfLua live grep" }
    },
    config = function()
       local actions = require("fzf-lua.actions")
       require("fzf-lua").setup {
-         winopts = {
-            preview = { default = "cat" }
-         },
+         winopts = {},
          previewers = {
             builtin = {
                syntax = false,
