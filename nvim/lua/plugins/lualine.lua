@@ -216,54 +216,6 @@ local function configuration()
             }
          }
       },
-
-      winbar = {
-         lualine_a = {},
-         lualine_b = {},
-         lualine_c = {},
-         lualine_x = {
-            -- {
-            -- 	"diagnostics",
-            -- 	sources = { "nvim_workspace_diagnostic" },
-            -- 	sections = { "error", "warn", "info", "hint" },
-            -- 	symbols = {
-            -- 		error = "󰅙 ",
-            -- 		warn = "󰀦 ",
-            -- 		info = "󰋼 ",
-            -- 		hint = "󰌵 "
-            -- 	},
-            -- 	colored = true,
-            -- 	update_in_insert = false,
-            -- 	always_visible = true,
-            -- }
-         },
-         lualine_y = {},
-         lualine_z = {}
-      },
-
-      inactive_winbar = {
-         lualine_a = {},
-         lualine_b = {},
-         lualine_c = {},
-         lualine_x = {
-            -- {
-            -- 	"diagnostics",
-            -- 	sources = { "nvim_workspace_diagnostic" },
-            -- 	sections = { "error", "warn", "info", "hint" },
-            -- 	symbols = {
-            -- 		error = "󰅚 ",
-            -- 		warn = "󰀪 ",
-            -- 		info = "󰋽 ",
-            -- 		hint = "󰌶 ",
-            -- 	},
-            -- 	colored = true,
-            -- 	update_in_insert = false,
-            -- 	always_visible = true,
-            -- }
-         },
-      },
-
-      extensions = {}
    }
 end
 
