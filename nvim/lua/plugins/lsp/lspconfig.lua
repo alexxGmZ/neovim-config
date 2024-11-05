@@ -37,22 +37,22 @@ return {
       --
       local LSP_LIST = {
          "pyright",
-         "jdtls",
+         -- "jdtls",
          "html",
-         "clangd",
+         -- "clangd",
          "lua_ls",
-         "intelephense",
-         "vimls",
+         -- "intelephense",
+         -- "vimls",
          "cssls",
          "marksman",
-         "texlab",
+         -- "texlab",
          -- "tailwindcss",
          "bashls",
-         "lemminx",
+         -- "lemminx",
          -- "quick_lint_js",
          "ts_ls",
          "jsonls",
-         -- "gopls"
+         "gopls"
       }
 
       --
