@@ -36,7 +36,7 @@ return {
       -- add the lsp server name here after installing
       --
       local LSP_LIST = {
-         "pyright",
+         -- "pyright",
          -- "jdtls",
          "html",
          -- "clangd",
