@@ -11,26 +11,6 @@ return {
       "williamboman/mason-lspconfig.nvim",
    },
    config = function()
-      local status, mason = pcall(require, "mason")
-      if not status then
-         return
-      end
-
-      mason.setup({
-         ui = {
-            icons = {
-               package_installed = "✓",
-               package_pending = "➜",
-               package_uninstalled = "✗"
-            },
-            border = "rounded",
-         }
-      })
-
-      local cmp_nvim_lsp = require("cmp_nvim_lsp")
-      local lspconfig = require("lspconfig")
-      local mason_lspconfig = require("mason-lspconfig")
-
       --
       -- table of installed lsps
       -- add the lsp server name here after installing
@@ -54,6 +34,26 @@ return {
          "jsonls",
          "gopls"
       }
+
+      local status, mason = pcall(require, "mason")
+      if not status then
+         return
+      end
+
+      mason.setup({
+         ui = {
+            icons = {
+               package_installed = "✓",
+               package_pending = "➜",
+               package_uninstalled = "✗"
+            },
+            border = "rounded",
+         }
+      })
+
+      local cmp_nvim_lsp = require("cmp_nvim_lsp")
+      local lspconfig = require("lspconfig")
+      local mason_lspconfig = require("mason-lspconfig")
 
       --
       -- mason setup
