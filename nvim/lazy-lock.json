@@ -19,6 +19,7 @@
   "diagflow.nvim": { "branch": "main", "commit": "fc09d55d2e60edc8ed8f9939ba97b7b7e6488c99" },
   "dressing.nvim": { "branch": "master", "commit": "6ef1ca479d37d4ff66f13eed44d08912caff483a" },
   "everforest-nvim": { "branch": "main", "commit": "7c57941d5ef5a150f307b9295c00a59e95d78587" },
+  "evergarden": { "branch": "mega", "commit": "d7adb7e8e1f803176e588a427d7d21e76840bb83" },
   "eyeliner.nvim": { "branch": "main", "commit": "8f197eb30cecdf4c2cc9988a5eecc6bc34c0c7d6" },
   "fortune.nvim": { "branch": "master", "commit": "29a99fbf887a2d48693f1eaa1893f84cde60af54" },
   "friendly-snippets": { "branch": "main", "commit": "de8fce94985873666bd9712ea3e49ee17aadb1ed" },
