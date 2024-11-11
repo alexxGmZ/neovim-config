@@ -1,0 +1,39 @@
+return {
+   { "saghen/blink.compat" },
+   {
+      "saghen/blink.cmp",
+      version = 'v0.5.1',
+      dependencies = {
+         "rafamadriz/friendly-snippets",
+         "f3fora/cmp-spell"
+      },
+      opts = {
+         keymap = {
+            preset = "default",
+            ["<Tab>"] = { "select_next", "fallback" },
+            ["<S-Tab>"] = { "select_prev", "fallback" }
+         },
+         nerd_font_variant = "normal",
+         sources = {
+            enabled_providers = { "lsp", "path", "snippets", "buffer", "spell" },
+            providers = {
+               spell = {
+                  name = "spell",
+                  module = "blink.compat.source",
+                  score_offset = -3
+               }
+            }
+         },
+         windows = {
+            autocomplete = {
+               border = "rounded",
+               selection = "auto_insert"
+            },
+            documentation = {
+               border = "rounded",
+               auto_show = true
+            }
+         }
+      }
+   }
+}

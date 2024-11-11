@@ -9,6 +9,7 @@ return {
    dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      -- "saghen/blink.cmp",
    },
    config = function()
       --
@@ -98,6 +99,7 @@ return {
       -- cmp-nvim-lsp plugin
       --
       local capabilities = cmp_nvim_lsp.default_capabilities()
+      -- local capabilities = require('blink.cmp').get_lsp_capabilities()
 
       --
       -- lsp configurations
