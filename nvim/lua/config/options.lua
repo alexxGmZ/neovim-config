@@ -40,7 +40,7 @@ opt.smartindent = true
 
 -- linenumber
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 
 -- cursor
 opt.cursorline = true
