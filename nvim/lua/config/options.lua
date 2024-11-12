@@ -13,7 +13,7 @@ vim.cmd [[
    set autoread
    set showmatch
    set mouse=a
-   set showcmd
+   set noshowcmd
    set nobackup
    set writebackup
    set noshowmode
