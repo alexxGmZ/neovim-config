@@ -34,6 +34,7 @@ return {
                ["@keyword.function"] = { fg = colors.red, italic = true },
                ["Boolean"] = { fg = colors.yellow },
                ["Function"] = { fg = colors.peach },
+               ["Operator"] = { fg = colors.red }
             }
          end
       })
