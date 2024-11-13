@@ -15,6 +15,8 @@ return {
             variables = { "bold" },
             booleans = { "bold" },
             numbers = { "bold" },
+            keywords = { "italic" },
+            functions = { "bold" },
             miscs = {},
          },
          custom_highlights = function(colors)
@@ -28,6 +30,10 @@ return {
                ["CursorLineNr"] = { fg = colors.yellow, bold = true },
                ["LineNr"] = { fg = colors.overlay0 },
                ["GitSignsCurrentLineBlame"] = { fg = colors.overlay0 },
+               ["Keyword"] = { fg = colors.red, italic = true },
+               ["@keyword.function"] = { fg = colors.red, italic = true },
+               ["Boolean"] = { fg = colors.yellow },
+               ["Function"] = { fg = colors.peach },
             }
          end
       })
