@@ -7,6 +7,7 @@ return {
    keys = {
       { "<C-p>",      "<cmd>FzfLua files<CR>",     desc = "FzfLua: FzfLua files" },
       { "<leader>lg", "<cmd>FzfLua live_grep<CR>", desc = "FzfLua: FzfLua live grep" }
+      { "<leader>bf", "<cmd>FzfLua buffers<CR>", desc = "FzfLua: FzfLua buffers" }
    },
    config = function()
       local actions = require("fzf-lua.actions")
