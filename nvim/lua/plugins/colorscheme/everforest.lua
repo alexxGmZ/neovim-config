@@ -72,7 +72,7 @@ end
 
 return {
    "neanias/everforest-nvim",
-   priority = 1000,
-   -- lazy = true,
+   -- priority = 1000,
+   lazy = true,
    config = setup_config
 }
