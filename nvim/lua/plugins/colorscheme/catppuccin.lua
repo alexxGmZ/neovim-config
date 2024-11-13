@@ -25,6 +25,9 @@ return {
                ["@markup.heading.4.markdown"] = { fg = colors.green, bold = true },
                ["@markup.heading.5.markdown"] = { fg = colors.blue, bold = true },
                ["@markup.heading.6.markdown"] = { fg = colors.mauve, bold = true },
+               ["CursorLineNr"] = { fg = colors.yellow, bold = true },
+               ["LineNr"] = { fg = colors.overlay0 },
+               ["GitSignsCurrentLineBlame"] = { fg = colors.overlay0 },
             }
          end
       })
