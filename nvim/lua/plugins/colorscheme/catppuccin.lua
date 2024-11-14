@@ -35,7 +35,8 @@ return {
                ["@keyword.function"] = { fg = colors.red, italic = true },
                ["Boolean"] = { fg = colors.yellow },
                ["Function"] = { fg = colors.peach },
-               ["Operator"] = { fg = colors.red }
+               ["Operator"] = { fg = colors.red },
+               ["BufferLineBufferSelected"] = { fg = colors.peach, bold = true }
             }
          end
       })
