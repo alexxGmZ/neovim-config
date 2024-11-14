@@ -48,3 +48,10 @@ create_autocmd("ColorScheme", {
       vim.cmd [[hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e]]
    end
 })
+
+-- "syntax on" to some filetypes. "syntax" is off by default in order to utilize treesitter
+create_autocmd("FileType", {
+   pattern = { "html", "tmux", "fugitive" },
+   group = user_augroup,
+   command = "syntax on"
+})
