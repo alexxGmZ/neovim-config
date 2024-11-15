@@ -51,7 +51,7 @@ create_autocmd("ColorScheme", {
 
 -- "syntax on" to some filetypes. "syntax" is off by default in order to utilize treesitter
 create_autocmd("FileType", {
-   pattern = { "html", "tmux", "fugitive" },
+   pattern = { "html", "tmux", "fugitive", "sh", "zsh", "oil" },
    group = user_augroup,
    command = "syntax on"
 })
