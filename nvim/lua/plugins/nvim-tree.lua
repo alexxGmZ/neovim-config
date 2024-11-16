@@ -1,9 +1,6 @@
 return {
    "nvim-tree/nvim-tree.lua",
    cmd = { "NvimTreeOpen", "NvimTreeToggle" },
-   keys = {
-      { "<leader>ff", "<cmd>NvimTreeToggle<CR>", desc = "NvimTree: Toggle" },
-   },
    config = function()
       local HEIGHT_RATIO = 0.8 -- You can change this
       local WIDTH_RATIO = 0.5  -- You can change this too
