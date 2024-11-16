@@ -1,5 +1,12 @@
 return {
    {
+      dir = "$HOME/Git/Md2Pdf",
+      config = function()
+         require("Md2Pdf").setup()
+      end
+   },
+
+   {
       "sitiom/nvim-numbertoggle",
       enabled = true,
       event = "VeryLazy",
