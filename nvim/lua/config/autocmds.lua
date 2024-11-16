@@ -55,3 +55,23 @@ create_autocmd("FileType", {
    group = user_augroup,
    command = "syntax on"
 })
+
+-- create_autocmd("BufWritePost", {
+--    pattern = { "*.md" },
+--    callback = function()
+--       local md_file = vim.api.nvim_buf_get_name(0)
+--       local pdf_file = string.gsub(md_file, ".md", ".pdf")
+--       local pandoc_var = "geometry:margin=1in"
+--       local command = { "pandoc", md_file, "-o", pdf_file, "-V", pandoc_var }
+--
+--       vim.notify(md_file)
+--       vim.notify(pdf_file)
+--       vim.notify(pandoc_var)
+--
+--       vim.system(command, { text = true }, function(obj)
+--          if obj.stderr ~= "" then
+--             vim.notify(obj.stderr, "WARN")
+--          end
+--       end)
+--    end
+-- })
