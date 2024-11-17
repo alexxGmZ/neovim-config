@@ -42,7 +42,6 @@
   "nerdy.nvim": { "branch": "main", "commit": "b467d6609b78d6a5f1e12cbc08fcc1ac87af20f5" },
   "nvim-cmp": { "branch": "main", "commit": "f17d9b4394027ff4442b298398dfcaab97e40c4f" },
   "nvim-early-retirement": { "branch": "main", "commit": "2c36a5671b9d8f0d9e11b77c5a55de802bc45e34" },
-  "nvim-highlight-colors": { "branch": "main", "commit": "e967e2ba13fd4ca731b41d0e5cc1ac2edcd6e25e" },
   "nvim-lspconfig": { "branch": "master", "commit": "87c7c83ce62971e0bdb29bb32b8ad2b19c8f95d0" },
   "nvim-notify": { "branch": "master", "commit": "fbef5d32be8466dd76544a257d3f3dce20082a07" },
   "nvim-numbertoggle": { "branch": "main", "commit": "c5827153f8a955886f1b38eaea6998c067d2992f" },
