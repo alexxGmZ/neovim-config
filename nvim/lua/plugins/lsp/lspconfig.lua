@@ -36,22 +36,6 @@ return {
          "gopls"
       }
 
-      local status, mason = pcall(require, "mason")
-      if not status then
-         return
-      end
-
-      mason.setup({
-         ui = {
-            icons = {
-               package_installed = "✓",
-               package_pending = "➜",
-               package_uninstalled = "✗"
-            },
-            border = "rounded",
-         }
-      })
-
       local cmp_nvim_lsp = require("cmp_nvim_lsp")
       local lspconfig = require("lspconfig")
       local mason_lspconfig = require("mason-lspconfig")
