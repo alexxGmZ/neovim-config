@@ -110,14 +110,12 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [dgagn/diagflow.nvim](https://github.com/dgagn/diagflow.nvim)
 * [uga-rosa/ccc.nvim](https://github.com/uga-rosa/ccc.nvim)
 * [MeanderingProgrammer/markdown.nvim](https://github.com/MeanderingProgrammer/markdown.nvim)
+* [nvzone/timerly](https://github.com/nvzone/timerly)
 
 #### Colorscheme
 
 * [neanias/everforest-nvim](https://github.com/neanias/everforest-nvim)
-* [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material)
-* [cvigilv/patana.nvim](https://github.com/cvigilv/patana.nvim)
 * [ptdewey/darkearth-nvim](https://github.com/ptdewey/darkearth-nvim)
-* [myagko/nymph](https://github.com/myagko/nymph)
 * [catppuccin/nvim](https://github.com/catppuccin/nvim)
 
 #### Git Integration
@@ -142,6 +140,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 * [alexxGmZ/player.nvim](https://github.com/alexxGmZ/player.nvim)
 * [hat0uma/csvview.nvim](https://github.com/hat0uma/csvview.nvim)
+* [alexxGmZ/Md2Pdf](https://github.com/alexxGmZ/Md2Pdf)
 
 <br>
 
