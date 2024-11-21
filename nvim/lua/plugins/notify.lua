@@ -25,7 +25,6 @@ return {
       })
 
       vim.notify = notify
-      vim.print = notify
 
       print = function(...)
          local print_safe_args = {}
