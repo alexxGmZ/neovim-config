@@ -21,10 +21,10 @@ return {
          code = { sign = false },
          checkbox = {
             unchecked = {
-               highlight = "DiagnosticError"
+               highlight = "DiagnosticSignError"
             },
             checked = {
-               highlight = "DiagnosticOk"
+               highlight = "DiagnosticSignOk"
             }
          }
       })
