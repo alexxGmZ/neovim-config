@@ -7,5 +7,4 @@ return {
          pdf_engine = "xelatex"
       })
    end
-},
-
+}
