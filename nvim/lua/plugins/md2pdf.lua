@@ -1,10 +1,11 @@
 return {
-   -- "alexxGmZ/Md2Pdf",
-   -- cmd = "Md2Pdf",
-   dir = "$HOME/Git/Md2Pdf",
+   "alexxGmZ/Md2Pdf",
+   cmd = "Md2Pdf",
+   -- dir = "$HOME/Git/Md2Pdf",
    config = function()
       require("Md2Pdf").setup({
-         pdf_engine = "xelatex"
+         pdf_engine = "xelatex",
+         yaml_template_path = "/home/alex/Documents/pandoc_template.yml"
       })
    end
 }
