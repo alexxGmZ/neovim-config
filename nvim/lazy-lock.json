@@ -58,6 +58,7 @@
   "render-markdown": { "branch": "main", "commit": "d6a82d70765aa238b7ea48d257a1d57a92501423" },
   "screenkey.nvim": { "branch": "main", "commit": "0589de3c857721e150ea694cfe66d6d0e8aecacb" },
   "timerly": { "branch": "main", "commit": "6a25eec63ca42491de4706587b84182e85e6e7f4" },
+  "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "86050f39a62de48734f1a2876d70d179b75deb7c" },
   "todo-comments.nvim": { "branch": "main", "commit": "ae0a2afb47cf7395dc400e5dc4e05274bf4fb9e0" },
   "transparent.nvim": { "branch": "main", "commit": "8a2749a2fa74f97fe6557f61b89ac7fd873f3c21" },
   "treesj": { "branch": "main", "commit": "0d81326b5afd36babe7dd480aabbb0b05f33e688" },
