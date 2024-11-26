@@ -29,6 +29,21 @@ local function highlight_overrides()
 
    set_hl(0, "EndOfBuffer", { fg = palette.dark_blue })
    set_hl(0, "@function.call", { link = "@function" })
+
+   set_hl(0, "@markup.link.url", { fg = palette.light_blue, italic = true, underline = true })
+   set_hl(0, "@markup.link.label", { fg = palette.rose_red })
+   set_hl(0, "@markup.heading.1.markdown", { fg = palette.red, bold = true })
+   set_hl(0, "@markup.heading.2.markdown", { fg = palette.orange, bold = true })
+   set_hl(0, "@markup.heading.3.markdown", { fg = palette.green, bold = true })
+   set_hl(0, "@markup.heading.4.markdown", { fg = palette.yellow, bold = true })
+   set_hl(0, "@markup.heading.5.markdown", { fg = palette.blue, bold = true })
+   set_hl(0, "@markup.heading.6.markdown", { fg = palette.brown, bold = true })
+   set_hl(0, "markdownH1", { link = "@markup.heading.1.markdown" })
+   set_hl(0, "markdownH2", { link = "@markup.heading.2.markdown" })
+   set_hl(0, "markdownH3", { link = "@markup.heading.3.markdown" })
+   set_hl(0, "markdownH4", { link = "@markup.heading.4.markdown" })
+   set_hl(0, "markdownH5", { link = "@markup.heading.5.markdown" })
+   set_hl(0, "markdownH6", { link = "@markup.heading.6.markdown" })
 end
 return {
    "vague2k/vague.nvim",
