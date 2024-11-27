@@ -1,20 +1,21 @@
+local palette = {
+   fg = "#cdcdcd",
+   bg = "#18191a",
+   dark_blue = "#465362",
+   blue = "#7894ab",
+   sky_blue = "#8ca0dc",
+   light_blue = "#bad1ce",
+   purple = "#b9a3ba",
+   red = "#d2788c",
+   rose_red = "#be8c8c",
+   orange = "#d2a374",
+   peach = "#deb896",
+   yellow = "#e6be8c",
+   green = "#8faf77"
+}
+
 local function highlight_overrides()
    local set_hl = vim.api.nvim_set_hl
-   local palette = {
-      fg = "#cdcdcd",
-      bg = "#18191a",
-      dark_blue = "#465362",
-      blue = "#7894ab",
-      sky_blue = "#8ca0dc",
-      light_blue = "#bad1ce",
-      purple = "#b9a3ba",
-      red = "#d2788c",
-      rose_red = "#be8c8c",
-      orange = "#d2a374",
-      peach = "#deb896",
-      yellow = "#e6be8c",
-      green = "#8faf77"
-   }
 
    set_hl(0, "RainbowDelimiterRed", { fg = palette.red })
    set_hl(0, "RainbowDelimiterYellow", { fg = palette.yellow })
@@ -48,8 +49,9 @@ local function highlight_overrides()
    set_hl(0, "SpellBad", { sp = palette.red, undercurl = true })
    set_hl(0, "SpellCap", { sp = palette.green, undercurl = true })
 
-   set_hl(0, "EyelinerPrimary", { fg = palette.orange, bold = true })
-   set_hl(0, "EyelinerSecondary", { fg = palette.blue, bold = true })
+   set_hl(0, "EyelinerPrimary", { fg = palette.orange, bold = true, reverse = true })
+   set_hl(0, "EyelinerSecondary", { fg = palette.blue, bold = true, reverse = true })
+   set_hl(0, "Visual", { reverse = true })
 end
 return {
    "vague2k/vague.nvim",
