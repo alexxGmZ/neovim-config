@@ -44,6 +44,12 @@ local function highlight_overrides()
    set_hl(0, "markdownH4", { link = "@markup.heading.4.markdown" })
    set_hl(0, "markdownH5", { link = "@markup.heading.5.markdown" })
    set_hl(0, "markdownH6", { link = "@markup.heading.6.markdown" })
+
+   set_hl(0, "SpellBad", { sp = palette.red, undercurl = true })
+   set_hl(0, "SpellCap", { sp = palette.green, undercurl = true })
+
+   set_hl(0, "EyelinerPrimary", { fg = palette.orange, bold = true })
+   set_hl(0, "EyelinerSecondary", { fg = palette.blue, bold = true })
 end
 return {
    "vague2k/vague.nvim",
@@ -83,7 +89,7 @@ return {
          pattern = "*",
          group = "HANDSOME",
          callback = function()
-            if vim.g.colors_name ~= "darkearth" then
+            if vim.g.colors_name ~= "vague" then
                return
             end
 
