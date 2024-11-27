@@ -51,7 +51,7 @@ local function highlight_overrides()
 
    set_hl(0, "EyelinerPrimary", { fg = palette.orange, bold = true, reverse = true })
    set_hl(0, "EyelinerSecondary", { fg = palette.blue, bold = true, reverse = true })
-   set_hl(0, "Visual", { reverse = true })
+   set_hl(0, "Visual", { bg = palette.dark_blue })
 end
 return {
    "vague2k/vague.nvim",
