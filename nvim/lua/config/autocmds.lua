@@ -39,16 +39,6 @@ create_autocmd({ "CmdlineLeave", "UIEnter" }, {
    end
 })
 
--- enforce custom highlights every time the colorscheme changes
-vim.opt.colorcolumn = "80,90"
-create_autocmd("ColorScheme", {
-   pattern = "*",
-   group = user_augroup,
-   callback = function()
-      vim.cmd [[hi MatchParen gui=underline guifg=Orange guibg=#4e4e4e]]
-   end
-})
-
 -- "syntax on" to some filetypes. "syntax" is off by default in order to utilize treesitter
 create_autocmd("FileType", {
    pattern = { "html", "tmux", "fugitive", "sh", "zsh", "oil", "git" },
