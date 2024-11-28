@@ -58,8 +58,8 @@ local function highlight_overrides()
 end
 return {
    "vague2k/vague.nvim",
-   priority = 1000,
-   -- lazy = true,
+   -- priority = 1000,
+   lazy = true,
    config = function()
       require("vague").setup({
          transparent = true,
