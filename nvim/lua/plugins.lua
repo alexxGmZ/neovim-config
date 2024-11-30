@@ -6,11 +6,6 @@ return {
    },
 
    {
-      "gregsexton/MatchTag",
-      ft = { 'markdown', 'html', 'php', 'xml', 'javascript' },
-   },
-
-   {
       "kylechui/nvim-surround",
       version = "*",
       event = "VeryLazy",
