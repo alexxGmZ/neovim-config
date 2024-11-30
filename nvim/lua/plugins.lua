@@ -61,5 +61,13 @@ return {
       "NStefan002/screenkey.nvim",
       cmd = "Screenkey",
       version = "*", -- or branch = "dev", to use the latest commit
+   },
+
+   {
+      "OXY2DEV/helpview.nvim",
+      ft = "help",
+      dependencies = {
+         "nvim-treesitter/nvim-treesitter"
+      }
    }
 }
