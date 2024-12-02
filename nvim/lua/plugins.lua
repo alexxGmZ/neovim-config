@@ -59,5 +59,12 @@ return {
       dependencies = {
          "nvim-treesitter/nvim-treesitter"
       }
+   },
+
+   {
+      "nvzone/timerly",
+      cmd = "TimerlyToggle",
+      dependencies = "nvzone/volt"
+
    }
 }
