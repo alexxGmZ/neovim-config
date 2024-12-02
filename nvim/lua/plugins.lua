@@ -9,9 +9,7 @@ return {
       "kylechui/nvim-surround",
       version = "*",
       event = "VeryLazy",
-      config = function()
-         require("nvim-surround").setup({})
-      end
+      config = true
    },
 
    {
@@ -27,18 +25,13 @@ return {
    {
       "hat0uma/csvview.nvim",
       cmd = { "CsvViewEnable", "CsvViewToggle" },
-      config = function()
-         require("csvview").setup()
-      end
+      config = true
    },
 
    {
       "lukas-reineke/indent-blankline.nvim",
       cmd = "IBLEnable",
       main = "ibl",
-      config = function()
-         require("ibl").setup()
-      end
    },
 
    {
