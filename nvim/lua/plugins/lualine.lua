@@ -166,7 +166,12 @@ local function configuration()
             },
          },
          lualine_x = { word_cnt, macro_recording, "searchcount" },
-         lualine_y = { lsp_client, "filetype" },
+         lualine_y = { lsp_client,
+            {
+               "filetype",
+               icon_only = true
+            }
+         },
          lualine_z = {
             {
                "location",
