@@ -57,6 +57,8 @@ local function setup_config()
          hl["@keyword.function"] = { fg = palette.red, italic = true }
          hl["@constant.builtin"] = { fg = palette.purple, italic = true }
          hl.LazyReasonKeys = { fg = palette.red }
+         hl.LazyReasonRequire = { fg = palette.red }
+         hl.LazyReasonEvent = { fg = palette.orange }
          hl["@property"] = { fg = palette.blue, italic = true }
          hl.EyelinerPrimary = { fg = palette.orange, bold = true, reverse = true }
          hl.EyelinerSecondary = { fg = palette.blue, bold = true, reverse = true }
