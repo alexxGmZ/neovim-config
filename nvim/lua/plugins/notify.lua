@@ -5,8 +5,8 @@ return {
       local notify = require("notify")
 
       notify.setup({
-         -- background_colour = "NotifyBackground",
-         background_colour = "#000000",
+         background_colour = "NotifyBackground",
+         -- background_colour = "#000000",
          fps = 30,
          icons = {
             DEBUG = " ",
@@ -20,19 +20,19 @@ return {
          minimum_width = 10,
          render = "default",
          stages = "fade",
-         timeout = 2000,
+         timeout = 1500,
          top_down = false
       })
 
       vim.notify = notify
 
-      print = function(...)
+      --[[ print = function(...)
          local print_safe_args = {}
          local _ = { ... }
          for i = 1, #_ do
             table.insert(print_safe_args, tostring(_[i]))
          end
          vim.notify(table.concat(print_safe_args, " "), "info")
-      end
+      end ]]
    end
 }
