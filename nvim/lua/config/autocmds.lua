@@ -41,7 +41,7 @@ create_autocmd({ "CmdlineLeave", "UIEnter" }, {
 
 -- "syntax on" to some filetypes. "syntax" is off by default in order to utilize treesitter
 create_autocmd("FileType", {
-   pattern = { "html", "tmux", "fugitive", "sh", "zsh", "oil", "git" },
+   pattern = { "html", "tmux", "fugitive", "sh", "zsh", "oil", "git", "man" },
    group = user_augroup,
    command = "syntax on"
 })
