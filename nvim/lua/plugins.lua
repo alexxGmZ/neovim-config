@@ -13,11 +13,6 @@ return {
    },
 
    {
-      "nullchilly/fsread.nvim",
-      cmd = { "FSRead", "FSToggle" }
-   },
-
-   {
       "numToStr/Comment.nvim",
       event = "VeryLazy",
       config = function()
@@ -62,12 +57,5 @@ return {
       dependencies = {
          "nvim-treesitter/nvim-treesitter"
       }
-   },
-
-   {
-      "nvzone/timerly",
-      cmd = "TimerlyToggle",
-      dependencies = "nvzone/volt"
-
    }
 }
