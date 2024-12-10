@@ -74,7 +74,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### LSP and Auto-Completion
 
-* [gregsexton/MatchTag](https://github.com/gregsexton/MatchTag)
 * [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
 * [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 * [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
@@ -89,11 +88,9 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [lukas-reineke/cmp-under-comparator](https://github.com/lukas-reineke/cmp-under-comparator)
 * [hrsh7th/cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help)
 * [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
-* [VidocqH/lsp-lens.nvim](https://github.com/VidocqH/lsp-lens.nvim)
 
 #### Aesthetic or Interface
 
-* [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 * [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 * [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 * [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
@@ -102,21 +99,18 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 * [onsails/lspkind.nvim](https://github.com/onsails/lspkind.nvim)
 * [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
-* [sudoerwx/vim-ray-so-beautiful](https://github.com/sudoerwx/vim-ray-so-beautiful)
 * [nvimdev/dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
 * [NStefan002/screenkey.nvim](https://github.com/NStefan002/screenkey.nvim)
 * [RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate)
 * [folke/zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
-* [dgagn/diagflow.nvim](https://github.com/dgagn/diagflow.nvim)
 * [uga-rosa/ccc.nvim](https://github.com/uga-rosa/ccc.nvim)
-* [MeanderingProgrammer/markdown.nvim](https://github.com/MeanderingProgrammer/markdown.nvim)
-* [nvzone/timerly](https://github.com/nvzone/timerly)
 
 #### Colorscheme
 
 * [neanias/everforest-nvim](https://github.com/neanias/everforest-nvim)
 * [ptdewey/darkearth-nvim](https://github.com/ptdewey/darkearth-nvim)
 * [catppuccin/nvim](https://github.com/catppuccin/nvim)
+* [vague2k/vague.nvim](https://github.com/vague2k/vague.nvim)
 
 #### Git Integration
 
@@ -128,9 +122,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 #### Quality of Life
 
 * [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim)
-* [nullchilly/fsread.nvim](https://github.com/nullchilly/fsread.nvim)
 * [chrisgrieser/nvim-early-retirement](https://github.com/chrisgrieser/nvim-early-retirement)
-* [is0n/jaq-nvim](https://github.com/is0n/jaq-nvim)
 * [kylechui/nvim-surround](https://github.com/kylechui/nvim-surround)
 * [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)
 * [f3fora/cmp-spell](https://github.com/f3fora/cmp-spell)
