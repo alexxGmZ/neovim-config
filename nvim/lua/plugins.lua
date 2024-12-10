@@ -27,22 +27,11 @@ return {
    },
 
    {
-      "lukas-reineke/indent-blankline.nvim",
-      cmd = "IBLEnable",
-      main = "ibl",
-   },
-
-   {
       "2kabhishek/nerdy.nvim",
       dependencies = {
          "stevearc/dressing.nvim",
       },
       cmd = "Nerdy",
-   },
-
-   {
-      "sudoerwx/vim-ray-so-beautiful",
-      cmd = { "Ray" }
    },
 
    {

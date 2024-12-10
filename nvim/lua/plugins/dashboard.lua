@@ -6,17 +6,7 @@ return {
    		return true
    	end
    end,
-   dependencies = {
-      "nvim-tree/nvim-web-devicons",
-      {
-         "rubiin/fortune.nvim",
-         config = function()
-            require("fortune").setup({
-               display_format = "mixed"
-            })
-         end
-      }
-   },
+   dependencies = { "nvim-tree/nvim-web-devicons" },
    config = function()
       require("dashboard").setup {
          theme = "hyper",
@@ -80,9 +70,6 @@ return {
                cwd_only = true,
                label = "Recent Files"
             },
-            footer = function()
-               return require("fortune").get_fortune()
-            end
          },
          hide = {
             statusline = true, -- hide statusline default is true
