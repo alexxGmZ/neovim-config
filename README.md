@@ -88,6 +88,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [lukas-reineke/cmp-under-comparator](https://github.com/lukas-reineke/cmp-under-comparator)
 * [hrsh7th/cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help)
 * [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+* [f3fora/cmp-spell](https://github.com/f3fora/cmp-spell)
 
 #### Aesthetic or Interface
 
@@ -115,7 +116,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 #### Git Integration
 
 * [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
-* [idanarye/vim-merginal](https://github.com/idanarye/vim-merginal)
 * [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 * [akinsho/git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)
 
@@ -125,7 +125,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [chrisgrieser/nvim-early-retirement](https://github.com/chrisgrieser/nvim-early-retirement)
 * [kylechui/nvim-surround](https://github.com/kylechui/nvim-surround)
 * [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)
-* [f3fora/cmp-spell](https://github.com/f3fora/cmp-spell)
 * [diepm/vim-rest-console](https://github.com/diepm/vim-rest-console)
 * [kristijanhusak/vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui)
 * [Wansmer/treesj](https://github.com/Wansmer/treesj)
