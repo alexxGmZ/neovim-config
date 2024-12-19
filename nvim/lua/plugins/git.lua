@@ -16,9 +16,8 @@ return {
       end
    },
    {
-      "idanarye/vim-merginal",
-      cmd = { "Merginal", "MerginalToggle", "Git", "G" },
-      dependencies = { "tpope/vim-fugitive" },
+      "tpope/vim-fugitive",
+      cmd = { "Git", "G" }
    },
    {
       "akinsho/git-conflict.nvim",
