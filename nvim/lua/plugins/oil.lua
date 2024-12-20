@@ -17,6 +17,7 @@ return {
                ["<C-r>"] = "actions.refresh",
                ["-"] = "actions.parent",
                ["g."] = "actions.toggle_hidden",
+               ["gx"] = "actions.open_external",
             },
             view_options = { show_hidden = true },
             float = { padding = 4, max_width = 80 },
