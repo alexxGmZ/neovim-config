@@ -2,7 +2,7 @@
 
 My neovim setup and development workflow
 
-<br>
+&nbsp;
 
 ### Screenshots
 
@@ -24,8 +24,7 @@ My neovim setup and development workflow
    + [Git Integration](#git-integration)
    + [Quality of Life](#quality-of-life)
 
-<br>
-
+&nbsp;
 
 ### Dependencies
 
@@ -34,8 +33,7 @@ other utf-8 characters)
 * neovim v0.10.+
 * [lazy](https://github.com/folke/lazy.nvim) as the plugin manager
 
-<br>
-
+&nbsp;
 
 ### Installation
 
@@ -50,8 +48,7 @@ cp -vr nvim ~/.config/
 > [!WARNING]
 > This config doesn't fully work in Windows
 
-<br>
-
+&nbsp;
 
 ### Plugins
 
@@ -133,5 +130,5 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [hat0uma/csvview.nvim](https://github.com/hat0uma/csvview.nvim)
 * [alexxGmZ/Md2Pdf](https://github.com/alexxGmZ/Md2Pdf)
 
-<br>
+&nbsp;
 
