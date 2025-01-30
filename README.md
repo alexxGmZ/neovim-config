@@ -99,6 +99,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate)
 * [folke/zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
 * [uga-rosa/ccc.nvim](https://github.com/uga-rosa/ccc.nvim)
+* [OXY2DEV/helpview.nvim](https://github.com/OXY2DEV/helpview.nvim)
 
 #### Colorscheme
 
