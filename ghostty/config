@@ -1,6 +1,6 @@
 theme = "everforest-dark"
 
-font-family = "Hasklug Nerd Font"
+font-family = "IntoneMono Nerd Font"
 font-size = 9
 adjust-underline-position = 2
 selection-invert-fg-bg = true
