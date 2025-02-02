@@ -1,6 +1,7 @@
 return {
    "rcarriga/nvim-notify",
-   priority = 999,
+   -- priority = 999,
+   event = "VeryLazy",
    config = function()
       local notify = require("notify")
 
@@ -25,14 +26,5 @@ return {
       })
 
       vim.notify = notify
-
-      --[[ print = function(...)
-         local print_safe_args = {}
-         local _ = { ... }
-         for i = 1, #_ do
-            table.insert(print_safe_args, tostring(_[i]))
-         end
-         vim.notify(table.concat(print_safe_args, " "), "info")
-      end ]]
    end
 }
