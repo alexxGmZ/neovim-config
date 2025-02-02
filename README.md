@@ -107,6 +107,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [ptdewey/darkearth-nvim](https://github.com/ptdewey/darkearth-nvim)
 * [catppuccin/nvim](https://github.com/catppuccin/nvim)
 * [vague2k/vague.nvim](https://github.com/vague2k/vague.nvim)
+* [aileot/ex-colors.nvim](https://github.com/aileot/ex-colors.nvim)
 
 #### Git Integration
 
