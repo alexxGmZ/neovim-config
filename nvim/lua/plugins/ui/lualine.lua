@@ -186,7 +186,7 @@ local function configuration()
             {
                "filename",
                path = 0,
-               separator = { left = "", right = "" },
+               separator = { right = "" },
                symbols = { modified = "●", readonly = "[RO]" }
             },
             {
@@ -197,7 +197,7 @@ local function configuration()
                   modified = "󱗝 ", -- nf-md-circle_box_outline
                   removed = "󰛲 ", -- nf-md-minus_box_outline
                },
-               separator = {},
+               separator = { right = "" },
                source = nil,
             },
             {
@@ -213,13 +213,13 @@ local function configuration()
          },
          lualine_c = {},
          lualine_x = { word_cnt },
-         lualine_y = { { "filetype" } },
-         lualine_z = {
+         lualine_y = {
             {
-               "location",
-               separator = { left = "", right = "" },
-            }
-         }
+               "filetype",
+               icon_only = true
+            },
+         },
+         lualine_z = {}
       },
    }
 end
