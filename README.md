@@ -104,9 +104,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 #### Colorscheme
 
 * [neanias/everforest-nvim](https://github.com/neanias/everforest-nvim)
-* [ptdewey/darkearth-nvim](https://github.com/ptdewey/darkearth-nvim)
 * [catppuccin/nvim](https://github.com/catppuccin/nvim)
-* [vague2k/vague.nvim](https://github.com/vague2k/vague.nvim)
 * [aileot/ex-colors.nvim](https://github.com/aileot/ex-colors.nvim)
 
 #### Git Integration
@@ -118,7 +116,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 #### Quality of Life
 
 * [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim)
-* [chrisgrieser/nvim-early-retirement](https://github.com/chrisgrieser/nvim-early-retirement)
 * [kylechui/nvim-surround](https://github.com/kylechui/nvim-surround)
 * [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)
 * [diepm/vim-rest-console](https://github.com/diepm/vim-rest-console)
