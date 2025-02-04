@@ -1,11 +1,5 @@
 return {
    {
-      "sitiom/nvim-numbertoggle",
-      enabled = true,
-      event = "VeryLazy",
-   },
-
-   {
       "kylechui/nvim-surround",
       version = "*",
       event = "VeryLazy",
