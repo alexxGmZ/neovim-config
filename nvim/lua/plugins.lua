@@ -27,17 +27,4 @@ return {
       },
       cmd = "Nerdy",
    },
-
-   {
-      "OXY2DEV/helpview.nvim",
-      lazy = false,
-      opts = {
-         preview = {
-            icon_provider = "devicons",
-         }
-      },
-      dependencies = {
-         "nvim-treesitter/nvim-treesitter"
-      }
-   }
 }
