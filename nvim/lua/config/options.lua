@@ -40,7 +40,7 @@ opt.shiftwidth = 3
 opt.smartindent = true
 
 -- linenumber
-opt.number = true
+opt.number = false
 opt.relativenumber = true
 
 -- cursor
