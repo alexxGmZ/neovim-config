@@ -30,7 +30,12 @@ return {
 
    {
       "OXY2DEV/helpview.nvim",
-      ft = "help",
+      lazy = false,
+      opts = {
+         preview = {
+            icon_provider = "devicons",
+         }
+      },
       dependencies = {
          "nvim-treesitter/nvim-treesitter"
       }
