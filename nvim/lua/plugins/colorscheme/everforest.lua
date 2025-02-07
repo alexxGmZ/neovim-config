@@ -59,6 +59,8 @@ local function setup_config()
          hl.LazyReasonKeys = { fg = palette.red }
          hl.LazyReasonRequire = { fg = palette.red }
          hl.LazyReasonEvent = { fg = palette.orange }
+         hl.LazyReasonImport = { fg = palette.blue }
+         hl.LazyReasonPlugin = { fg = palette.yellow }
          -- hl["@property"] = { fg = palette.blue, italic = true }
          hl.EyelinerPrimary = { fg = palette.orange, bold = true, reverse = true }
          hl.EyelinerSecondary = { fg = palette.blue, bold = true, reverse = true }
@@ -110,6 +112,7 @@ local function setup_config()
 
          hl["gitcommitDiscardedFile"] = { link = "@string" }
          hl["gitcommitSelectedFile"] = { link = "@string" }
+         hl["gitcommitSummary"] = { link = "@string" }
          hl["gitcommitUntrackedFile"] = { link = "@string" }
          hl["goBuiltins"] = { link = "@keyword" }
          hl["goConditional"] = { link = "@keyword" }
