@@ -11,7 +11,7 @@ local function setup_config()
       diagnostic_virtual_text = "coloured",
       diagnostic_line_highlight = false,
       spell_foreground = false,
-      show_eob = true,
+      show_eob = false,
       float_style = "dim",
       on_highlights = function(hl, palette)
          -- hl.TSBoolean = { link = "Boolean" }
@@ -62,16 +62,81 @@ local function setup_config()
          -- hl["@property"] = { fg = palette.blue, italic = true }
          hl.EyelinerPrimary = { fg = palette.orange, bold = true, reverse = true }
          hl.EyelinerSecondary = { fg = palette.blue, bold = true, reverse = true }
+
+         -- mono-chrome override
+         hl["@boolean"] = { fg = palette.fg }
+         hl["@constant"] = { fg = palette.fg }
+         hl["@constant.builtin"] = { link = "@constant" }
+         hl["@function"] = { fg = palette.fg }
+         hl["@function.builtin"] = { link = "@function" }
+         hl["@function.call"] = { link = "@function" }
+         hl["@function.method"] = { link = "@function" }
+         hl["@function.method.call"] = { link = "@function" }
+         hl["@keyword"] = { fg = palette.fg }
+         hl["@keyword.conditional"] = { link = "@keyword" }
+         hl["@keyword.function"] = { link = "@keyword" }
+         hl["@keyword.operator"] = { link = "@keyword" }
+         hl["@keyword.repeat"] = { link = "@keyword" }
+         hl["@keyword.return"] = { link = "@keyword" }
+         hl["@module"] = { fg = palette.fg }
+         hl["@module.builtin"] = { link = "@module" }
+         hl["@number"] = { fg = palette.fg }
+         hl["@operator"] = { fg = palette.fg }
+         hl["@property"] = { fg = palette.fg }
+         hl["@string"] = { fg = palette.fg }
+         hl["@string.escape"] = { link = "@string" }
+         hl["@string.regexp"] = { link = "@string" }
+         hl["@variable"] = { fg = palette.fg }
+         hl["@variable.member"] = { link = "@variable" }
+
+         hl["Define"] = { link = "@variable" }
+         hl["Include"] = { link = "Define" }
+         hl["Keyword"] = { link = "@keyword" }
+         hl["Statement"] = { link = "@keyword" }
+         hl["String"] = { link = "@string" }
+
+         hl["goBuiltins"] = { link = "@keyword" }
+         hl["goConditional"] = { link = "@keyword" }
+         hl["goDeclType"] = { link = "@variable" }
+         hl["goFormatSpecifier"] = { link = "@string" }
+         hl["goPredefinedIdentifiers"] = { link = "@variable" }
+         hl["goRepeat"] = { link = "@keyword" }
+         hl["goSignedInts"] = { link = "@variable" }
+         hl["goType"] = { link = "@variable" }
+         hl["goVar"] = { link = "@variable" }
+         hl["htmlSpecialChar"] = { link = "@keyword" }
+         hl["javaScriptBoolean"] = { link = "@boolean" }
+         hl["javaScriptBraces"] = { link = "@operator" }
+         hl["javaScriptConditional"] = { link = "@keyword" }
+         hl["javaScriptEmbed"] = { link = "@string" }
+         hl["javaScriptException"] = { link = "@keyword" }
+         hl["javaScriptIdentifier"] = { link = "@keyword" }
+         hl["javaScriptMember"] = { link = "@property" }
+         hl["javaScriptNumber"] = { link = "@number" }
+         hl["javaScriptOperator"] = { link = "@operator" }
+         hl["markdownCode"] = { fg = palette.fg }
+         hl["markdownCodeBlock"] = { link = "markdownCode" }
+         hl["markdownCodeDelimiter"] = { link = "markdownCode" }
+         hl["markdownH1"] = { fg = palette.fg, bold = true }
+         hl["markdownH2"] = { link = "markdownH1" }
+         hl["markdownH3"] = { link = "markdownH1" }
+         hl["markdownH4"] = { link = "markdownH1" }
+         hl["markdownH5"] = { link = "markdownH1" }
+         hl["markdownH6"] = { link = "markdownH1" }
+         hl["markdownLinkText"] = { fg = palette.fg }
+         hl["markdownListMarker"] = { link = "Grey" }
+         hl["markdownOrderedListMarker"] = { link = "markdownListMarker" }
+         hl["markdownUrl"] = { fg = palette.fg }
       end,
       colours_override = function(palette)
          -- palette.bg0 = "#402914"
-         palette.yellow = palette.fg
-         palette.orange = palette.fg
-         palette.purple = palette.fg
-         palette.green = palette.fg
-         palette.blue = palette.fg
-         palette.red = palette.fg
-         palette.aqua = palette.fg
+         -- palette.yellow = palette.fg
+         -- palette.orange = palette.fg
+         -- palette.purple = palette.fg
+         -- palette.green = palette.fg
+         -- palette.blue = palette.fg
+         -- palette.red = palette.fg
+         -- palette.aqua = palette.fg
       end,
    })
    vim.cmd.colorscheme "everforest"
