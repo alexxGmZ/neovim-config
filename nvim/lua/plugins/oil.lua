@@ -23,9 +23,9 @@ return {
             float = { padding = 4, max_width = 80 },
             skip_confirm_for_simple_edits = true,
             delete_to_trash = true,
-            win_options = {
-               signcolumn = "yes:1",
-            },
+            -- win_options = {
+            --    signcolumn = "yes:1",
+            -- },
          })
 
          vim.api.nvim_create_user_command("OilToggleFloat", function()
@@ -51,12 +51,4 @@ return {
          vim.keymap.set("n", "<leader>F", "<cmd>OilToggleFloat<cr>", { desc = "Oil: Toggle Float" })
       end,
    },
-
-   {
-      "refractalize/oil-git-status.nvim",
-      dependencies = {
-         "stevearc/oil.nvim",
-      },
-      config = true
-   }
 }
