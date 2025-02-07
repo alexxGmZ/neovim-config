@@ -61,6 +61,8 @@ local function setup_config()
          hl.LazyReasonEvent = { fg = palette.orange }
          hl.LazyReasonImport = { fg = palette.blue }
          hl.LazyReasonPlugin = { fg = palette.yellow }
+         hl.LazyReasonStart = { fg = palette.blue }
+         hl.LazyCommitIssue = { fg = palette.orange }
          -- hl["@property"] = { fg = palette.blue, italic = true }
          hl.EyelinerPrimary = { fg = palette.orange, bold = true, reverse = true }
          hl.EyelinerSecondary = { fg = palette.blue, bold = true, reverse = true }
