@@ -28,7 +28,7 @@ local function setup_config()
          -- hl.TSMethodCall = { link = "Function" }
          hl.TreesitterContextBottom = { underline = true }
          --
-         -- hl.CurrentWord = { fg = palette.none, underline = true }
+         hl.CurrentWord = { fg = palette.none, underline = true }
          -- hl.String = { fg = palette.green, bold = false }
          -- hl.Keyword = { fg = palette.orange, italic = true }
          -- hl.Constant = { fg = palette.orange, bold = true }
@@ -45,9 +45,9 @@ local function setup_config()
          -- hl.vimFunction = { link = "Function" }
          -- hl.vimUserFunc = { link = "Function" }
 
-         hl.IlluminateWordText = { bg = "#4e4e4e" }
-         hl.IlluminateWordRead = { bg = "#4e4e4e" }
-         hl.IlluminateWordWrite = { bg = "#4e4e4e" }
+         hl.IlluminatedWordText = { link = "CurrentWord" }
+         hl.IlluminatedWordRead = { link = "CurrentWord" }
+         hl.IlluminatedWordWrite = { link = "CurrentWord" }
 
          -- hl.CursorLineNr = { fg = palette.green, bold = true }
          -- hl["@variable.builtin"] = { fg = palette.yellow, bold = true }
@@ -66,6 +66,9 @@ local function setup_config()
          hl.EyelinerSecondary = { fg = palette.blue, bold = true, reverse = true }
 
          -- mono-chrome override
+         -- for group, _ in pairs(hl) do
+         --    hl[group] = { fg = palette.fg }
+         -- end
          hl["@boolean"] = { fg = palette.fg }
          hl["@constant"] = { fg = palette.fg }
          hl["@constant.builtin"] = { link = "@constant" }
@@ -91,6 +94,7 @@ local function setup_config()
          hl["@variable"] = { fg = palette.fg }
          hl["@variable.member"] = { link = "@variable" }
 
+         hl["Boolean"] = { link = "@boolean" }
          hl["Define"] = { link = "@variable" }
          hl["Function"] = { link = "@function" }
          hl["Identifier"] = { link = "@keyword" }
@@ -130,6 +134,7 @@ local function setup_config()
          hl["javaScriptException"] = { link = "@keyword" }
          hl["javaScriptIdentifier"] = { link = "Identifier" }
          hl["javaScriptMember"] = { link = "@property" }
+         hl["javaScriptMessage"] = { link = "@function" }
          hl["javaScriptNumber"] = { link = "@number" }
          hl["javaScriptOperator"] = { link = "@operator" }
          hl["markdownCode"] = { fg = palette.fg }
@@ -145,6 +150,7 @@ local function setup_config()
          hl["markdownListMarker"] = { link = "Grey" }
          hl["markdownOrderedListMarker"] = { link = "markdownListMarker" }
          hl["markdownUrl"] = { fg = palette.fg }
+         hl["yamlBlockMappingKey"] = { link = "@property" }
       end,
       colours_override = function(palette)
          -- palette.bg0 = "#402914"
