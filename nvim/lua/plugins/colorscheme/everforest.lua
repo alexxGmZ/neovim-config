@@ -90,27 +90,42 @@ local function setup_config()
          hl["@variable.member"] = { link = "@variable" }
 
          hl["Define"] = { link = "@variable" }
+         hl["Function"] = { link = "@function" }
+         hl["Identifier"] = { link = "@keyword" }
          hl["Include"] = { link = "Define" }
          hl["Keyword"] = { link = "@keyword" }
+         hl["Label"] = { link = "@keyword" }
+         hl["Macro"] = { link = "@keyword" }
+         hl["Number"] = { link = "@number" }
+         hl["PreCondit"] = { link = "@keyword" }
+         hl["PreProc"] = { link = "@keyword" }
+         hl["Special"] = { link = "@keyword" }
          hl["Statement"] = { link = "@keyword" }
+         hl["StorageClass"] = { link = "@keyword" }
          hl["String"] = { link = "@string" }
+         hl["Structure"] = { link = "@keyword" }
+         hl["Tag"] = { link = "@string" }
+         hl["Type"] = { link = "@keyword" }
+         hl["Typedef"] = { link = "@keyword" }
 
+         hl["gitcommitDiscardedFile"] = { link = "@string" }
+         hl["gitcommitSelectedFile"] = { link = "@string" }
+         hl["gitcommitUntrackedFile"] = { link = "@string" }
          hl["goBuiltins"] = { link = "@keyword" }
          hl["goConditional"] = { link = "@keyword" }
          hl["goDeclType"] = { link = "@variable" }
          hl["goFormatSpecifier"] = { link = "@string" }
-         hl["goPredefinedIdentifiers"] = { link = "@variable" }
+         hl["goPredefinedIdentifiers"] = { link = "Identifier" }
          hl["goRepeat"] = { link = "@keyword" }
          hl["goSignedInts"] = { link = "@variable" }
          hl["goType"] = { link = "@variable" }
          hl["goVar"] = { link = "@variable" }
-         hl["htmlSpecialChar"] = { link = "@keyword" }
          hl["javaScriptBoolean"] = { link = "@boolean" }
          hl["javaScriptBraces"] = { link = "@operator" }
          hl["javaScriptConditional"] = { link = "@keyword" }
          hl["javaScriptEmbed"] = { link = "@string" }
          hl["javaScriptException"] = { link = "@keyword" }
-         hl["javaScriptIdentifier"] = { link = "@keyword" }
+         hl["javaScriptIdentifier"] = { link = "Identifier" }
          hl["javaScriptMember"] = { link = "@property" }
          hl["javaScriptNumber"] = { link = "@number" }
          hl["javaScriptOperator"] = { link = "@operator" }
