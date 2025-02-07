@@ -80,6 +80,8 @@ local function setup_config()
          hl["@keyword"] = { fg = palette.fg }
          hl["@keyword.conditional"] = { link = "@keyword" }
          hl["@keyword.function"] = { link = "@keyword" }
+         hl["@keyword.import"] = { link = "@keyword" }
+         hl["@keyword.import.typescript"] = { link = "@keyword" }
          hl["@keyword.operator"] = { link = "@keyword" }
          hl["@keyword.repeat"] = { link = "@keyword" }
          hl["@keyword.return"] = { link = "@keyword" }
@@ -91,6 +93,7 @@ local function setup_config()
          hl["@string"] = { fg = palette.fg }
          hl["@string.escape"] = { link = "@string" }
          hl["@string.regexp"] = { link = "@string" }
+         hl["@type"] = { link = "@keyword" }
          hl["@variable"] = { fg = palette.fg }
          hl["@variable.member"] = { link = "@variable" }
 
@@ -111,7 +114,7 @@ local function setup_config()
          hl["String"] = { link = "@string" }
          hl["Structure"] = { link = "@keyword" }
          hl["Tag"] = { link = "@string" }
-         hl["Type"] = { link = "@keyword" }
+         hl["Type"] = { link = "@type" }
          hl["Typedef"] = { link = "@keyword" }
 
          hl["gitcommitDiscardedFile"] = { link = "@string" }
@@ -135,8 +138,10 @@ local function setup_config()
          hl["javaScriptIdentifier"] = { link = "Identifier" }
          hl["javaScriptMember"] = { link = "@property" }
          hl["javaScriptMessage"] = { link = "@function" }
+         hl["javaScriptNull"] = { link = "@number" }
          hl["javaScriptNumber"] = { link = "@number" }
          hl["javaScriptOperator"] = { link = "@operator" }
+         hl["jsonKeyword"] = { link = "@keyword" }
          hl["markdownCode"] = { fg = palette.fg }
          hl["markdownCodeBlock"] = { link = "markdownCode" }
          hl["markdownCodeDelimiter"] = { link = "markdownCode" }
