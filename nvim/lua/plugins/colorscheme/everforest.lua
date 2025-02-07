@@ -87,6 +87,7 @@ local function setup_config()
          hl["@keyword.operator"] = { link = "@keyword" }
          hl["@keyword.repeat"] = { link = "@keyword" }
          hl["@keyword.return"] = { link = "@keyword" }
+         hl["@label"] = { fg = palette.fg }
          hl["@module"] = { fg = palette.fg }
          hl["@module.builtin"] = { link = "@module" }
          hl["@number"] = { fg = palette.fg }
@@ -98,6 +99,7 @@ local function setup_config()
          hl["@type"] = { link = "@keyword" }
          hl["@variable"] = { fg = palette.fg }
          hl["@variable.member"] = { link = "@variable" }
+         hl["@variable.builtin"] = { link = "@variable" }
 
          hl["Boolean"] = { link = "@boolean" }
          hl["Define"] = { link = "@variable" }
@@ -105,7 +107,7 @@ local function setup_config()
          hl["Identifier"] = { link = "@keyword" }
          hl["Include"] = { link = "Define" }
          hl["Keyword"] = { link = "@keyword" }
-         hl["Label"] = { link = "@keyword" }
+         hl["Label"] = { link = "@label" }
          hl["Macro"] = { link = "@keyword" }
          hl["Number"] = { link = "@number" }
          hl["PreCondit"] = { link = "@keyword" }
