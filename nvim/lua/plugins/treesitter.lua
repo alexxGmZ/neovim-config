@@ -31,7 +31,7 @@ return {
                "vimdoc"
             },
             highlight = {
-               enable = true,
+               enable = false,
                disable = { "html", "csv", "tmux" },
                additional_vim_regex_highlighting = false,
             },
