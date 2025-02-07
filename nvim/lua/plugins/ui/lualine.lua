@@ -147,6 +147,10 @@ local function configuration()
                source = nil,
             },
             {
+               "filetype",
+               icon_only = true,
+            },
+            {
                "filename",
                path = 0,
                separator = { right = "" },
@@ -166,12 +170,7 @@ local function configuration()
             },
          },
          lualine_x = { word_cnt, macro_recording, "searchcount" },
-         lualine_y = { lsp_client,
-            {
-               "filetype",
-               icon_only = true
-            }
-         },
+         lualine_y = { lsp_client },
          lualine_z = {
             {
                "location",
@@ -183,6 +182,10 @@ local function configuration()
       inactive_sections = {
          lualine_a = {},
          lualine_b = {
+            {
+               "filetype",
+               icon_only = true
+            },
             {
                "filename",
                path = 0,
@@ -213,12 +216,7 @@ local function configuration()
          },
          lualine_c = {},
          lualine_x = { word_cnt },
-         lualine_y = {
-            {
-               "filetype",
-               icon_only = true
-            },
-         },
+         lualine_y = {},
          lualine_z = {}
       },
    }
