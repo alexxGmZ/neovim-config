@@ -72,6 +72,7 @@ local function setup_config()
          --    hl[group] = { fg = palette.fg }
          -- end
          hl["@boolean"] = { fg = palette.fg }
+         hl["@conditional"] = { fg = palette.fg }
          hl["@constant"] = { fg = palette.fg }
          hl["@constant.builtin"] = { link = "@constant" }
          hl["@function"] = { fg = palette.fg }
@@ -126,19 +127,20 @@ local function setup_config()
          hl["gitcommitSummary"] = { link = "@string" }
          hl["gitcommitUntrackedFile"] = { link = "@string" }
          hl["goBuiltins"] = { link = "@keyword" }
-         hl["goConditional"] = { link = "@keyword" }
-         hl["goDeclType"] = { link = "@variable" }
+         hl["goConditional"] = { link = "@conditional" }
+         hl["goDeclType"] = { link = "@type" }
          hl["goFormatSpecifier"] = { link = "@string" }
          hl["goPredefinedIdentifiers"] = { link = "Identifier" }
          hl["goRepeat"] = { link = "@keyword" }
          hl["goSignedInts"] = { link = "@variable" }
-         hl["goType"] = { link = "@variable" }
+         hl["goType"] = { link = "@type" }
          hl["goVar"] = { link = "@variable" }
          hl["javaScriptBoolean"] = { link = "@boolean" }
          hl["javaScriptBraces"] = { link = "@operator" }
-         hl["javaScriptConditional"] = { link = "@keyword" }
+         hl["javaScriptConditional"] = { link = "@conditional" }
          hl["javaScriptEmbed"] = { link = "@string" }
          hl["javaScriptException"] = { link = "@keyword" }
+         hl["javaScriptGlobal"] = { link = "@member" }
          hl["javaScriptIdentifier"] = { link = "Identifier" }
          hl["javaScriptMember"] = { link = "@property" }
          hl["javaScriptMessage"] = { link = "@function" }
