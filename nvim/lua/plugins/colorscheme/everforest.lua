@@ -162,6 +162,11 @@ local function setup_config()
          hl["markdownOrderedListMarker"] = { link = "markdownListMarker" }
          hl["markdownUrl"] = { fg = palette.fg }
          hl["yamlBlockMappingKey"] = { link = "@property" }
+         hl["zshDeref"] = { link = "@variable" }
+         hl["zshOptStart"] = { link = "@keyword" }
+         hl["zshOption"] = { link = "@keyword" }
+         hl["zshTypes"] = { link = "@type" }
+         hl["zshVariableDef"] = { link = "@variable" }
       end,
       colours_override = function(palette)
          -- palette.bg0 = "#402914"
