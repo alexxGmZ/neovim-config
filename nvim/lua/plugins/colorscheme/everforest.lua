@@ -98,6 +98,7 @@ local function setup_config()
          hl["@string.escape"] = { link = "@string" }
          hl["@string.regexp"] = { link = "@string" }
          hl["@type"] = { link = "@keyword" }
+         hl["@type.builtin"] = { link = "@type" }
          hl["@variable"] = { fg = palette.fg }
          hl["@variable.member"] = { link = "@variable" }
          hl["@variable.builtin"] = { link = "@variable" }
@@ -114,6 +115,7 @@ local function setup_config()
          hl["Number"] = { link = "@number" }
          hl["PreCondit"] = { link = "@keyword" }
          hl["PreProc"] = { link = "@keyword" }
+         hl["Repeat"] = { link = "@keyword" }
          hl["Special"] = { link = "@keyword" }
          hl["Statement"] = { link = "@keyword" }
          hl["StorageClass"] = { link = "@keyword" }
