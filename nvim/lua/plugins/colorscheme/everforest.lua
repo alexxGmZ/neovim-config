@@ -103,6 +103,7 @@ local function setup_config()
          hl["@variable.builtin"] = { link = "@variable" }
 
          hl["Boolean"] = { link = "@boolean" }
+         hl["Conditional"] = { link = "@conditional" }
          hl["Define"] = { link = "@variable" }
          hl["Function"] = { link = "@function" }
          hl["Identifier"] = { link = "@keyword" }
@@ -161,6 +162,18 @@ local function setup_config()
          hl["markdownListMarker"] = { link = "Grey" }
          hl["markdownOrderedListMarker"] = { link = "markdownListMarker" }
          hl["markdownUrl"] = { fg = palette.fg }
+         hl["shCmdSubRegion"] = { link = "@string" }
+         hl["shConditional"] = { link = "@conditional" }
+         hl["shCommandSub"] = { link = "@string" }
+         hl["shOperator"] = { link = "@operator" }
+         hl["shOption"] = { link = "@keyword" }
+         hl["shQuote"] = { link = "@string" }
+         hl["shSet"] = { link = "@keyword" }
+         hl["shSetList"] = { link = "@keyword" }
+         hl["shSnglCase"] = { link = "@operator" }
+         hl["shTestOpr"] = { link = "@operator" }
+         hl["shVarAssign"] = { link = "@operator" }
+         hl["shVariable"] = { link = "@variable" }
          hl["yamlBlockMappingKey"] = { link = "@property" }
          hl["zshDeref"] = { link = "@variable" }
          hl["zshOptStart"] = { link = "@keyword" }
