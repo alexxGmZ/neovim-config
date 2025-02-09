@@ -162,6 +162,9 @@ local function setup_config()
          hl["markdownListMarker"] = { link = "Grey" }
          hl["markdownOrderedListMarker"] = { link = "markdownListMarker" }
          hl["markdownUrl"] = { fg = palette.fg }
+         hl["pythonBuiltin"] = { link = "@keyword" }
+         hl["pythonOperator"] = { link = "@operator" }
+         hl["pythonRepeat"] = { link = "@keyword" }
          hl["shCmdSubRegion"] = { link = "@string" }
          hl["shConditional"] = { link = "@conditional" }
          hl["shCommandSub"] = { link = "@string" }
