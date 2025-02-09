@@ -9,6 +9,7 @@ return {
    config = function()
       require("illuminate").configure({
          providers = { "lsp", "treesitter", "regex" },
+         delay = 500,
          modes_allowlist = { "n" },
          filetypes_denylist = {
             "help",
