@@ -3,7 +3,7 @@ local opt = vim.opt
 vim.cmd [[
    set termguicolors
    " set completeopt=menu,menuone,noselect
-   syntax on
+   syntax off
 
    " filetype
    filetype on
