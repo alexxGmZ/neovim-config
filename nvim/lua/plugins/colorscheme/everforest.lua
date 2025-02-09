@@ -136,6 +136,12 @@ local function setup_config()
          hl["goSignedInts"] = { link = "@variable" }
          hl["goType"] = { link = "@type" }
          hl["goVar"] = { link = "@variable" }
+         hl["javaClassDecl"] = { link = "@keyword" }
+         hl["javaExceptions"] = { link = "@keyword" }
+         hl["javaMethodDecl"] = { link = "@keyword" }
+         hl["javaOperator"] = { link = "@operator" }
+         hl["javaRepeat"] = { link = "@keyword" }
+         hl["javaSpecialChar"] = { link = "@string" }
          hl["javaScriptBoolean"] = { link = "@boolean" }
          hl["javaScriptBraces"] = { link = "@operator" }
          hl["javaScriptConditional"] = { link = "@conditional" }
