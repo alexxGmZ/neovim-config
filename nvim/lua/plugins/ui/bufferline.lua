@@ -66,6 +66,12 @@ return {
                   highlight = "Directory",
                   separator = true
                },
+               {
+                  filetype = "oil",
+                  text = "File Manager (oil.nvim)",
+                  highlight = "Directory",
+                  separator = true
+               },
             }
          },
       }
