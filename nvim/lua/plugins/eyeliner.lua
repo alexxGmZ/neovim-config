@@ -1,7 +1,7 @@
 return {
    "jinh0/eyeliner.nvim",
-   -- cmd = { "EyelinerEnable", "EyelinerToggle" },
-   event = "VeryLazy",
+   keys = { { "f" }, { "F" }, { "t" }, { "T" } },
+   -- event = "VeryLazy",
    config = function ()
       require("eyeliner").setup({
          highlight_on_key = true,
