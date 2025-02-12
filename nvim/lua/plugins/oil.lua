@@ -23,9 +23,8 @@ return {
             float = { padding = 4, max_width = 80 },
             skip_confirm_for_simple_edits = true,
             delete_to_trash = true,
-            win_options = {
-               signcolumn = "yes:1",
-            },
+            win_options = { signcolumn = "yes:1" },
+            lsp_file_methods = { enabled = false }
          })
 
          vim.api.nvim_create_user_command("OilToggleFloat", function()
