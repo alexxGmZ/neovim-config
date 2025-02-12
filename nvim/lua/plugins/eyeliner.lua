@@ -1,6 +1,15 @@
 return {
    "jinh0/eyeliner.nvim",
-   keys = { { "f" }, { "F" }, { "t" }, { "T" } },
+   keys = {
+      { "f" },
+      { "F" },
+      { "t" },
+      { "T" },
+      { "f", mode = "v" },
+      { "F", mode = "v" },
+      { "t", mode = "v" },
+      { "T", mode = "v" },
+   },
    -- event = "VeryLazy",
    config = function ()
       require("eyeliner").setup({
