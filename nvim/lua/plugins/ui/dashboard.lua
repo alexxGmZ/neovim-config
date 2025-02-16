@@ -56,13 +56,6 @@ return {
                   desc = "Git", group = "RainbowDelimiterRed", key = "gi",
                   action = function() vim.cmd("Git") end
                },
-               -- {
-               -- 	icon = "󰈹 ",
-               -- 	desc = "FireFox", group = 'RainbowDelimiterRed', key = 'fr',
-               -- 	action = function()
-               -- 		vim.cmd("!firefox")
-               -- 	end
-               -- },
             },
             project = { enable = false },
             mru = {
