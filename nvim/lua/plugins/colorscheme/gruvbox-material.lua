@@ -9,8 +9,6 @@ local function highlight_overrides()
    local set_hl = vim.fn["gruvbox_material#highlight"]
    local nvim_set_hl = vim.api.nvim_set_hl
 
-   set_hl("EyelinerPrimary", palette.bg0, palette.orange)
-   set_hl("EyelinerSecondary", palette.bg0, palette.blue)
    set_hl("FloatBorder", palette.none, palette.bg0)
    set_hl("FloatTitle", palette.none, palette.bg0)
    set_hl("Function", palette.orange, palette.none)
@@ -18,6 +16,8 @@ local function highlight_overrides()
    set_hl("NormalFloat", palette.none, palette.bg0)
    set_hl("Visual", palette.none, palette.bg_visual_red)
 
+   nvim_set_hl(0, "EyelinerPrimary", { fg = palette.orange[1], bold = true, reverse = true })
+   nvim_set_hl(0, "EyelinerSecondary", { fg = palette.blue[1], bold = true, reverse = true })
    nvim_set_hl(0, "Constant", { fg = palette.orange[1], bold = true })
    nvim_set_hl(0, "NvimTreeNormal", { bg = palette.bg0[1] })
    nvim_set_hl(0, "String", { fg = palette.green[1] })
