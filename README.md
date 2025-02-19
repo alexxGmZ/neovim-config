@@ -39,10 +39,7 @@ other utf-8 characters)
 
 Enter these commands in the terminal.
 ```bash
-git clone https://github.com/alexxShandsome/neovim-config
-cd neovim-config
-mkdir -v ~/.config/nvim
-cp -vr nvim ~/.config/
+git clone https://github.com/alexxShandsome/neovim-config ~/.config/nvim
 ```
 
 > [!WARNING]
