@@ -63,6 +63,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [hedyhli/outline.nvim](https://github.com/hedyhli/outline.nvim)
 * [folke/trouble.nvim](https://github.com/folke/trouble.nvim)
 * [jinh0/eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim)
+* [nvim-tree/nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 
 #### Syntax Highlighting
 
