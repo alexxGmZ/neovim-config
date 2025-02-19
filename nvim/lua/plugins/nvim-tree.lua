@@ -88,6 +88,8 @@ return {
             sync = { open = false, close = false }
          }
       }
+
+      vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { link = "NonText" })
    end,
    dependencies = {
       "nvim-tree/nvim-web-devicons"
