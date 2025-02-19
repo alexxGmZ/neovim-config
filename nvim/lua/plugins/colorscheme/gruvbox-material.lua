@@ -19,7 +19,7 @@ local function highlight_overrides()
    set_hl("Visual", palette.none, palette.bg_visual_red)
 
    nvim_set_hl(0, "Constant", { fg = palette.orange[1], bold = true })
-   nvim_set_hl(0, "String", { fg = palette.green[1], bold = true })
+   nvim_set_hl(0, "String", { fg = palette.green[1] })
    nvim_set_hl(0, "TSFunction", { link = "Function" })
    nvim_set_hl(0, "TSFunctionCall", { link = "Function" })
    nvim_set_hl(0, "TSMethod", { link = "Function" })
