@@ -49,7 +49,8 @@ end
 
 return {
    "sainnhe/gruvbox-material",
-   priority = 1000,
+   -- priority = 1000,
+   lazy = true,
    config = function()
       vim.g.gruvbox_material_enable_italic = false
       vim.g.gruvbox_material_background = "hard"
