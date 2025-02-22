@@ -4,7 +4,8 @@ return {
    cmd = "Player",
    keys = {
       { "<leader>pn", "<cmd>Player next<CR>", desc = "Player: Next track" },
-      { "<leader>pp", "<cmd>Player play-pause<CR>", desc = "Player: Play-pause" }
+      { "<leader>pp", "<cmd>Player play-pause<CR>", desc = "Player: Play-pause" },
+      { "<leader>pv", "<cmd>Player previous<CR>", desc = "Player: Previous track" },
    },
    config = function()
       require("player").setup({
