@@ -44,6 +44,7 @@ local function setup_config()
          hl.vimFuncName = { link = "Function" }
          hl.vimFunction = { link = "Function" }
          hl.vimUserFunc = { link = "Function" }
+         hl.EndOfBuffer = { link = "NonText" }
 
          hl.IlluminatedWordText = { link = "CurrentWord" }
          hl.IlluminatedWordRead = { link = "CurrentWord" }
@@ -66,6 +67,7 @@ local function setup_config()
          hl["@property"] = { fg = palette.blue }
          hl.EyelinerPrimary = { fg = palette.orange, bold = true, reverse = true }
          hl.EyelinerSecondary = { fg = palette.blue, bold = true, reverse = true }
+         hl.NvimTreeNormal = { bg = palette.bgdim }
       end,
       colours_override = function(palette)
          -- palette.bg0 = "#402914"
