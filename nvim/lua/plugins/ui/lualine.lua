@@ -131,7 +131,6 @@ local function configuration()
          lualine_b = {
             {
                "branch",
-               color = { bg = "#66d9ef", fg = "#1a1b26" },
                icons_enabled = true,
                separator = { right = "" },
             },
