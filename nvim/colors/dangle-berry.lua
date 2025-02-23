@@ -1,7 +1,5 @@
 -- Light monochrome colorscheme
--- Uses everforest light palette
-
--- WARN: Doesn't support treesitter
+-- Minimally uses everforest light palette
 
 local set_var = vim.api.nvim_set_var
 local set_hl = vim.api.nvim_set_hl
@@ -36,7 +34,11 @@ local everforest = {
    blue1 = "#3a94c5",
    blue2 = "#ECF5ED",
    cyan = "#35a77c",
+   magenta1 = "#df69ba"
 }
+
+vim.cmd([[highlight clear]])
+vim.opt.background = "light"
 
 set_var("colors_name", "dangle-berry")
 set_var("background", "light")
@@ -66,9 +68,10 @@ set_hl(0, "CursorColumn", { link = "CursorLine" })
 set_hl(0, "CursorLine", { bg = palette.white })
 set_hl(0, "Delimiter", { fg = palette.black2 })
 set_hl(0, "Directory", { fg = palette.black1 })
+set_hl(0, "ErrorMsg", { fg = everforest.red1 })
 set_hl(0, "Fg", { bg = palette.black1 })
 set_hl(0, "FloatBorder", { fg = palette.blue2, bg = palette.bg })
-set_hl(0, "Function", { fg = palette.black1 })
+set_hl(0, "Function", { fg = palette.black2 })
 set_hl(0, "Identifier", { fg = palette.cyan2 })
 set_hl(0, "MoreMsg", { fg = palette.black1 })
 set_hl(0, "Normal", { fg = palette.black1, bg = palette.bg })
@@ -77,14 +80,19 @@ set_hl(0, "Operator", { fg = palette.red2 })
 set_hl(0, "Question", { link = "MoreMsg" })
 set_hl(0, "QuickFixLine", { link = "MoreMsg" })
 set_hl(0, "Special", { fg = palette.green1 })
-set_hl(0, "Statement", { fg = palette.red2 })
+set_hl(0, "SpellBad", { sp = everforest.red1, undercurl = true })
+set_hl(0, "SpellCap", { sp = everforest.blue1, undercurl = true })
+set_hl(0, "SpellLocal", { sp = everforest.green2, undercurl = true })
+set_hl(0, "SpellRare", { sp = everforest.magenta1, undercurl = true })
+set_hl(0, "Statement", { fg = palette.magenta2 })
 set_hl(0, "StatusLine", { link = "Normal" })
 set_hl(0, "StatusLineNC", { link = "Normal" })
-set_hl(0, "String", { fg = palette.green1 })
+set_hl(0, "String", { fg = palette.green2 })
 set_hl(0, "Title", { fg = palette.black2 })
 set_hl(0, "Type", { fg = palette.red })
 set_hl(0, "Visual", { bg = palette.cyan1 })
-set_hl(0, "WarningMsg", { bg = everforest.red1 })
+set_hl(0, "WarningMsg", { fg = everforest.red1 })
+set_hl(0, "WinSeparator", { fg = palette.blue1 })
 
 set_hl(0, "Added", { fg = everforest.green1 })
 set_hl(0, "Changed", { fg = everforest.blue1 })
