@@ -12,6 +12,7 @@ return {
    config = function()
       local actions = require("fzf-lua.actions")
       require("fzf-lua").setup {
+         fzf_colors = true,
          winopts = {},
          previewers = {
             builtin = {

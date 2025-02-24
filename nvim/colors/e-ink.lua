@@ -140,5 +140,6 @@ set_hl(0, "EyelinerSecondary", { fg = palette.cyan2, bold = true, reverse = true
 
 -- FzfLua
 set_hl(0, "FzfLuaBufNr", { fg = palette.cyan1 })
+set_hl(0, "FzfLuaHeaderBind", { fg = palette.cyan1 })
 set_hl(0, "FzfLuaPathLineNr", { fg = palette.cyan1 })
 set_hl(0, "FzfLuaTabMarker", { fg = palette.black1 })
