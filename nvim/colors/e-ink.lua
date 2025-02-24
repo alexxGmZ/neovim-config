@@ -110,6 +110,7 @@ set_hl(0, "DiffChange", { bg = everforest.blue2 })
 set_hl(0, "DiffDelete", { bg = everforest.red3 })
 set_hl(0, "DiffText", { bg = everforest.blue1 })
 
+-- nvim-notify
 set_hl(0, "NotifyInfoIcon", { link = "DiagnosticOk" })
 set_hl(0, "NotifyWarnIcon", { link = "DiagnosticWarn" })
 set_hl(0, "NotifyErrorIcon", { link = "DiagnosticError" })
@@ -122,10 +123,16 @@ set_hl(0, "NotifyErrorBorder", { link = "DiagnosticError" })
 
 -- treesitter
 set_hl(0, "@variable", { fg = palette.black2 })
-
 set_hl(0, "@markup.strong", { fg = palette.black2, bold = true })
 set_hl(0, "@markup.link", { bold = true, underline = false })
 set_hl(0, "@markup.link.label", { bold = true, underline = false })
 set_hl(0, "@markup.link.url", { bold = false, underline = true })
 set_hl(0, "@markup.quote", { fg = palette.magenta2 })
+
+-- treesitter-context
+set_hl(0, "TreesitterContextBottom", { underline = true })
+
+-- eyeliner
+set_hl(0, "EyelinerPrimary", { fg = palette.green2, bold = true, reverse = true })
+set_hl(0, "EyelinerSecondary", { fg = palette.cyan2, bold = true, reverse = true })
 
