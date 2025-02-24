@@ -138,3 +138,7 @@ set_hl(0, "TreesitterContextBottom", { underline = true })
 set_hl(0, "EyelinerPrimary", { fg = palette.green2, bold = true, reverse = true })
 set_hl(0, "EyelinerSecondary", { fg = palette.cyan2, bold = true, reverse = true })
 
+-- FzfLua
+set_hl(0, "FzfLuaBufNr", { fg = palette.cyan1 })
+set_hl(0, "FzfLuaPathLineNr", { fg = palette.cyan1 })
+set_hl(0, "FzfLuaTabMarker", { fg = palette.black1 })
