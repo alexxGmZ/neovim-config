@@ -42,5 +42,3 @@ end
 if vim.g.vscode then
    require("plugins-vscode")
 end
-
--- vim.cmd.colorscheme "ex-everforest"
