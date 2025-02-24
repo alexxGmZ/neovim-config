@@ -137,6 +137,11 @@ local function configuration()
             {
                "diff",
                colored = true,
+               -- diff_color = {
+               --    added = "Added",
+               --    modified = "Changed",
+               --    removed = "Removed",
+               -- },
                symbols = {
                   added = "󰐖 ", -- nf-md-plus_box
                   modified = "󱗜 ", -- nf-md-circle_box
