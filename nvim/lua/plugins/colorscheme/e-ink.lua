@@ -5,6 +5,12 @@ local function highlight_overrides()
    -- print(vim.inspect(mono))
    -- print(vim.inspect(everforest))
 
+   -- transparent when dark background
+   if vim.o.background == "dark" then
+      set_hl(0, "Normal", { fg = mono[12], bg = "NONE" })
+      set_hl(0, "NotifyBackground", { bg = mono[1] })
+   end
+
    set_hl(0, "Function", { fg = mono[16], bold = true })
    set_hl(0, "@variable", { fg = mono[16], bold = true })
 end
