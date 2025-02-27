@@ -1,6 +1,9 @@
 local function highlight_overrides()
    local set_hl = vim.api.nvim_set_hl
-   local mono = require("e-ink.palette").mono
+   local mono = require("e-ink.palette").mono()
+   -- local everforest = require("e-ink.palette").everforest()
+   -- print(vim.inspect(mono))
+   -- print(vim.inspect(everforest))
 
    set_hl(0, "Function", { fg = mono[16], bold = true })
    set_hl(0, "@variable", { fg = mono[16], bold = true })
@@ -13,6 +16,7 @@ return {
    priority = 1000,
    config = function()
       vim.cmd.colorscheme "e-ink"
+      vim.opt.background = "dark"
 
       highlight_overrides()
       vim.api.nvim_create_autocmd("ColorScheme", {
