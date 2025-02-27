@@ -16,13 +16,20 @@ return {
    priority = 1000,
    config = function()
       vim.cmd.colorscheme "e-ink"
-      vim.opt.background = "dark"
+
+      local time = tonumber(os.date("%H%M"))
+      if time >= 1600 then
+         vim.opt.background = "dark"
+      else
+         vim.opt.background = "light"
+      end
+
 
       highlight_overrides()
       vim.api.nvim_create_autocmd("ColorScheme", {
          group = "HANDSOME",
          pattern = "*",
-         callback = function ()
+         callback = function()
             if vim.g.colors_name ~= "e-ink" then
                return
             end
