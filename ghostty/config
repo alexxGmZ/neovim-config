@@ -6,7 +6,7 @@ adjust-underline-position = 2
 selection-invert-fg-bg = true
 cursor-invert-fg-bg = true
 cursor-style = block
-background-opacity = 1
+background-opacity = 0.85
 bold-is-bright = true
 
 mouse-hide-while-typing = true
