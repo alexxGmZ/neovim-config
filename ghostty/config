@@ -1,4 +1,4 @@
-theme = "everforest-dark"
+theme = "e-ink-everforest-dark"
 
 font-family = "CodeNewRoman Nerd Font"
 font-size = 9
@@ -6,7 +6,7 @@ adjust-underline-position = 2
 selection-invert-fg-bg = true
 cursor-invert-fg-bg = true
 cursor-style = block
-background-opacity = 0.8
+background-opacity = 1
 bold-is-bright = true
 
 mouse-hide-while-typing = true
