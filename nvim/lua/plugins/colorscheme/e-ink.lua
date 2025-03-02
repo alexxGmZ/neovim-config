@@ -1,7 +1,7 @@
 local function highlight_overrides()
    local set_hl = vim.api.nvim_set_hl
    local mono = require("e-ink.palette").mono()
-   -- local everforest = require("e-ink.palette").everforest()
+   local everforest = require("e-ink.palette").everforest()
    -- print(vim.inspect(mono))
    -- print(vim.inspect(everforest))
 
@@ -11,6 +11,8 @@ local function highlight_overrides()
       set_hl(0, "NotifyBackground", { bg = mono[1] })
    end
 
+   set_hl(0, "EyelinerPrimary", { fg = everforest.orange, reverse = true, bold = true })
+   set_hl(0, "EyelinerSecondary", { fg = everforest.blue, reverse = true, bold = true })
    set_hl(0, "Function", { fg = mono[16], bold = true })
    set_hl(0, "@variable", { fg = mono[16], bold = true })
 end
