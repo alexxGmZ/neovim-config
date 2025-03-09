@@ -97,13 +97,14 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate)
 * [folke/zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
 * [uga-rosa/ccc.nvim](https://github.com/uga-rosa/ccc.nvim)
-* [OXY2DEV/helpview.nvim](https://github.com/OXY2DEV/helpview.nvim)
 
 #### Colorscheme
 
 * [neanias/everforest-nvim](https://github.com/neanias/everforest-nvim)
 * [catppuccin/nvim](https://github.com/catppuccin/nvim)
 * [aileot/ex-colors.nvim](https://github.com/aileot/ex-colors.nvim)
+* [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material)
+* [alexxGmZ/e-ink.nvim](https://github.com/alexxGmZ/e-ink.nvim)
 
 #### Git Integration
 
