@@ -124,6 +124,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [alexxGmZ/player.nvim](https://github.com/alexxGmZ/player.nvim)
 * [hat0uma/csvview.nvim](https://github.com/hat0uma/csvview.nvim)
 * [alexxGmZ/Md2Pdf](https://github.com/alexxGmZ/Md2Pdf)
+* [2kabhishek/nerdy.nvim](https://github.com/2kabhishek/nerdy.nvim)
 
 &nbsp;
 
