@@ -20,7 +20,7 @@ end
 return {
    -- dir = "/home/alex/Git/e-ink.nvim",
    "alexxGmZ/e-ink.nvim",
-   branch = "beta",
+   -- branch = "beta",
    priority = 1000,
    config = function()
       vim.cmd.colorscheme "e-ink"
