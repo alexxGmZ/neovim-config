@@ -32,7 +32,7 @@ return {
             },
             highlight = {
                enable = true,
-               disable = { "html", "csv", "tmux" },
+               disable = { "html", "xml", "csv", "tmux" },
                additional_vim_regex_highlighting = false,
             },
             incremental_selection = { enable = false },
