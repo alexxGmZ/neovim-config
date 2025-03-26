@@ -18,7 +18,7 @@ local function highlight_overrides()
 end
 
 return {
-   -- dir = "/home/alex/Git/e-ink.nvim",
+   -- dir = "/home/alex/Git/e-ink/nvim",
    "alexxGmZ/e-ink.nvim",
    -- branch = "beta",
    priority = 1000,
