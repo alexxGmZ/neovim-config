@@ -108,7 +108,8 @@ local function configuration()
                   -- right = ""
                },
                fmt = function()
-                  return mode_map[vim.api.nvim_get_mode().mode] or vim.api.nvim_get_mode().mode
+                  local nvim_mode = vim.api.nvim_get_mode().mode
+                  return mode_map[nvim_mode] or nvim_mode
                end
             },
          },
