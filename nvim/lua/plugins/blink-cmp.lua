@@ -23,10 +23,7 @@ return {
             window = { border = 'rounded' }
          },
          list = {
-            selection = {
-               preselect = false,
-               auto_insert = false
-            },
+            selection = { preselect = false, auto_insert = false },
          }
       },
       sources = {
@@ -36,7 +33,10 @@ return {
       cmdline = {
          completion = {
             menu = { auto_show = true },
-         }
+            list = {
+               selection = { preselect = false, auto_insert = false },
+            }
+         },
       }
    },
    opts_extend = { "sources.default" },
