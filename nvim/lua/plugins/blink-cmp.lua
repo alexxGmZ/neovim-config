@@ -23,7 +23,7 @@ return {
             window = { border = 'rounded' }
          },
          list = {
-            selection = { preselect = false, auto_insert = false },
+            selection = { preselect = false, auto_insert = true },
          }
       },
       sources = {
@@ -35,7 +35,7 @@ return {
          completion = {
             menu = { auto_show = true },
             list = {
-               selection = { preselect = false, auto_insert = false },
+               selection = { preselect = false, auto_insert = true },
             }
          },
       }
