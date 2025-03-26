@@ -1,5 +1,6 @@
 return {
    'saghen/blink.cmp',
+   event = { "CmdlineEnter", "InsertEnter" },
    dependencies = {
       'rafamadriz/friendly-snippets',
       'hrsh7th/nvim-cmp',
@@ -31,7 +32,10 @@ return {
       },
       fuzzy = { implementation = "prefer_rust_with_warning" },
       cmdline = {
-         keymap = { preset = 'inherit' },
+         keymap = {
+            preset = 'inherit',
+            ['<CR>'] = { 'accept_and_enter', 'fallback' }
+         },
          completion = {
             menu = { auto_show = true },
             list = {
