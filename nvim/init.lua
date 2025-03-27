@@ -1,5 +1,6 @@
 require("config.autocmds")
 require("config.keymaps")
+require("config.lsp")
 require("config.options")
 require("config.usercmds")
 
@@ -42,3 +43,15 @@ end
 if vim.g.vscode then
    require("plugins-vscode")
 end
+
+-- vim.api.nvim_create_user_command("LspStart", function()
+--    vim.lsp.enable({"lua_ls", "bashls"})
+--    vim.cmd "edit"
+-- end, {})
+vim.lsp.enable({
+   "lua_ls",
+   "bashls",
+   "html",
+   "gopls",
+   "ts_ls"
+})
