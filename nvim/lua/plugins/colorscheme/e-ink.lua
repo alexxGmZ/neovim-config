@@ -15,6 +15,7 @@ local function highlight_overrides()
    set_hl(0, "EyelinerSecondary", { fg = everforest.blue, reverse = true, bold = true })
    set_hl(0, "Function", { fg = mono[16], bold = true })
    set_hl(0, "@variable", { fg = mono[16], bold = true })
+   set_hl(0, "Pmenu", { link = "NormalFloat" })
 end
 
 return {
