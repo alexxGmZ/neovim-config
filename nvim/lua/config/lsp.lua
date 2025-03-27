@@ -1,4 +1,6 @@
 vim.lsp.config("*", {
+   autostart = true,
+   single_file_support = true,
    on_attach = function(client)
       client.server_capabilities.semanticTokensProvider = nil
    end,
