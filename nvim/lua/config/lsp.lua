@@ -1,3 +1,14 @@
+local lsp_list = {
+   "lua_ls",
+   "bashls",
+   "html",
+   "gopls",
+   "ts_ls"
+}
+
+--
+-- default lsp server config
+--
 vim.lsp.config("*", {
    autostart = true,
    single_file_support = true,
@@ -6,13 +17,28 @@ vim.lsp.config("*", {
    end,
 })
 
-vim.lsp.enable({
-   "lua_ls",
-   "bashls",
-   "html",
-   "gopls",
-   "ts_ls"
+vim.api.nvim_create_user_command("LspStart", function(args)
+   local arg1 = args.fargs[1] or ""
+
+   if arg1 == "" then
+      vim.lsp.enable(lsp_list)
+   else
+      vim.lsp.enable(arg1)
+   end
+
+   vim.cmd("edit")
+end, {
+   nargs = "*",
+   complete = function()
+      return lsp_list
+   end
 })
+
+vim.api.nvim_create_user_command("LspStop", function()
+   vim.lsp.stop_client(vim.lsp.get_clients())
+   vim.wait(500)
+   vim.cmd("edit")
+end, {})
 
 vim.api.nvim_create_autocmd("LspAttach", {
    group = vim.api.nvim_create_augroup("UserLspConfig", {}),
