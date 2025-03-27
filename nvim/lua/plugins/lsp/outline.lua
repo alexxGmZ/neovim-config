@@ -2,7 +2,7 @@ return {
    "hedyhli/outline.nvim",
    cmd = { "Outline", "OutlineOpen" },
    dependencies = {
-      "neovim/nvim-lspconfig",
+      -- "neovim/nvim-lspconfig",
    },
    keys = {
       { "<leader>tt", "<cmd>Outline<CR>", desc = "Outline: Toggle LSP code symbols outline" }
