@@ -8,7 +8,7 @@
   "csvview.nvim": { "branch": "main", "commit": "7dcb6aa2965a1d5555d4940ed0c9c2f0e173ecdb" },
   "dashboard-nvim": { "branch": "master", "commit": "000448d837f6e7a47f8f342f29526c4d7e49e9ce" },
   "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
-  "e-ink.nvim": { "branch": "main", "commit": "1d9e56f2271e31701df115a40c77b1cd47d99fad" },
+  "e-ink.nvim": { "branch": "main", "commit": "7b91325d3df121535b47017ee069c996f7e30274" },
   "everforest-nvim": { "branch": "main", "commit": "135cc21a45756e688dd1a3cbeb1c80a04b569b46" },
   "ex-colors.nvim": { "branch": "main", "commit": "1565f1b2d21ee5745015437172b7c9f5bc75e140" },
   "eyeliner.nvim": { "branch": "main", "commit": "8f197eb30cecdf4c2cc9988a5eecc6bc34c0c7d6" },
