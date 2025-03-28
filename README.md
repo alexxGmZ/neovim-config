@@ -30,7 +30,7 @@ My neovim setup and development workflow
 
 * [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and
 other utf-8 characters)
-* neovim v0.10.+
+* neovim v0.11.+
 * [lazy](https://github.com/folke/lazy.nvim) as the plugin manager
 
 &nbsp;
@@ -71,17 +71,8 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
 * [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 * [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-* [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
-* [hrsh7th/cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
-* [hrsh7th/cmp-path](https://github.com/hrsh7th/cmp-path)
-* [hrsh7th/cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
-* [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-* [hrsh7th/cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip)
-* [hrsh7th/vim-vsnip](https://github.com/hrsh7th/vim-vsnip)
-* [lukas-reineke/cmp-under-comparator](https://github.com/lukas-reineke/cmp-under-comparator)
-* [hrsh7th/cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help)
 * [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
-* [f3fora/cmp-spell](https://github.com/f3fora/cmp-spell)
+* [saghen/blink.cmp](https://github.com/Saghen/blink.cmp)
 
 #### Aesthetic or Interface
 
