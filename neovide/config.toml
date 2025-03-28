@@ -1,4 +1,4 @@
 [font]
-	# normal = [ "CodeNewRoman Nerd Font Mono" ]
-	normal = [ "Hasklug Nerd Font" ]
+	normal = [ "CodeNewRoman Nerd Font" ]
+	# normal = [ "Hasklug Nerd Font" ]
 	size = 8
