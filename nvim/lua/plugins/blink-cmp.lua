@@ -3,7 +3,7 @@ return {
    event = { "CmdlineEnter", "InsertEnter" },
    dependencies = {
       "rafamadriz/friendly-snippets",
-      "hrsh7th/nvim-cmp",
+      -- "hrsh7th/nvim-cmp",
    },
    version = "1.*",
    opts = {
