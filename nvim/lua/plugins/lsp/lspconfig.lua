@@ -7,7 +7,6 @@ return {
       "Mason",
    },
    dependencies = {
-      "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "saghen/blink.cmp",
    },
@@ -22,7 +21,7 @@ return {
          "html",
          -- "clangd",
          "lua_ls",
-         -- "intelephense",
+         "intelephense",
          -- "vimls",
          "cssls",
          "marksman",
