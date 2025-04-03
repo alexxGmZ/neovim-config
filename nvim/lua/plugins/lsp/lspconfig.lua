@@ -114,6 +114,22 @@ return {
                filetypes = { "zsh", "bash", "sh" },
             }
          end
+
+         if lsp_server == "intelephense" then
+            lspconfig[lsp_server].setup {
+               autostart = false,
+               capabilities = capabilities,
+               single_file_support = true,
+               on_attach = function(client)
+                  client.server_capabilities.semanticTokensProvider = nil
+               end,
+               settings = {
+                  intelephense = {
+                     diagnostics = { undefinedMethods = false }
+                  }
+               }
+            }
+         end
       end
 
       --
