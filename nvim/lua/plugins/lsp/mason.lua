@@ -1,6 +1,9 @@
 return {
    "williamboman/mason.nvim",
    cmd = { "Mason" },
+   dependencies = {
+      "neovim/nvim-lspconfig",
+   },
    config = function()
       require("mason").setup({
          ui = {
