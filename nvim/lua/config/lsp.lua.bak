@@ -3,7 +3,8 @@ local lsp_list = {
    "bashls",
    "html",
    "gopls",
-   "ts_ls"
+   "ts_ls",
+   "intelephense"
 }
 
 --
