@@ -30,7 +30,7 @@ return {
       sources = {
          default = { "lsp", "path", "snippets", "buffer" },
       },
-      fuzzy = { implementation = "lua" },
+      fuzzy = { implementation = "prefer_rust" },
       cmdline = {
          keymap = {
             preset = "inherit",
