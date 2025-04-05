@@ -82,7 +82,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [rcarriga/nvim-notify](https://github.com/rcarriga/nvim-notify)
 * [NMAC427/guess-indent.nvim](https://github.com/NMAC427/guess-indent.nvim)
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
-* [onsails/lspkind.nvim](https://github.com/onsails/lspkind.nvim)
 * [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
 * [nvimdev/dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
 * [RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate)
