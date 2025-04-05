@@ -68,6 +68,8 @@ local function setup_config()
          hl.EyelinerPrimary = { fg = palette.orange, bold = true, reverse = true }
          hl.EyelinerSecondary = { fg = palette.blue, bold = true, reverse = true }
          hl.NvimTreeNormal = { bg = palette.bgdim }
+         hl.BlinkCmpDoc = { link = "NormalFloat" }
+         hl.BlinkCmpMenuSelection = { link = "Visual" }
       end,
       colours_override = function(palette)
          -- palette.bg0 = "#402914"
