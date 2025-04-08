@@ -4,7 +4,8 @@ local lsp_list = {
    "html",
    "gopls",
    "ts_ls",
-   "intelephense"
+   "intelephense",
+   "laravel_ls"
 }
 
 --
