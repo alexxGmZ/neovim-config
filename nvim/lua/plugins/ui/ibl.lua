@@ -3,6 +3,8 @@ return {
    main = "ibl",
    cmd = { "IBLEnable", "IBLToggle" },
    config = function ()
-      require("ibl").setup()
+      require("ibl").setup({
+         indent = { char = "" }
+      })
    end
 }
