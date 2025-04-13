@@ -73,6 +73,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 * [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 * [saghen/blink.cmp](https://github.com/Saghen/blink.cmp)
+* [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
 
 #### Aesthetic or Interface
 
