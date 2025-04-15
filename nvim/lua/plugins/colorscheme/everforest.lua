@@ -70,6 +70,14 @@ local function setup_config()
          hl.NvimTreeNormal = { bg = palette.bgdim }
          hl.BlinkCmpDoc = { link = "NormalFloat" }
          hl.BlinkCmpMenuSelection = { link = "Visual" }
+         hl["@markup.link"] = { fg = palette.orange }
+         hl["@markup.link.label"] = { fg = palette.orange, bold = true }
+         hl["@markup.link.url"] = { fg = palette.blue, italic = true, underline = true }
+         hl["@tag"] = { fg = palette.orange, bold = true }
+         hl["@tag.attribute"] = { fg = palette.aqua, bold = true }
+         hl["@tag.delimiter"] = { fg = palette.red, bold = false }
+         hl.Type = { fg = palette.yellow, bold = true }
+         hl["@type"] = { link = "Type" }
       end,
       colours_override = function(palette)
          -- palette.bg0 = "#402914"
