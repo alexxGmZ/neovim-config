@@ -16,6 +16,7 @@ local function highlight_overrides()
    set_hl(0, "Function", { fg = mono[16], bold = true })
    set_hl(0, "@variable", { fg = mono[16], bold = true })
    set_hl(0, "Pmenu", { link = "NormalFloat" })
+   set_hl(0, "Type", { fg = mono[13], bold = true })
 end
 
 return {
@@ -23,6 +24,7 @@ return {
    "alexxGmZ/e-ink.nvim",
    -- branch = "beta",
    priority = 1000,
+   -- lazy = true,
    config = function()
       vim.cmd.colorscheme "e-ink"
       vim.opt.background = "light"
