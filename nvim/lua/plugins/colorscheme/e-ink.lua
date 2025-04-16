@@ -35,8 +35,8 @@ return {
    -- dir = "/home/alex/Git/e-ink/nvim",
    "alexxGmZ/e-ink.nvim",
    -- branch = "beta",
-   priority = 1000,
-   -- lazy = true,
+   -- priority = 1000,
+   lazy = true,
    config = function()
       vim.cmd.colorscheme "e-ink"
       vim.opt.background = "light"
