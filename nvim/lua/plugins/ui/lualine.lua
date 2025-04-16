@@ -178,7 +178,6 @@ local function configuration()
             {
                "filename",
                path = 0,
-               separator = { right = "" },
                symbols = { modified = "●", readonly = "[RO]" }
             },
             {
@@ -189,7 +188,6 @@ local function configuration()
                   modified = "󱗝 ", -- nf-md-circle_box_outline
                   removed = "󰛲 ", -- nf-md-minus_box_outline
                },
-               separator = { right = "" },
                source = nil,
             },
             {
