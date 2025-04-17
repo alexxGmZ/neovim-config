@@ -17,7 +17,7 @@ return {
          previewers = {
             builtin = {
                syntax = false,
-               treesitter = { enable = false },
+               treesitter = { enabled = false },
                extensions = {
                   ["svg"] = { "viu", "-b" },
                   ["png"] = { "viu", "-b" },
