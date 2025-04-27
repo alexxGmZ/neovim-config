@@ -9,10 +9,7 @@
   "csvview.nvim": { "branch": "main", "commit": "6eb9c7293d35c40a71ec1eb9c653d80e8de5a2e9" },
   "dashboard-nvim": { "branch": "master", "commit": "b0551fae871fc39454a67cca1adcf76fbe2f61f9" },
   "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
-<<<<<<< HEAD
-=======
   "e-ink.nvim": { "branch": "main", "commit": "5ec0d044ba4fcdd679fe9395dba09c6d0af700d2" },
->>>>>>> 41034df (lazy-lock)
   "everforest.nvim": { "branch": "main", "commit": "b04c044819c3e3ba7d09de44fc6ad98f5738cb72" },
   "eyeliner.nvim": { "branch": "main", "commit": "8f197eb30cecdf4c2cc9988a5eecc6bc34c0c7d6" },
   "friendly-snippets": { "branch": "main", "commit": "fc8f183479a472df60aa86f00e295462f2308178" },
