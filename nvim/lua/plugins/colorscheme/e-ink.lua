@@ -30,7 +30,7 @@ return {
    lazy = true,
    config = function()
       vim.cmd.colorscheme "e-ink"
-      vim.opt.background = "light"
+      -- vim.opt.background = "light"
 
       highlight_overrides()
       vim.api.nvim_create_autocmd("ColorScheme", {
