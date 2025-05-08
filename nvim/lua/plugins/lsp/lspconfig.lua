@@ -43,7 +43,8 @@ return {
       -- mason setup
       --
       mason_lspconfig.setup {
-         ensure_installed = LSP_LIST
+         ensure_installed = LSP_LIST,
+         automatic_enable = false
       }
 
       --
