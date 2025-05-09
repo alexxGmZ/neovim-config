@@ -32,7 +32,8 @@ return {
          -- "quick_lint_js",
          "ts_ls",
          "jsonls",
-         "gopls"
+         "gopls",
+         "tinymist"
       }
 
       -- local cmp_nvim_lsp = require("cmp_nvim_lsp")
