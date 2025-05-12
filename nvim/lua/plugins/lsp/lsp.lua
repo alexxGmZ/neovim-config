@@ -23,6 +23,11 @@ local LSP_LIST = {
    "tinymist"
 }
 
+local FORMATTER_LIST = {
+   "blade-formatter",
+   "typstyle"
+}
+
 return {
    {
       "mason-org/mason.nvim",
@@ -43,13 +48,14 @@ return {
    },
    {
       "mason-org/mason-lspconfig.nvim",
-      cmd = { "Mason", "LspInstall", "LspUninstall" },
+      cmd = { "LspInstall", "LspUninstall" },
       dependencies = {
          "mason-org/mason.nvim",
       },
       config = function()
+         local packages = vim.tbl_extend("force", LSP_LIST, FORMATTER_LIST)
          require("mason-lspconfig").setup {
-            ensure_installed = LSP_LIST,
+            ensure_installed = packages,
             automatic_enable = false
          }
       end
