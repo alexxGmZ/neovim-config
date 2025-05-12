@@ -95,10 +95,6 @@ return {
          })
 
          --
-         -- cmp-nvim-lsp plugin
-         --
-         -- local capabilities = cmp_nvim_lsp.default_capabilities()
-         --
          -- blink-cmp capabilities
          --
          local capabilities = require('blink.cmp').get_lsp_capabilities()
