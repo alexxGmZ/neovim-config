@@ -24,8 +24,8 @@ local LSP_LIST = {
 }
 
 local FORMATTER_LIST = {
-   "blade-formatter",
-   "typstyle"
+   blade = { "blade-formatter" },
+   typst = { "typstyle" }
 }
 
 return {
@@ -51,11 +51,11 @@ return {
       cmd = { "LspInstall", "LspUninstall" },
       dependencies = {
          "mason-org/mason.nvim",
+         "neovim/nvim-lspconfig",
       },
       config = function()
-         local packages = vim.tbl_extend("force", LSP_LIST, FORMATTER_LIST)
          require("mason-lspconfig").setup {
-            ensure_installed = packages,
+            ensure_installed = LSP_LIST,
             automatic_enable = false
          }
       end
@@ -208,10 +208,7 @@ return {
       },
       config = function()
          require("conform").setup({
-            formatters_by_ft = {
-               blade = { "blade-formatter" },
-               typst = { "typstyle" }
-            },
+            formatters_by_ft = FORMATTER_LIST
          })
       end
    }
