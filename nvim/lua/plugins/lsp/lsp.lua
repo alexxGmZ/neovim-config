@@ -192,5 +192,27 @@ return {
             return orig_util_open_floating_preview(contents, syntax, opts, ...)
          end
       end
+   },
+   {
+      "stevearc/conform.nvim",
+      keys = {
+         {
+            "<leader>f",
+            function()
+               require("conform").format({
+                  async = true,
+                  lsp_format = "fallback"
+               })
+            end,
+         }
+      },
+      config = function()
+         require("conform").setup({
+            formatters_by_ft = {
+               blade = { "blade-formatter" },
+               typst = { "typstyle" }
+            },
+         })
+      end
    }
 }
