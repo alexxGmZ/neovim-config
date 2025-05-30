@@ -24,10 +24,15 @@ return {
       vim.g.db_ui_use_nvim_notify = 1
       vim.g.db_ui_disable_mappings = 1
       vim.g.db_ui_show_help = 0
+      vim.g.db_ui_execute_on_save = 0
    end,
    config = function()
       vim.api.nvim_create_user_command("DBUISaveQuery", function()
          vim.cmd [[execute "normal \<Plug>(DBUI_SaveQuery)"]]
+      end, {})
+
+      vim.api.nvim_create_user_command("DBUIExecuteQuery", function()
+         vim.cmd [[execute "normal \<Plug>(DBUI_ExecuteQuery)"]]
       end, {})
 
       vim.api.nvim_create_autocmd("FileType", {
