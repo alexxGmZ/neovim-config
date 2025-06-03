@@ -42,7 +42,7 @@ return {
    },
    {
       "nvim-treesitter/nvim-treesitter-context",
-      cmd = { "TSContextEnable", "TSContextToggle" },
+      cmd = { "TSContext" },
       opts = {
          enable = true,
          max_lines = 0,
