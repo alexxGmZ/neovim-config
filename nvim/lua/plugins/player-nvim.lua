@@ -12,7 +12,6 @@ return {
          supported_players = {
             "cmus",
             "spotify",
-            "firefox",
             "mpv",
             "vlc"
          },
