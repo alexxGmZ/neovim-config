@@ -39,7 +39,7 @@ other utf-8 characters)
 
 Enter these commands in the terminal.
 ```bash
-git clone https://github.com/alexxShandsome/neovim-config ~/.config/nvim
+git clone https://github.com/alexxGmZ/neovim-config ~/.config/nvim
 ```
 
 > [!WARNING]
