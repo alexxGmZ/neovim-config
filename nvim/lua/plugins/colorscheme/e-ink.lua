@@ -6,10 +6,10 @@ local function highlight_overrides()
    -- print(vim.inspect(everforest))
 
    -- transparent when dark background
-   if vim.o.background == "dark" then
-      set_hl(0, "Normal", { fg = mono[12], bg = "NONE" })
-      set_hl(0, "NotifyBackground", { bg = mono[1] })
-   end
+   -- if vim.o.background == "dark" then
+   --    set_hl(0, "Normal", { fg = mono[12], bg = "NONE" })
+   --    set_hl(0, "NotifyBackground", { bg = mono[1] })
+   -- end
 
    set_hl(0, "EyelinerPrimary", { fg = everforest.orange, reverse = true, bold = true })
    set_hl(0, "EyelinerSecondary", { fg = everforest.blue, reverse = true, bold = true })
@@ -24,7 +24,7 @@ end
 
 return {
    -- dir = "/home/alex/Git/e-ink/nvim",
-   "alexxGmZ/e-ink.nvim",
+   "e-ink-colorscheme/e-ink.nvim",
    -- branch = "beta",
    priority = 1000,
    -- lazy = true,
