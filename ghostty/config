@@ -1,6 +1,6 @@
 theme = "e-ink-everforest-light"
 
-font-family = "CodeNewRoman Nerd Font"
+font-family = "CaskaydiaCove Nerd Font"
 font-size = 9
 adjust-underline-position = 2
 selection-invert-fg-bg = true
