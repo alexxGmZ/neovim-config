@@ -26,11 +26,10 @@ return {
    -- dir = "/home/alex/Git/e-ink/nvim",
    "e-ink-colorscheme/e-ink.nvim",
    -- branch = "beta",
-   priority = 1000,
-   -- lazy = true,
+   -- priority = 1000,
+   lazy = true,
    config = function()
       vim.cmd.colorscheme "e-ink"
-      vim.opt.background = "light"
 
       highlight_overrides()
       vim.api.nvim_create_autocmd("ColorScheme", {
