@@ -32,4 +32,10 @@ return {
          use_new_command = true, -- Enable new command system
       }
    },
+
+   {
+      "NStefan002/screenkey.nvim",
+      cmd = "Screenkey",
+      version = "*", -- or branch = "dev", to use the latest commit
+   },
 }
