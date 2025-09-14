@@ -5,7 +5,7 @@ return {
    config = function()
       require("Md2Pdf").setup({
          pdf_engine = "xelatex",
-         yaml_template_path = "/home/alex/Documents/pandoc_template.yml"
+         yaml_template_path = "/home/al/Documents/pandoc_template.yml"
       })
    end
 }
