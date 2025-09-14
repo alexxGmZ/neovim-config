@@ -16,8 +16,8 @@ return {
          winopts = {},
          previewers = {
             builtin = {
-               syntax = false,
-               treesitter = { enabled = false },
+               syntax = true,
+               treesitter = { enabled = true },
                extensions = {
                   ["svg"] = { "viu", "-b" },
                   ["png"] = { "viu", "-b" },
