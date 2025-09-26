@@ -1,11 +1,12 @@
-local lsp_list = {
+local LSP_LIST = {
    "lua_ls",
    "bashls",
    "html",
    "gopls",
    "ts_ls",
    "intelephense",
-   "laravel_ls"
+   "laravel_ls",
+   "tinymist"
 }
 
 --
@@ -23,7 +24,7 @@ vim.api.nvim_create_user_command("LspStart", function(args)
    local arg1 = args.fargs[1] or ""
 
    if arg1 == "" then
-      vim.lsp.enable(lsp_list)
+      vim.lsp.enable(LSP_LIST)
    else
       vim.lsp.enable(arg1)
    end
@@ -32,7 +33,7 @@ vim.api.nvim_create_user_command("LspStart", function(args)
 end, {
    nargs = "*",
    complete = function()
-      return lsp_list
+      return LSP_LIST
    end
 })
 
