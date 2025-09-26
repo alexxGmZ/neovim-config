@@ -6,7 +6,8 @@ local LSP_LIST = {
    "ts_ls",
    "intelephense",
    "laravel_ls",
-   "tinymist"
+   "tinymist",
+   "json_lsp"
 }
 
 --
