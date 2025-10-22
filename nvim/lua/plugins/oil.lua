@@ -27,6 +27,7 @@ return {
                border = "rounded",
             },
             skip_confirm_for_simple_edits = true,
+            confirmation = { border = "rounded" },
             delete_to_trash = true,
             win_options = { signcolumn = "yes:1" },
             lsp_file_methods = { enabled = false }
