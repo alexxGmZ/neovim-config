@@ -21,7 +21,11 @@ return {
                ["gx"] = "actions.open_external",
             },
             view_options = { show_hidden = true },
-            float = { padding = 4, max_width = 80 },
+            float = {
+               padding = 4,
+               max_width = 80,
+               border = "rounded",
+            },
             skip_confirm_for_simple_edits = true,
             delete_to_trash = true,
             win_options = { signcolumn = "yes:1" },
