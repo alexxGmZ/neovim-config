@@ -23,14 +23,12 @@ local function highlight_overrides()
 end
 
 return {
-   -- dir = "/home/alex/Git/e-ink/nvim",
+   -- dir = "/home/al/Git/e-ink.nvim",
    "e-ink-colorscheme/e-ink.nvim",
    -- branch = "beta",
    -- priority = 1000,
    lazy = true,
    config = function()
-      vim.cmd.colorscheme "e-ink"
-
       highlight_overrides()
       vim.api.nvim_create_autocmd("ColorScheme", {
          group = "HANDSOME",

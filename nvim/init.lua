@@ -44,4 +44,5 @@ if vim.g.vscode then
    require("plugins-vscode")
 end
 
-vim.opt.background = "dark"
+vim.opt.background = "light"
+vim.cmd.colorscheme "e-ink"
