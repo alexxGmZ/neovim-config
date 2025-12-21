@@ -7,7 +7,8 @@ local LSP_LIST = {
    "intelephense",
    "laravel_ls",
    "tinymist",
-   "jsonls"
+   "jsonls",
+   "marksman"
 }
 
 --
