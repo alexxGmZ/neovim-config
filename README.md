@@ -56,7 +56,6 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [junegunn/fzf](https://github.com/junegunn/fzf)
 * [ibhagwan/fzf-lua](https://github.com/ibhagwan/fzf-lua)
 * [alexghergh/nvim-tmux-navigation](https://github.com/alexghergh/nvim-tmux-navigation)
-* [sitiom/nvim-numbertoggle](https://github.com/sitiom/nvim-numbertoggle)
 * [hedyhli/outline.nvim](https://github.com/hedyhli/outline.nvim)
 * [folke/trouble.nvim](https://github.com/folke/trouble.nvim)
 * [jinh0/eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim)
@@ -91,9 +90,8 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### Colorscheme
 
-* [neanias/everforest-nvim](https://github.com/neanias/everforest-nvim)
+* [alexxGmZ/everforest.nvim](https://github.com/alexxGmZ/everforest.nvim)
 * [catppuccin/nvim](https://github.com/catppuccin/nvim)
-* [aileot/ex-colors.nvim](https://github.com/aileot/ex-colors.nvim)
 * [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material)
 * [alexxGmZ/e-ink.nvim](https://github.com/alexxGmZ/e-ink.nvim)
 
