@@ -87,6 +87,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate)
 * [folke/zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
 * [uga-rosa/ccc.nvim](https://github.com/uga-rosa/ccc.nvim)
+* [NStefan002/screenkey.nvim](https://github.com/NStefan002/screenkey.nvim)
 
 #### Colorscheme
 
@@ -108,6 +109,8 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)
 * [diepm/vim-rest-console](https://github.com/diepm/vim-rest-console)
 * [kristijanhusak/vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui)
+* [tpope/vim-dadbod](https://github.com/tpope/vim-dadbod)
+* [kristijanhusak/vim-dadbod-completion](https://github.com/kristijanhusak/vim-dadbod-completion)
 * [Wansmer/treesj](https://github.com/Wansmer/treesj)
 * [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 * [alexxGmZ/player.nvim](https://github.com/alexxGmZ/player.nvim)
