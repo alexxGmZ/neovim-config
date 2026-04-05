@@ -30,7 +30,7 @@ My neovim setup and development workflow
 
 * [Kitty Terminal](https://github.com/kovidgoyal/kitty) (coz it supports font ligature and
 other utf-8 characters)
-* neovim v0.11.+
+* neovim v0.12.+
 * [lazy](https://github.com/folke/lazy.nvim) as the plugin manager
 
 &nbsp;
