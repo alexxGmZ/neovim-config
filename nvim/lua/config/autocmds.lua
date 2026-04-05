@@ -22,7 +22,7 @@ create_autocmd("TermOpen", {
 })
 
 -- show cmdline
-create_autocmd("CmdlineEnter", {
+create_autocmd({"CmdlineEnter", "Progress"}, {
    pattern = "*",
    group = user_augroup,
    callback = function()
