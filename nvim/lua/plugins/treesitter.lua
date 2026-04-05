@@ -77,7 +77,12 @@ return {
             'Outline',
             'NvimTree',
             'blink-cmp-menu',
-            'fugitive'
+            'fugitive',
+            'git',
+            'lazy_backdrop',
+            'notify',
+            'ccc_ui',
+            'mason_backdrop'
          }
 
          -- Auto-install parsers and enable highlighting on FileType
