@@ -1,16 +1,3 @@
-local LSP_LIST = {
-   "lua_ls",
-   "bashls",
-   "html",
-   "gopls",
-   "ts_ls",
-   "intelephense",
-   "laravel_ls",
-   "tinymist",
-   "jsonls",
-   "marksman"
-}
-
 --
 -- default lsp server config
 --
@@ -21,29 +8,6 @@ vim.lsp.config("*", {
       client.server_capabilities.semanticTokensProvider = nil
    end,
 })
-
-vim.api.nvim_create_user_command("LspStart", function(args)
-   local arg1 = args.fargs[1] or ""
-
-   if arg1 == "" then
-      vim.lsp.enable(LSP_LIST)
-   else
-      vim.lsp.enable(arg1)
-   end
-
-   vim.cmd("edit")
-end, {
-   nargs = "*",
-   complete = function()
-      return LSP_LIST
-   end
-})
-
-vim.api.nvim_create_user_command("LspStop", function()
-   vim.lsp.stop_client(vim.lsp.get_clients())
-   vim.wait(500)
-   vim.cmd("edit")
-end, {})
 
 vim.api.nvim_create_autocmd("LspAttach", {
    group = vim.api.nvim_create_augroup("UserLspConfig", {}),
