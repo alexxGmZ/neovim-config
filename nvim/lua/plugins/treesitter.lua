@@ -82,7 +82,9 @@ return {
             'lazy_backdrop',
             'notify',
             'ccc_ui',
-            'mason_backdrop'
+            'mason_backdrop',
+            'csv',
+            'text'
          }
 
          -- Auto-install parsers and enable highlighting on FileType
