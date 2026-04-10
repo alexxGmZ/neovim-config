@@ -3,6 +3,7 @@ require("config.keymaps")
 require("config.lsp")
 require("config.options")
 require("config.usercmds")
+require("vim._core.ui2").enable({})
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -44,5 +45,5 @@ if vim.g.vscode then
    require("plugins-vscode")
 end
 
-vim.opt.background = "light"
-vim.cmd.colorscheme "e-ink"
+vim.opt.background = "dark"
+vim.cmd.colorscheme "everforest"
