@@ -44,7 +44,7 @@ opt.number = false
 opt.relativenumber = false
 
 -- cursor
-opt.cursorline = false
+opt.cursorline = true
 opt.scrolloff = 8
 opt.sidescrolloff = 8
 opt.guicursor = "a:block100-blinkwait900-blinkon200-blinkoff500,i-ci:ver30"
