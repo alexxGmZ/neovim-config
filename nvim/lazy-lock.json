@@ -39,6 +39,7 @@
   "player.nvim": { "branch": "beta", "commit": "54254bab65c00648629d58a537216f7b67d3e606" },
   "plenary.nvim": { "branch": "master", "commit": "fcb3e9ac127d178b4c189088396165b3facc219e" },
   "screenkey.nvim": { "branch": "main", "commit": "16390931d847b1d5d77098daccac4e55654ac9e2" },
+  "snacks.nvim": { "branch": "main", "commit": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e" },
   "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "57a0eb84b2008c76e77930639890d9874195b1e1" },
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
   "treesj": { "branch": "main", "commit": "26bc2a8432ba3ea79ed6aa346fba780a3d372570" },
