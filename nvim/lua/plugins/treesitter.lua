@@ -84,7 +84,12 @@ return {
             'ccc_ui',
             'mason_backdrop',
             'csv',
-            'text'
+            'text',
+            'cmd',
+            'dialog',
+            'msg',
+            'pager',
+            'image'
          }
 
          -- Auto-install parsers and enable highlighting on FileType
