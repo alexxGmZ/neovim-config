@@ -1,6 +1,12 @@
 return {
    "folke/snacks.nvim",
    opts = {
-      image = { enable = true }
+      image = {
+         enable = true,
+         doc = {
+            inline = false,
+            float = false
+         }
+      }
    }
 }
