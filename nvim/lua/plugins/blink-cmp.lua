@@ -8,7 +8,7 @@ return {
    version = "1.*",
    opts = {
       keymap = {
-         preset = "enter",
+         preset = "none",
          ["<S-Tab>"] = { "select_prev", "fallback" },
          ["<Tab>"] = { "select_next", "fallback" },
       },
