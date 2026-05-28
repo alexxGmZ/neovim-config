@@ -22,22 +22,22 @@ create_autocmd("TermOpen", {
 })
 
 -- show cmdline
-create_autocmd({"CmdlineEnter"}, {
-   pattern = "*",
-   group = user_augroup,
-   callback = function()
-      vim.opt.cmdheight = 1
-   end
-})
+-- create_autocmd({"CmdlineEnter"}, {
+--    pattern = "*",
+--    group = user_augroup,
+--    callback = function()
+--       vim.opt.cmdheight = 1
+--    end
+-- })
 
 -- hide cmdline
-create_autocmd({ "CmdlineLeave", "UIEnter" }, {
-   pattern = "*",
-   group = user_augroup,
-   callback = function()
-      vim.opt.cmdheight = 0
-   end
-})
+-- create_autocmd({ "CmdlineLeave", "UIEnter" }, {
+--    pattern = "*",
+--    group = user_augroup,
+--    callback = function()
+--       vim.opt.cmdheight = 0
+--    end
+-- })
 
 -- "syntax on" to some filetypes. "syntax" is off by default in order to utilize treesitter
 -- create_autocmd("FileType", {
