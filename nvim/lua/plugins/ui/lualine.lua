@@ -158,7 +158,7 @@ local function configuration()
                -- separator = { right = "" }
             },
          },
-         lualine_x = { word_cnt, macro_recording, "searchcount" },
+         lualine_x = { word_cnt },
          lualine_y = { "lsp_status" },
          lualine_z = {
             {
