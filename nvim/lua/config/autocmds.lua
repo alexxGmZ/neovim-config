@@ -12,6 +12,33 @@ create_autocmd("BufWritePre", {
    end
 })
 
+create_autocmd("BufWritePost", {
+   pattern = "*.typ",
+   group = user_augroup,
+   callback = function()
+      local filename = vim.api.nvim_buf_get_name(0)
+      local notify = function(message, log_level)
+         vim.notify(message, log_level, { title = "Typst" })
+      end
+
+      vim.fn.jobstart({ "typst", "compile", filename }, {
+         detach = true,
+         stderr_buffered = true,
+         on_stderr = function(_, data)
+            local err_msg = table.concat(data, "\n")
+            if err_msg ~= "" then
+               notify(err_msg, "ERROR")
+            end
+         end,
+         on_exit = function(_, code)
+            if code == 0 then
+               notify("Compiled succesfully.")
+            end
+         end
+      })
+   end
+})
+
 -- hide linenumber in terminal buffertype
 create_autocmd("TermOpen", {
    pattern = "*",
