@@ -21,6 +21,11 @@ create_autocmd("BufWritePost", {
          vim.notify(message, log_level, { title = "Typst" })
       end
 
+      if vim.fn.executable('typst') == 0 then
+         notify("typst executable not found", "ERROR")
+         return
+      end
+
       vim.fn.jobstart({ "typst", "compile", filename }, {
          detach = true,
          stderr_buffered = true,
