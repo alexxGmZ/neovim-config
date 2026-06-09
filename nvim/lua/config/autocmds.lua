@@ -15,8 +15,13 @@ create_autocmd("BufWritePre", {
 create_autocmd("BufWritePost", {
    pattern = "*.typ",
    group = user_augroup,
-   callback = function()
-      local filename = vim.api.nvim_buf_get_name(0)
+   callback = function(args)
+      local file = vim.api.nvim_buf_get_name(0)
+      local filename = vim.fn.fnamemodify(args.file, ":t")
+      local exclude_files = {
+         "conf.typ"
+      }
+
       local notify = function(message, log_level)
          vim.notify(message, log_level, { title = "Typst" })
       end
@@ -26,7 +31,12 @@ create_autocmd("BufWritePost", {
          return
       end
 
-      vim.fn.jobstart({ "typst", "compile", filename }, {
+      if vim.tbl_contains(exclude_files, filename) then
+         notify("File (" .. filename .. ") excluded", "WARN")
+         return
+      end
+
+      vim.fn.jobstart({ "typst", "compile", file }, {
          detach = true,
          stderr_buffered = true,
          on_stderr = function(_, data)
