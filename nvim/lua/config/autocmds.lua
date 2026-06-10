@@ -27,12 +27,12 @@ create_autocmd("BufWritePost", {
       end
 
       if vim.fn.executable('typst') == 0 then
-         notify("typst executable not found", "ERROR")
+         notify("󰅚 typst executable not found", "ERROR")
          return
       end
 
       if vim.tbl_contains(exclude_files, filename) then
-         notify("File (" .. filename .. ") excluded", "WARN")
+         notify("󰀪 File (" .. filename .. ") excluded", "WARN")
          return
       end
 
@@ -47,7 +47,7 @@ create_autocmd("BufWritePost", {
          end,
          on_exit = function(_, code)
             if code == 0 then
-               notify("Compiled succesfully.")
+               notify(" Compiled succesfully.")
             end
          end
       })
