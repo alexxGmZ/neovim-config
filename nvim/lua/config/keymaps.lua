@@ -50,6 +50,9 @@ local function define_word()
    lines = vim.split(command.stdout, "\n", { plain = true })
    vim.api.nvim_buf_set_lines(buffer, 0, -1, false, lines)
 
+   vim.bo[buffer].modifiable = false
+   vim.bo[buffer].readonly = true
+
    local window = vim.api.nvim_open_win(buffer, true, {
       relative = "cursor",
       bufpos = { 0, 0 },
@@ -65,6 +68,7 @@ local function define_word()
       once = true,
       callback = function()
          vim.api.nvim_win_close(window, true)
+         vim.bo[buffer].bufhidden = "wipe"
       end
    })
 
