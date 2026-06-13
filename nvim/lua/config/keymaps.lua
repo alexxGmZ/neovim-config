@@ -29,3 +29,46 @@ map.set("n", "<leader>-", "<C-w>3-", { desc = "Pane: Decrease current pane heigh
 map.set("n", "<leader>=", "<C-w>3+", { desc = "Pane: Increate current pane height" })
 map.set("n", "<leader>.", "<C-w>3>", { desc = "Pane: Increase current pane width" })
 map.set("n", "<leader>,", "<C-w>3<", { desc = "Pane: Decrease current pane width" })
+
+local function define_word()
+   local word = vim.fn.expand("<cword>")
+   local buffer = vim.api.nvim_create_buf(false, true)
+   local lines = nil
+
+   if vim.fn.executable('dict') == 0 then
+      vim.notify("dict executable not found", "ERROR")
+      return
+   end
+
+   local command = vim.system({ "dict", word }, { text = true }):wait()
+
+   lines = vim.split(command.stdout, "\n", { plain = true })
+   if command.code ~= 0 then
+      print(command.stderr)
+      return
+   end
+
+   vim.api.nvim_buf_set_lines(buffer, 0, -1, false, lines)
+
+   local window = vim.api.nvim_open_win(buffer, true, {
+      relative = "cursor",
+      bufpos = { 0, 0 },
+      border = "single",
+      width = 90,
+      height = 25,
+      style = "minimal",
+      title = word
+   })
+
+   vim.api.nvim_create_autocmd("WinLeave", {
+      buf = buffer,
+      once = true,
+      callback = function()
+         vim.api.nvim_win_close(window, true)
+      end
+   })
+
+   print("Dictionary", word)
+end
+
+map.set("n", "<leader>dc", define_word, { desc = "Dictionary" })
