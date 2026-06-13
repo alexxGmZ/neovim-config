@@ -42,12 +42,12 @@ local function define_word()
 
    local command = vim.system({ "dict", word }, { text = true }):wait()
 
-   lines = vim.split(command.stdout, "\n", { plain = true })
    if command.code ~= 0 then
       print(command.stderr)
       return
    end
 
+   lines = vim.split(command.stdout, "\n", { plain = true })
    vim.api.nvim_buf_set_lines(buffer, 0, -1, false, lines)
 
    local window = vim.api.nvim_open_win(buffer, true, {
