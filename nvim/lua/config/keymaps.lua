@@ -57,7 +57,7 @@ local function define_word()
       relative = "cursor",
       bufpos = { 0, 0 },
       border = "single",
-      width = 90,
+      width = 85,
       height = 25,
       style = "minimal",
       title = word
