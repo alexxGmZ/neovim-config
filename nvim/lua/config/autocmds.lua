@@ -87,9 +87,3 @@ create_autocmd("TermOpen", {
 --    group = user_augroup,
 --    command = "syntax on"
 -- })
-
-create_autocmd("FileType", {
-   pattern = { "markdown", "text", "man", "git", "fugitive", "gitcommit", "oil" },
-   group = user_augroup,
-   command = "setlocal norelativenumber | setlocal nonumber"
-})
