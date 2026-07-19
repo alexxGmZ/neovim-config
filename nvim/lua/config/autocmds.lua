@@ -87,3 +87,11 @@ create_autocmd("TermOpen", {
 --    group = user_augroup,
 --    command = "syntax on"
 -- })
+
+create_autocmd("BufRead", {
+   pattern = { "*.html", "*.blade.*" },
+   group = user_augroup,
+   callback = function()
+      vim.opt.colorcolumn = ""
+   end
+})
