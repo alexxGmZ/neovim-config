@@ -1,4 +1,6 @@
-theme = light:everforest-light,dark:everforest-dark
+custom-shader = ./shaders/bettercrt.glsl
+custom-shader = ./shaders/bloom.glsl
+theme = everforest-dark
 
 font-family = "Hasklug Nerd Font"
 font-size = 11
