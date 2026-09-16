@@ -1,6 +1,7 @@
-custom-shader = ./shaders/bettercrt.glsl
-custom-shader = ./shaders/bloom.glsl
+custom-shader = ./shaders/smooth-cursor.glsl
 theme = everforest-dark
+
+cursor-opacity = 0
 
 font-family = "Hasklug Nerd Font"
 font-size = 11
