@@ -24,6 +24,7 @@ return {
             float = {
                padding = 4,
                max_width = 80,
+               max_height = 40,
                border = "rounded",
             },
             skip_confirm_for_simple_edits = true,
