@@ -9,12 +9,7 @@ return {
    },
    config = function()
       require("player").setup({
-         supported_players = {
-            "cmus",
-            "spotify",
-            "mpv",
-            "vlc"
-         },
+         default_player = "cmus",
          notify_now_playing = false
       })
    end
