@@ -67,12 +67,13 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 
 #### LSP and Auto-Completion
 
-* [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
-* [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+* [mason-org/mason.nvim](https://github.com/mason-org/mason.nvim)
+* [mason-org/mason-lspconfig.nvim](https://github.com/mason-org/mason-lspconfig.nvim)
 * [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 * [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
-* [saghen/blink.cmp](https://github.com/Saghen/blink.cmp)
+* [saghen/blink.cmp](https://github.com/saghen/blink.cmp)
 * [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
+* [rachartier/tiny-inline-diagnostics.nvim](https://github.com/rachartier/tiny-inline-diagnostics.nvim)
 
 #### Aesthetic or Interface
 
@@ -83,7 +84,8 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [NMAC427/guess-indent.nvim](https://github.com/NMAC427/guess-indent.nvim)
 * [nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 * [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
-* [nvimdev/dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
+* [folke/snacks.nvim](https://github.com/folke/snacks.nvim)
+* [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 * [RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate)
 * [folke/zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
 * [uga-rosa/ccc.nvim](https://github.com/uga-rosa/ccc.nvim)
@@ -94,7 +96,7 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [alexxGmZ/everforest.nvim](https://github.com/alexxGmZ/everforest.nvim)
 * [catppuccin/nvim](https://github.com/catppuccin/nvim)
 * [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material)
-* [alexxGmZ/e-ink.nvim](https://github.com/alexxGmZ/e-ink.nvim)
+* [e-ink-colorscheme/e-ink.nvim](https://github.com/e-ink-colorscheme/e-ink.nvim)
 
 #### Git Integration
 
@@ -112,11 +114,12 @@ I use [lazy](https://github.com/folke/lazy.nvim) as a Plugin Manager
 * [tpope/vim-dadbod](https://github.com/tpope/vim-dadbod)
 * [kristijanhusak/vim-dadbod-completion](https://github.com/kristijanhusak/vim-dadbod-completion)
 * [Wansmer/treesj](https://github.com/Wansmer/treesj)
-* [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
+* [sammaji/markdown-preview.nvim](https://github.com/sammaji/markdown-preview.nvim)
 * [alexxGmZ/player.nvim](https://github.com/alexxGmZ/player.nvim)
 * [hat0uma/csvview.nvim](https://github.com/hat0uma/csvview.nvim)
 * [alexxGmZ/Md2Pdf](https://github.com/alexxGmZ/Md2Pdf)
 * [2kabhishek/nerdy.nvim](https://github.com/2kabhishek/nerdy.nvim)
+* [is0n/jaq-nvim](https://github.com/is0n/jaq-nvim)
 
 &nbsp;
 
