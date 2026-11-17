@@ -89,9 +89,9 @@ create_autocmd("TermOpen", {
 -- })
 
 create_autocmd("BufRead", {
-   pattern = { "*.html", "*.blade.*" },
+   pattern = { "*.html", "*.blade.*", "*.xml" },
    group = user_augroup,
    callback = function()
-      vim.opt.colorcolumn = ""
+      vim.opt_local.colorcolumn = ""
    end
 })
